@@ -27,19 +27,15 @@ class JsonQuery
 
     public function __construct(array $opts)
     {
-        switch ($opts) {
-            case 'isbn':
-                if (!empty($opts['isbn'])) {
-                    $this->query = $this->buildIsbnQuery($opts['isbn']);
-                }
-                break;
-            case 'lcn':
-                if (!empty($opts['lcn'])) {
-                    $this->query = $this->buildLcnQuery($opts['lcn']);
-                }
-                break;
-            default:
-                $this->query = null;
+        foreach ($opts as $k => $v) {
+            if (!empty($opts['isbn'])) {
+                $this->query = $this->buildIsbnQuery($opts['isbn']);
+                return;
+            }
+            if (!empty($opts['lcn'])) {
+                $this->query = $this->buildLcnQuery($opts['lcn']);
+                return;
+            }
         }
     }
 
