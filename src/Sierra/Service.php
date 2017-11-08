@@ -86,7 +86,7 @@ trait Service
 
             // basic client which will be used when we need to get a new token
             $reAuthClient = new Client([
-                'base_uri' => $this->getOption(SierraAPI::BASE_URL . 'token')
+                'base_uri' => $this->getOption(SierraAPI::BASE_URL) . 'token'
             ]);
             $reAuthConfig = [
                 'client_id' => $this->getOption(SierraAPI::CLIENT_ID),

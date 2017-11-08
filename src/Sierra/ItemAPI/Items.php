@@ -1,8 +1,11 @@
 <?php
 
-namespace Sierra;
+namespace Sierra\ItemAPI;
 
 use GuzzleHttp\Psr7\Request;
+use Sierra\JsonQuery;
+use Sierra\Service;
+use Sierra\SierraAPI;
 
 class Items extends SierraAPI
 {

@@ -3,6 +3,7 @@
 namespace Sierra;
 
 use Sierra\Errors\APIClientError;
+use Sierra\BibAPI\Bibs;
 
 /**
  * The Sierra API is used to interact with Innovative Sierra APIs.
