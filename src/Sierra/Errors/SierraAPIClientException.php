@@ -5,7 +5,7 @@
 
 namespace Sierra\Errors;
 
-class APIClientError extends SierraAPIClientException
+class SierraAPIClientException extends \Exception
 {
 
 }

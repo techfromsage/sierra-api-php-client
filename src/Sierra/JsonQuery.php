@@ -21,23 +21,9 @@ namespace Sierra;
 class JsonQuery
 {
     /**
-     * @var array|null
+     * @var array
      */
-    private $query;
-
-    public function __construct(array $opts)
-    {
-        foreach ($opts as $k => $v) {
-            if (!empty($opts['isbn'])) {
-                $this->query = $this->buildIsbnQuery($opts['isbn']);
-                return;
-            }
-            if (!empty($opts['lcn'])) {
-                $this->query = $this->buildLcnQuery($opts['lcn']);
-                return;
-            }
-        }
-    }
+    private $opts = [];
 
     /**
      * Return JSON encoded query
@@ -45,8 +31,9 @@ class JsonQuery
      */
     public function toJSON()
     {
-        if (!is_null($this->query)) {
-            return json_encode($this->query);
+        $query = $this->buildQuery();
+        if (!is_null($query)) {
+            return json_encode($query);
         }
     }
 
@@ -57,10 +44,9 @@ class JsonQuery
      *
      * @return array
      */
-    private function buildIsbnQuery($isbn)
+    public function addIsbn($isbn)
     {
-        // TODO: These tag codes are guessed. this bit of documentation is behind a login which we don't have access to.
-        return $this->buildTagQuery('i', $isbn);
+        $this->opts['isbn'][] = $isbn;
     }
 
     /**
@@ -70,10 +56,21 @@ class JsonQuery
      *
      * @return array
      */
-    private function buildLcnQuery($lcn)
+    public function addLcn($lcn)
+    {
+        $this->opts['lcn'][] = $lcn;
+    }
+
+    private function buildQuery()
     {
         // TODO: These tag codes are guessed. this bit of documentation is behind a login which we don't have access to.
-        return $this->buildTagQuery('l', $lcn);
+        $query = null;
+        if (!empty($this->opts['isbn'])) {
+            $query = $this->buildTagQuery('i', $this->opts['isbn']);
+        } elseif (!empty($this->opts['lcn'])) {
+            $query = $this->buildTagQuery('l', $this->opts['lcn']);
+        }
+        return $query;
     }
 
     /**

@@ -6,7 +6,7 @@
 
 namespace Sierra\Errors;
 
-class SierraAuthorizationException extends \Exception
+class SierraAuthorizationException extends SierraAPIClientException
 {
 
 }

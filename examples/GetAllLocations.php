@@ -1,5 +1,8 @@
 <?php
 /**
+ * TODO: Is this a copy-paste leftover from a previous API ? Can it be removed?
+ */
+/**
  * An example of
  * TODO:  update with an example that you want timed.
  * This example also includes a timer and summary so that you can see how fast you are getting responses

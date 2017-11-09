@@ -8,6 +8,8 @@ use kamermans\OAuth2\GrantType\ClientCredentials;
 use Sierra\Errors\APIClientError;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
+use Sierra\Errors\APIClientException;
+use Sierra\Errors\SierraApiConfigurationException;
 use Sierra\Errors\SierraAuthorizationException;
 
 /**
@@ -24,15 +26,32 @@ trait Service
     protected $httpClient;
 
     /**
+     * @var SierraAPI|null
+     */
+    protected $sierraAPI = null;
+
+
+    /**
+     * Sierra Constructor
+     *
+     * @param SierraAPI $sierraAPI
+     */
+    public function __construct(SierraAPI $sierraAPI)
+    {
+        $this->sierraAPI = $sierraAPI;
+    }
+
+    /**
      * Get a named option from the options
      *
-     * @param string $key
+     * @throws SierraApiConfigurationException
+     * @internal param string $key
      *
-     * @return null|mixed
+     * @return SierraAPI
      */
-    protected function getOption($key)
+    protected function getSierraAPI()
     {
-        return empty($this->opts[$key]) ? null : $this->opts[$key];
+        return $this->sierraAPI;
     }
 
     /**
@@ -41,10 +60,10 @@ trait Service
      * @param Request $request
      * @param int $expected_status_code
      *
-     * @return \stdClass
+     * @return string
      * @throws APIClientError
      */
-    public function handleRequest(Request $request, $expected_status_code = 200)
+    private function handleRequest(Request $request, $expected_status_code = 200)
     {
         // Guzzle will throw Client or Server Errors as necessary
         $response = $this->getHTTPClient()->send($request);
@@ -64,9 +83,9 @@ trait Service
      * @return array
      * @throws SierraAuthorizationException
      */
-    protected function getDefaultHeaders()
+    private function getDefaultHeaders()
     {
-        if (empty($this->getOption(SierraAPI::CLIENT_ID)) || empty($this->getOption(SierraAPI::CLIENT_SECRET))) {
+        if (empty($this->getSierraAPI()->getClientId()) || empty($this->getSierraAPI()->getClientSecret())) {
             throw new SierraAuthorizationException("No client id or secret has been configured for this instance");
         }
 
@@ -80,17 +99,16 @@ trait Service
      * Get an HTTP Client
      * @return Client|null
      */
-    public function getHTTPClient()
+    private function getHTTPClient()
     {
         if ($this->httpClient === null) {
-
             // basic client which will be used when we need to get a new token
             $reAuthClient = new Client([
-                'base_uri' => $this->getOption(SierraAPI::BASE_URL) . 'token'
+                'base_uri' => $this->getSierraAPI()->getBaseUrl() . 'token'
             ]);
             $reAuthConfig = [
-                'client_id' => $this->getOption(SierraAPI::CLIENT_ID),
-                'client_secret' => $this->getOption(SierraAPI::CLIENT_SECRET),
+                'client_id' => $this->getSierraAPI()->getClientId(),
+                'client_secret' => $this->getSierraAPI()->getClientSecret(),
             ];
 
             // setup the oAuth 2 middleware
@@ -102,11 +120,10 @@ trait Service
 
             // create our actual client
             $this->httpClient = new Client([
-                'base_uri' => $this->getOption(SierraAPI::BASE_URL),
+                'base_uri' => $this->getSierraAPI()->getBaseUrl(),
                 'handler'  => $stack,
                 'auth'     => 'oauth'
             ]);
-
         }
 
         return $this->httpClient;

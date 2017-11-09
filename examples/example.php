@@ -10,24 +10,32 @@ $sierraAPI->setClientID(getenv('SIERRA_SANDBOX_CLIENT_ID'));
 $sierraAPI->setClientSecret(getenv('SIERRA_SANDBOX_CLIENT_SECRET'));
 $sierraAPI->setBaseURL(getenv('SIERRA_SANDBOX_BASE_URL'));
 
-// bibs query
-echo "\n\n===== Query =====\n";
-$query = new \Sierra\JsonQuery(['isbn' => '0080091032']);
+//////////
+//// Bibs
+echo "\n\n===== Bibs Query =====\n";
+$query = new \Sierra\JsonQuery();
+$query->addIsbn('0080091032');
 var_export($query->toJSON());
 
-echo "\n\n===== Query Results=====\n";
+echo "\n\n===== Bibs Query Results=====\n";
 $results = $sierraAPI->bibs()->query($query);
 var_export($results);
 
 
-echo "\n\n===== Search AWS =====\n";
+echo "\n\n===== Bibs Search AWS =====\n";
 $results = $sierraAPI->bibs()->search('ISBN', '0080091032');
 var_export($results);
 
-echo "\n\n===== Single record =====\n";
+echo "\n\n===== Bibs Single record =====\n";
 $result = $sierraAPI->bibs()->getRecordByID(1000016);
 var_export($result);
 
-echo "\n\n===== Single record with variable length Fields =====\n";
+echo "\n\n===== Bibs Single record with variable length Fields =====\n";
 $result = $sierraAPI->bibs()->getRecordByID(1000016, ['title','varFields']);
 var_export($result);
+
+////////
+// Items
+echo "\n\n===== Items search =====\n";
+$results = $sierraAPI->items()->getItemsByBibId('1000025');
+var_export($results);

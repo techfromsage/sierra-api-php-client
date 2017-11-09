@@ -1,16 +1,10 @@
 <?php
-namespace Sierra\BibAPI;
+namespace Sierra\Routes;
 
-use \Sierra\SierraAPI;
-use \Sierra\Service;
 use \Sierra\JsonQuery;
 
-use GuzzleHttp\Psr7\Request;
-
-class Bibs extends SierraAPI
+class Bibs extends BaseRoutes
 {
-    use Service;
-
     /**
      * Post a query to the /bibs/query endpoint
      *
@@ -27,14 +21,11 @@ class Bibs extends SierraAPI
             'limit'  => $limit,
         ];
 
-        $request = new Request(
-           'POST',
-           'bibs/query?' . $this->prepareArguments($mandatoryArguments),
-           $this->getDefaultHeaders(),
-           $query->toJSON()
+        return $this->doPostRequest(
+            'bibs/query',
+            $this->prepareArguments($mandatoryArguments),
+            $query->toJSON()
         );
-
-        return $this->handleRequest($request);
     }
 
     /**
@@ -63,13 +54,10 @@ class Bibs extends SierraAPI
             'fields' => join(',', $fields)
         ];
 
-        $request = new Request(
-            'GET',
-            'bibs/search?' . $this->prepareArguments($mandatoryArguments, $optionalArguments),
-            $this->getDefaultHeaders()
+        return $this->doGetRequest(
+            'bibs/search',
+            $this->prepareArguments($mandatoryArguments, $optionalArguments)
         );
-
-        return $this->handleRequest($request);
     }
 
     /**
@@ -86,31 +74,9 @@ class Bibs extends SierraAPI
             'fields' => join(',', $fields)
         ];
 
-        $request = new Request(
-            'GET',
-            'bibs/' . $id . '?' . $this->prepareArguments([], $optionalArguments),
-            $this->getDefaultHeaders()
+        return $this->doGetRequest(
+            'bibs/' . $id,
+            $this->prepareArguments([], $optionalArguments)
         );
-
-        return $this->handleRequest($request);
-    }
-
-    /**
-     * Prepare optional and mandatory arguments, making sure that only optional arguments with values are included
-     *
-     * @param array $mandatory Parameters which must be sent in the URL
-     * @param array $optional  Parameters that may be sent if they have a value
-     *
-     * @return string
-     */
-    private function prepareArguments(array $mandatory, array $optional = [])
-    {
-        foreach ($optional as $k => $v) {
-            if (!empty($v)) {
-                $mandatory[$k] = $v;
-            }
-        }
-
-        return http_build_query($mandatory);
     }
 }

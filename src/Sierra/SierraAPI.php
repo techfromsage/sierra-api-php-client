@@ -2,15 +2,15 @@
 
 namespace Sierra;
 
-use Sierra\Errors\APIClientError;
-use Sierra\BibAPI\Bibs;
+use Sierra\Routes\Bibs;
+use Sierra\Routes\Items;
 
 /**
  * The Sierra API is used to interact with Innovative Sierra APIs.
  *
  * Before you start
  * - You will need a Client ID and Secret
- * - You will need to know the BASE URL of your Sirra API service.
+ * - You will need to know the BASE URL of your Sierra API service.
  *
  * ===== Using the class =====
  *
@@ -21,21 +21,14 @@ use Sierra\BibAPI\Bibs;
 class SierraAPI
 {
 
-    const CLIENT_ID = 'client_id';
-    const CLIENT_SECRET = 'client_secret';
-    const BASE_URL = 'baseURL';
-    const HEADERS = 'headers';
+    /** @var  $baseUrl */
+    protected $baseUrl;
 
-    /**
-     * An array of options will include at a minimum:
-     * $opts = [
-     *   'client_id' => 'someID',
-     *   'client_secret' => 'someSecret',
-     *   'baseURL' => 'https://example.com'
-     * ]
-     * @var array
-     */
-    protected $opts;
+    /** @var $clientId  */
+    protected $clientId;
+
+    /** @var  $clientSecret */
+    protected $clientSecret;
 
     /**
      * @var string
@@ -44,16 +37,16 @@ class SierraAPI
 
     /**
      * Sierra Constructor
-     * @param array $opts A optional array of options to pass to the client
+     * @param $baseUrl
+     * @param $clientId
+     * @param $clientSecret
+     * @internal param array $opts A optional array of options to pass to the client
      */
-    public function __construct(array $opts = [])
+    public function __construct($baseUrl = null, $clientId = null, $clientSecret = null)
     {
-        $this->opts = $opts;
-
-        if (isset($opts[self::BASE_URL])) {
-            // make sure we set the base url correctly
-            $this->setBaseURL($opts[self::BASE_URL]);
-        }
+        $this->setBaseURL($baseUrl);
+        $this->setClientID($clientId);
+        $this->setClientSecret($clientSecret);
     }
 
     /**
@@ -61,7 +54,7 @@ class SierraAPI
      */
     public function setClientID($clientID)
     {
-        $this->opts[self::CLIENT_ID] = $clientID;
+        $this->clientId = $clientID;
     }
 
     /**
@@ -69,7 +62,7 @@ class SierraAPI
      */
     public function setClientSecret($clientSecret)
     {
-        $this->opts[self::CLIENT_SECRET] = $clientSecret;
+        $this->clientSecret = $clientSecret;
     }
 
     /**
@@ -80,7 +73,37 @@ class SierraAPI
         if (substr($baseURL, strlen($baseURL) - 1, 1) != '/') {
             $baseURL = $baseURL . '/';
         }
-        $this->opts[self::BASE_URL] = $baseURL;
+        $this->baseUrl = $baseURL;
+    }
+
+    /**
+     * Get the BaseUrl
+     *
+     * @return mixed
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * Get the Client ID
+     *
+     * @return mixed
+     */
+    public function getClientId()
+    {
+        return $this->clientId;
+    }
+
+    /**
+     * Get the Client Secret
+     *
+     * @return mixed
+     */
+    public function getClientSecret()
+    {
+        return $this->clientSecret;
     }
 
     /**
@@ -89,28 +112,15 @@ class SierraAPI
      */
     public function bibs()
     {
-        return new Bibs($this->getOptions());
+        return new Bibs($this);
     }
 
     /**
-     * Get the options for this API client instance.
-     * Throw an error if the important options are not present.
-     *
-     * @return array
-     * @throws APIClientError
+     * Access bibs routes
+     * @return Items
      */
-    protected function getOptions()
+    public function items()
     {
-        if (empty($this->opts[self::CLIENT_ID])) {
-            throw new APIClientError("client id must be set");
-        }
-        if (empty($this->opts[self::CLIENT_SECRET])) {
-            throw new APIClientError("client secret must be set");
-        }
-        if (empty($this->opts[self::BASE_URL])) {
-            throw new APIClientError("base url must be set");
-        }
-
-        return $this->opts;
+        return new Items($this);
     }
 }
