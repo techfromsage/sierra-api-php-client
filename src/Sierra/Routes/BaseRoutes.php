@@ -30,7 +30,7 @@ abstract class BaseRoutes
     public function __construct(SierraAPI $sierraAPI)
     {
         $this->sierraAPI = $sierraAPI;
-        $this->defaultContentType = self::CONTENT_TYPE_JSON;
+        $this->defaultContentType = $sierraAPI->getDefaultAcceptContentType();
     }
 
     /**

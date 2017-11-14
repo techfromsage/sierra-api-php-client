@@ -38,3 +38,13 @@ var_export($result);
 echo "\n\n===== Items search =====\n";
 $results = $sierraAPI->items()->getItemsByBibId('1000025');
 var_export($results);
+
+echo "\n\n===== This client instance will return XML by default =====\n";
+$sierraAPI2 = new \Sierra\SierraAPI();
+$sierraAPI2->setClientID(getenv('SIERRA_SANDBOX_CLIENT_ID'));
+$sierraAPI2->setClientSecret(getenv('SIERRA_SANDBOX_CLIENT_SECRET'));
+$sierraAPI2->setBaseURL(getenv('SIERRA_SANDBOX_BASE_URL'));
+$sierraAPI2->setDefaultAcceptContentType('application/xml');
+
+$results = $sierraAPI2->bibs()->getRecordByID(1000016);
+var_export($results);

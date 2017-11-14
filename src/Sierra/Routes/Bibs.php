@@ -33,6 +33,46 @@ class Bibs extends BaseRoutes
      *
      * @see https://techdocs.iii.com/sierraapi/Content/zAppendix/keywordSearchIndexes.htm
      *
+     * data is structured like this:
+     *
+     * }
+     *   "count": 1,
+     *   "total": 1,
+     *   "start": 0,
+     *   "entries": [
+     *       {
+     *           "relevance": 2.4000000953674,
+     *           "bib": {
+     *               "id": "1000016",
+     *               "fixedFields": {...},  // these are Sierra specific fields
+     *               "varFields": [...]  // These are the MARC data fields.
+     *           }
+     *       }
+     *   ]
+     * }
+     *
+     * Each MARC field looks like this
+     * {
+     *   "fieldTag": "a",
+     *   "marcTag": "100",
+     *   "ind1": "1",
+     *   "ind2": " ",
+     *   "subfields": [
+     *      {
+     *          "tag": "a",
+     *          "content": "Landau, L. D."
+     *      },
+     *      {
+     *          "tag": "q",
+     *          "content": "(Lev Davidovich),"
+     *      },
+     *      {
+     *          "tag": "d",
+     *          "content": "1908-1968."
+     *      }
+     *   ]
+     * },
+     *
      * @param $index
      * @param $text
      * @param int $offset
@@ -82,6 +122,9 @@ class Bibs extends BaseRoutes
 
     /**
      * Get the MARC record for a Bib record by ID
+     * This API route has different accept headers that you might want to use to get MARC record representations
+     *
+     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Get_the_MARC_data_for_a_single_bib_record_get_6
      *
      * @param int   $id          The bib id to retrieve
      * @param null  $contentType A content type to ask for

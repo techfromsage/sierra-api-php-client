@@ -21,14 +21,17 @@ use Sierra\Routes\Items;
 class SierraAPI
 {
 
-    /** @var  $baseUrl */
+    /** @var  string */
     protected $baseUrl;
 
-    /** @var $clientId  */
+    /** @var  string */
     protected $clientId;
 
-    /** @var  $clientSecret */
+    /** @var  string */
     protected $clientSecret;
+
+    /** @var  string */
+    protected $defaultAcceptContentType;
 
     /**
      * @var string
@@ -37,16 +40,25 @@ class SierraAPI
 
     /**
      * Sierra Constructor
-     * @param $baseUrl
-     * @param $clientId
-     * @param $clientSecret
+     *
+     * @param string $baseUrl The Base URL to build API requests on
+     * @param string $clientId Identify your client to the service
+     * @param string $clientSecret Authenticate your client id
+     * @param string $contentType Set a default Accept Content-Type
+     *
      * @internal param array $opts A optional array of options to pass to the client
      */
-    public function __construct($baseUrl = null, $clientId = null, $clientSecret = null)
+    public function __construct(
+        $baseUrl = null,
+        $clientId = null,
+        $clientSecret = null,
+        $contentType = 'application/json'
+    )
     {
         $this->setBaseURL($baseUrl);
         $this->setClientID($clientId);
         $this->setClientSecret($clientSecret);
+        $this->setDefaultAcceptContentType($contentType);
     }
 
     /**
@@ -77,6 +89,16 @@ class SierraAPI
     }
 
     /**
+     * Set the default Accept header Content Type.
+     *
+     * @param $contentType
+     */
+    public function setDefaultAcceptContentType($contentType)
+    {
+        $this->defaultAcceptContentType = $contentType;
+    }
+
+    /**
      * Get the BaseUrl
      *
      * @return mixed
@@ -104,6 +126,15 @@ class SierraAPI
     public function getClientSecret()
     {
         return $this->clientSecret;
+    }
+
+    /**
+     * Get the default Accept Content-Type
+     * @return string
+     */
+    public function getDefaultAcceptContentType()
+    {
+        return $this->defaultAcceptContentType;
     }
 
     /**
