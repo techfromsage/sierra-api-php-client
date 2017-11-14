@@ -8,9 +8,9 @@ class Bibs extends BaseRoutes
     /**
      * Post a query to the /bibs/query endpoint
      *
-     * @param JsonQuery $query  A Query to execute
-     * @param int       $offset Start at Offset (defaults to 0)
-     * @param int       $limit  Limit to n responses (defaults to 20)
+     * @param JsonQuery $query A Query to execute
+     * @param int $offset Start at Offset (defaults to 0)
+     * @param int $limit Limit to n responses (defaults to 20)
      *
      * @return \stdClass
      */
@@ -44,8 +44,8 @@ class Bibs extends BaseRoutes
     public function search($index, $text, $offset = 0, $limit = 20, $fields = [])
     {
         $mandatoryArguments = [
-            'index'  => $index,
-            'text'   => $text,
+            'index' => $index,
+            'text'  => $text,
         ];
 
         $optionalArguments = [
@@ -63,7 +63,7 @@ class Bibs extends BaseRoutes
     /**
      * Get a Bib record by ID
      *
-     * @param int $id       The bib id to retrieve
+     * @param int $id The bib id to retrieve
      * @param array $fields Optional fields to retrieve
      *
      * @return \stdClass
@@ -78,5 +78,22 @@ class Bibs extends BaseRoutes
             'bibs/' . $id,
             $this->prepareArguments([], $optionalArguments)
         );
+    }
+
+    /**
+     * Get the MARC record for a Bib record by ID
+     *
+     * @param int   $id          The bib id to retrieve
+     * @param null  $contentType A content type to ask for
+     *
+     * @return \stdClass|string
+     */
+    public function getMarcRecordByID($id, $contentType = null)
+    {
+        if (is_null($contentType)) {
+            $contentType = self::CONTENT_TYPE_MARC_XML;
+        }
+        $this->setRequestContentType($contentType);
+        return $this->doGetRequest('bibs/' . $id . '/marc', []);
     }
 }

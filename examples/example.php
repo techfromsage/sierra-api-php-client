@@ -21,13 +21,12 @@ echo "\n\n===== Bibs Query Results=====\n";
 $results = $sierraAPI->bibs()->query($query);
 var_export($results);
 
-
 echo "\n\n===== Bibs Search AWS =====\n";
 $results = $sierraAPI->bibs()->search('ISBN', '0080091032');
 var_export($results);
 
-echo "\n\n===== Bibs Single record =====\n";
-$result = $sierraAPI->bibs()->getRecordByID(1000016);
+echo "\n\n===== Bibs Single MARC record =====\n";
+$result = $sierraAPI->bibs()->getMarcRecordByID(1000016);
 var_export($result);
 
 echo "\n\n===== Bibs Single record with variable length Fields =====\n";

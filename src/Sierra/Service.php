@@ -30,16 +30,18 @@ trait Service
      */
     protected $sierraAPI = null;
 
+    /**
+     * Default Content Type
+     * @var null|string
+     */
+    protected $defaultContentType = null;
 
     /**
-     * Sierra Constructor
-     *
-     * @param SierraAPI $sierraAPI
+     * Content type of a particular request
+     * This is reset to null immediately after use.
+     * @var null|string
      */
-    public function __construct(SierraAPI $sierraAPI)
-    {
-        $this->sierraAPI = $sierraAPI;
-    }
+    protected $requestContentType = null;
 
     /**
      * Get a named option from the options
@@ -57,10 +59,10 @@ trait Service
     /**
      * Handle a response from a service and return the parsed JSON payload
      *
-     * @param Request $request
-     * @param int $expected_status_code
+     * @param Request $request The request to make
+     * @param int $expected_status_code An expected status code
      *
-     * @return string
+     * @return \stdClass|string
      * @throws APIClientError
      */
     private function handleRequest(Request $request, $expected_status_code = 200)
@@ -71,7 +73,22 @@ trait Service
         $response_status_code = $response->getStatusCode();
 
         if ($response_status_code == $expected_status_code) {
-            return json_decode($response->getBody());
+            $contentType = $response->getHeader('Content-Type');
+            if (strpos($contentType[0], ';') !== -1) {
+                $contentType = explode(';', $contentType[0]);
+            }
+            switch ($contentType[0]) {
+                case 'application/json':
+                case 'application/marc-json':
+                case 'application/marc-in-json':
+                    return json_decode($response->getBody());
+                    break;
+                case 'application/marc-xml':
+                    return $response->getBody()->getContents();
+                    break;
+                default:
+                    return $response->getBody()->getContents();
+            }
         } else {
             throw new APIClientError("Response code $response_status_code was unexpected");
         }
@@ -85,22 +102,49 @@ trait Service
      */
     private function getDefaultHeaders()
     {
-        if (empty($this->getSierraAPI()->getClientId()) || empty($this->getSierraAPI()->getClientSecret())) {
-            throw new SierraAuthorizationException("No client id or secret has been configured for this instance");
-        }
-
         return [
-            'User-Agent'    => 'sierra-api-php-client/' . Version::VERSION . ' php/' . PHP_VERSION,
-            'Accept'        => 'application/json'
+            'User-Agent' => 'sierra-api-php-client/' . Version::VERSION . ' php/' . PHP_VERSION,
+            'Accept'     => $this->getContentType()
         ];
+    }
+
+    /**
+     * Get either a specific request content type or the default content type.
+     * @return null|string
+     */
+    protected function getContentType()
+    {
+        if (is_null($this->requestContentType)) {
+            return $this->defaultContentType;
+        } else {
+            $retVal = $this->requestContentType;
+            $this->requestContentType = null;
+            return $retVal;
+        }
+    }
+
+    /**
+     * Set a content Type to use for this request
+     * resets to default content type after use.
+     *
+     * @param string $contentType Set this Content Type as the value to use in the header for the next request
+     */
+    protected function setRequestContentType($contentType)
+    {
+        $this->requestContentType = $contentType;
     }
 
     /**
      * Get an HTTP Client
      * @return Client|null
+     * @throws SierraAuthorizationException
      */
     private function getHTTPClient()
     {
+        if (empty($this->getSierraAPI()->getClientId()) || empty($this->getSierraAPI()->getClientSecret())) {
+            throw new SierraAuthorizationException("No client id or secret has been configured for this instance");
+        }
+
         if ($this->httpClient === null) {
             // basic client which will be used when we need to get a new token
             $reAuthClient = new Client([
