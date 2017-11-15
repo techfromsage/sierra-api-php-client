@@ -8,6 +8,8 @@ class Bibs extends BaseRoutes
     /**
      * Post a query to the /bibs/query endpoint
      *
+     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Filter_the_records_by_a_query_in_JSON_format_post_3
+     *
      * @param JsonQuery $query A Query to execute
      * @param int $offset Start at Offset (defaults to 0)
      * @param int $limit Limit to n responses (defaults to 20)
@@ -32,6 +34,7 @@ class Bibs extends BaseRoutes
      * Search the Sierra 'AWS' index for the text given
      *
      * @see https://techdocs.iii.com/sierraapi/Content/zAppendix/keywordSearchIndexes.htm
+     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Find_bib_information_using_AWS_search_by_author_and_or_title_get_4
      *
      * data is structured like this:
      *
@@ -102,6 +105,8 @@ class Bibs extends BaseRoutes
 
     /**
      * Get a Bib record by ID
+     *
+     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Get_a_bib_by_record_ID_get_5
      *
      * @param int $id The bib id to retrieve
      * @param array $fields Optional fields to retrieve
