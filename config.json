@@ -1,0 +1,8 @@
+{
+	"modelPackage": "Models",
+	"invokerPackage": "Sierra",
+	"packagePath": "sierra-api-php-client",
+	"srcBasePath": "/Sierra",
+	"composerVendorName": "iii",
+	"composerProjectName": "sierra-api"
+}
