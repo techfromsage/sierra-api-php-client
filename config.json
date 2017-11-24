@@ -3,6 +3,6 @@
 	"invokerPackage": "Sierra",
 	"packagePath": "sierra-api-php-client",
 	"srcBasePath": "/Sierra",
-	"composerVendorName": "iii",
-	"composerProjectName": "sierra-api"
+	"composerVendorName": "talis",
+	"composerProjectName": "sierra-api-php-client"
 }

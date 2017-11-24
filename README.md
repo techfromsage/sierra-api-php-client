@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/iii/sierra-api.git"
+      "url": "https://github.com/talis/sierra-api-php-client.git"
     }
   ],
   "require": {
-    "iii/sierra-api": "*@dev"
+    "talis/sierra-api-php-client": "*@dev"
   }
 }
 ```
