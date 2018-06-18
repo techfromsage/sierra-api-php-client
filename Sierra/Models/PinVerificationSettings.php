@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PinVerificationSettings Class Doc Comment
  *
  * @category Class
  * @description the settings for PIN verification
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,9 +55,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'minimum_chars' => 'int',
-        'maximum_chars' => 'int',
-        'num_only' => 'bool',
+        'minimumChars' => 'int',
+        'maximumChars' => 'int',
+        'numOnly' => 'bool',
         'mixed' => 'bool'
     ];
 
@@ -67,9 +67,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'minimum_chars' => 'int32',
-        'maximum_chars' => 'int32',
-        'num_only' => null,
+        'minimumChars' => 'int32',
+        'maximumChars' => 'int32',
+        'numOnly' => null,
         'mixed' => null
     ];
 
@@ -100,9 +100,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'minimum_chars' => 'minimumChars',
-        'maximum_chars' => 'maximumChars',
-        'num_only' => 'numOnly',
+        'minimumChars' => 'minimumChars',
+        'maximumChars' => 'maximumChars',
+        'numOnly' => 'numOnly',
         'mixed' => 'mixed'
     ];
 
@@ -112,9 +112,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'minimum_chars' => 'setMinimumChars',
-        'maximum_chars' => 'setMaximumChars',
-        'num_only' => 'setNumOnly',
+        'minimumChars' => 'setMinimumChars',
+        'maximumChars' => 'setMaximumChars',
+        'numOnly' => 'setNumOnly',
         'mixed' => 'setMixed'
     ];
 
@@ -124,9 +124,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'minimum_chars' => 'getMinimumChars',
-        'maximum_chars' => 'getMaximumChars',
-        'num_only' => 'getNumOnly',
+        'minimumChars' => 'getMinimumChars',
+        'maximumChars' => 'getMaximumChars',
+        'numOnly' => 'getNumOnly',
         'mixed' => 'getMixed'
     ];
 
@@ -190,9 +190,9 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['minimum_chars'] = isset($data['minimum_chars']) ? $data['minimum_chars'] : null;
-        $this->container['maximum_chars'] = isset($data['maximum_chars']) ? $data['maximum_chars'] : null;
-        $this->container['num_only'] = isset($data['num_only']) ? $data['num_only'] : null;
+        $this->container['minimumChars'] = isset($data['minimumChars']) ? $data['minimumChars'] : null;
+        $this->container['maximumChars'] = isset($data['maximumChars']) ? $data['maximumChars'] : null;
+        $this->container['numOnly'] = isset($data['numOnly']) ? $data['numOnly'] : null;
         $this->container['mixed'] = isset($data['mixed']) ? $data['mixed'] : null;
     }
 
@@ -205,14 +205,14 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['minimum_chars'] === null) {
-            $invalidProperties[] = "'minimum_chars' can't be null";
+        if ($this->container['minimumChars'] === null) {
+            $invalidProperties[] = "'minimumChars' can't be null";
         }
-        if ($this->container['maximum_chars'] === null) {
-            $invalidProperties[] = "'maximum_chars' can't be null";
+        if ($this->container['maximumChars'] === null) {
+            $invalidProperties[] = "'maximumChars' can't be null";
         }
-        if ($this->container['num_only'] === null) {
-            $invalidProperties[] = "'num_only' can't be null";
+        if ($this->container['numOnly'] === null) {
+            $invalidProperties[] = "'numOnly' can't be null";
         }
         if ($this->container['mixed'] === null) {
             $invalidProperties[] = "'mixed' can't be null";
@@ -229,13 +229,13 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['minimum_chars'] === null) {
+        if ($this->container['minimumChars'] === null) {
             return false;
         }
-        if ($this->container['maximum_chars'] === null) {
+        if ($this->container['maximumChars'] === null) {
             return false;
         }
-        if ($this->container['num_only'] === null) {
+        if ($this->container['numOnly'] === null) {
             return false;
         }
         if ($this->container['mixed'] === null) {
@@ -246,73 +246,73 @@ class PinVerificationSettings implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets minimum_chars
+     * Gets minimumChars
      *
      * @return int
      */
     public function getMinimumChars()
     {
-        return $this->container['minimum_chars'];
+        return $this->container['minimumChars'];
     }
 
     /**
-     * Sets minimum_chars
+     * Sets minimumChars
      *
-     * @param int $minimum_chars the minimum number of characters allowed for a PIN
+     * @param int $minimumChars the minimum number of characters allowed for a PIN
      *
      * @return $this
      */
-    public function setMinimumChars($minimum_chars)
+    public function setMinimumChars($minimumChars)
     {
-        $this->container['minimum_chars'] = $minimum_chars;
+        $this->container['minimumChars'] = $minimumChars;
 
         return $this;
     }
 
     /**
-     * Gets maximum_chars
+     * Gets maximumChars
      *
      * @return int
      */
     public function getMaximumChars()
     {
-        return $this->container['maximum_chars'];
+        return $this->container['maximumChars'];
     }
 
     /**
-     * Sets maximum_chars
+     * Sets maximumChars
      *
-     * @param int $maximum_chars the maximum number of characters allowed for a PIN
+     * @param int $maximumChars the maximum number of characters allowed for a PIN
      *
      * @return $this
      */
-    public function setMaximumChars($maximum_chars)
+    public function setMaximumChars($maximumChars)
     {
-        $this->container['maximum_chars'] = $maximum_chars;
+        $this->container['maximumChars'] = $maximumChars;
 
         return $this;
     }
 
     /**
-     * Gets num_only
+     * Gets numOnly
      *
      * @return bool
      */
     public function getNumOnly()
     {
-        return $this->container['num_only'];
+        return $this->container['numOnly'];
     }
 
     /**
-     * Sets num_only
+     * Sets numOnly
      *
-     * @param bool $num_only whether the PIN must contain only numbers
+     * @param bool $numOnly whether the PIN must contain only numbers
      *
      * @return $this
      */
-    public function setNumOnly($num_only)
+    public function setNumOnly($numOnly)
     {
-        $this->container['num_only'] = $num_only;
+        $this->container['numOnly'] = $numOnly;
 
         return $this;
     }

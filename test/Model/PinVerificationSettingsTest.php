@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * PinVerificationSettingsTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the settings for PIN verification
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,21 +75,21 @@ class PinVerificationSettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "minimum_chars"
+     * Test attribute "minimumChars"
      */
     public function testPropertyMinimumChars()
     {
     }
 
     /**
-     * Test attribute "maximum_chars"
+     * Test attribute "maximumChars"
      */
     public function testPropertyMaximumChars()
     {
     }
 
     /**
-     * Test attribute "num_only"
+     * Test attribute "numOnly"
      */
     public function testPropertyNumOnly()
     {

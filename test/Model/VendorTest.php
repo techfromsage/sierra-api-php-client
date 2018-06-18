@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * VendorTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an invoice vendor record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,21 +75,21 @@ class VendorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "vendor_code"
+     * Test attribute "vendorCode"
      */
     public function testPropertyVendorCode()
     {
     }
 
     /**
-     * Test attribute "voucher_num"
+     * Test attribute "voucherNum"
      */
     public function testPropertyVoucherNum()
     {
     }
 
     /**
-     * Test attribute "voucher_total"
+     * Test attribute "voucherTotal"
      */
     public function testPropertyVoucherTotal()
     {

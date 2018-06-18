@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * ChargeType Class Doc Comment
  *
  * @category Class
  * @description the charge type of the fine
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class ChargeType implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\Sierra\Models\Char',
+        'code' => '\III\Sierra\Models\Char',
         'display' => 'string'
     ];
 
@@ -224,7 +224,7 @@ class ChargeType implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getCode()
     {
@@ -234,7 +234,7 @@ class ChargeType implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param \Sierra\Models\Char $code a code representing the type of charge assessed
+     * @param \III\Sierra\Models\Char $code a code representing the type of charge assessed
      *
      * @return $this
      */

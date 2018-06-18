@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Bib Class Doc Comment
  *
  * @category Class
  * @description a bibliographic record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,26 +56,26 @@ class Bib implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'updated_date' => '\DateTime',
-        'created_date' => '\DateTime',
-        'deleted_date' => '\DateTime',
+        'updatedDate' => '\DateTime',
+        'createdDate' => '\DateTime',
+        'deletedDate' => '\DateTime',
         'deleted' => 'bool',
         'suppressed' => 'bool',
         'available' => 'bool',
-        'lang' => '\Sierra\Models\Language',
+        'lang' => '\III\Sierra\Models\Language',
         'title' => 'string',
         'author' => 'string',
-        'material_type' => '\Sierra\Models\MaterialType',
-        'bib_level' => '\Sierra\Models\BibLevel',
-        'publish_year' => 'int',
-        'catalog_date' => '\DateTime',
-        'country' => '\Sierra\Models\Country',
-        'orders' => '\Sierra\Models\OrderInfo[]',
-        'norm_title' => 'string',
-        'norm_author' => 'string',
-        'locations' => '\Sierra\Models\Location[]',
-        'fixed_fields' => '\Sierra\Models\map',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'materialType' => '\III\Sierra\Models\MaterialType',
+        'bibLevel' => '\III\Sierra\Models\BibLevel',
+        'publishYear' => 'int',
+        'catalogDate' => '\DateTime',
+        'country' => '\III\Sierra\Models\Country',
+        'orders' => '\III\Sierra\Models\OrderInfo[]',
+        'normTitle' => 'string',
+        'normAuthor' => 'string',
+        'locations' => '\III\Sierra\Models\Location[]',
+        'fixedFields' => '\III\Sierra\Models\map',
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -85,26 +85,26 @@ class Bib implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'updated_date' => 'date-time',
-        'created_date' => 'date-time',
-        'deleted_date' => 'date',
+        'updatedDate' => 'date-time',
+        'createdDate' => 'date-time',
+        'deletedDate' => 'date',
         'deleted' => null,
         'suppressed' => null,
         'available' => null,
         'lang' => null,
         'title' => null,
         'author' => null,
-        'material_type' => null,
-        'bib_level' => null,
-        'publish_year' => 'int32',
-        'catalog_date' => 'date',
+        'materialType' => null,
+        'bibLevel' => null,
+        'publishYear' => 'int32',
+        'catalogDate' => 'date',
         'country' => null,
         'orders' => null,
-        'norm_title' => null,
-        'norm_author' => null,
+        'normTitle' => null,
+        'normAuthor' => null,
         'locations' => null,
-        'fixed_fields' => null,
-        'var_fields' => null
+        'fixedFields' => null,
+        'varFields' => null
     ];
 
     /**
@@ -135,26 +135,26 @@ class Bib implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'updated_date' => 'updatedDate',
-        'created_date' => 'createdDate',
-        'deleted_date' => 'deletedDate',
+        'updatedDate' => 'updatedDate',
+        'createdDate' => 'createdDate',
+        'deletedDate' => 'deletedDate',
         'deleted' => 'deleted',
         'suppressed' => 'suppressed',
         'available' => 'available',
         'lang' => 'lang',
         'title' => 'title',
         'author' => 'author',
-        'material_type' => 'materialType',
-        'bib_level' => 'bibLevel',
-        'publish_year' => 'publishYear',
-        'catalog_date' => 'catalogDate',
+        'materialType' => 'materialType',
+        'bibLevel' => 'bibLevel',
+        'publishYear' => 'publishYear',
+        'catalogDate' => 'catalogDate',
         'country' => 'country',
         'orders' => 'orders',
-        'norm_title' => 'normTitle',
-        'norm_author' => 'normAuthor',
+        'normTitle' => 'normTitle',
+        'normAuthor' => 'normAuthor',
         'locations' => 'locations',
-        'fixed_fields' => 'fixedFields',
-        'var_fields' => 'varFields'
+        'fixedFields' => 'fixedFields',
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -164,26 +164,26 @@ class Bib implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'updated_date' => 'setUpdatedDate',
-        'created_date' => 'setCreatedDate',
-        'deleted_date' => 'setDeletedDate',
+        'updatedDate' => 'setUpdatedDate',
+        'createdDate' => 'setCreatedDate',
+        'deletedDate' => 'setDeletedDate',
         'deleted' => 'setDeleted',
         'suppressed' => 'setSuppressed',
         'available' => 'setAvailable',
         'lang' => 'setLang',
         'title' => 'setTitle',
         'author' => 'setAuthor',
-        'material_type' => 'setMaterialType',
-        'bib_level' => 'setBibLevel',
-        'publish_year' => 'setPublishYear',
-        'catalog_date' => 'setCatalogDate',
+        'materialType' => 'setMaterialType',
+        'bibLevel' => 'setBibLevel',
+        'publishYear' => 'setPublishYear',
+        'catalogDate' => 'setCatalogDate',
         'country' => 'setCountry',
         'orders' => 'setOrders',
-        'norm_title' => 'setNormTitle',
-        'norm_author' => 'setNormAuthor',
+        'normTitle' => 'setNormTitle',
+        'normAuthor' => 'setNormAuthor',
         'locations' => 'setLocations',
-        'fixed_fields' => 'setFixedFields',
-        'var_fields' => 'setVarFields'
+        'fixedFields' => 'setFixedFields',
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -193,26 +193,26 @@ class Bib implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'updated_date' => 'getUpdatedDate',
-        'created_date' => 'getCreatedDate',
-        'deleted_date' => 'getDeletedDate',
+        'updatedDate' => 'getUpdatedDate',
+        'createdDate' => 'getCreatedDate',
+        'deletedDate' => 'getDeletedDate',
         'deleted' => 'getDeleted',
         'suppressed' => 'getSuppressed',
         'available' => 'getAvailable',
         'lang' => 'getLang',
         'title' => 'getTitle',
         'author' => 'getAuthor',
-        'material_type' => 'getMaterialType',
-        'bib_level' => 'getBibLevel',
-        'publish_year' => 'getPublishYear',
-        'catalog_date' => 'getCatalogDate',
+        'materialType' => 'getMaterialType',
+        'bibLevel' => 'getBibLevel',
+        'publishYear' => 'getPublishYear',
+        'catalogDate' => 'getCatalogDate',
         'country' => 'getCountry',
         'orders' => 'getOrders',
-        'norm_title' => 'getNormTitle',
-        'norm_author' => 'getNormAuthor',
+        'normTitle' => 'getNormTitle',
+        'normAuthor' => 'getNormAuthor',
         'locations' => 'getLocations',
-        'fixed_fields' => 'getFixedFields',
-        'var_fields' => 'getVarFields'
+        'fixedFields' => 'getFixedFields',
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -276,26 +276,26 @@ class Bib implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['updated_date'] = isset($data['updated_date']) ? $data['updated_date'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['deleted_date'] = isset($data['deleted_date']) ? $data['deleted_date'] : null;
+        $this->container['updatedDate'] = isset($data['updatedDate']) ? $data['updatedDate'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['deletedDate'] = isset($data['deletedDate']) ? $data['deletedDate'] : null;
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['suppressed'] = isset($data['suppressed']) ? $data['suppressed'] : null;
         $this->container['available'] = isset($data['available']) ? $data['available'] : null;
         $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['author'] = isset($data['author']) ? $data['author'] : null;
-        $this->container['material_type'] = isset($data['material_type']) ? $data['material_type'] : null;
-        $this->container['bib_level'] = isset($data['bib_level']) ? $data['bib_level'] : null;
-        $this->container['publish_year'] = isset($data['publish_year']) ? $data['publish_year'] : null;
-        $this->container['catalog_date'] = isset($data['catalog_date']) ? $data['catalog_date'] : null;
+        $this->container['materialType'] = isset($data['materialType']) ? $data['materialType'] : null;
+        $this->container['bibLevel'] = isset($data['bibLevel']) ? $data['bibLevel'] : null;
+        $this->container['publishYear'] = isset($data['publishYear']) ? $data['publishYear'] : null;
+        $this->container['catalogDate'] = isset($data['catalogDate']) ? $data['catalogDate'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
-        $this->container['norm_title'] = isset($data['norm_title']) ? $data['norm_title'] : null;
-        $this->container['norm_author'] = isset($data['norm_author']) ? $data['norm_author'] : null;
+        $this->container['normTitle'] = isset($data['normTitle']) ? $data['normTitle'] : null;
+        $this->container['normAuthor'] = isset($data['normAuthor']) ? $data['normAuthor'] : null;
         $this->container['locations'] = isset($data['locations']) ? $data['locations'] : null;
-        $this->container['fixed_fields'] = isset($data['fixed_fields']) ? $data['fixed_fields'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['fixedFields'] = isset($data['fixedFields']) ? $data['fixedFields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -319,11 +319,11 @@ class Bib implements ModelInterface, ArrayAccess
         if ($this->container['locations'] === null) {
             $invalidProperties[] = "'locations' can't be null";
         }
-        if ($this->container['fixed_fields'] === null) {
-            $invalidProperties[] = "'fixed_fields' can't be null";
+        if ($this->container['fixedFields'] === null) {
+            $invalidProperties[] = "'fixedFields' can't be null";
         }
-        if ($this->container['var_fields'] === null) {
-            $invalidProperties[] = "'var_fields' can't be null";
+        if ($this->container['varFields'] === null) {
+            $invalidProperties[] = "'varFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -349,10 +349,10 @@ class Bib implements ModelInterface, ArrayAccess
         if ($this->container['locations'] === null) {
             return false;
         }
-        if ($this->container['fixed_fields'] === null) {
+        if ($this->container['fixedFields'] === null) {
             return false;
         }
-        if ($this->container['var_fields'] === null) {
+        if ($this->container['varFields'] === null) {
             return false;
         }
         return true;
@@ -384,73 +384,73 @@ class Bib implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets updated_date
+     * Gets updatedDate
      *
      * @return \DateTime
      */
     public function getUpdatedDate()
     {
-        return $this->container['updated_date'];
+        return $this->container['updatedDate'];
     }
 
     /**
-     * Sets updated_date
+     * Sets updatedDate
      *
-     * @param \DateTime $updated_date the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $updatedDate the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setUpdatedDate($updated_date)
+    public function setUpdatedDate($updatedDate)
     {
-        $this->container['updated_date'] = $updated_date;
+        $this->container['updatedDate'] = $updatedDate;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime $created_date the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $createdDate the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets deleted_date
+     * Gets deletedDate
      *
      * @return \DateTime
      */
     public function getDeletedDate()
     {
-        return $this->container['deleted_date'];
+        return $this->container['deletedDate'];
     }
 
     /**
-     * Sets deleted_date
+     * Sets deletedDate
      *
-     * @param \DateTime $deleted_date the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $deletedDate the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setDeletedDate($deleted_date)
+    public function setDeletedDate($deletedDate)
     {
-        $this->container['deleted_date'] = $deleted_date;
+        $this->container['deletedDate'] = $deletedDate;
 
         return $this;
     }
@@ -530,7 +530,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Gets lang
      *
-     * @return \Sierra\Models\Language
+     * @return \III\Sierra\Models\Language
      */
     public function getLang()
     {
@@ -540,7 +540,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Sets lang
      *
-     * @param \Sierra\Models\Language $lang the language of the material (display value)
+     * @param \III\Sierra\Models\Language $lang the language of the material (display value)
      *
      * @return $this
      */
@@ -600,97 +600,97 @@ class Bib implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets material_type
+     * Gets materialType
      *
-     * @return \Sierra\Models\MaterialType
+     * @return \III\Sierra\Models\MaterialType
      */
     public function getMaterialType()
     {
-        return $this->container['material_type'];
+        return $this->container['materialType'];
     }
 
     /**
-     * Sets material_type
+     * Sets materialType
      *
-     * @param \Sierra\Models\MaterialType $material_type the material type, such as book, serial, map, and so forth, based on MARC 21 Leader/06 values, or UNIMARC Label/06 values
+     * @param \III\Sierra\Models\MaterialType $materialType the material type, such as book, serial, map, and so forth, based on MARC 21 Leader/06 values, or UNIMARC Label/06 values
      *
      * @return $this
      */
-    public function setMaterialType($material_type)
+    public function setMaterialType($materialType)
     {
-        $this->container['material_type'] = $material_type;
+        $this->container['materialType'] = $materialType;
 
         return $this;
     }
 
     /**
-     * Gets bib_level
+     * Gets bibLevel
      *
-     * @return \Sierra\Models\BibLevel
+     * @return \III\Sierra\Models\BibLevel
      */
     public function getBibLevel()
     {
-        return $this->container['bib_level'];
+        return $this->container['bibLevel'];
     }
 
     /**
-     * Sets bib_level
+     * Sets bibLevel
      *
-     * @param \Sierra\Models\BibLevel $bib_level the bibliographic level, based on MARC 21 Leader/07 values or UNIMARC Label/07 values
+     * @param \III\Sierra\Models\BibLevel $bibLevel the bibliographic level, based on MARC 21 Leader/07 values or UNIMARC Label/07 values
      *
      * @return $this
      */
-    public function setBibLevel($bib_level)
+    public function setBibLevel($bibLevel)
     {
-        $this->container['bib_level'] = $bib_level;
+        $this->container['bibLevel'] = $bibLevel;
 
         return $this;
     }
 
     /**
-     * Gets publish_year
+     * Gets publishYear
      *
      * @return int
      */
     public function getPublishYear()
     {
-        return $this->container['publish_year'];
+        return $this->container['publishYear'];
     }
 
     /**
-     * Sets publish_year
+     * Sets publishYear
      *
-     * @param int $publish_year the year of publication
+     * @param int $publishYear the year of publication
      *
      * @return $this
      */
-    public function setPublishYear($publish_year)
+    public function setPublishYear($publishYear)
     {
-        $this->container['publish_year'] = $publish_year;
+        $this->container['publishYear'] = $publishYear;
 
         return $this;
     }
 
     /**
-     * Gets catalog_date
+     * Gets catalogDate
      *
      * @return \DateTime
      */
     public function getCatalogDate()
     {
-        return $this->container['catalog_date'];
+        return $this->container['catalogDate'];
     }
 
     /**
-     * Sets catalog_date
+     * Sets catalogDate
      *
-     * @param \DateTime $catalog_date the date the record was added to the catalog, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $catalogDate the date the record was added to the catalog, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setCatalogDate($catalog_date)
+    public function setCatalogDate($catalogDate)
     {
-        $this->container['catalog_date'] = $catalog_date;
+        $this->container['catalogDate'] = $catalogDate;
 
         return $this;
     }
@@ -698,7 +698,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \Sierra\Models\Country
+     * @return \III\Sierra\Models\Country
      */
     public function getCountry()
     {
@@ -708,7 +708,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \Sierra\Models\Country $country the country of publication (display value)
+     * @param \III\Sierra\Models\Country $country the country of publication (display value)
      *
      * @return $this
      */
@@ -722,7 +722,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \Sierra\Models\OrderInfo[]
+     * @return \III\Sierra\Models\OrderInfo[]
      */
     public function getOrders()
     {
@@ -732,7 +732,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \Sierra\Models\OrderInfo[] $orders the order information for the bib record
+     * @param \III\Sierra\Models\OrderInfo[] $orders the order information for the bib record
      *
      * @return $this
      */
@@ -744,49 +744,49 @@ class Bib implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets norm_title
+     * Gets normTitle
      *
      * @return string
      */
     public function getNormTitle()
     {
-        return $this->container['norm_title'];
+        return $this->container['normTitle'];
     }
 
     /**
-     * Sets norm_title
+     * Sets normTitle
      *
-     * @param string $norm_title the normalized form of the most authoritative available version of the title
+     * @param string $normTitle the normalized form of the most authoritative available version of the title
      *
      * @return $this
      */
-    public function setNormTitle($norm_title)
+    public function setNormTitle($normTitle)
     {
-        $this->container['norm_title'] = $norm_title;
+        $this->container['normTitle'] = $normTitle;
 
         return $this;
     }
 
     /**
-     * Gets norm_author
+     * Gets normAuthor
      *
      * @return string
      */
     public function getNormAuthor()
     {
-        return $this->container['norm_author'];
+        return $this->container['normAuthor'];
     }
 
     /**
-     * Sets norm_author
+     * Sets normAuthor
      *
-     * @param string $norm_author the normalized form of the most authoritative available representation of the author's name
+     * @param string $normAuthor the normalized form of the most authoritative available representation of the author's name
      *
      * @return $this
      */
-    public function setNormAuthor($norm_author)
+    public function setNormAuthor($normAuthor)
     {
-        $this->container['norm_author'] = $norm_author;
+        $this->container['normAuthor'] = $normAuthor;
 
         return $this;
     }
@@ -794,7 +794,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Gets locations
      *
-     * @return \Sierra\Models\Location[]
+     * @return \III\Sierra\Models\Location[]
      */
     public function getLocations()
     {
@@ -804,7 +804,7 @@ class Bib implements ModelInterface, ArrayAccess
     /**
      * Sets locations
      *
-     * @param \Sierra\Models\Location[] $locations the locations associated with the bib
+     * @param \III\Sierra\Models\Location[] $locations the locations associated with the bib
      *
      * @return $this
      */
@@ -816,49 +816,49 @@ class Bib implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets fixed_fields
+     * Gets fixedFields
      *
-     * @return \Sierra\Models\map
+     * @return \III\Sierra\Models\map
      */
     public function getFixedFields()
     {
-        return $this->container['fixed_fields'];
+        return $this->container['fixedFields'];
     }
 
     /**
-     * Sets fixed_fields
+     * Sets fixedFields
      *
-     * @param \Sierra\Models\map $fixed_fields the fixed-length fields from the bib record
+     * @param \III\Sierra\Models\map $fixedFields the fixed-length fields from the bib record
      *
      * @return $this
      */
-    public function setFixedFields($fixed_fields)
+    public function setFixedFields($fixedFields)
     {
-        $this->container['fixed_fields'] = $fixed_fields;
+        $this->container['fixedFields'] = $fixedFields;
 
         return $this;
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the bib record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the bib record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

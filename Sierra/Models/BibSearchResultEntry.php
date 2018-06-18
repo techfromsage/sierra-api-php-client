@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * BibSearchResultEntry Class Doc Comment
  *
  * @category Class
  * @description a bib search result entry
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class BibSearchResultEntry implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'relevance' => 'string',
-        'bib' => '\Sierra\Models\Bib'
+        'bib' => '\III\Sierra\Models\Bib'
     ];
 
     /**
@@ -248,7 +248,7 @@ class BibSearchResultEntry implements ModelInterface, ArrayAccess
     /**
      * Gets bib
      *
-     * @return \Sierra\Models\Bib
+     * @return \III\Sierra\Models\Bib
      */
     public function getBib()
     {
@@ -258,7 +258,7 @@ class BibSearchResultEntry implements ModelInterface, ArrayAccess
     /**
      * Sets bib
      *
-     * @param \Sierra\Models\Bib $bib bib data
+     * @param \III\Sierra\Models\Bib $bib bib data
      *
      * @return $this
      */

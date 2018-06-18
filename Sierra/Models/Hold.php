@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Hold Class Doc Comment
  *
  * @category Class
  * @description the data describing a hold
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,15 +60,15 @@ class Hold implements ModelInterface, ArrayAccess
         'patron' => 'string',
         'frozen' => 'bool',
         'placed' => '\DateTime',
-        'not_needed_after_date' => '\DateTime',
-        'not_wanted_before_date' => '\DateTime',
-        'pickup_by_date' => '\DateTime',
-        'location' => '\Sierra\Models\Location',
-        'pickup_location' => '\Sierra\Models\Location',
-        'status' => '\Sierra\Models\HoldStatus',
-        'record_type' => 'string',
+        'notNeededAfterDate' => '\DateTime',
+        'notWantedBeforeDate' => '\DateTime',
+        'pickupByDate' => '\DateTime',
+        'location' => '\III\Sierra\Models\Location',
+        'pickupLocation' => '\III\Sierra\Models\Location',
+        'status' => '\III\Sierra\Models\HoldStatus',
+        'recordType' => 'string',
         'priority' => 'int',
-        'priority_queue_length' => 'int',
+        'priorityQueueLength' => 'int',
         'note' => 'string'
     ];
 
@@ -83,15 +83,15 @@ class Hold implements ModelInterface, ArrayAccess
         'patron' => null,
         'frozen' => null,
         'placed' => 'date',
-        'not_needed_after_date' => 'date',
-        'not_wanted_before_date' => 'date',
-        'pickup_by_date' => 'date-time',
+        'notNeededAfterDate' => 'date',
+        'notWantedBeforeDate' => 'date',
+        'pickupByDate' => 'date-time',
         'location' => null,
-        'pickup_location' => null,
+        'pickupLocation' => null,
         'status' => null,
-        'record_type' => null,
+        'recordType' => null,
         'priority' => 'int32',
-        'priority_queue_length' => 'int32',
+        'priorityQueueLength' => 'int32',
         'note' => null
     ];
 
@@ -127,15 +127,15 @@ class Hold implements ModelInterface, ArrayAccess
         'patron' => 'patron',
         'frozen' => 'frozen',
         'placed' => 'placed',
-        'not_needed_after_date' => 'notNeededAfterDate',
-        'not_wanted_before_date' => 'notWantedBeforeDate',
-        'pickup_by_date' => 'pickupByDate',
+        'notNeededAfterDate' => 'notNeededAfterDate',
+        'notWantedBeforeDate' => 'notWantedBeforeDate',
+        'pickupByDate' => 'pickupByDate',
         'location' => 'location',
-        'pickup_location' => 'pickupLocation',
+        'pickupLocation' => 'pickupLocation',
         'status' => 'status',
-        'record_type' => 'recordType',
+        'recordType' => 'recordType',
         'priority' => 'priority',
-        'priority_queue_length' => 'priorityQueueLength',
+        'priorityQueueLength' => 'priorityQueueLength',
         'note' => 'note'
     ];
 
@@ -150,15 +150,15 @@ class Hold implements ModelInterface, ArrayAccess
         'patron' => 'setPatron',
         'frozen' => 'setFrozen',
         'placed' => 'setPlaced',
-        'not_needed_after_date' => 'setNotNeededAfterDate',
-        'not_wanted_before_date' => 'setNotWantedBeforeDate',
-        'pickup_by_date' => 'setPickupByDate',
+        'notNeededAfterDate' => 'setNotNeededAfterDate',
+        'notWantedBeforeDate' => 'setNotWantedBeforeDate',
+        'pickupByDate' => 'setPickupByDate',
         'location' => 'setLocation',
-        'pickup_location' => 'setPickupLocation',
+        'pickupLocation' => 'setPickupLocation',
         'status' => 'setStatus',
-        'record_type' => 'setRecordType',
+        'recordType' => 'setRecordType',
         'priority' => 'setPriority',
-        'priority_queue_length' => 'setPriorityQueueLength',
+        'priorityQueueLength' => 'setPriorityQueueLength',
         'note' => 'setNote'
     ];
 
@@ -173,15 +173,15 @@ class Hold implements ModelInterface, ArrayAccess
         'patron' => 'getPatron',
         'frozen' => 'getFrozen',
         'placed' => 'getPlaced',
-        'not_needed_after_date' => 'getNotNeededAfterDate',
-        'not_wanted_before_date' => 'getNotWantedBeforeDate',
-        'pickup_by_date' => 'getPickupByDate',
+        'notNeededAfterDate' => 'getNotNeededAfterDate',
+        'notWantedBeforeDate' => 'getNotWantedBeforeDate',
+        'pickupByDate' => 'getPickupByDate',
         'location' => 'getLocation',
-        'pickup_location' => 'getPickupLocation',
+        'pickupLocation' => 'getPickupLocation',
         'status' => 'getStatus',
-        'record_type' => 'getRecordType',
+        'recordType' => 'getRecordType',
         'priority' => 'getPriority',
-        'priority_queue_length' => 'getPriorityQueueLength',
+        'priorityQueueLength' => 'getPriorityQueueLength',
         'note' => 'getNote'
     ];
 
@@ -250,15 +250,15 @@ class Hold implements ModelInterface, ArrayAccess
         $this->container['patron'] = isset($data['patron']) ? $data['patron'] : null;
         $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
         $this->container['placed'] = isset($data['placed']) ? $data['placed'] : null;
-        $this->container['not_needed_after_date'] = isset($data['not_needed_after_date']) ? $data['not_needed_after_date'] : null;
-        $this->container['not_wanted_before_date'] = isset($data['not_wanted_before_date']) ? $data['not_wanted_before_date'] : null;
-        $this->container['pickup_by_date'] = isset($data['pickup_by_date']) ? $data['pickup_by_date'] : null;
+        $this->container['notNeededAfterDate'] = isset($data['notNeededAfterDate']) ? $data['notNeededAfterDate'] : null;
+        $this->container['notWantedBeforeDate'] = isset($data['notWantedBeforeDate']) ? $data['notWantedBeforeDate'] : null;
+        $this->container['pickupByDate'] = isset($data['pickupByDate']) ? $data['pickupByDate'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
-        $this->container['pickup_location'] = isset($data['pickup_location']) ? $data['pickup_location'] : null;
+        $this->container['pickupLocation'] = isset($data['pickupLocation']) ? $data['pickupLocation'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['record_type'] = isset($data['record_type']) ? $data['record_type'] : null;
+        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['priority_queue_length'] = isset($data['priority_queue_length']) ? $data['priority_queue_length'] : null;
+        $this->container['priorityQueueLength'] = isset($data['priorityQueueLength']) ? $data['priorityQueueLength'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
     }
 
@@ -420,73 +420,73 @@ class Hold implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets not_needed_after_date
+     * Gets notNeededAfterDate
      *
      * @return \DateTime
      */
     public function getNotNeededAfterDate()
     {
-        return $this->container['not_needed_after_date'];
+        return $this->container['notNeededAfterDate'];
     }
 
     /**
-     * Sets not_needed_after_date
+     * Sets notNeededAfterDate
      *
-     * @param \DateTime $not_needed_after_date the date the hold expires, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $notNeededAfterDate the date the hold expires, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setNotNeededAfterDate($not_needed_after_date)
+    public function setNotNeededAfterDate($notNeededAfterDate)
     {
-        $this->container['not_needed_after_date'] = $not_needed_after_date;
+        $this->container['notNeededAfterDate'] = $notNeededAfterDate;
 
         return $this;
     }
 
     /**
-     * Gets not_wanted_before_date
+     * Gets notWantedBeforeDate
      *
      * @return \DateTime
      */
     public function getNotWantedBeforeDate()
     {
-        return $this->container['not_wanted_before_date'];
+        return $this->container['notWantedBeforeDate'];
     }
 
     /**
-     * Sets not_wanted_before_date
+     * Sets notWantedBeforeDate
      *
-     * @param \DateTime $not_wanted_before_date the date before which the system should not fill the hold, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $notWantedBeforeDate the date before which the system should not fill the hold, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setNotWantedBeforeDate($not_wanted_before_date)
+    public function setNotWantedBeforeDate($notWantedBeforeDate)
     {
-        $this->container['not_wanted_before_date'] = $not_wanted_before_date;
+        $this->container['notWantedBeforeDate'] = $notWantedBeforeDate;
 
         return $this;
     }
 
     /**
-     * Gets pickup_by_date
+     * Gets pickupByDate
      *
      * @return \DateTime
      */
     public function getPickupByDate()
     {
-        return $this->container['pickup_by_date'];
+        return $this->container['pickupByDate'];
     }
 
     /**
-     * Sets pickup_by_date
+     * Sets pickupByDate
      *
-     * @param \DateTime $pickup_by_date the date that the hold is picked up by (in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ))
+     * @param \DateTime $pickupByDate the date that the hold is picked up by (in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ))
      *
      * @return $this
      */
-    public function setPickupByDate($pickup_by_date)
+    public function setPickupByDate($pickupByDate)
     {
-        $this->container['pickup_by_date'] = $pickup_by_date;
+        $this->container['pickupByDate'] = $pickupByDate;
 
         return $this;
     }
@@ -494,7 +494,7 @@ class Hold implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getLocation()
     {
@@ -504,7 +504,7 @@ class Hold implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \Sierra\Models\Location $location the code of the location from which to fill the hold, if the hold is set for \"Limit to Location\" (does not apply to item-level holds)
+     * @param \III\Sierra\Models\Location $location the code of the location from which to fill the hold, if the hold is set for \"Limit to Location\" (does not apply to item-level holds)
      *
      * @return $this
      */
@@ -516,25 +516,25 @@ class Hold implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets pickup_location
+     * Gets pickupLocation
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getPickupLocation()
     {
-        return $this->container['pickup_location'];
+        return $this->container['pickupLocation'];
     }
 
     /**
-     * Sets pickup_location
+     * Sets pickupLocation
      *
-     * @param \Sierra\Models\Location $pickup_location the location code of the hold's pickup location
+     * @param \III\Sierra\Models\Location $pickupLocation the location code of the hold's pickup location
      *
      * @return $this
      */
-    public function setPickupLocation($pickup_location)
+    public function setPickupLocation($pickupLocation)
     {
-        $this->container['pickup_location'] = $pickup_location;
+        $this->container['pickupLocation'] = $pickupLocation;
 
         return $this;
     }
@@ -542,7 +542,7 @@ class Hold implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Sierra\Models\HoldStatus
+     * @return \III\Sierra\Models\HoldStatus
      */
     public function getStatus()
     {
@@ -552,7 +552,7 @@ class Hold implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Sierra\Models\HoldStatus $status the hold status code and description
+     * @param \III\Sierra\Models\HoldStatus $status the hold status code and description
      *
      * @return $this
      */
@@ -564,25 +564,25 @@ class Hold implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets record_type
+     * Gets recordType
      *
      * @return string
      */
     public function getRecordType()
     {
-        return $this->container['record_type'];
+        return $this->container['recordType'];
     }
 
     /**
-     * Sets record_type
+     * Sets recordType
      *
-     * @param string $record_type a record type code, i.e., bib (b), item (i), or volume (j)
+     * @param string $recordType a record type code, i.e., bib (b), item (i), or volume (j)
      *
      * @return $this
      */
-    public function setRecordType($record_type)
+    public function setRecordType($recordType)
     {
-        $this->container['record_type'] = $record_type;
+        $this->container['recordType'] = $recordType;
 
         return $this;
     }
@@ -612,25 +612,25 @@ class Hold implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets priority_queue_length
+     * Gets priorityQueueLength
      *
      * @return int
      */
     public function getPriorityQueueLength()
     {
-        return $this->container['priority_queue_length'];
+        return $this->container['priorityQueueLength'];
     }
 
     /**
-     * Sets priority_queue_length
+     * Sets priorityQueueLength
      *
-     * @param int $priority_queue_length the length of the hold queue
+     * @param int $priorityQueueLength the length of the hold queue
      *
      * @return $this
      */
-    public function setPriorityQueueLength($priority_queue_length)
+    public function setPriorityQueueLength($priorityQueueLength)
     {
-        $this->container['priority_queue_length'] = $priority_queue_length;
+        $this->container['priorityQueueLength'] = $priorityQueueLength;
 
         return $this;
     }

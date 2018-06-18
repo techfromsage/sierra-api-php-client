@@ -1,4 +1,4 @@
-# Sierra\V5infoApi
+# III\Sierra\V5infoApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getTokenInformation**
-> \Sierra\Models\TokenInfo getTokenInformation()
+> \III\Sierra\Models\TokenInfo getTokenInformation()
 
 Get token information
 
@@ -19,7 +19,7 @@ Get token information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5infoApi(
+$apiInstance = new III\Sierra\Api\V5infoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Sierra\Models\TokenInfo**](../Model/TokenInfo.md)
+[**\III\Sierra\Models\TokenInfo**](../Model/TokenInfo.md)
 
 ### Authorization
 

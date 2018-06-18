@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Item Class Doc Comment
  *
  * @category Class
  * @description an item record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,18 +56,18 @@ class Item implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'updated_date' => '\DateTime',
-        'created_date' => '\DateTime',
-        'deleted_date' => '\DateTime',
+        'updatedDate' => '\DateTime',
+        'createdDate' => '\DateTime',
+        'deletedDate' => '\DateTime',
         'deleted' => 'bool',
-        'bib_ids' => 'string[]',
-        'location' => '\Sierra\Models\Location',
-        'status' => '\Sierra\Models\ItemStatus',
+        'bibIds' => 'string[]',
+        'location' => '\III\Sierra\Models\Location',
+        'status' => '\III\Sierra\Models\ItemStatus',
         'barcode' => 'string',
-        'call_number' => 'string',
-        'item_type' => 'string',
-        'fixed_fields' => '\Sierra\Models\map',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'callNumber' => 'string',
+        'itemType' => 'string',
+        'fixedFields' => '\III\Sierra\Models\map',
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -77,18 +77,18 @@ class Item implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'updated_date' => 'date-time',
-        'created_date' => 'date-time',
-        'deleted_date' => 'date',
+        'updatedDate' => 'date-time',
+        'createdDate' => 'date-time',
+        'deletedDate' => 'date',
         'deleted' => null,
-        'bib_ids' => null,
+        'bibIds' => null,
         'location' => null,
         'status' => null,
         'barcode' => null,
-        'call_number' => null,
-        'item_type' => null,
-        'fixed_fields' => null,
-        'var_fields' => null
+        'callNumber' => null,
+        'itemType' => null,
+        'fixedFields' => null,
+        'varFields' => null
     ];
 
     /**
@@ -119,18 +119,18 @@ class Item implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'updated_date' => 'updatedDate',
-        'created_date' => 'createdDate',
-        'deleted_date' => 'deletedDate',
+        'updatedDate' => 'updatedDate',
+        'createdDate' => 'createdDate',
+        'deletedDate' => 'deletedDate',
         'deleted' => 'deleted',
-        'bib_ids' => 'bibIds',
+        'bibIds' => 'bibIds',
         'location' => 'location',
         'status' => 'status',
         'barcode' => 'barcode',
-        'call_number' => 'callNumber',
-        'item_type' => 'itemType',
-        'fixed_fields' => 'fixedFields',
-        'var_fields' => 'varFields'
+        'callNumber' => 'callNumber',
+        'itemType' => 'itemType',
+        'fixedFields' => 'fixedFields',
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -140,18 +140,18 @@ class Item implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'updated_date' => 'setUpdatedDate',
-        'created_date' => 'setCreatedDate',
-        'deleted_date' => 'setDeletedDate',
+        'updatedDate' => 'setUpdatedDate',
+        'createdDate' => 'setCreatedDate',
+        'deletedDate' => 'setDeletedDate',
         'deleted' => 'setDeleted',
-        'bib_ids' => 'setBibIds',
+        'bibIds' => 'setBibIds',
         'location' => 'setLocation',
         'status' => 'setStatus',
         'barcode' => 'setBarcode',
-        'call_number' => 'setCallNumber',
-        'item_type' => 'setItemType',
-        'fixed_fields' => 'setFixedFields',
-        'var_fields' => 'setVarFields'
+        'callNumber' => 'setCallNumber',
+        'itemType' => 'setItemType',
+        'fixedFields' => 'setFixedFields',
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -161,18 +161,18 @@ class Item implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'updated_date' => 'getUpdatedDate',
-        'created_date' => 'getCreatedDate',
-        'deleted_date' => 'getDeletedDate',
+        'updatedDate' => 'getUpdatedDate',
+        'createdDate' => 'getCreatedDate',
+        'deletedDate' => 'getDeletedDate',
         'deleted' => 'getDeleted',
-        'bib_ids' => 'getBibIds',
+        'bibIds' => 'getBibIds',
         'location' => 'getLocation',
         'status' => 'getStatus',
         'barcode' => 'getBarcode',
-        'call_number' => 'getCallNumber',
-        'item_type' => 'getItemType',
-        'fixed_fields' => 'getFixedFields',
-        'var_fields' => 'getVarFields'
+        'callNumber' => 'getCallNumber',
+        'itemType' => 'getItemType',
+        'fixedFields' => 'getFixedFields',
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -236,18 +236,18 @@ class Item implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['updated_date'] = isset($data['updated_date']) ? $data['updated_date'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['deleted_date'] = isset($data['deleted_date']) ? $data['deleted_date'] : null;
+        $this->container['updatedDate'] = isset($data['updatedDate']) ? $data['updatedDate'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['deletedDate'] = isset($data['deletedDate']) ? $data['deletedDate'] : null;
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
-        $this->container['bib_ids'] = isset($data['bib_ids']) ? $data['bib_ids'] : null;
+        $this->container['bibIds'] = isset($data['bibIds']) ? $data['bibIds'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
-        $this->container['call_number'] = isset($data['call_number']) ? $data['call_number'] : null;
-        $this->container['item_type'] = isset($data['item_type']) ? $data['item_type'] : null;
-        $this->container['fixed_fields'] = isset($data['fixed_fields']) ? $data['fixed_fields'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['callNumber'] = isset($data['callNumber']) ? $data['callNumber'] : null;
+        $this->container['itemType'] = isset($data['itemType']) ? $data['itemType'] : null;
+        $this->container['fixedFields'] = isset($data['fixedFields']) ? $data['fixedFields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -265,14 +265,14 @@ class Item implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             $invalidProperties[] = "'deleted' can't be null";
         }
-        if ($this->container['bib_ids'] === null) {
-            $invalidProperties[] = "'bib_ids' can't be null";
+        if ($this->container['bibIds'] === null) {
+            $invalidProperties[] = "'bibIds' can't be null";
         }
-        if ($this->container['fixed_fields'] === null) {
-            $invalidProperties[] = "'fixed_fields' can't be null";
+        if ($this->container['fixedFields'] === null) {
+            $invalidProperties[] = "'fixedFields' can't be null";
         }
-        if ($this->container['var_fields'] === null) {
-            $invalidProperties[] = "'var_fields' can't be null";
+        if ($this->container['varFields'] === null) {
+            $invalidProperties[] = "'varFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -292,13 +292,13 @@ class Item implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             return false;
         }
-        if ($this->container['bib_ids'] === null) {
+        if ($this->container['bibIds'] === null) {
             return false;
         }
-        if ($this->container['fixed_fields'] === null) {
+        if ($this->container['fixedFields'] === null) {
             return false;
         }
-        if ($this->container['var_fields'] === null) {
+        if ($this->container['varFields'] === null) {
             return false;
         }
         return true;
@@ -330,73 +330,73 @@ class Item implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets updated_date
+     * Gets updatedDate
      *
      * @return \DateTime
      */
     public function getUpdatedDate()
     {
-        return $this->container['updated_date'];
+        return $this->container['updatedDate'];
     }
 
     /**
-     * Sets updated_date
+     * Sets updatedDate
      *
-     * @param \DateTime $updated_date the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $updatedDate the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setUpdatedDate($updated_date)
+    public function setUpdatedDate($updatedDate)
     {
-        $this->container['updated_date'] = $updated_date;
+        $this->container['updatedDate'] = $updatedDate;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime $created_date the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $createdDate the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets deleted_date
+     * Gets deletedDate
      *
      * @return \DateTime
      */
     public function getDeletedDate()
     {
-        return $this->container['deleted_date'];
+        return $this->container['deletedDate'];
     }
 
     /**
-     * Sets deleted_date
+     * Sets deletedDate
      *
-     * @param \DateTime $deleted_date the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $deletedDate the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setDeletedDate($deleted_date)
+    public function setDeletedDate($deletedDate)
     {
-        $this->container['deleted_date'] = $deleted_date;
+        $this->container['deletedDate'] = $deletedDate;
 
         return $this;
     }
@@ -426,25 +426,25 @@ class Item implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets bib_ids
+     * Gets bibIds
      *
      * @return string[]
      */
     public function getBibIds()
     {
-        return $this->container['bib_ids'];
+        return $this->container['bibIds'];
     }
 
     /**
-     * Sets bib_ids
+     * Sets bibIds
      *
-     * @param string[] $bib_ids the IDs of the bibliographic records to which this item is linked
+     * @param string[] $bibIds the IDs of the bibliographic records to which this item is linked
      *
      * @return $this
      */
-    public function setBibIds($bib_ids)
+    public function setBibIds($bibIds)
     {
-        $this->container['bib_ids'] = $bib_ids;
+        $this->container['bibIds'] = $bibIds;
 
         return $this;
     }
@@ -452,7 +452,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getLocation()
     {
@@ -462,7 +462,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \Sierra\Models\Location $location the location of the item, with the location code and name
+     * @param \III\Sierra\Models\Location $location the location of the item, with the location code and name
      *
      * @return $this
      */
@@ -476,7 +476,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Sierra\Models\ItemStatus
+     * @return \III\Sierra\Models\ItemStatus
      */
     public function getStatus()
     {
@@ -486,7 +486,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Sierra\Models\ItemStatus $status the status of the item, with the code and display value, and a due date if the item is checked out
+     * @param \III\Sierra\Models\ItemStatus $status the status of the item, with the code and display value, and a due date if the item is checked out
      *
      * @return $this
      */
@@ -522,97 +522,97 @@ class Item implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets call_number
+     * Gets callNumber
      *
      * @return string
      */
     public function getCallNumber()
     {
-        return $this->container['call_number'];
+        return $this->container['callNumber'];
     }
 
     /**
-     * Sets call_number
+     * Sets callNumber
      *
-     * @param string $call_number the call number found in the item record
+     * @param string $callNumber the call number found in the item record
      *
      * @return $this
      */
-    public function setCallNumber($call_number)
+    public function setCallNumber($callNumber)
     {
-        $this->container['call_number'] = $call_number;
+        $this->container['callNumber'] = $callNumber;
 
         return $this;
     }
 
     /**
-     * Gets item_type
+     * Gets itemType
      *
      * @return string
      */
     public function getItemType()
     {
-        return $this->container['item_type'];
+        return $this->container['itemType'];
     }
 
     /**
-     * Sets item_type
+     * Sets itemType
      *
-     * @param string $item_type the type of the item record
+     * @param string $itemType the type of the item record
      *
      * @return $this
      */
-    public function setItemType($item_type)
+    public function setItemType($itemType)
     {
-        $this->container['item_type'] = $item_type;
+        $this->container['itemType'] = $itemType;
 
         return $this;
     }
 
     /**
-     * Gets fixed_fields
+     * Gets fixedFields
      *
-     * @return \Sierra\Models\map
+     * @return \III\Sierra\Models\map
      */
     public function getFixedFields()
     {
-        return $this->container['fixed_fields'];
+        return $this->container['fixedFields'];
     }
 
     /**
-     * Sets fixed_fields
+     * Sets fixedFields
      *
-     * @param \Sierra\Models\map $fixed_fields the fixed-length fields from the item record
+     * @param \III\Sierra\Models\map $fixedFields the fixed-length fields from the item record
      *
      * @return $this
      */
-    public function setFixedFields($fixed_fields)
+    public function setFixedFields($fixedFields)
     {
-        $this->container['fixed_fields'] = $fixed_fields;
+        $this->container['fixedFields'] = $fixedFields;
 
         return $this;
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the item record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the item record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

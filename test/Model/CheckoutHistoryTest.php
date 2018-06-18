@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * CheckoutHistoryTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the data describing the checkout history
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -96,7 +96,7 @@ class CheckoutHistoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "out_date"
+     * Test attribute "outDate"
      */
     public function testPropertyOutDate()
     {

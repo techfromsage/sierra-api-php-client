@@ -1,5 +1,6 @@
 {
     "name": "talis/sierra-api-php-client",
+    "version": "0.0.1",
     "description": "",
     "keywords": [
         "swagger",
@@ -28,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "Sierra\\" : "/Sierra/" }
+        "psr-4": { "III\\Sierra\\" : "/Sierra/" }
     },
     "autoload-dev": {
-        "psr-4": { "Sierra\\" : "test/" }
+        "psr-4": { "III\\Sierra\\" : "test/" }
     }
 }

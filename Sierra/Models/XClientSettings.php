@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * XClientSettings Class Doc Comment
  *
  * @category Class
  * @description the xclient settings
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,9 +57,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'host' => 'string',
         'port' => 'int',
-        'read_timeout_ms' => 'int',
-        'connection_timeout_ms' => 'int',
-        'pilot_educator' => 'int'
+        'readTimeoutMs' => 'int',
+        'connectionTimeoutMs' => 'int',
+        'pilotEducator' => 'int'
     ];
 
     /**
@@ -70,9 +70,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'host' => null,
         'port' => 'int32',
-        'read_timeout_ms' => 'int32',
-        'connection_timeout_ms' => 'int32',
-        'pilot_educator' => 'int32'
+        'readTimeoutMs' => 'int32',
+        'connectionTimeoutMs' => 'int32',
+        'pilotEducator' => 'int32'
     ];
 
     /**
@@ -104,9 +104,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'host' => 'host',
         'port' => 'port',
-        'read_timeout_ms' => 'readTimeoutMs',
-        'connection_timeout_ms' => 'connectionTimeoutMs',
-        'pilot_educator' => 'pilotEducator'
+        'readTimeoutMs' => 'readTimeoutMs',
+        'connectionTimeoutMs' => 'connectionTimeoutMs',
+        'pilotEducator' => 'pilotEducator'
     ];
 
     /**
@@ -117,9 +117,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     protected static $setters = [
         'host' => 'setHost',
         'port' => 'setPort',
-        'read_timeout_ms' => 'setReadTimeoutMs',
-        'connection_timeout_ms' => 'setConnectionTimeoutMs',
-        'pilot_educator' => 'setPilotEducator'
+        'readTimeoutMs' => 'setReadTimeoutMs',
+        'connectionTimeoutMs' => 'setConnectionTimeoutMs',
+        'pilotEducator' => 'setPilotEducator'
     ];
 
     /**
@@ -130,9 +130,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     protected static $getters = [
         'host' => 'getHost',
         'port' => 'getPort',
-        'read_timeout_ms' => 'getReadTimeoutMs',
-        'connection_timeout_ms' => 'getConnectionTimeoutMs',
-        'pilot_educator' => 'getPilotEducator'
+        'readTimeoutMs' => 'getReadTimeoutMs',
+        'connectionTimeoutMs' => 'getConnectionTimeoutMs',
+        'pilotEducator' => 'getPilotEducator'
     ];
 
     /**
@@ -197,9 +197,9 @@ class XClientSettings implements ModelInterface, ArrayAccess
     {
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['read_timeout_ms'] = isset($data['read_timeout_ms']) ? $data['read_timeout_ms'] : null;
-        $this->container['connection_timeout_ms'] = isset($data['connection_timeout_ms']) ? $data['connection_timeout_ms'] : null;
-        $this->container['pilot_educator'] = isset($data['pilot_educator']) ? $data['pilot_educator'] : null;
+        $this->container['readTimeoutMs'] = isset($data['readTimeoutMs']) ? $data['readTimeoutMs'] : null;
+        $this->container['connectionTimeoutMs'] = isset($data['connectionTimeoutMs']) ? $data['connectionTimeoutMs'] : null;
+        $this->container['pilotEducator'] = isset($data['pilotEducator']) ? $data['pilotEducator'] : null;
     }
 
     /**
@@ -217,14 +217,14 @@ class XClientSettings implements ModelInterface, ArrayAccess
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
         }
-        if ($this->container['read_timeout_ms'] === null) {
-            $invalidProperties[] = "'read_timeout_ms' can't be null";
+        if ($this->container['readTimeoutMs'] === null) {
+            $invalidProperties[] = "'readTimeoutMs' can't be null";
         }
-        if ($this->container['connection_timeout_ms'] === null) {
-            $invalidProperties[] = "'connection_timeout_ms' can't be null";
+        if ($this->container['connectionTimeoutMs'] === null) {
+            $invalidProperties[] = "'connectionTimeoutMs' can't be null";
         }
-        if ($this->container['pilot_educator'] === null) {
-            $invalidProperties[] = "'pilot_educator' can't be null";
+        if ($this->container['pilotEducator'] === null) {
+            $invalidProperties[] = "'pilotEducator' can't be null";
         }
         return $invalidProperties;
     }
@@ -244,13 +244,13 @@ class XClientSettings implements ModelInterface, ArrayAccess
         if ($this->container['port'] === null) {
             return false;
         }
-        if ($this->container['read_timeout_ms'] === null) {
+        if ($this->container['readTimeoutMs'] === null) {
             return false;
         }
-        if ($this->container['connection_timeout_ms'] === null) {
+        if ($this->container['connectionTimeoutMs'] === null) {
             return false;
         }
-        if ($this->container['pilot_educator'] === null) {
+        if ($this->container['pilotEducator'] === null) {
             return false;
         }
         return true;
@@ -306,73 +306,73 @@ class XClientSettings implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets read_timeout_ms
+     * Gets readTimeoutMs
      *
      * @return int
      */
     public function getReadTimeoutMs()
     {
-        return $this->container['read_timeout_ms'];
+        return $this->container['readTimeoutMs'];
     }
 
     /**
-     * Sets read_timeout_ms
+     * Sets readTimeoutMs
      *
-     * @param int $read_timeout_ms the xclient read timeout in milliseconds
+     * @param int $readTimeoutMs the xclient read timeout in milliseconds
      *
      * @return $this
      */
-    public function setReadTimeoutMs($read_timeout_ms)
+    public function setReadTimeoutMs($readTimeoutMs)
     {
-        $this->container['read_timeout_ms'] = $read_timeout_ms;
+        $this->container['readTimeoutMs'] = $readTimeoutMs;
 
         return $this;
     }
 
     /**
-     * Gets connection_timeout_ms
+     * Gets connectionTimeoutMs
      *
      * @return int
      */
     public function getConnectionTimeoutMs()
     {
-        return $this->container['connection_timeout_ms'];
+        return $this->container['connectionTimeoutMs'];
     }
 
     /**
-     * Sets connection_timeout_ms
+     * Sets connectionTimeoutMs
      *
-     * @param int $connection_timeout_ms the xclient connection timeout in milliseconds
+     * @param int $connectionTimeoutMs the xclient connection timeout in milliseconds
      *
      * @return $this
      */
-    public function setConnectionTimeoutMs($connection_timeout_ms)
+    public function setConnectionTimeoutMs($connectionTimeoutMs)
     {
-        $this->container['connection_timeout_ms'] = $connection_timeout_ms;
+        $this->container['connectionTimeoutMs'] = $connectionTimeoutMs;
 
         return $this;
     }
 
     /**
-     * Gets pilot_educator
+     * Gets pilotEducator
      *
      * @return int
      */
     public function getPilotEducator()
     {
-        return $this->container['pilot_educator'];
+        return $this->container['pilotEducator'];
     }
 
     /**
-     * Sets pilot_educator
+     * Sets pilotEducator
      *
-     * @param int $pilot_educator the xclient pilot educator
+     * @param int $pilotEducator the xclient pilot educator
      *
      * @return $this
      */
-    public function setPilotEducator($pilot_educator)
+    public function setPilotEducator($pilotEducator)
     {
-        $this->container['pilot_educator'] = $pilot_educator;
+        $this->container['pilotEducator'] = $pilotEducator;
 
         return $this;
     }

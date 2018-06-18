@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5agenciesApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -86,9 +86,9 @@ class V5agenciesApi
      *
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\AgencyResultSet
+     * @return \III\Sierra\Models\AgencyResultSet
      */
     public function getAListOfAgencies($language = null)
     {
@@ -103,13 +103,13 @@ class V5agenciesApi
      *
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\AgencyResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\AgencyResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfAgenciesWithHttpInfo($language = null)
     {
-        $returnType = '\Sierra\Models\AgencyResultSet';
+        $returnType = '\III\Sierra\Models\AgencyResultSet';
         $request = $this->getAListOfAgenciesRequest($language);
 
         try {
@@ -161,7 +161,7 @@ class V5agenciesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\AgencyResultSet',
+                        '\III\Sierra\Models\AgencyResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -203,7 +203,7 @@ class V5agenciesApi
      */
     public function getAListOfAgenciesAsyncWithHttpInfo($language = null)
     {
-        $returnType = '\Sierra\Models\AgencyResultSet';
+        $returnType = '\III\Sierra\Models\AgencyResultSet';
         $request = $this->getAListOfAgenciesRequest($language);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * FixedField Class Doc Comment
  *
  * @category Class
  * @description a fixed-length field from a bibliographic record or item record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class FixedField implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'label' => 'string',
-        'value' => '\Sierra\Models\FixedFieldVal',
+        'value' => '\III\Sierra\Models\FixedFieldVal',
         'display' => 'string'
     ];
 
@@ -248,7 +248,7 @@ class FixedField implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return \Sierra\Models\FixedFieldVal
+     * @return \III\Sierra\Models\FixedFieldVal
      */
     public function getValue()
     {
@@ -258,7 +258,7 @@ class FixedField implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param \Sierra\Models\FixedFieldVal $value the stored value of the field (can be a String, LocalDate, DateTime, Boolean, Long, or Decimal depending on the field)
+     * @param \III\Sierra\Models\FixedFieldVal $value the stored value of the field (can be a String, LocalDate, DateTime, Boolean, Long, or Decimal depending on the field)
      *
      * @return $this
      */

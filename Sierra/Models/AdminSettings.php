@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * AdminSettings Class Doc Comment
  *
  * @category Class
  * @description Administrator settings
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,15 +55,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_host' => 'string',
-        'email_user' => 'string',
-        'email_sender_name' => 'string',
-        'email_sender_email' => 'string',
-        'email_subject' => 'string',
-        'api_enabled' => 'bool',
-        'can_config' => 'bool',
-        'access_tier' => 'string',
-        'root_url' => 'string'
+        'emailHost' => 'string',
+        'emailUser' => 'string',
+        'emailSenderName' => 'string',
+        'emailSenderEmail' => 'string',
+        'emailSubject' => 'string',
+        'apiEnabled' => 'bool',
+        'canConfig' => 'bool',
+        'accessTier' => 'string',
+        'rootUrl' => 'string'
     ];
 
     /**
@@ -72,15 +72,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email_host' => null,
-        'email_user' => null,
-        'email_sender_name' => null,
-        'email_sender_email' => null,
-        'email_subject' => null,
-        'api_enabled' => null,
-        'can_config' => null,
-        'access_tier' => null,
-        'root_url' => null
+        'emailHost' => null,
+        'emailUser' => null,
+        'emailSenderName' => null,
+        'emailSenderEmail' => null,
+        'emailSubject' => null,
+        'apiEnabled' => null,
+        'canConfig' => null,
+        'accessTier' => null,
+        'rootUrl' => null
     ];
 
     /**
@@ -110,15 +110,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_host' => 'emailHost',
-        'email_user' => 'emailUser',
-        'email_sender_name' => 'emailSenderName',
-        'email_sender_email' => 'emailSenderEmail',
-        'email_subject' => 'emailSubject',
-        'api_enabled' => 'apiEnabled',
-        'can_config' => 'canConfig',
-        'access_tier' => 'accessTier',
-        'root_url' => 'rootUrl'
+        'emailHost' => 'emailHost',
+        'emailUser' => 'emailUser',
+        'emailSenderName' => 'emailSenderName',
+        'emailSenderEmail' => 'emailSenderEmail',
+        'emailSubject' => 'emailSubject',
+        'apiEnabled' => 'apiEnabled',
+        'canConfig' => 'canConfig',
+        'accessTier' => 'accessTier',
+        'rootUrl' => 'rootUrl'
     ];
 
     /**
@@ -127,15 +127,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_host' => 'setEmailHost',
-        'email_user' => 'setEmailUser',
-        'email_sender_name' => 'setEmailSenderName',
-        'email_sender_email' => 'setEmailSenderEmail',
-        'email_subject' => 'setEmailSubject',
-        'api_enabled' => 'setApiEnabled',
-        'can_config' => 'setCanConfig',
-        'access_tier' => 'setAccessTier',
-        'root_url' => 'setRootUrl'
+        'emailHost' => 'setEmailHost',
+        'emailUser' => 'setEmailUser',
+        'emailSenderName' => 'setEmailSenderName',
+        'emailSenderEmail' => 'setEmailSenderEmail',
+        'emailSubject' => 'setEmailSubject',
+        'apiEnabled' => 'setApiEnabled',
+        'canConfig' => 'setCanConfig',
+        'accessTier' => 'setAccessTier',
+        'rootUrl' => 'setRootUrl'
     ];
 
     /**
@@ -144,15 +144,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_host' => 'getEmailHost',
-        'email_user' => 'getEmailUser',
-        'email_sender_name' => 'getEmailSenderName',
-        'email_sender_email' => 'getEmailSenderEmail',
-        'email_subject' => 'getEmailSubject',
-        'api_enabled' => 'getApiEnabled',
-        'can_config' => 'getCanConfig',
-        'access_tier' => 'getAccessTier',
-        'root_url' => 'getRootUrl'
+        'emailHost' => 'getEmailHost',
+        'emailUser' => 'getEmailUser',
+        'emailSenderName' => 'getEmailSenderName',
+        'emailSenderEmail' => 'getEmailSenderEmail',
+        'emailSubject' => 'getEmailSubject',
+        'apiEnabled' => 'getApiEnabled',
+        'canConfig' => 'getCanConfig',
+        'accessTier' => 'getAccessTier',
+        'rootUrl' => 'getRootUrl'
     ];
 
     /**
@@ -215,15 +215,15 @@ class AdminSettings implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_host'] = isset($data['email_host']) ? $data['email_host'] : null;
-        $this->container['email_user'] = isset($data['email_user']) ? $data['email_user'] : null;
-        $this->container['email_sender_name'] = isset($data['email_sender_name']) ? $data['email_sender_name'] : null;
-        $this->container['email_sender_email'] = isset($data['email_sender_email']) ? $data['email_sender_email'] : null;
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['api_enabled'] = isset($data['api_enabled']) ? $data['api_enabled'] : null;
-        $this->container['can_config'] = isset($data['can_config']) ? $data['can_config'] : null;
-        $this->container['access_tier'] = isset($data['access_tier']) ? $data['access_tier'] : null;
-        $this->container['root_url'] = isset($data['root_url']) ? $data['root_url'] : null;
+        $this->container['emailHost'] = isset($data['emailHost']) ? $data['emailHost'] : null;
+        $this->container['emailUser'] = isset($data['emailUser']) ? $data['emailUser'] : null;
+        $this->container['emailSenderName'] = isset($data['emailSenderName']) ? $data['emailSenderName'] : null;
+        $this->container['emailSenderEmail'] = isset($data['emailSenderEmail']) ? $data['emailSenderEmail'] : null;
+        $this->container['emailSubject'] = isset($data['emailSubject']) ? $data['emailSubject'] : null;
+        $this->container['apiEnabled'] = isset($data['apiEnabled']) ? $data['apiEnabled'] : null;
+        $this->container['canConfig'] = isset($data['canConfig']) ? $data['canConfig'] : null;
+        $this->container['accessTier'] = isset($data['accessTier']) ? $data['accessTier'] : null;
+        $this->container['rootUrl'] = isset($data['rootUrl']) ? $data['rootUrl'] : null;
     }
 
     /**
@@ -235,32 +235,32 @@ class AdminSettings implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['email_host'] === null) {
-            $invalidProperties[] = "'email_host' can't be null";
+        if ($this->container['emailHost'] === null) {
+            $invalidProperties[] = "'emailHost' can't be null";
         }
-        if ($this->container['email_user'] === null) {
-            $invalidProperties[] = "'email_user' can't be null";
+        if ($this->container['emailUser'] === null) {
+            $invalidProperties[] = "'emailUser' can't be null";
         }
-        if ($this->container['email_sender_name'] === null) {
-            $invalidProperties[] = "'email_sender_name' can't be null";
+        if ($this->container['emailSenderName'] === null) {
+            $invalidProperties[] = "'emailSenderName' can't be null";
         }
-        if ($this->container['email_sender_email'] === null) {
-            $invalidProperties[] = "'email_sender_email' can't be null";
+        if ($this->container['emailSenderEmail'] === null) {
+            $invalidProperties[] = "'emailSenderEmail' can't be null";
         }
-        if ($this->container['email_subject'] === null) {
-            $invalidProperties[] = "'email_subject' can't be null";
+        if ($this->container['emailSubject'] === null) {
+            $invalidProperties[] = "'emailSubject' can't be null";
         }
-        if ($this->container['api_enabled'] === null) {
-            $invalidProperties[] = "'api_enabled' can't be null";
+        if ($this->container['apiEnabled'] === null) {
+            $invalidProperties[] = "'apiEnabled' can't be null";
         }
-        if ($this->container['can_config'] === null) {
-            $invalidProperties[] = "'can_config' can't be null";
+        if ($this->container['canConfig'] === null) {
+            $invalidProperties[] = "'canConfig' can't be null";
         }
-        if ($this->container['access_tier'] === null) {
-            $invalidProperties[] = "'access_tier' can't be null";
+        if ($this->container['accessTier'] === null) {
+            $invalidProperties[] = "'accessTier' can't be null";
         }
-        if ($this->container['root_url'] === null) {
-            $invalidProperties[] = "'root_url' can't be null";
+        if ($this->container['rootUrl'] === null) {
+            $invalidProperties[] = "'rootUrl' can't be null";
         }
         return $invalidProperties;
     }
@@ -274,31 +274,31 @@ class AdminSettings implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['email_host'] === null) {
+        if ($this->container['emailHost'] === null) {
             return false;
         }
-        if ($this->container['email_user'] === null) {
+        if ($this->container['emailUser'] === null) {
             return false;
         }
-        if ($this->container['email_sender_name'] === null) {
+        if ($this->container['emailSenderName'] === null) {
             return false;
         }
-        if ($this->container['email_sender_email'] === null) {
+        if ($this->container['emailSenderEmail'] === null) {
             return false;
         }
-        if ($this->container['email_subject'] === null) {
+        if ($this->container['emailSubject'] === null) {
             return false;
         }
-        if ($this->container['api_enabled'] === null) {
+        if ($this->container['apiEnabled'] === null) {
             return false;
         }
-        if ($this->container['can_config'] === null) {
+        if ($this->container['canConfig'] === null) {
             return false;
         }
-        if ($this->container['access_tier'] === null) {
+        if ($this->container['accessTier'] === null) {
             return false;
         }
-        if ($this->container['root_url'] === null) {
+        if ($this->container['rootUrl'] === null) {
             return false;
         }
         return true;
@@ -306,217 +306,217 @@ class AdminSettings implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets email_host
+     * Gets emailHost
      *
      * @return string
      */
     public function getEmailHost()
     {
-        return $this->container['email_host'];
+        return $this->container['emailHost'];
     }
 
     /**
-     * Sets email_host
+     * Sets emailHost
      *
-     * @param string $email_host the email host server
+     * @param string $emailHost the email host server
      *
      * @return $this
      */
-    public function setEmailHost($email_host)
+    public function setEmailHost($emailHost)
     {
-        $this->container['email_host'] = $email_host;
+        $this->container['emailHost'] = $emailHost;
 
         return $this;
     }
 
     /**
-     * Gets email_user
+     * Gets emailUser
      *
      * @return string
      */
     public function getEmailUser()
     {
-        return $this->container['email_user'];
+        return $this->container['emailUser'];
     }
 
     /**
-     * Sets email_user
+     * Sets emailUser
      *
-     * @param string $email_user the email account user name
+     * @param string $emailUser the email account user name
      *
      * @return $this
      */
-    public function setEmailUser($email_user)
+    public function setEmailUser($emailUser)
     {
-        $this->container['email_user'] = $email_user;
+        $this->container['emailUser'] = $emailUser;
 
         return $this;
     }
 
     /**
-     * Gets email_sender_name
+     * Gets emailSenderName
      *
      * @return string
      */
     public function getEmailSenderName()
     {
-        return $this->container['email_sender_name'];
+        return $this->container['emailSenderName'];
     }
 
     /**
-     * Sets email_sender_name
+     * Sets emailSenderName
      *
-     * @param string $email_sender_name the email sender's name
+     * @param string $emailSenderName the email sender's name
      *
      * @return $this
      */
-    public function setEmailSenderName($email_sender_name)
+    public function setEmailSenderName($emailSenderName)
     {
-        $this->container['email_sender_name'] = $email_sender_name;
+        $this->container['emailSenderName'] = $emailSenderName;
 
         return $this;
     }
 
     /**
-     * Gets email_sender_email
+     * Gets emailSenderEmail
      *
      * @return string
      */
     public function getEmailSenderEmail()
     {
-        return $this->container['email_sender_email'];
+        return $this->container['emailSenderEmail'];
     }
 
     /**
-     * Sets email_sender_email
+     * Sets emailSenderEmail
      *
-     * @param string $email_sender_email the email sender's email address
+     * @param string $emailSenderEmail the email sender's email address
      *
      * @return $this
      */
-    public function setEmailSenderEmail($email_sender_email)
+    public function setEmailSenderEmail($emailSenderEmail)
     {
-        $this->container['email_sender_email'] = $email_sender_email;
+        $this->container['emailSenderEmail'] = $emailSenderEmail;
 
         return $this;
     }
 
     /**
-     * Gets email_subject
+     * Gets emailSubject
      *
      * @return string
      */
     public function getEmailSubject()
     {
-        return $this->container['email_subject'];
+        return $this->container['emailSubject'];
     }
 
     /**
-     * Sets email_subject
+     * Sets emailSubject
      *
-     * @param string $email_subject the email subject line
+     * @param string $emailSubject the email subject line
      *
      * @return $this
      */
-    public function setEmailSubject($email_subject)
+    public function setEmailSubject($emailSubject)
     {
-        $this->container['email_subject'] = $email_subject;
+        $this->container['emailSubject'] = $emailSubject;
 
         return $this;
     }
 
     /**
-     * Gets api_enabled
+     * Gets apiEnabled
      *
      * @return bool
      */
     public function getApiEnabled()
     {
-        return $this->container['api_enabled'];
+        return $this->container['apiEnabled'];
     }
 
     /**
-     * Sets api_enabled
+     * Sets apiEnabled
      *
-     * @param bool $api_enabled whether the API is enabled
+     * @param bool $apiEnabled whether the API is enabled
      *
      * @return $this
      */
-    public function setApiEnabled($api_enabled)
+    public function setApiEnabled($apiEnabled)
     {
-        $this->container['api_enabled'] = $api_enabled;
+        $this->container['apiEnabled'] = $apiEnabled;
 
         return $this;
     }
 
     /**
-     * Gets can_config
+     * Gets canConfig
      *
      * @return bool
      */
     public function getCanConfig()
     {
-        return $this->container['can_config'];
+        return $this->container['canConfig'];
     }
 
     /**
-     * Sets can_config
+     * Sets canConfig
      *
-     * @param bool $can_config whether the API management interface is enabled
+     * @param bool $canConfig whether the API management interface is enabled
      *
      * @return $this
      */
-    public function setCanConfig($can_config)
+    public function setCanConfig($canConfig)
     {
-        $this->container['can_config'] = $can_config;
+        $this->container['canConfig'] = $canConfig;
 
         return $this;
     }
 
     /**
-     * Gets access_tier
+     * Gets accessTier
      *
      * @return string
      */
     public function getAccessTier()
     {
-        return $this->container['access_tier'];
+        return $this->container['accessTier'];
     }
 
     /**
-     * Sets access_tier
+     * Sets accessTier
      *
-     * @param string $access_tier the site's access tier (basic or premium)
+     * @param string $accessTier the site's access tier (basic or premium)
      *
      * @return $this
      */
-    public function setAccessTier($access_tier)
+    public function setAccessTier($accessTier)
     {
-        $this->container['access_tier'] = $access_tier;
+        $this->container['accessTier'] = $accessTier;
 
         return $this;
     }
 
     /**
-     * Gets root_url
+     * Gets rootUrl
      *
      * @return string
      */
     public function getRootUrl()
     {
-        return $this->container['root_url'];
+        return $this->container['rootUrl'];
     }
 
     /**
-     * Sets root_url
+     * Sets rootUrl
      *
-     * @param string $root_url the root URL for the Sierra API
+     * @param string $rootUrl the root URL for the Sierra API
      *
      * @return $this
      */
-    public function setRootUrl($root_url)
+    public function setRootUrl($rootUrl)
     {
-        $this->container['root_url'] = $root_url;
+        $this->container['rootUrl'] = $rootUrl;
 
         return $this;
     }

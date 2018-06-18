@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * CheckoutHistory Class Doc Comment
  *
  * @category Class
  * @description the data describing the checkout history
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         'patron' => 'string',
         'item' => 'string',
         'bib' => 'string',
-        'out_date' => '\DateTime'
+        'outDate' => '\DateTime'
     ];
 
     /**
@@ -70,7 +70,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         'patron' => null,
         'item' => null,
         'bib' => null,
-        'out_date' => 'date-time'
+        'outDate' => 'date-time'
     ];
 
     /**
@@ -103,7 +103,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         'patron' => 'patron',
         'item' => 'item',
         'bib' => 'bib',
-        'out_date' => 'outDate'
+        'outDate' => 'outDate'
     ];
 
     /**
@@ -115,7 +115,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         'patron' => 'setPatron',
         'item' => 'setItem',
         'bib' => 'setBib',
-        'out_date' => 'setOutDate'
+        'outDate' => 'setOutDate'
     ];
 
     /**
@@ -127,7 +127,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         'patron' => 'getPatron',
         'item' => 'getItem',
         'bib' => 'getBib',
-        'out_date' => 'getOutDate'
+        'outDate' => 'getOutDate'
     ];
 
     /**
@@ -193,7 +193,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         $this->container['patron'] = isset($data['patron']) ? $data['patron'] : null;
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
         $this->container['bib'] = isset($data['bib']) ? $data['bib'] : null;
-        $this->container['out_date'] = isset($data['out_date']) ? $data['out_date'] : null;
+        $this->container['outDate'] = isset($data['outDate']) ? $data['outDate'] : null;
     }
 
     /**
@@ -214,8 +214,8 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         if ($this->container['bib'] === null) {
             $invalidProperties[] = "'bib' can't be null";
         }
-        if ($this->container['out_date'] === null) {
-            $invalidProperties[] = "'out_date' can't be null";
+        if ($this->container['outDate'] === null) {
+            $invalidProperties[] = "'outDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -238,7 +238,7 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
         if ($this->container['bib'] === null) {
             return false;
         }
-        if ($this->container['out_date'] === null) {
+        if ($this->container['outDate'] === null) {
             return false;
         }
         return true;
@@ -318,25 +318,25 @@ class CheckoutHistory implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets out_date
+     * Gets outDate
      *
      * @return \DateTime
      */
     public function getOutDate()
     {
-        return $this->container['out_date'];
+        return $this->container['outDate'];
     }
 
     /**
-     * Sets out_date
+     * Sets outDate
      *
-     * @param \DateTime $out_date the checkout date and time for the item, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $outDate the checkout date and time for the item, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setOutDate($out_date)
+    public function setOutDate($outDate)
     {
-        $this->container['out_date'] = $out_date;
+        $this->container['outDate'] = $outDate;
 
         return $this;
     }

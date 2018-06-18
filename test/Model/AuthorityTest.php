@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * AuthorityTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an authority record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class AuthorityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_date"
+     * Test attribute "updatedDate"
      */
     public function testPropertyUpdatedDate()
     {
     }
 
     /**
-     * Test attribute "created_date"
+     * Test attribute "createdDate"
      */
     public function testPropertyCreatedDate()
     {
     }
 
     /**
-     * Test attribute "deleted_date"
+     * Test attribute "deletedDate"
      */
     public function testPropertyDeletedDate()
     {
@@ -117,7 +117,7 @@ class AuthorityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "var_fields"
+     * Test attribute "varFields"
      */
     public function testPropertyVarFields()
     {

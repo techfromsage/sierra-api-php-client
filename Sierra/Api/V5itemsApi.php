@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5itemsApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5itemsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\QueryResultSet
+     * @return \III\Sierra\Models\QueryResultSet
      */
     public function filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
     {
@@ -107,13 +107,13 @@ class V5itemsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function filterTheRecordsByAQueryInJSONFormatWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         try {
@@ -165,7 +165,7 @@ class V5itemsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\QueryResultSet',
+                        '\III\Sierra\Models\QueryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5itemsApi
      */
     public function filterTheRecordsByAQueryInJSONFormatAsyncWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         return $this->client
@@ -375,23 +375,23 @@ class V5itemsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of items to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted items to retrieve(can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted items to retrieve(can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) items (optional)
-     * @param  string[] $bib_ids a comma-delimited list of bib IDs for which to retrieve associated items (optional)
+     * @param  string[] $bibIds a comma-delimited list of bib IDs for which to retrieve associated items (optional)
      * @param  string $status the status code of items to retrieve (optional)
      * @param  \DateTime $duedate the due date of items to retrieve (optional)
      * @param  bool $suppressed the suppressed flag value of items to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ItemResultSet
+     * @return \III\Sierra\Models\ItemResultSet
      */
-    public function getAListOfItems($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $bib_ids = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
+    public function getAListOfItems($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $bibIds = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
     {
-        list($response) = $this->getAListOfItemsWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $bib_ids, $status, $duedate, $suppressed, $locations);
+        list($response) = $this->getAListOfItemsWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $bibIds, $status, $duedate, $suppressed, $locations);
         return $response;
     }
 
@@ -404,24 +404,24 @@ class V5itemsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of items to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted items to retrieve(can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted items to retrieve(can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) items (optional)
-     * @param  string[] $bib_ids a comma-delimited list of bib IDs for which to retrieve associated items (optional)
+     * @param  string[] $bibIds a comma-delimited list of bib IDs for which to retrieve associated items (optional)
      * @param  string $status the status code of items to retrieve (optional)
      * @param  \DateTime $duedate the due date of items to retrieve (optional)
      * @param  bool $suppressed the suppressed flag value of items to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ItemResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ItemResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfItemsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $bib_ids = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
+    public function getAListOfItemsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $bibIds = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
     {
-        $returnType = '\Sierra\Models\ItemResultSet';
-        $request = $this->getAListOfItemsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $bib_ids, $status, $duedate, $suppressed, $locations);
+        $returnType = '\III\Sierra\Models\ItemResultSet';
+        $request = $this->getAListOfItemsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $bibIds, $status, $duedate, $suppressed, $locations);
 
         try {
             $options = $this->createHttpClientOption();
@@ -472,7 +472,7 @@ class V5itemsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ItemResultSet',
+                        '\III\Sierra\Models\ItemResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,11 +491,11 @@ class V5itemsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of items to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted items to retrieve(can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted items to retrieve(can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) items (optional)
-     * @param  string[] $bib_ids a comma-delimited list of bib IDs for which to retrieve associated items (optional)
+     * @param  string[] $bibIds a comma-delimited list of bib IDs for which to retrieve associated items (optional)
      * @param  string $status the status code of items to retrieve (optional)
      * @param  \DateTime $duedate the due date of items to retrieve (optional)
      * @param  bool $suppressed the suppressed flag value of items to retrieve (optional)
@@ -504,9 +504,9 @@ class V5itemsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfItemsAsync($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $bib_ids = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
+    public function getAListOfItemsAsync($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $bibIds = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
     {
-        return $this->getAListOfItemsAsyncWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $bib_ids, $status, $duedate, $suppressed, $locations)
+        return $this->getAListOfItemsAsyncWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $bibIds, $status, $duedate, $suppressed, $locations)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -523,11 +523,11 @@ class V5itemsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of items to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted items to retrieve(can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted items to retrieve(can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) items (optional)
-     * @param  string[] $bib_ids a comma-delimited list of bib IDs for which to retrieve associated items (optional)
+     * @param  string[] $bibIds a comma-delimited list of bib IDs for which to retrieve associated items (optional)
      * @param  string $status the status code of items to retrieve (optional)
      * @param  \DateTime $duedate the due date of items to retrieve (optional)
      * @param  bool $suppressed the suppressed flag value of items to retrieve (optional)
@@ -536,10 +536,10 @@ class V5itemsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfItemsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $bib_ids = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
+    public function getAListOfItemsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $bibIds = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
     {
-        $returnType = '\Sierra\Models\ItemResultSet';
-        $request = $this->getAListOfItemsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $bib_ids, $status, $duedate, $suppressed, $locations);
+        $returnType = '\III\Sierra\Models\ItemResultSet';
+        $request = $this->getAListOfItemsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $bibIds, $status, $duedate, $suppressed, $locations);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -585,11 +585,11 @@ class V5itemsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of items to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of items to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted items to retrieve(can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of items to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted items to retrieve(can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) items (optional)
-     * @param  string[] $bib_ids a comma-delimited list of bib IDs for which to retrieve associated items (optional)
+     * @param  string[] $bibIds a comma-delimited list of bib IDs for which to retrieve associated items (optional)
      * @param  string $status the status code of items to retrieve (optional)
      * @param  \DateTime $duedate the due date of items to retrieve (optional)
      * @param  bool $suppressed the suppressed flag value of items to retrieve (optional)
@@ -598,7 +598,7 @@ class V5itemsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfItemsRequest($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $bib_ids = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
+    protected function getAListOfItemsRequest($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $bibIds = null, $status = null, $duedate = null, $suppressed = null, $locations = null)
     {
 
         $resourcePath = '/v5/items/';
@@ -631,27 +631,27 @@ class V5itemsApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
-        if ($deleted_date !== null) {
-            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deleted_date);
+        if ($deletedDate !== null) {
+            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deletedDate);
         }
         // query params
         if ($deleted !== null) {
             $queryParams['deleted'] = ObjectSerializer::toQueryValue($deleted);
         }
         // query params
-        if (is_array($bib_ids)) {
-            $bib_ids = ObjectSerializer::serializeCollection($bib_ids, 'csv', true);
+        if (is_array($bibIds)) {
+            $bibIds = ObjectSerializer::serializeCollection($bibIds, 'csv', true);
         }
-        if ($bib_ids !== null) {
-            $queryParams['bibIds'] = ObjectSerializer::toQueryValue($bib_ids);
+        if ($bibIds !== null) {
+            $queryParams['bibIds'] = ObjectSerializer::toQueryValue($bibIds);
         }
         // query params
         if ($status !== null) {
@@ -743,9 +743,9 @@ class V5itemsApi
      * @param  string $id the item record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Item
+     * @return \III\Sierra\Models\Item
      */
     public function getAnItemByRecordID($id, $fields = null)
     {
@@ -761,13 +761,13 @@ class V5itemsApi
      * @param  string $id the item record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Item, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Item, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAnItemByRecordIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Item';
+        $returnType = '\III\Sierra\Models\Item';
         $request = $this->getAnItemByRecordIDRequest($id, $fields);
 
         try {
@@ -819,7 +819,7 @@ class V5itemsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Item',
+                        '\III\Sierra\Models\Item',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -863,7 +863,7 @@ class V5itemsApi
      */
     public function getAnItemByRecordIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Item';
+        $returnType = '\III\Sierra\Models\Item';
         $request = $this->getAnItemByRecordIDRequest($id, $fields);
 
         return $this->client

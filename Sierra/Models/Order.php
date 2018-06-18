@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Order Class Doc Comment
  *
  * @category Class
  * @description the order
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,19 +56,19 @@ class Order implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'updated_date' => '\DateTime',
-        'created_date' => '\DateTime',
-        'deleted_date' => '\DateTime',
+        'updatedDate' => '\DateTime',
+        'createdDate' => '\DateTime',
+        'deletedDate' => '\DateTime',
         'deleted' => 'bool',
         'suppressed' => 'bool',
-        'accounting_unit' => 'int',
-        'estimated_price' => 'float',
-        'vendor_record_code' => 'string',
-        'order_date' => '\DateTime',
-        'charged_funds' => '\Sierra\Models\ChargedFund[]',
-        'vendor_titles' => 'string[]',
-        'fixed_fields' => '\Sierra\Models\map',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'accountingUnit' => 'int',
+        'estimatedPrice' => 'float',
+        'vendorRecordCode' => 'string',
+        'orderDate' => '\DateTime',
+        'chargedFunds' => '\III\Sierra\Models\ChargedFund[]',
+        'vendorTitles' => 'string[]',
+        'fixedFields' => '\III\Sierra\Models\map',
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -78,19 +78,19 @@ class Order implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'updated_date' => 'date-time',
-        'created_date' => 'date-time',
-        'deleted_date' => 'date',
+        'updatedDate' => 'date-time',
+        'createdDate' => 'date-time',
+        'deletedDate' => 'date',
         'deleted' => null,
         'suppressed' => null,
-        'accounting_unit' => 'int64',
-        'estimated_price' => null,
-        'vendor_record_code' => null,
-        'order_date' => 'date-time',
-        'charged_funds' => null,
-        'vendor_titles' => null,
-        'fixed_fields' => null,
-        'var_fields' => null
+        'accountingUnit' => 'int64',
+        'estimatedPrice' => null,
+        'vendorRecordCode' => null,
+        'orderDate' => 'date-time',
+        'chargedFunds' => null,
+        'vendorTitles' => null,
+        'fixedFields' => null,
+        'varFields' => null
     ];
 
     /**
@@ -121,19 +121,19 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'updated_date' => 'updatedDate',
-        'created_date' => 'createdDate',
-        'deleted_date' => 'deletedDate',
+        'updatedDate' => 'updatedDate',
+        'createdDate' => 'createdDate',
+        'deletedDate' => 'deletedDate',
         'deleted' => 'deleted',
         'suppressed' => 'suppressed',
-        'accounting_unit' => 'accountingUnit',
-        'estimated_price' => 'estimatedPrice',
-        'vendor_record_code' => 'vendorRecordCode',
-        'order_date' => 'orderDate',
-        'charged_funds' => 'chargedFunds',
-        'vendor_titles' => 'vendorTitles',
-        'fixed_fields' => 'fixedFields',
-        'var_fields' => 'varFields'
+        'accountingUnit' => 'accountingUnit',
+        'estimatedPrice' => 'estimatedPrice',
+        'vendorRecordCode' => 'vendorRecordCode',
+        'orderDate' => 'orderDate',
+        'chargedFunds' => 'chargedFunds',
+        'vendorTitles' => 'vendorTitles',
+        'fixedFields' => 'fixedFields',
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -143,19 +143,19 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'updated_date' => 'setUpdatedDate',
-        'created_date' => 'setCreatedDate',
-        'deleted_date' => 'setDeletedDate',
+        'updatedDate' => 'setUpdatedDate',
+        'createdDate' => 'setCreatedDate',
+        'deletedDate' => 'setDeletedDate',
         'deleted' => 'setDeleted',
         'suppressed' => 'setSuppressed',
-        'accounting_unit' => 'setAccountingUnit',
-        'estimated_price' => 'setEstimatedPrice',
-        'vendor_record_code' => 'setVendorRecordCode',
-        'order_date' => 'setOrderDate',
-        'charged_funds' => 'setChargedFunds',
-        'vendor_titles' => 'setVendorTitles',
-        'fixed_fields' => 'setFixedFields',
-        'var_fields' => 'setVarFields'
+        'accountingUnit' => 'setAccountingUnit',
+        'estimatedPrice' => 'setEstimatedPrice',
+        'vendorRecordCode' => 'setVendorRecordCode',
+        'orderDate' => 'setOrderDate',
+        'chargedFunds' => 'setChargedFunds',
+        'vendorTitles' => 'setVendorTitles',
+        'fixedFields' => 'setFixedFields',
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -165,19 +165,19 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'updated_date' => 'getUpdatedDate',
-        'created_date' => 'getCreatedDate',
-        'deleted_date' => 'getDeletedDate',
+        'updatedDate' => 'getUpdatedDate',
+        'createdDate' => 'getCreatedDate',
+        'deletedDate' => 'getDeletedDate',
         'deleted' => 'getDeleted',
         'suppressed' => 'getSuppressed',
-        'accounting_unit' => 'getAccountingUnit',
-        'estimated_price' => 'getEstimatedPrice',
-        'vendor_record_code' => 'getVendorRecordCode',
-        'order_date' => 'getOrderDate',
-        'charged_funds' => 'getChargedFunds',
-        'vendor_titles' => 'getVendorTitles',
-        'fixed_fields' => 'getFixedFields',
-        'var_fields' => 'getVarFields'
+        'accountingUnit' => 'getAccountingUnit',
+        'estimatedPrice' => 'getEstimatedPrice',
+        'vendorRecordCode' => 'getVendorRecordCode',
+        'orderDate' => 'getOrderDate',
+        'chargedFunds' => 'getChargedFunds',
+        'vendorTitles' => 'getVendorTitles',
+        'fixedFields' => 'getFixedFields',
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -241,19 +241,19 @@ class Order implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['updated_date'] = isset($data['updated_date']) ? $data['updated_date'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['deleted_date'] = isset($data['deleted_date']) ? $data['deleted_date'] : null;
+        $this->container['updatedDate'] = isset($data['updatedDate']) ? $data['updatedDate'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['deletedDate'] = isset($data['deletedDate']) ? $data['deletedDate'] : null;
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['suppressed'] = isset($data['suppressed']) ? $data['suppressed'] : null;
-        $this->container['accounting_unit'] = isset($data['accounting_unit']) ? $data['accounting_unit'] : null;
-        $this->container['estimated_price'] = isset($data['estimated_price']) ? $data['estimated_price'] : null;
-        $this->container['vendor_record_code'] = isset($data['vendor_record_code']) ? $data['vendor_record_code'] : null;
-        $this->container['order_date'] = isset($data['order_date']) ? $data['order_date'] : null;
-        $this->container['charged_funds'] = isset($data['charged_funds']) ? $data['charged_funds'] : null;
-        $this->container['vendor_titles'] = isset($data['vendor_titles']) ? $data['vendor_titles'] : null;
-        $this->container['fixed_fields'] = isset($data['fixed_fields']) ? $data['fixed_fields'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['accountingUnit'] = isset($data['accountingUnit']) ? $data['accountingUnit'] : null;
+        $this->container['estimatedPrice'] = isset($data['estimatedPrice']) ? $data['estimatedPrice'] : null;
+        $this->container['vendorRecordCode'] = isset($data['vendorRecordCode']) ? $data['vendorRecordCode'] : null;
+        $this->container['orderDate'] = isset($data['orderDate']) ? $data['orderDate'] : null;
+        $this->container['chargedFunds'] = isset($data['chargedFunds']) ? $data['chargedFunds'] : null;
+        $this->container['vendorTitles'] = isset($data['vendorTitles']) ? $data['vendorTitles'] : null;
+        $this->container['fixedFields'] = isset($data['fixedFields']) ? $data['fixedFields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -271,11 +271,11 @@ class Order implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             $invalidProperties[] = "'deleted' can't be null";
         }
-        if ($this->container['fixed_fields'] === null) {
-            $invalidProperties[] = "'fixed_fields' can't be null";
+        if ($this->container['fixedFields'] === null) {
+            $invalidProperties[] = "'fixedFields' can't be null";
         }
-        if ($this->container['var_fields'] === null) {
-            $invalidProperties[] = "'var_fields' can't be null";
+        if ($this->container['varFields'] === null) {
+            $invalidProperties[] = "'varFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -295,10 +295,10 @@ class Order implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             return false;
         }
-        if ($this->container['fixed_fields'] === null) {
+        if ($this->container['fixedFields'] === null) {
             return false;
         }
-        if ($this->container['var_fields'] === null) {
+        if ($this->container['varFields'] === null) {
             return false;
         }
         return true;
@@ -330,73 +330,73 @@ class Order implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets updated_date
+     * Gets updatedDate
      *
      * @return \DateTime
      */
     public function getUpdatedDate()
     {
-        return $this->container['updated_date'];
+        return $this->container['updatedDate'];
     }
 
     /**
-     * Sets updated_date
+     * Sets updatedDate
      *
-     * @param \DateTime $updated_date the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $updatedDate the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setUpdatedDate($updated_date)
+    public function setUpdatedDate($updatedDate)
     {
-        $this->container['updated_date'] = $updated_date;
+        $this->container['updatedDate'] = $updatedDate;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime $created_date the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $createdDate the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets deleted_date
+     * Gets deletedDate
      *
      * @return \DateTime
      */
     public function getDeletedDate()
     {
-        return $this->container['deleted_date'];
+        return $this->container['deletedDate'];
     }
 
     /**
-     * Sets deleted_date
+     * Sets deletedDate
      *
-     * @param \DateTime $deleted_date the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $deletedDate the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setDeletedDate($deleted_date)
+    public function setDeletedDate($deletedDate)
     {
-        $this->container['deleted_date'] = $deleted_date;
+        $this->container['deletedDate'] = $deletedDate;
 
         return $this;
     }
@@ -450,193 +450,193 @@ class Order implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets accounting_unit
+     * Gets accountingUnit
      *
      * @return int
      */
     public function getAccountingUnit()
     {
-        return $this->container['accounting_unit'];
+        return $this->container['accountingUnit'];
     }
 
     /**
-     * Sets accounting_unit
+     * Sets accountingUnit
      *
-     * @param int $accounting_unit the accounting unit of the order
+     * @param int $accountingUnit the accounting unit of the order
      *
      * @return $this
      */
-    public function setAccountingUnit($accounting_unit)
+    public function setAccountingUnit($accountingUnit)
     {
-        $this->container['accounting_unit'] = $accounting_unit;
+        $this->container['accountingUnit'] = $accountingUnit;
 
         return $this;
     }
 
     /**
-     * Gets estimated_price
+     * Gets estimatedPrice
      *
      * @return float
      */
     public function getEstimatedPrice()
     {
-        return $this->container['estimated_price'];
+        return $this->container['estimatedPrice'];
     }
 
     /**
-     * Sets estimated_price
+     * Sets estimatedPrice
      *
-     * @param float $estimated_price the estimated price for one copy of the ordered item
+     * @param float $estimatedPrice the estimated price for one copy of the ordered item
      *
      * @return $this
      */
-    public function setEstimatedPrice($estimated_price)
+    public function setEstimatedPrice($estimatedPrice)
     {
-        $this->container['estimated_price'] = $estimated_price;
+        $this->container['estimatedPrice'] = $estimatedPrice;
 
         return $this;
     }
 
     /**
-     * Gets vendor_record_code
+     * Gets vendorRecordCode
      *
      * @return string
      */
     public function getVendorRecordCode()
     {
-        return $this->container['vendor_record_code'];
+        return $this->container['vendorRecordCode'];
     }
 
     /**
-     * Sets vendor_record_code
+     * Sets vendorRecordCode
      *
-     * @param string $vendor_record_code a library-defined code for the vendor who handles the order
+     * @param string $vendorRecordCode a library-defined code for the vendor who handles the order
      *
      * @return $this
      */
-    public function setVendorRecordCode($vendor_record_code)
+    public function setVendorRecordCode($vendorRecordCode)
     {
-        $this->container['vendor_record_code'] = $vendor_record_code;
+        $this->container['vendorRecordCode'] = $vendorRecordCode;
 
         return $this;
     }
 
     /**
-     * Gets order_date
+     * Gets orderDate
      *
      * @return \DateTime
      */
     public function getOrderDate()
     {
-        return $this->container['order_date'];
+        return $this->container['orderDate'];
     }
 
     /**
-     * Sets order_date
+     * Sets orderDate
      *
-     * @param \DateTime $order_date the date the material was ordered, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $orderDate the date the material was ordered, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setOrderDate($order_date)
+    public function setOrderDate($orderDate)
     {
-        $this->container['order_date'] = $order_date;
+        $this->container['orderDate'] = $orderDate;
 
         return $this;
     }
 
     /**
-     * Gets charged_funds
+     * Gets chargedFunds
      *
-     * @return \Sierra\Models\ChargedFund[]
+     * @return \III\Sierra\Models\ChargedFund[]
      */
     public function getChargedFunds()
     {
-        return $this->container['charged_funds'];
+        return $this->container['chargedFunds'];
     }
 
     /**
-     * Sets charged_funds
+     * Sets chargedFunds
      *
-     * @param \Sierra\Models\ChargedFund[] $charged_funds the list of funds to be charged and related data
+     * @param \III\Sierra\Models\ChargedFund[] $chargedFunds the list of funds to be charged and related data
      *
      * @return $this
      */
-    public function setChargedFunds($charged_funds)
+    public function setChargedFunds($chargedFunds)
     {
-        $this->container['charged_funds'] = $charged_funds;
+        $this->container['chargedFunds'] = $chargedFunds;
 
         return $this;
     }
 
     /**
-     * Gets vendor_titles
+     * Gets vendorTitles
      *
      * @return string[]
      */
     public function getVendorTitles()
     {
-        return $this->container['vendor_titles'];
+        return $this->container['vendorTitles'];
     }
 
     /**
-     * Sets vendor_titles
+     * Sets vendorTitles
      *
-     * @param string[] $vendor_titles the list of the vendor's identification numbers for this title; the vendor's identification number is also called the Vendor ID #
+     * @param string[] $vendorTitles the list of the vendor's identification numbers for this title; the vendor's identification number is also called the Vendor ID #
      *
      * @return $this
      */
-    public function setVendorTitles($vendor_titles)
+    public function setVendorTitles($vendorTitles)
     {
-        $this->container['vendor_titles'] = $vendor_titles;
+        $this->container['vendorTitles'] = $vendorTitles;
 
         return $this;
     }
 
     /**
-     * Gets fixed_fields
+     * Gets fixedFields
      *
-     * @return \Sierra\Models\map
+     * @return \III\Sierra\Models\map
      */
     public function getFixedFields()
     {
-        return $this->container['fixed_fields'];
+        return $this->container['fixedFields'];
     }
 
     /**
-     * Sets fixed_fields
+     * Sets fixedFields
      *
-     * @param \Sierra\Models\map $fixed_fields the fixed-length fields from the order record
+     * @param \III\Sierra\Models\map $fixedFields the fixed-length fields from the order record
      *
      * @return $this
      */
-    public function setFixedFields($fixed_fields)
+    public function setFixedFields($fixedFields)
     {
-        $this->container['fixed_fields'] = $fixed_fields;
+        $this->container['fixedFields'] = $fixedFields;
 
         return $this;
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the order record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the order record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

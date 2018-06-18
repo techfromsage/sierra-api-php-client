@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * DisplayableApiInfo Class Doc Comment
  *
  * @category Class
  * @description API displayable information details
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
         'version' => 'string',
-        'sierra_version' => 'string',
-        'full_version' => 'string',
+        'sierraVersion' => 'string',
+        'fullVersion' => 'string',
         'revision' => 'string',
-        'revision_date' => 'string',
-        'backwards_compatible_versions' => 'string'
+        'revisionDate' => 'string',
+        'backwardsCompatibleVersions' => 'string'
     ];
 
     /**
@@ -72,11 +72,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'name' => null,
         'version' => null,
-        'sierra_version' => null,
-        'full_version' => null,
+        'sierraVersion' => null,
+        'fullVersion' => null,
         'revision' => null,
-        'revision_date' => null,
-        'backwards_compatible_versions' => null
+        'revisionDate' => null,
+        'backwardsCompatibleVersions' => null
     ];
 
     /**
@@ -108,11 +108,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'name' => 'name',
         'version' => 'version',
-        'sierra_version' => 'sierraVersion',
-        'full_version' => 'fullVersion',
+        'sierraVersion' => 'sierraVersion',
+        'fullVersion' => 'fullVersion',
         'revision' => 'revision',
-        'revision_date' => 'revisionDate',
-        'backwards_compatible_versions' => 'backwardsCompatibleVersions'
+        'revisionDate' => 'revisionDate',
+        'backwardsCompatibleVersions' => 'backwardsCompatibleVersions'
     ];
 
     /**
@@ -123,11 +123,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'name' => 'setName',
         'version' => 'setVersion',
-        'sierra_version' => 'setSierraVersion',
-        'full_version' => 'setFullVersion',
+        'sierraVersion' => 'setSierraVersion',
+        'fullVersion' => 'setFullVersion',
         'revision' => 'setRevision',
-        'revision_date' => 'setRevisionDate',
-        'backwards_compatible_versions' => 'setBackwardsCompatibleVersions'
+        'revisionDate' => 'setRevisionDate',
+        'backwardsCompatibleVersions' => 'setBackwardsCompatibleVersions'
     ];
 
     /**
@@ -138,11 +138,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'name' => 'getName',
         'version' => 'getVersion',
-        'sierra_version' => 'getSierraVersion',
-        'full_version' => 'getFullVersion',
+        'sierraVersion' => 'getSierraVersion',
+        'fullVersion' => 'getFullVersion',
         'revision' => 'getRevision',
-        'revision_date' => 'getRevisionDate',
-        'backwards_compatible_versions' => 'getBackwardsCompatibleVersions'
+        'revisionDate' => 'getRevisionDate',
+        'backwardsCompatibleVersions' => 'getBackwardsCompatibleVersions'
     ];
 
     /**
@@ -207,11 +207,11 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['sierra_version'] = isset($data['sierra_version']) ? $data['sierra_version'] : null;
-        $this->container['full_version'] = isset($data['full_version']) ? $data['full_version'] : null;
+        $this->container['sierraVersion'] = isset($data['sierraVersion']) ? $data['sierraVersion'] : null;
+        $this->container['fullVersion'] = isset($data['fullVersion']) ? $data['fullVersion'] : null;
         $this->container['revision'] = isset($data['revision']) ? $data['revision'] : null;
-        $this->container['revision_date'] = isset($data['revision_date']) ? $data['revision_date'] : null;
-        $this->container['backwards_compatible_versions'] = isset($data['backwards_compatible_versions']) ? $data['backwards_compatible_versions'] : null;
+        $this->container['revisionDate'] = isset($data['revisionDate']) ? $data['revisionDate'] : null;
+        $this->container['backwardsCompatibleVersions'] = isset($data['backwardsCompatibleVersions']) ? $data['backwardsCompatibleVersions'] : null;
     }
 
     /**
@@ -229,20 +229,20 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
         }
-        if ($this->container['sierra_version'] === null) {
-            $invalidProperties[] = "'sierra_version' can't be null";
+        if ($this->container['sierraVersion'] === null) {
+            $invalidProperties[] = "'sierraVersion' can't be null";
         }
-        if ($this->container['full_version'] === null) {
-            $invalidProperties[] = "'full_version' can't be null";
+        if ($this->container['fullVersion'] === null) {
+            $invalidProperties[] = "'fullVersion' can't be null";
         }
         if ($this->container['revision'] === null) {
             $invalidProperties[] = "'revision' can't be null";
         }
-        if ($this->container['revision_date'] === null) {
-            $invalidProperties[] = "'revision_date' can't be null";
+        if ($this->container['revisionDate'] === null) {
+            $invalidProperties[] = "'revisionDate' can't be null";
         }
-        if ($this->container['backwards_compatible_versions'] === null) {
-            $invalidProperties[] = "'backwards_compatible_versions' can't be null";
+        if ($this->container['backwardsCompatibleVersions'] === null) {
+            $invalidProperties[] = "'backwardsCompatibleVersions' can't be null";
         }
         return $invalidProperties;
     }
@@ -262,19 +262,19 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
         if ($this->container['version'] === null) {
             return false;
         }
-        if ($this->container['sierra_version'] === null) {
+        if ($this->container['sierraVersion'] === null) {
             return false;
         }
-        if ($this->container['full_version'] === null) {
+        if ($this->container['fullVersion'] === null) {
             return false;
         }
         if ($this->container['revision'] === null) {
             return false;
         }
-        if ($this->container['revision_date'] === null) {
+        if ($this->container['revisionDate'] === null) {
             return false;
         }
-        if ($this->container['backwards_compatible_versions'] === null) {
+        if ($this->container['backwardsCompatibleVersions'] === null) {
             return false;
         }
         return true;
@@ -330,49 +330,49 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets sierra_version
+     * Gets sierraVersion
      *
      * @return string
      */
     public function getSierraVersion()
     {
-        return $this->container['sierra_version'];
+        return $this->container['sierraVersion'];
     }
 
     /**
-     * Sets sierra_version
+     * Sets sierraVersion
      *
-     * @param string $sierra_version the intended version of sierra the API works with
+     * @param string $sierraVersion the intended version of sierra the API works with
      *
      * @return $this
      */
-    public function setSierraVersion($sierra_version)
+    public function setSierraVersion($sierraVersion)
     {
-        $this->container['sierra_version'] = $sierra_version;
+        $this->container['sierraVersion'] = $sierraVersion;
 
         return $this;
     }
 
     /**
-     * Gets full_version
+     * Gets fullVersion
      *
      * @return string
      */
     public function getFullVersion()
     {
-        return $this->container['full_version'];
+        return $this->container['fullVersion'];
     }
 
     /**
-     * Sets full_version
+     * Sets fullVersion
      *
-     * @param string $full_version the full version, includes sierra version and API version
+     * @param string $fullVersion the full version, includes sierra version and API version
      *
      * @return $this
      */
-    public function setFullVersion($full_version)
+    public function setFullVersion($fullVersion)
     {
-        $this->container['full_version'] = $full_version;
+        $this->container['fullVersion'] = $fullVersion;
 
         return $this;
     }
@@ -402,49 +402,49 @@ class DisplayableApiInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets revision_date
+     * Gets revisionDate
      *
      * @return string
      */
     public function getRevisionDate()
     {
-        return $this->container['revision_date'];
+        return $this->container['revisionDate'];
     }
 
     /**
-     * Sets revision_date
+     * Sets revisionDate
      *
-     * @param string $revision_date the API revision date
+     * @param string $revisionDate the API revision date
      *
      * @return $this
      */
-    public function setRevisionDate($revision_date)
+    public function setRevisionDate($revisionDate)
     {
-        $this->container['revision_date'] = $revision_date;
+        $this->container['revisionDate'] = $revisionDate;
 
         return $this;
     }
 
     /**
-     * Gets backwards_compatible_versions
+     * Gets backwardsCompatibleVersions
      *
      * @return string
      */
     public function getBackwardsCompatibleVersions()
     {
-        return $this->container['backwards_compatible_versions'];
+        return $this->container['backwardsCompatibleVersions'];
     }
 
     /**
-     * Sets backwards_compatible_versions
+     * Sets backwardsCompatibleVersions
      *
-     * @param string $backwards_compatible_versions the previous versions of the API this version supports
+     * @param string $backwardsCompatibleVersions the previous versions of the API this version supports
      *
      * @return $this
      */
-    public function setBackwardsCompatibleVersions($backwards_compatible_versions)
+    public function setBackwardsCompatibleVersions($backwardsCompatibleVersions)
     {
-        $this->container['backwards_compatible_versions'] = $backwards_compatible_versions;
+        $this->container['backwardsCompatibleVersions'] = $backwardsCompatibleVersions;
 
         return $this;
     }

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * OrderInfo Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -54,7 +54,7 @@ class OrderInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'location' => '\Sierra\Models\Location',
+        'location' => '\III\Sierra\Models\Location',
         'copies' => 'int',
         'date' => '\DateTime'
     ];
@@ -229,7 +229,7 @@ class OrderInfo implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getLocation()
     {
@@ -239,7 +239,7 @@ class OrderInfo implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \Sierra\Models\Location $location the location for which the bib was ordered
+     * @param \III\Sierra\Models\Location $location the location for which the bib was ordered
      *
      * @return $this
      */

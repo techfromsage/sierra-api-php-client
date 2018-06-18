@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * OrderBibLinksTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the links to the new order and bib records
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,21 +75,21 @@ class OrderBibLinksTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "control_number"
+     * Test attribute "controlNumber"
      */
     public function testPropertyControlNumber()
     {
     }
 
     /**
-     * Test attribute "order_id"
+     * Test attribute "orderId"
      */
     public function testPropertyOrderId()
     {
     }
 
     /**
-     * Test attribute "bib_id"
+     * Test attribute "bibId"
      */
     public function testPropertyBibId()
     {
@@ -103,14 +103,14 @@ class OrderBibLinksTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "vendor_id_numbers"
+     * Test attribute "vendorIDNumbers"
      */
-    public function testPropertyVendorIdNumbers()
+    public function testPropertyVendorIDNumbers()
     {
     }
 
     /**
-     * Test attribute "legacy_order_id"
+     * Test attribute "legacyOrderId"
      */
     public function testPropertyLegacyOrderId()
     {

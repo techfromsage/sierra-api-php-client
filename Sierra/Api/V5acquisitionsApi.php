@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5acquisitionsApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -84,15 +84,15 @@ class V5acquisitionsApi
      *
      * Create a new acquisition
      *
-     * @param  \Sierra\Models\AcquisitionOrderPost $acquisition_order_post the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
+     * @param  \III\Sierra\Models\AcquisitionOrderPost $acquisitionOrderPost the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\OrderBibLinks
+     * @return \III\Sierra\Models\OrderBibLinks
      */
-    public function createANewAcquisition($acquisition_order_post)
+    public function createANewAcquisition($acquisitionOrderPost)
     {
-        list($response) = $this->createANewAcquisitionWithHttpInfo($acquisition_order_post);
+        list($response) = $this->createANewAcquisitionWithHttpInfo($acquisitionOrderPost);
         return $response;
     }
 
@@ -101,16 +101,16 @@ class V5acquisitionsApi
      *
      * Create a new acquisition
      *
-     * @param  \Sierra\Models\AcquisitionOrderPost $acquisition_order_post the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
+     * @param  \III\Sierra\Models\AcquisitionOrderPost $acquisitionOrderPost the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\OrderBibLinks, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\OrderBibLinks, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createANewAcquisitionWithHttpInfo($acquisition_order_post)
+    public function createANewAcquisitionWithHttpInfo($acquisitionOrderPost)
     {
-        $returnType = '\Sierra\Models\OrderBibLinks';
-        $request = $this->createANewAcquisitionRequest($acquisition_order_post);
+        $returnType = '\III\Sierra\Models\OrderBibLinks';
+        $request = $this->createANewAcquisitionRequest($acquisitionOrderPost);
 
         try {
             $options = $this->createHttpClientOption();
@@ -161,7 +161,7 @@ class V5acquisitionsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\OrderBibLinks',
+                        '\III\Sierra\Models\OrderBibLinks',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,14 +176,14 @@ class V5acquisitionsApi
      *
      * Create a new acquisition
      *
-     * @param  \Sierra\Models\AcquisitionOrderPost $acquisition_order_post the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
+     * @param  \III\Sierra\Models\AcquisitionOrderPost $acquisitionOrderPost the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createANewAcquisitionAsync($acquisition_order_post)
+    public function createANewAcquisitionAsync($acquisitionOrderPost)
     {
-        return $this->createANewAcquisitionAsyncWithHttpInfo($acquisition_order_post)
+        return $this->createANewAcquisitionAsyncWithHttpInfo($acquisitionOrderPost)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,15 +196,15 @@ class V5acquisitionsApi
      *
      * Create a new acquisition
      *
-     * @param  \Sierra\Models\AcquisitionOrderPost $acquisition_order_post the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
+     * @param  \III\Sierra\Models\AcquisitionOrderPost $acquisitionOrderPost the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createANewAcquisitionAsyncWithHttpInfo($acquisition_order_post)
+    public function createANewAcquisitionAsyncWithHttpInfo($acquisitionOrderPost)
     {
-        $returnType = '\Sierra\Models\OrderBibLinks';
-        $request = $this->createANewAcquisitionRequest($acquisition_order_post);
+        $returnType = '\III\Sierra\Models\OrderBibLinks';
+        $request = $this->createANewAcquisitionRequest($acquisitionOrderPost);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -246,17 +246,17 @@ class V5acquisitionsApi
     /**
      * Create request for operation 'createANewAcquisition'
      *
-     * @param  \Sierra\Models\AcquisitionOrderPost $acquisition_order_post the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
+     * @param  \III\Sierra\Models\AcquisitionOrderPost $acquisitionOrderPost the order information and the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createANewAcquisitionRequest($acquisition_order_post)
+    protected function createANewAcquisitionRequest($acquisitionOrderPost)
     {
-        // verify the required parameter 'acquisition_order_post' is set
-        if ($acquisition_order_post === null) {
+        // verify the required parameter 'acquisitionOrderPost' is set
+        if ($acquisitionOrderPost === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $acquisition_order_post when calling createANewAcquisition'
+                'Missing the required parameter $acquisitionOrderPost when calling createANewAcquisition'
             );
         }
 
@@ -271,8 +271,8 @@ class V5acquisitionsApi
 
         // body params
         $_tempBody = null;
-        if (isset($acquisition_order_post)) {
-            $_tempBody = $acquisition_order_post;
+        if (isset($acquisitionOrderPost)) {
+            $_tempBody = $acquisitionOrderPost;
         }
 
         if ($multipart) {
@@ -348,15 +348,15 @@ class V5acquisitionsApi
      * @param   $marc the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      * @param  int $copies the number of copies ordered (optional)
      * @param  double $price the estimated price per copy (optional)
-     * @param  string $acquisition_type the library-defined acquisition type code or the method of paying for the material (optional)
+     * @param  string $acquisitionType the library-defined acquisition type code or the method of paying for the material (optional)
      * @param  string $claim the claiming activity code (optional)
      * @param  string $code1 the library-defined order code 1 (optional)
      * @param  string $code2 the library-defined order code 2 (optional)
      * @param  string $code3 the library-defined order code 3 (optional)
      * @param  string $code4 the library-defined order code 4 (optional)
      * @param  string $format a code representing the physical form of the material (any hash mark symbols &#39;#&#39; must be URL encoded (optional)
-     * @param  string $order_note a code representing an order note to print on the purchase order form (optional)
-     * @param  string $order_type a code representing the type of order (optional)
+     * @param  string $orderNote a code representing an order note to print on the purchase order form (optional)
+     * @param  string $orderType a code representing the type of order (optional)
      * @param  string $raction a code representing the receiving action (optional)
      * @param  string $rloc a code representing the receiving location (optional)
      * @param  string $bloc a code representing the billing location (optional)
@@ -366,31 +366,31 @@ class V5acquisitionsApi
      * @param  string $language the language of the material, based on the MARC 21 Code List for Languages (also used by UNIMARC format) (optional)
      * @param  string $country the country of publication, based on the MARC 21 Code List of Countries, or ISO 3166/MA standard for UNIMARC systems (optional)
      * @param  string $note a code representing the note that prints on the purchase order form (repeatable parameter) (optional)
-     * @param  string $staff_note a free-text internal (staff) note (repeatable parameter) (optional)
-     * @param  string $vendor_note a free-text note for vendor order information (repeatable parameter) (optional)
-     * @param  string $vendor_id_number the vendor&#39;s identification number for this title (repeatable parameter) (optional)
+     * @param  string $staffNote a free-text internal (staff) note (repeatable parameter) (optional)
+     * @param  string $vendorNote a free-text note for vendor order information (repeatable parameter) (optional)
+     * @param  string $vendorIDNumber the vendor&#39;s identification number for this title (repeatable parameter) (optional)
      * @param  string $volume the number of volumes for this title (optional)
      * @param  string $selector a free text note identifying the selector of the item (repeatable parameter) (optional)
-     * @param  string $vendor_account the vendor account number (repeatable parameter) (optional)
-     * @param  string $currency_code the foreign currency code (optional)
+     * @param  string $vendorAccount the vendor account number (repeatable parameter) (optional)
+     * @param  string $currencyCode the foreign currency code (optional)
      * @param  string $identity a free text note, used to distinguish between order records (repeatable parameter) (optional)
-     * @param  string $ship_to the library address to which the vendor should ship materials (repeatable parameter) (optional)
+     * @param  string $shipTo the library address to which the vendor should ship materials (repeatable parameter) (optional)
      * @param  string $requestor the requestor (repeatable parameter) (optional)
-     * @param  string $old_order_number the old order number (repeatable parameter) (optional)
-     * @param  string $paid_note the paid note (repeatable parameter) (optional)
-     * @param  string $vendor_address the vendor address (repeatable parameter) (optional)
-     * @param  string $custom_var_field1 custom var field 1 (repeatable parameter) (optional)
-     * @param  string $custom_var_field2 custom var field 2 (repeatable parameter) (optional)
-     * @param  string $custom_var_field3 custom var field 3 (repeatable parameter) (optional)
-     * @param  string $custom_var_field4 custom var field 4 (repeatable parameter) (optional)
+     * @param  string $oldOrderNumber the old order number (repeatable parameter) (optional)
+     * @param  string $paidNote the paid note (repeatable parameter) (optional)
+     * @param  string $vendorAddress the vendor address (repeatable parameter) (optional)
+     * @param  string $customVarField1 custom var field 1 (repeatable parameter) (optional)
+     * @param  string $customVarField2 custom var field 2 (repeatable parameter) (optional)
+     * @param  string $customVarField3 custom var field 3 (repeatable parameter) (optional)
+     * @param  string $customVarField4 custom var field 4 (repeatable parameter) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\OrderBibLinks
+     * @return \III\Sierra\Models\OrderBibLinks
      */
-    public function createANewAcquisition_0($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisition_type = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $order_note = null, $order_type = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staff_note = null, $vendor_note = null, $vendor_id_number = null, $volume = null, $selector = null, $vendor_account = null, $currency_code = null, $identity = null, $ship_to = null, $requestor = null, $old_order_number = null, $paid_note = null, $vendor_address = null, $custom_var_field1 = null, $custom_var_field2 = null, $custom_var_field3 = null, $custom_var_field4 = null)
+    public function createANewAcquisition_0($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisitionType = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $orderNote = null, $orderType = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staffNote = null, $vendorNote = null, $vendorIDNumber = null, $volume = null, $selector = null, $vendorAccount = null, $currencyCode = null, $identity = null, $shipTo = null, $requestor = null, $oldOrderNumber = null, $paidNote = null, $vendorAddress = null, $customVarField1 = null, $customVarField2 = null, $customVarField3 = null, $customVarField4 = null)
     {
-        list($response) = $this->createANewAcquisition_0WithHttpInfo($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisition_type, $claim, $code1, $code2, $code3, $code4, $format, $order_note, $order_type, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staff_note, $vendor_note, $vendor_id_number, $volume, $selector, $vendor_account, $currency_code, $identity, $ship_to, $requestor, $old_order_number, $paid_note, $vendor_address, $custom_var_field1, $custom_var_field2, $custom_var_field3, $custom_var_field4);
+        list($response) = $this->createANewAcquisition_0WithHttpInfo($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisitionType, $claim, $code1, $code2, $code3, $code4, $format, $orderNote, $orderType, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staffNote, $vendorNote, $vendorIDNumber, $volume, $selector, $vendorAccount, $currencyCode, $identity, $shipTo, $requestor, $oldOrderNumber, $paidNote, $vendorAddress, $customVarField1, $customVarField2, $customVarField3, $customVarField4);
         return $response;
     }
 
@@ -406,15 +406,15 @@ class V5acquisitionsApi
      * @param   $marc the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      * @param  int $copies the number of copies ordered (optional)
      * @param  double $price the estimated price per copy (optional)
-     * @param  string $acquisition_type the library-defined acquisition type code or the method of paying for the material (optional)
+     * @param  string $acquisitionType the library-defined acquisition type code or the method of paying for the material (optional)
      * @param  string $claim the claiming activity code (optional)
      * @param  string $code1 the library-defined order code 1 (optional)
      * @param  string $code2 the library-defined order code 2 (optional)
      * @param  string $code3 the library-defined order code 3 (optional)
      * @param  string $code4 the library-defined order code 4 (optional)
      * @param  string $format a code representing the physical form of the material (any hash mark symbols &#39;#&#39; must be URL encoded (optional)
-     * @param  string $order_note a code representing an order note to print on the purchase order form (optional)
-     * @param  string $order_type a code representing the type of order (optional)
+     * @param  string $orderNote a code representing an order note to print on the purchase order form (optional)
+     * @param  string $orderType a code representing the type of order (optional)
      * @param  string $raction a code representing the receiving action (optional)
      * @param  string $rloc a code representing the receiving location (optional)
      * @param  string $bloc a code representing the billing location (optional)
@@ -424,32 +424,32 @@ class V5acquisitionsApi
      * @param  string $language the language of the material, based on the MARC 21 Code List for Languages (also used by UNIMARC format) (optional)
      * @param  string $country the country of publication, based on the MARC 21 Code List of Countries, or ISO 3166/MA standard for UNIMARC systems (optional)
      * @param  string $note a code representing the note that prints on the purchase order form (repeatable parameter) (optional)
-     * @param  string $staff_note a free-text internal (staff) note (repeatable parameter) (optional)
-     * @param  string $vendor_note a free-text note for vendor order information (repeatable parameter) (optional)
-     * @param  string $vendor_id_number the vendor&#39;s identification number for this title (repeatable parameter) (optional)
+     * @param  string $staffNote a free-text internal (staff) note (repeatable parameter) (optional)
+     * @param  string $vendorNote a free-text note for vendor order information (repeatable parameter) (optional)
+     * @param  string $vendorIDNumber the vendor&#39;s identification number for this title (repeatable parameter) (optional)
      * @param  string $volume the number of volumes for this title (optional)
      * @param  string $selector a free text note identifying the selector of the item (repeatable parameter) (optional)
-     * @param  string $vendor_account the vendor account number (repeatable parameter) (optional)
-     * @param  string $currency_code the foreign currency code (optional)
+     * @param  string $vendorAccount the vendor account number (repeatable parameter) (optional)
+     * @param  string $currencyCode the foreign currency code (optional)
      * @param  string $identity a free text note, used to distinguish between order records (repeatable parameter) (optional)
-     * @param  string $ship_to the library address to which the vendor should ship materials (repeatable parameter) (optional)
+     * @param  string $shipTo the library address to which the vendor should ship materials (repeatable parameter) (optional)
      * @param  string $requestor the requestor (repeatable parameter) (optional)
-     * @param  string $old_order_number the old order number (repeatable parameter) (optional)
-     * @param  string $paid_note the paid note (repeatable parameter) (optional)
-     * @param  string $vendor_address the vendor address (repeatable parameter) (optional)
-     * @param  string $custom_var_field1 custom var field 1 (repeatable parameter) (optional)
-     * @param  string $custom_var_field2 custom var field 2 (repeatable parameter) (optional)
-     * @param  string $custom_var_field3 custom var field 3 (repeatable parameter) (optional)
-     * @param  string $custom_var_field4 custom var field 4 (repeatable parameter) (optional)
+     * @param  string $oldOrderNumber the old order number (repeatable parameter) (optional)
+     * @param  string $paidNote the paid note (repeatable parameter) (optional)
+     * @param  string $vendorAddress the vendor address (repeatable parameter) (optional)
+     * @param  string $customVarField1 custom var field 1 (repeatable parameter) (optional)
+     * @param  string $customVarField2 custom var field 2 (repeatable parameter) (optional)
+     * @param  string $customVarField3 custom var field 3 (repeatable parameter) (optional)
+     * @param  string $customVarField4 custom var field 4 (repeatable parameter) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\OrderBibLinks, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\OrderBibLinks, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createANewAcquisition_0WithHttpInfo($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisition_type = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $order_note = null, $order_type = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staff_note = null, $vendor_note = null, $vendor_id_number = null, $volume = null, $selector = null, $vendor_account = null, $currency_code = null, $identity = null, $ship_to = null, $requestor = null, $old_order_number = null, $paid_note = null, $vendor_address = null, $custom_var_field1 = null, $custom_var_field2 = null, $custom_var_field3 = null, $custom_var_field4 = null)
+    public function createANewAcquisition_0WithHttpInfo($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisitionType = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $orderNote = null, $orderType = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staffNote = null, $vendorNote = null, $vendorIDNumber = null, $volume = null, $selector = null, $vendorAccount = null, $currencyCode = null, $identity = null, $shipTo = null, $requestor = null, $oldOrderNumber = null, $paidNote = null, $vendorAddress = null, $customVarField1 = null, $customVarField2 = null, $customVarField3 = null, $customVarField4 = null)
     {
-        $returnType = '\Sierra\Models\OrderBibLinks';
-        $request = $this->createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisition_type, $claim, $code1, $code2, $code3, $code4, $format, $order_note, $order_type, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staff_note, $vendor_note, $vendor_id_number, $volume, $selector, $vendor_account, $currency_code, $identity, $ship_to, $requestor, $old_order_number, $paid_note, $vendor_address, $custom_var_field1, $custom_var_field2, $custom_var_field3, $custom_var_field4);
+        $returnType = '\III\Sierra\Models\OrderBibLinks';
+        $request = $this->createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisitionType, $claim, $code1, $code2, $code3, $code4, $format, $orderNote, $orderType, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staffNote, $vendorNote, $vendorIDNumber, $volume, $selector, $vendorAccount, $currencyCode, $identity, $shipTo, $requestor, $oldOrderNumber, $paidNote, $vendorAddress, $customVarField1, $customVarField2, $customVarField3, $customVarField4);
 
         try {
             $options = $this->createHttpClientOption();
@@ -500,7 +500,7 @@ class V5acquisitionsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\OrderBibLinks',
+                        '\III\Sierra\Models\OrderBibLinks',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,15 +522,15 @@ class V5acquisitionsApi
      * @param   $marc the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      * @param  int $copies the number of copies ordered (optional)
      * @param  double $price the estimated price per copy (optional)
-     * @param  string $acquisition_type the library-defined acquisition type code or the method of paying for the material (optional)
+     * @param  string $acquisitionType the library-defined acquisition type code or the method of paying for the material (optional)
      * @param  string $claim the claiming activity code (optional)
      * @param  string $code1 the library-defined order code 1 (optional)
      * @param  string $code2 the library-defined order code 2 (optional)
      * @param  string $code3 the library-defined order code 3 (optional)
      * @param  string $code4 the library-defined order code 4 (optional)
      * @param  string $format a code representing the physical form of the material (any hash mark symbols &#39;#&#39; must be URL encoded (optional)
-     * @param  string $order_note a code representing an order note to print on the purchase order form (optional)
-     * @param  string $order_type a code representing the type of order (optional)
+     * @param  string $orderNote a code representing an order note to print on the purchase order form (optional)
+     * @param  string $orderType a code representing the type of order (optional)
      * @param  string $raction a code representing the receiving action (optional)
      * @param  string $rloc a code representing the receiving location (optional)
      * @param  string $bloc a code representing the billing location (optional)
@@ -540,30 +540,30 @@ class V5acquisitionsApi
      * @param  string $language the language of the material, based on the MARC 21 Code List for Languages (also used by UNIMARC format) (optional)
      * @param  string $country the country of publication, based on the MARC 21 Code List of Countries, or ISO 3166/MA standard for UNIMARC systems (optional)
      * @param  string $note a code representing the note that prints on the purchase order form (repeatable parameter) (optional)
-     * @param  string $staff_note a free-text internal (staff) note (repeatable parameter) (optional)
-     * @param  string $vendor_note a free-text note for vendor order information (repeatable parameter) (optional)
-     * @param  string $vendor_id_number the vendor&#39;s identification number for this title (repeatable parameter) (optional)
+     * @param  string $staffNote a free-text internal (staff) note (repeatable parameter) (optional)
+     * @param  string $vendorNote a free-text note for vendor order information (repeatable parameter) (optional)
+     * @param  string $vendorIDNumber the vendor&#39;s identification number for this title (repeatable parameter) (optional)
      * @param  string $volume the number of volumes for this title (optional)
      * @param  string $selector a free text note identifying the selector of the item (repeatable parameter) (optional)
-     * @param  string $vendor_account the vendor account number (repeatable parameter) (optional)
-     * @param  string $currency_code the foreign currency code (optional)
+     * @param  string $vendorAccount the vendor account number (repeatable parameter) (optional)
+     * @param  string $currencyCode the foreign currency code (optional)
      * @param  string $identity a free text note, used to distinguish between order records (repeatable parameter) (optional)
-     * @param  string $ship_to the library address to which the vendor should ship materials (repeatable parameter) (optional)
+     * @param  string $shipTo the library address to which the vendor should ship materials (repeatable parameter) (optional)
      * @param  string $requestor the requestor (repeatable parameter) (optional)
-     * @param  string $old_order_number the old order number (repeatable parameter) (optional)
-     * @param  string $paid_note the paid note (repeatable parameter) (optional)
-     * @param  string $vendor_address the vendor address (repeatable parameter) (optional)
-     * @param  string $custom_var_field1 custom var field 1 (repeatable parameter) (optional)
-     * @param  string $custom_var_field2 custom var field 2 (repeatable parameter) (optional)
-     * @param  string $custom_var_field3 custom var field 3 (repeatable parameter) (optional)
-     * @param  string $custom_var_field4 custom var field 4 (repeatable parameter) (optional)
+     * @param  string $oldOrderNumber the old order number (repeatable parameter) (optional)
+     * @param  string $paidNote the paid note (repeatable parameter) (optional)
+     * @param  string $vendorAddress the vendor address (repeatable parameter) (optional)
+     * @param  string $customVarField1 custom var field 1 (repeatable parameter) (optional)
+     * @param  string $customVarField2 custom var field 2 (repeatable parameter) (optional)
+     * @param  string $customVarField3 custom var field 3 (repeatable parameter) (optional)
+     * @param  string $customVarField4 custom var field 4 (repeatable parameter) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createANewAcquisition_0Async($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisition_type = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $order_note = null, $order_type = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staff_note = null, $vendor_note = null, $vendor_id_number = null, $volume = null, $selector = null, $vendor_account = null, $currency_code = null, $identity = null, $ship_to = null, $requestor = null, $old_order_number = null, $paid_note = null, $vendor_address = null, $custom_var_field1 = null, $custom_var_field2 = null, $custom_var_field3 = null, $custom_var_field4 = null)
+    public function createANewAcquisition_0Async($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisitionType = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $orderNote = null, $orderType = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staffNote = null, $vendorNote = null, $vendorIDNumber = null, $volume = null, $selector = null, $vendorAccount = null, $currencyCode = null, $identity = null, $shipTo = null, $requestor = null, $oldOrderNumber = null, $paidNote = null, $vendorAddress = null, $customVarField1 = null, $customVarField2 = null, $customVarField3 = null, $customVarField4 = null)
     {
-        return $this->createANewAcquisition_0AsyncWithHttpInfo($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisition_type, $claim, $code1, $code2, $code3, $code4, $format, $order_note, $order_type, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staff_note, $vendor_note, $vendor_id_number, $volume, $selector, $vendor_account, $currency_code, $identity, $ship_to, $requestor, $old_order_number, $paid_note, $vendor_address, $custom_var_field1, $custom_var_field2, $custom_var_field3, $custom_var_field4)
+        return $this->createANewAcquisition_0AsyncWithHttpInfo($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisitionType, $claim, $code1, $code2, $code3, $code4, $format, $orderNote, $orderType, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staffNote, $vendorNote, $vendorIDNumber, $volume, $selector, $vendorAccount, $currencyCode, $identity, $shipTo, $requestor, $oldOrderNumber, $paidNote, $vendorAddress, $customVarField1, $customVarField2, $customVarField3, $customVarField4)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -583,15 +583,15 @@ class V5acquisitionsApi
      * @param   $marc the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      * @param  int $copies the number of copies ordered (optional)
      * @param  double $price the estimated price per copy (optional)
-     * @param  string $acquisition_type the library-defined acquisition type code or the method of paying for the material (optional)
+     * @param  string $acquisitionType the library-defined acquisition type code or the method of paying for the material (optional)
      * @param  string $claim the claiming activity code (optional)
      * @param  string $code1 the library-defined order code 1 (optional)
      * @param  string $code2 the library-defined order code 2 (optional)
      * @param  string $code3 the library-defined order code 3 (optional)
      * @param  string $code4 the library-defined order code 4 (optional)
      * @param  string $format a code representing the physical form of the material (any hash mark symbols &#39;#&#39; must be URL encoded (optional)
-     * @param  string $order_note a code representing an order note to print on the purchase order form (optional)
-     * @param  string $order_type a code representing the type of order (optional)
+     * @param  string $orderNote a code representing an order note to print on the purchase order form (optional)
+     * @param  string $orderType a code representing the type of order (optional)
      * @param  string $raction a code representing the receiving action (optional)
      * @param  string $rloc a code representing the receiving location (optional)
      * @param  string $bloc a code representing the billing location (optional)
@@ -601,31 +601,31 @@ class V5acquisitionsApi
      * @param  string $language the language of the material, based on the MARC 21 Code List for Languages (also used by UNIMARC format) (optional)
      * @param  string $country the country of publication, based on the MARC 21 Code List of Countries, or ISO 3166/MA standard for UNIMARC systems (optional)
      * @param  string $note a code representing the note that prints on the purchase order form (repeatable parameter) (optional)
-     * @param  string $staff_note a free-text internal (staff) note (repeatable parameter) (optional)
-     * @param  string $vendor_note a free-text note for vendor order information (repeatable parameter) (optional)
-     * @param  string $vendor_id_number the vendor&#39;s identification number for this title (repeatable parameter) (optional)
+     * @param  string $staffNote a free-text internal (staff) note (repeatable parameter) (optional)
+     * @param  string $vendorNote a free-text note for vendor order information (repeatable parameter) (optional)
+     * @param  string $vendorIDNumber the vendor&#39;s identification number for this title (repeatable parameter) (optional)
      * @param  string $volume the number of volumes for this title (optional)
      * @param  string $selector a free text note identifying the selector of the item (repeatable parameter) (optional)
-     * @param  string $vendor_account the vendor account number (repeatable parameter) (optional)
-     * @param  string $currency_code the foreign currency code (optional)
+     * @param  string $vendorAccount the vendor account number (repeatable parameter) (optional)
+     * @param  string $currencyCode the foreign currency code (optional)
      * @param  string $identity a free text note, used to distinguish between order records (repeatable parameter) (optional)
-     * @param  string $ship_to the library address to which the vendor should ship materials (repeatable parameter) (optional)
+     * @param  string $shipTo the library address to which the vendor should ship materials (repeatable parameter) (optional)
      * @param  string $requestor the requestor (repeatable parameter) (optional)
-     * @param  string $old_order_number the old order number (repeatable parameter) (optional)
-     * @param  string $paid_note the paid note (repeatable parameter) (optional)
-     * @param  string $vendor_address the vendor address (repeatable parameter) (optional)
-     * @param  string $custom_var_field1 custom var field 1 (repeatable parameter) (optional)
-     * @param  string $custom_var_field2 custom var field 2 (repeatable parameter) (optional)
-     * @param  string $custom_var_field3 custom var field 3 (repeatable parameter) (optional)
-     * @param  string $custom_var_field4 custom var field 4 (repeatable parameter) (optional)
+     * @param  string $oldOrderNumber the old order number (repeatable parameter) (optional)
+     * @param  string $paidNote the paid note (repeatable parameter) (optional)
+     * @param  string $vendorAddress the vendor address (repeatable parameter) (optional)
+     * @param  string $customVarField1 custom var field 1 (repeatable parameter) (optional)
+     * @param  string $customVarField2 custom var field 2 (repeatable parameter) (optional)
+     * @param  string $customVarField3 custom var field 3 (repeatable parameter) (optional)
+     * @param  string $customVarField4 custom var field 4 (repeatable parameter) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createANewAcquisition_0AsyncWithHttpInfo($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisition_type = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $order_note = null, $order_type = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staff_note = null, $vendor_note = null, $vendor_id_number = null, $volume = null, $selector = null, $vendor_account = null, $currency_code = null, $identity = null, $ship_to = null, $requestor = null, $old_order_number = null, $paid_note = null, $vendor_address = null, $custom_var_field1 = null, $custom_var_field2 = null, $custom_var_field3 = null, $custom_var_field4 = null)
+    public function createANewAcquisition_0AsyncWithHttpInfo($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisitionType = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $orderNote = null, $orderType = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staffNote = null, $vendorNote = null, $vendorIDNumber = null, $volume = null, $selector = null, $vendorAccount = null, $currencyCode = null, $identity = null, $shipTo = null, $requestor = null, $oldOrderNumber = null, $paidNote = null, $vendorAddress = null, $customVarField1 = null, $customVarField2 = null, $customVarField3 = null, $customVarField4 = null)
     {
-        $returnType = '\Sierra\Models\OrderBibLinks';
-        $request = $this->createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisition_type, $claim, $code1, $code2, $code3, $code4, $format, $order_note, $order_type, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staff_note, $vendor_note, $vendor_id_number, $volume, $selector, $vendor_account, $currency_code, $identity, $ship_to, $requestor, $old_order_number, $paid_note, $vendor_address, $custom_var_field1, $custom_var_field2, $custom_var_field3, $custom_var_field4);
+        $returnType = '\III\Sierra\Models\OrderBibLinks';
+        $request = $this->createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies, $price, $acquisitionType, $claim, $code1, $code2, $code3, $code4, $format, $orderNote, $orderType, $raction, $rloc, $bloc, $status, $tloc, $odate, $language, $country, $note, $staffNote, $vendorNote, $vendorIDNumber, $volume, $selector, $vendorAccount, $currencyCode, $identity, $shipTo, $requestor, $oldOrderNumber, $paidNote, $vendorAddress, $customVarField1, $customVarField2, $customVarField3, $customVarField4);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -674,15 +674,15 @@ class V5acquisitionsApi
      * @param   $marc the MARC records in: application/marc-json, application/marc-in-json or application/marc-xml (required)
      * @param  int $copies the number of copies ordered (optional)
      * @param  double $price the estimated price per copy (optional)
-     * @param  string $acquisition_type the library-defined acquisition type code or the method of paying for the material (optional)
+     * @param  string $acquisitionType the library-defined acquisition type code or the method of paying for the material (optional)
      * @param  string $claim the claiming activity code (optional)
      * @param  string $code1 the library-defined order code 1 (optional)
      * @param  string $code2 the library-defined order code 2 (optional)
      * @param  string $code3 the library-defined order code 3 (optional)
      * @param  string $code4 the library-defined order code 4 (optional)
      * @param  string $format a code representing the physical form of the material (any hash mark symbols &#39;#&#39; must be URL encoded (optional)
-     * @param  string $order_note a code representing an order note to print on the purchase order form (optional)
-     * @param  string $order_type a code representing the type of order (optional)
+     * @param  string $orderNote a code representing an order note to print on the purchase order form (optional)
+     * @param  string $orderType a code representing the type of order (optional)
      * @param  string $raction a code representing the receiving action (optional)
      * @param  string $rloc a code representing the receiving location (optional)
      * @param  string $bloc a code representing the billing location (optional)
@@ -692,28 +692,28 @@ class V5acquisitionsApi
      * @param  string $language the language of the material, based on the MARC 21 Code List for Languages (also used by UNIMARC format) (optional)
      * @param  string $country the country of publication, based on the MARC 21 Code List of Countries, or ISO 3166/MA standard for UNIMARC systems (optional)
      * @param  string $note a code representing the note that prints on the purchase order form (repeatable parameter) (optional)
-     * @param  string $staff_note a free-text internal (staff) note (repeatable parameter) (optional)
-     * @param  string $vendor_note a free-text note for vendor order information (repeatable parameter) (optional)
-     * @param  string $vendor_id_number the vendor&#39;s identification number for this title (repeatable parameter) (optional)
+     * @param  string $staffNote a free-text internal (staff) note (repeatable parameter) (optional)
+     * @param  string $vendorNote a free-text note for vendor order information (repeatable parameter) (optional)
+     * @param  string $vendorIDNumber the vendor&#39;s identification number for this title (repeatable parameter) (optional)
      * @param  string $volume the number of volumes for this title (optional)
      * @param  string $selector a free text note identifying the selector of the item (repeatable parameter) (optional)
-     * @param  string $vendor_account the vendor account number (repeatable parameter) (optional)
-     * @param  string $currency_code the foreign currency code (optional)
+     * @param  string $vendorAccount the vendor account number (repeatable parameter) (optional)
+     * @param  string $currencyCode the foreign currency code (optional)
      * @param  string $identity a free text note, used to distinguish between order records (repeatable parameter) (optional)
-     * @param  string $ship_to the library address to which the vendor should ship materials (repeatable parameter) (optional)
+     * @param  string $shipTo the library address to which the vendor should ship materials (repeatable parameter) (optional)
      * @param  string $requestor the requestor (repeatable parameter) (optional)
-     * @param  string $old_order_number the old order number (repeatable parameter) (optional)
-     * @param  string $paid_note the paid note (repeatable parameter) (optional)
-     * @param  string $vendor_address the vendor address (repeatable parameter) (optional)
-     * @param  string $custom_var_field1 custom var field 1 (repeatable parameter) (optional)
-     * @param  string $custom_var_field2 custom var field 2 (repeatable parameter) (optional)
-     * @param  string $custom_var_field3 custom var field 3 (repeatable parameter) (optional)
-     * @param  string $custom_var_field4 custom var field 4 (repeatable parameter) (optional)
+     * @param  string $oldOrderNumber the old order number (repeatable parameter) (optional)
+     * @param  string $paidNote the paid note (repeatable parameter) (optional)
+     * @param  string $vendorAddress the vendor address (repeatable parameter) (optional)
+     * @param  string $customVarField1 custom var field 1 (repeatable parameter) (optional)
+     * @param  string $customVarField2 custom var field 2 (repeatable parameter) (optional)
+     * @param  string $customVarField3 custom var field 3 (repeatable parameter) (optional)
+     * @param  string $customVarField4 custom var field 4 (repeatable parameter) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisition_type = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $order_note = null, $order_type = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staff_note = null, $vendor_note = null, $vendor_id_number = null, $volume = null, $selector = null, $vendor_account = null, $currency_code = null, $identity = null, $ship_to = null, $requestor = null, $old_order_number = null, $paid_note = null, $vendor_address = null, $custom_var_field1 = null, $custom_var_field2 = null, $custom_var_field3 = null, $custom_var_field4 = null)
+    protected function createANewAcquisition_0Request($login, $location, $fund, $vendor, $marc, $copies = null, $price = null, $acquisitionType = null, $claim = null, $code1 = null, $code2 = null, $code3 = null, $code4 = null, $format = null, $orderNote = null, $orderType = null, $raction = null, $rloc = null, $bloc = null, $status = null, $tloc = null, $odate = null, $language = null, $country = null, $note = null, $staffNote = null, $vendorNote = null, $vendorIDNumber = null, $volume = null, $selector = null, $vendorAccount = null, $currencyCode = null, $identity = null, $shipTo = null, $requestor = null, $oldOrderNumber = null, $paidNote = null, $vendorAddress = null, $customVarField1 = null, $customVarField2 = null, $customVarField3 = null, $customVarField4 = null)
     {
         // verify the required parameter 'login' is set
         if ($login === null) {
@@ -778,8 +778,8 @@ class V5acquisitionsApi
             $queryParams['price'] = ObjectSerializer::toQueryValue($price);
         }
         // query params
-        if ($acquisition_type !== null) {
-            $queryParams['acquisitionType'] = ObjectSerializer::toQueryValue($acquisition_type);
+        if ($acquisitionType !== null) {
+            $queryParams['acquisitionType'] = ObjectSerializer::toQueryValue($acquisitionType);
         }
         // query params
         if ($claim !== null) {
@@ -806,12 +806,12 @@ class V5acquisitionsApi
             $queryParams['format'] = ObjectSerializer::toQueryValue($format);
         }
         // query params
-        if ($order_note !== null) {
-            $queryParams['orderNote'] = ObjectSerializer::toQueryValue($order_note);
+        if ($orderNote !== null) {
+            $queryParams['orderNote'] = ObjectSerializer::toQueryValue($orderNote);
         }
         // query params
-        if ($order_type !== null) {
-            $queryParams['orderType'] = ObjectSerializer::toQueryValue($order_type);
+        if ($orderType !== null) {
+            $queryParams['orderType'] = ObjectSerializer::toQueryValue($orderType);
         }
         // query params
         if ($raction !== null) {
@@ -850,16 +850,16 @@ class V5acquisitionsApi
             $queryParams['note'] = ObjectSerializer::toQueryValue($note);
         }
         // query params
-        if ($staff_note !== null) {
-            $queryParams['staffNote'] = ObjectSerializer::toQueryValue($staff_note);
+        if ($staffNote !== null) {
+            $queryParams['staffNote'] = ObjectSerializer::toQueryValue($staffNote);
         }
         // query params
-        if ($vendor_note !== null) {
-            $queryParams['vendorNote'] = ObjectSerializer::toQueryValue($vendor_note);
+        if ($vendorNote !== null) {
+            $queryParams['vendorNote'] = ObjectSerializer::toQueryValue($vendorNote);
         }
         // query params
-        if ($vendor_id_number !== null) {
-            $queryParams['vendorIDNumber'] = ObjectSerializer::toQueryValue($vendor_id_number);
+        if ($vendorIDNumber !== null) {
+            $queryParams['vendorIDNumber'] = ObjectSerializer::toQueryValue($vendorIDNumber);
         }
         // query params
         if ($volume !== null) {
@@ -870,52 +870,52 @@ class V5acquisitionsApi
             $queryParams['selector'] = ObjectSerializer::toQueryValue($selector);
         }
         // query params
-        if ($vendor_account !== null) {
-            $queryParams['vendorAccount'] = ObjectSerializer::toQueryValue($vendor_account);
+        if ($vendorAccount !== null) {
+            $queryParams['vendorAccount'] = ObjectSerializer::toQueryValue($vendorAccount);
         }
         // query params
-        if ($currency_code !== null) {
-            $queryParams['currencyCode'] = ObjectSerializer::toQueryValue($currency_code);
+        if ($currencyCode !== null) {
+            $queryParams['currencyCode'] = ObjectSerializer::toQueryValue($currencyCode);
         }
         // query params
         if ($identity !== null) {
             $queryParams['identity'] = ObjectSerializer::toQueryValue($identity);
         }
         // query params
-        if ($ship_to !== null) {
-            $queryParams['shipTo'] = ObjectSerializer::toQueryValue($ship_to);
+        if ($shipTo !== null) {
+            $queryParams['shipTo'] = ObjectSerializer::toQueryValue($shipTo);
         }
         // query params
         if ($requestor !== null) {
             $queryParams['requestor'] = ObjectSerializer::toQueryValue($requestor);
         }
         // query params
-        if ($old_order_number !== null) {
-            $queryParams['oldOrderNumber'] = ObjectSerializer::toQueryValue($old_order_number);
+        if ($oldOrderNumber !== null) {
+            $queryParams['oldOrderNumber'] = ObjectSerializer::toQueryValue($oldOrderNumber);
         }
         // query params
-        if ($paid_note !== null) {
-            $queryParams['paidNote'] = ObjectSerializer::toQueryValue($paid_note);
+        if ($paidNote !== null) {
+            $queryParams['paidNote'] = ObjectSerializer::toQueryValue($paidNote);
         }
         // query params
-        if ($vendor_address !== null) {
-            $queryParams['vendorAddress'] = ObjectSerializer::toQueryValue($vendor_address);
+        if ($vendorAddress !== null) {
+            $queryParams['vendorAddress'] = ObjectSerializer::toQueryValue($vendorAddress);
         }
         // query params
-        if ($custom_var_field1 !== null) {
-            $queryParams['customVarField1'] = ObjectSerializer::toQueryValue($custom_var_field1);
+        if ($customVarField1 !== null) {
+            $queryParams['customVarField1'] = ObjectSerializer::toQueryValue($customVarField1);
         }
         // query params
-        if ($custom_var_field2 !== null) {
-            $queryParams['customVarField2'] = ObjectSerializer::toQueryValue($custom_var_field2);
+        if ($customVarField2 !== null) {
+            $queryParams['customVarField2'] = ObjectSerializer::toQueryValue($customVarField2);
         }
         // query params
-        if ($custom_var_field3 !== null) {
-            $queryParams['customVarField3'] = ObjectSerializer::toQueryValue($custom_var_field3);
+        if ($customVarField3 !== null) {
+            $queryParams['customVarField3'] = ObjectSerializer::toQueryValue($customVarField3);
         }
         // query params
-        if ($custom_var_field4 !== null) {
-            $queryParams['customVarField4'] = ObjectSerializer::toQueryValue($custom_var_field4);
+        if ($customVarField4 !== null) {
+            $queryParams['customVarField4'] = ObjectSerializer::toQueryValue($customVarField4);
         }
 
 
@@ -991,15 +991,15 @@ class V5acquisitionsApi
      *
      * Validate the order data
      *
-     * @param  \Sierra\Models\AcquisitionOrder $acquisition_order_post the order information (required)
+     * @param  \III\Sierra\Models\AcquisitionOrder $acquisitionOrderPost the order information (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
-    public function validateTheOrderData($acquisition_order_post)
+    public function validateTheOrderData($acquisitionOrderPost)
     {
-        list($response) = $this->validateTheOrderDataWithHttpInfo($acquisition_order_post);
+        list($response) = $this->validateTheOrderDataWithHttpInfo($acquisitionOrderPost);
         return $response;
     }
 
@@ -1008,16 +1008,16 @@ class V5acquisitionsApi
      *
      * Validate the order data
      *
-     * @param  \Sierra\Models\AcquisitionOrder $acquisition_order_post the order information (required)
+     * @param  \III\Sierra\Models\AcquisitionOrder $acquisitionOrderPost the order information (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
-    public function validateTheOrderDataWithHttpInfo($acquisition_order_post)
+    public function validateTheOrderDataWithHttpInfo($acquisitionOrderPost)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->validateTheOrderDataRequest($acquisition_order_post);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->validateTheOrderDataRequest($acquisitionOrderPost);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1068,7 +1068,7 @@ class V5acquisitionsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1083,14 +1083,14 @@ class V5acquisitionsApi
      *
      * Validate the order data
      *
-     * @param  \Sierra\Models\AcquisitionOrder $acquisition_order_post the order information (required)
+     * @param  \III\Sierra\Models\AcquisitionOrder $acquisitionOrderPost the order information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validateTheOrderDataAsync($acquisition_order_post)
+    public function validateTheOrderDataAsync($acquisitionOrderPost)
     {
-        return $this->validateTheOrderDataAsyncWithHttpInfo($acquisition_order_post)
+        return $this->validateTheOrderDataAsyncWithHttpInfo($acquisitionOrderPost)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1103,15 +1103,15 @@ class V5acquisitionsApi
      *
      * Validate the order data
      *
-     * @param  \Sierra\Models\AcquisitionOrder $acquisition_order_post the order information (required)
+     * @param  \III\Sierra\Models\AcquisitionOrder $acquisitionOrderPost the order information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validateTheOrderDataAsyncWithHttpInfo($acquisition_order_post)
+    public function validateTheOrderDataAsyncWithHttpInfo($acquisitionOrderPost)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->validateTheOrderDataRequest($acquisition_order_post);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->validateTheOrderDataRequest($acquisitionOrderPost);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1153,17 +1153,17 @@ class V5acquisitionsApi
     /**
      * Create request for operation 'validateTheOrderData'
      *
-     * @param  \Sierra\Models\AcquisitionOrder $acquisition_order_post the order information (required)
+     * @param  \III\Sierra\Models\AcquisitionOrder $acquisitionOrderPost the order information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function validateTheOrderDataRequest($acquisition_order_post)
+    protected function validateTheOrderDataRequest($acquisitionOrderPost)
     {
-        // verify the required parameter 'acquisition_order_post' is set
-        if ($acquisition_order_post === null) {
+        // verify the required parameter 'acquisitionOrderPost' is set
+        if ($acquisitionOrderPost === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $acquisition_order_post when calling validateTheOrderData'
+                'Missing the required parameter $acquisitionOrderPost when calling validateTheOrderData'
             );
         }
 
@@ -1178,8 +1178,8 @@ class V5acquisitionsApi
 
         // body params
         $_tempBody = null;
-        if (isset($acquisition_order_post)) {
-            $_tempBody = $acquisition_order_post;
+        if (isset($acquisitionOrderPost)) {
+            $_tempBody = $acquisitionOrderPost;
         }
 
         if ($multipart) {

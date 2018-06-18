@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * FineTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description a patron fine
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -96,7 +96,7 @@ class FineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "assessed_date"
+     * Test attribute "assessedDate"
      */
     public function testPropertyAssessedDate()
     {
@@ -110,42 +110,42 @@ class FineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "invoiceNumber"
      */
     public function testPropertyInvoiceNumber()
     {
     }
 
     /**
-     * Test attribute "charge_type"
+     * Test attribute "chargeType"
      */
     public function testPropertyChargeType()
     {
     }
 
     /**
-     * Test attribute "item_charge"
+     * Test attribute "itemCharge"
      */
     public function testPropertyItemCharge()
     {
     }
 
     /**
-     * Test attribute "processing_fee"
+     * Test attribute "processingFee"
      */
     public function testPropertyProcessingFee()
     {
     }
 
     /**
-     * Test attribute "billing_fee"
+     * Test attribute "billingFee"
      */
     public function testPropertyBillingFee()
     {
     }
 
     /**
-     * Test attribute "paid_amount"
+     * Test attribute "paidAmount"
      */
     public function testPropertyPaidAmount()
     {
@@ -166,49 +166,49 @@ class FineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "creation_method"
+     * Test attribute "creationMethod"
      */
     public function testPropertyCreationMethod()
     {
     }
 
     /**
-     * Test attribute "date_paid"
+     * Test attribute "datePaid"
      */
     public function testPropertyDatePaid()
     {
     }
 
     /**
-     * Test attribute "original_patron"
+     * Test attribute "originalPatron"
      */
     public function testPropertyOriginalPatron()
     {
     }
 
     /**
-     * Test attribute "print_bill"
+     * Test attribute "printBill"
      */
     public function testPropertyPrintBill()
     {
     }
 
     /**
-     * Test attribute "terminal_number"
+     * Test attribute "terminalNumber"
      */
     public function testPropertyTerminalNumber()
     {
     }
 
     /**
-     * Test attribute "transfer_date"
+     * Test attribute "transferDate"
      */
     public function testPropertyTransferDate()
     {
     }
 
     /**
-     * Test attribute "return_date"
+     * Test attribute "returnDate"
      */
     public function testPropertyReturnDate()
     {

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * ChargedFund Class Doc Comment
  *
  * @category Class
  * @description order data related to one fund
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,10 +55,10 @@ class ChargedFund implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_order' => 'int',
+        'displayOrder' => 'int',
         'fund' => 'string',
         'copies' => 'int',
-        'location' => '\Sierra\Models\Location'
+        'location' => '\III\Sierra\Models\Location'
     ];
 
     /**
@@ -67,7 +67,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'display_order' => 'int32',
+        'displayOrder' => 'int32',
         'fund' => null,
         'copies' => 'int32',
         'location' => null
@@ -100,7 +100,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'display_order' => 'displayOrder',
+        'displayOrder' => 'displayOrder',
         'fund' => 'fund',
         'copies' => 'copies',
         'location' => 'location'
@@ -112,7 +112,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'display_order' => 'setDisplayOrder',
+        'displayOrder' => 'setDisplayOrder',
         'fund' => 'setFund',
         'copies' => 'setCopies',
         'location' => 'setLocation'
@@ -124,7 +124,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'display_order' => 'getDisplayOrder',
+        'displayOrder' => 'getDisplayOrder',
         'fund' => 'getFund',
         'copies' => 'getCopies',
         'location' => 'getLocation'
@@ -190,7 +190,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
+        $this->container['displayOrder'] = isset($data['displayOrder']) ? $data['displayOrder'] : null;
         $this->container['fund'] = isset($data['fund']) ? $data['fund'] : null;
         $this->container['copies'] = isset($data['copies']) ? $data['copies'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
@@ -205,8 +205,8 @@ class ChargedFund implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['display_order'] === null) {
-            $invalidProperties[] = "'display_order' can't be null";
+        if ($this->container['displayOrder'] === null) {
+            $invalidProperties[] = "'displayOrder' can't be null";
         }
         if ($this->container['fund'] === null) {
             $invalidProperties[] = "'fund' can't be null";
@@ -229,7 +229,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['display_order'] === null) {
+        if ($this->container['displayOrder'] === null) {
             return false;
         }
         if ($this->container['fund'] === null) {
@@ -246,25 +246,25 @@ class ChargedFund implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets display_order
+     * Gets displayOrder
      *
      * @return int
      */
     public function getDisplayOrder()
     {
-        return $this->container['display_order'];
+        return $this->container['displayOrder'];
     }
 
     /**
-     * Sets display_order
+     * Sets displayOrder
      *
-     * @param int $display_order an integer to manage the display order of a list
+     * @param int $displayOrder an integer to manage the display order of a list
      *
      * @return $this
      */
-    public function setDisplayOrder($display_order)
+    public function setDisplayOrder($displayOrder)
     {
-        $this->container['display_order'] = $display_order;
+        $this->container['displayOrder'] = $displayOrder;
 
         return $this;
     }
@@ -320,7 +320,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getLocation()
     {
@@ -330,7 +330,7 @@ class ChargedFund implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \Sierra\Models\Location $location the location code that corresponds to the physical location of the item ordered
+     * @param \III\Sierra\Models\Location $location the location code that corresponds to the physical location of the item ordered
      *
      * @return $this
      */

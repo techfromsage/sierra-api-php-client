@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **persistent** | **bool** | the persistence setting of MILPROTO service | 
 **username** | **string** | the user name of MILAPP Connection | 
 **password** | **string** | the password of MILAPP Connection | 
-**accounting_unit** | **int** | the accounting unit | 
+**accountingUnit** | **int** | the accounting unit | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

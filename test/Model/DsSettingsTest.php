@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * DsSettingsTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description The data service settings
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,49 +75,49 @@ class DsSettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "dataservice_url"
+     * Test attribute "dataserviceUrl"
      */
     public function testPropertyDataserviceUrl()
     {
     }
 
     /**
-     * Test attribute "milsh_port"
+     * Test attribute "milshPort"
      */
     public function testPropertyMilshPort()
     {
     }
 
     /**
-     * Test attribute "x_circ_settings"
+     * Test attribute "xCircSettings"
      */
     public function testPropertyXCircSettings()
     {
     }
 
     /**
-     * Test attribute "x_circ2_settings"
+     * Test attribute "xCirc2Settings"
      */
     public function testPropertyXCirc2Settings()
     {
     }
 
     /**
-     * Test attribute "message_tag"
+     * Test attribute "messageTag"
      */
     public function testPropertyMessageTag()
     {
     }
 
     /**
-     * Test attribute "mildata_settings"
+     * Test attribute "mildataSettings"
      */
     public function testPropertyMildataSettings()
     {
     }
 
     /**
-     * Test attribute "milproto_settings"
+     * Test attribute "milprotoSettings"
      */
     public function testPropertyMilprotoSettings()
     {

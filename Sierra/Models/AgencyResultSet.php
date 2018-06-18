@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * AgencyResultSet Class Doc Comment
  *
  * @category Class
  * @description a paged set of agency results
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class AgencyResultSet implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'total' => 'int',
         'start' => 'int',
-        'entries' => '\Sierra\Models\Agency[]'
+        'entries' => '\III\Sierra\Models\Agency[]'
     ];
 
     /**
@@ -272,7 +272,7 @@ class AgencyResultSet implements ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Sierra\Models\Agency[]
+     * @return \III\Sierra\Models\Agency[]
      */
     public function getEntries()
     {
@@ -282,7 +282,7 @@ class AgencyResultSet implements ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Sierra\Models\Agency[] $entries the agency entries
+     * @param \III\Sierra\Models\Agency[] $entries the agency entries
      *
      * @return $this
      */

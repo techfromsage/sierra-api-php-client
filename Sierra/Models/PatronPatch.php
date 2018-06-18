@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PatronPatch Class Doc Comment
  *
  * @category Class
  * @description a patron PUT request
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,21 +57,21 @@ class PatronPatch implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'emails' => 'string[]',
         'names' => 'string[]',
-        'addresses' => '\Sierra\Models\Address[]',
-        'phones' => '\Sierra\Models\Phone[]',
+        'addresses' => '\III\Sierra\Models\Address[]',
+        'phones' => '\III\Sierra\Models\Phone[]',
         'pin' => 'string',
         'barcodes' => 'string[]',
-        'patron_type' => 'int',
-        'expiration_date' => '\DateTime',
-        'birth_date' => '\DateTime',
-        'patron_codes' => '\Sierra\Models\Codes',
-        'block_info' => '\Sierra\Models\Block',
-        'unique_ids' => 'string[]',
-        'p_message' => 'string',
-        'home_library_code' => 'string',
-        'lang_pref' => 'string',
-        'fixed_fields' => '\Sierra\Models\map',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'patronType' => 'int',
+        'expirationDate' => '\DateTime',
+        'birthDate' => '\DateTime',
+        'patronCodes' => '\III\Sierra\Models\Codes',
+        'blockInfo' => '\III\Sierra\Models\Block',
+        'uniqueIds' => 'string[]',
+        'pMessage' => 'string',
+        'homeLibraryCode' => 'string',
+        'langPref' => 'string',
+        'fixedFields' => '\III\Sierra\Models\map',
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -86,17 +86,17 @@ class PatronPatch implements ModelInterface, ArrayAccess
         'phones' => null,
         'pin' => null,
         'barcodes' => null,
-        'patron_type' => 'int32',
-        'expiration_date' => 'date',
-        'birth_date' => 'date',
-        'patron_codes' => null,
-        'block_info' => null,
-        'unique_ids' => null,
-        'p_message' => null,
-        'home_library_code' => null,
-        'lang_pref' => null,
-        'fixed_fields' => null,
-        'var_fields' => null
+        'patronType' => 'int32',
+        'expirationDate' => 'date',
+        'birthDate' => 'date',
+        'patronCodes' => null,
+        'blockInfo' => null,
+        'uniqueIds' => null,
+        'pMessage' => null,
+        'homeLibraryCode' => null,
+        'langPref' => null,
+        'fixedFields' => null,
+        'varFields' => null
     ];
 
     /**
@@ -132,17 +132,17 @@ class PatronPatch implements ModelInterface, ArrayAccess
         'phones' => 'phones',
         'pin' => 'pin',
         'barcodes' => 'barcodes',
-        'patron_type' => 'patronType',
-        'expiration_date' => 'expirationDate',
-        'birth_date' => 'birthDate',
-        'patron_codes' => 'patronCodes',
-        'block_info' => 'blockInfo',
-        'unique_ids' => 'uniqueIds',
-        'p_message' => 'pMessage',
-        'home_library_code' => 'homeLibraryCode',
-        'lang_pref' => 'langPref',
-        'fixed_fields' => 'fixedFields',
-        'var_fields' => 'varFields'
+        'patronType' => 'patronType',
+        'expirationDate' => 'expirationDate',
+        'birthDate' => 'birthDate',
+        'patronCodes' => 'patronCodes',
+        'blockInfo' => 'blockInfo',
+        'uniqueIds' => 'uniqueIds',
+        'pMessage' => 'pMessage',
+        'homeLibraryCode' => 'homeLibraryCode',
+        'langPref' => 'langPref',
+        'fixedFields' => 'fixedFields',
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -157,17 +157,17 @@ class PatronPatch implements ModelInterface, ArrayAccess
         'phones' => 'setPhones',
         'pin' => 'setPin',
         'barcodes' => 'setBarcodes',
-        'patron_type' => 'setPatronType',
-        'expiration_date' => 'setExpirationDate',
-        'birth_date' => 'setBirthDate',
-        'patron_codes' => 'setPatronCodes',
-        'block_info' => 'setBlockInfo',
-        'unique_ids' => 'setUniqueIds',
-        'p_message' => 'setPMessage',
-        'home_library_code' => 'setHomeLibraryCode',
-        'lang_pref' => 'setLangPref',
-        'fixed_fields' => 'setFixedFields',
-        'var_fields' => 'setVarFields'
+        'patronType' => 'setPatronType',
+        'expirationDate' => 'setExpirationDate',
+        'birthDate' => 'setBirthDate',
+        'patronCodes' => 'setPatronCodes',
+        'blockInfo' => 'setBlockInfo',
+        'uniqueIds' => 'setUniqueIds',
+        'pMessage' => 'setPMessage',
+        'homeLibraryCode' => 'setHomeLibraryCode',
+        'langPref' => 'setLangPref',
+        'fixedFields' => 'setFixedFields',
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -182,17 +182,17 @@ class PatronPatch implements ModelInterface, ArrayAccess
         'phones' => 'getPhones',
         'pin' => 'getPin',
         'barcodes' => 'getBarcodes',
-        'patron_type' => 'getPatronType',
-        'expiration_date' => 'getExpirationDate',
-        'birth_date' => 'getBirthDate',
-        'patron_codes' => 'getPatronCodes',
-        'block_info' => 'getBlockInfo',
-        'unique_ids' => 'getUniqueIds',
-        'p_message' => 'getPMessage',
-        'home_library_code' => 'getHomeLibraryCode',
-        'lang_pref' => 'getLangPref',
-        'fixed_fields' => 'getFixedFields',
-        'var_fields' => 'getVarFields'
+        'patronType' => 'getPatronType',
+        'expirationDate' => 'getExpirationDate',
+        'birthDate' => 'getBirthDate',
+        'patronCodes' => 'getPatronCodes',
+        'blockInfo' => 'getBlockInfo',
+        'uniqueIds' => 'getUniqueIds',
+        'pMessage' => 'getPMessage',
+        'homeLibraryCode' => 'getHomeLibraryCode',
+        'langPref' => 'getLangPref',
+        'fixedFields' => 'getFixedFields',
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -261,17 +261,17 @@ class PatronPatch implements ModelInterface, ArrayAccess
         $this->container['phones'] = isset($data['phones']) ? $data['phones'] : null;
         $this->container['pin'] = isset($data['pin']) ? $data['pin'] : null;
         $this->container['barcodes'] = isset($data['barcodes']) ? $data['barcodes'] : null;
-        $this->container['patron_type'] = isset($data['patron_type']) ? $data['patron_type'] : null;
-        $this->container['expiration_date'] = isset($data['expiration_date']) ? $data['expiration_date'] : null;
-        $this->container['birth_date'] = isset($data['birth_date']) ? $data['birth_date'] : null;
-        $this->container['patron_codes'] = isset($data['patron_codes']) ? $data['patron_codes'] : null;
-        $this->container['block_info'] = isset($data['block_info']) ? $data['block_info'] : null;
-        $this->container['unique_ids'] = isset($data['unique_ids']) ? $data['unique_ids'] : null;
-        $this->container['p_message'] = isset($data['p_message']) ? $data['p_message'] : null;
-        $this->container['home_library_code'] = isset($data['home_library_code']) ? $data['home_library_code'] : null;
-        $this->container['lang_pref'] = isset($data['lang_pref']) ? $data['lang_pref'] : null;
-        $this->container['fixed_fields'] = isset($data['fixed_fields']) ? $data['fixed_fields'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['patronType'] = isset($data['patronType']) ? $data['patronType'] : null;
+        $this->container['expirationDate'] = isset($data['expirationDate']) ? $data['expirationDate'] : null;
+        $this->container['birthDate'] = isset($data['birthDate']) ? $data['birthDate'] : null;
+        $this->container['patronCodes'] = isset($data['patronCodes']) ? $data['patronCodes'] : null;
+        $this->container['blockInfo'] = isset($data['blockInfo']) ? $data['blockInfo'] : null;
+        $this->container['uniqueIds'] = isset($data['uniqueIds']) ? $data['uniqueIds'] : null;
+        $this->container['pMessage'] = isset($data['pMessage']) ? $data['pMessage'] : null;
+        $this->container['homeLibraryCode'] = isset($data['homeLibraryCode']) ? $data['homeLibraryCode'] : null;
+        $this->container['langPref'] = isset($data['langPref']) ? $data['langPref'] : null;
+        $this->container['fixedFields'] = isset($data['fixedFields']) ? $data['fixedFields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -350,7 +350,7 @@ class PatronPatch implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Sierra\Models\Address[]
+     * @return \III\Sierra\Models\Address[]
      */
     public function getAddresses()
     {
@@ -360,7 +360,7 @@ class PatronPatch implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Sierra\Models\Address[] $addresses a list of the patron's addresses (must include all applicable addresses for the patron)
+     * @param \III\Sierra\Models\Address[] $addresses a list of the patron's addresses (must include all applicable addresses for the patron)
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ class PatronPatch implements ModelInterface, ArrayAccess
     /**
      * Gets phones
      *
-     * @return \Sierra\Models\Phone[]
+     * @return \III\Sierra\Models\Phone[]
      */
     public function getPhones()
     {
@@ -384,7 +384,7 @@ class PatronPatch implements ModelInterface, ArrayAccess
     /**
      * Sets phones
      *
-     * @param \Sierra\Models\Phone[] $phones a list of the patron's phone numbers (must include all applicable phone numbers for the patron)
+     * @param \III\Sierra\Models\Phone[] $phones a list of the patron's phone numbers (must include all applicable phone numbers for the patron)
      *
      * @return $this
      */
@@ -444,265 +444,265 @@ class PatronPatch implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets patron_type
+     * Gets patronType
      *
      * @return int
      */
     public function getPatronType()
     {
-        return $this->container['patron_type'];
+        return $this->container['patronType'];
     }
 
     /**
-     * Sets patron_type
+     * Sets patronType
      *
-     * @param int $patron_type the patron type code
+     * @param int $patronType the patron type code
      *
      * @return $this
      */
-    public function setPatronType($patron_type)
+    public function setPatronType($patronType)
     {
-        $this->container['patron_type'] = $patron_type;
+        $this->container['patronType'] = $patronType;
 
         return $this;
     }
 
     /**
-     * Gets expiration_date
+     * Gets expirationDate
      *
      * @return \DateTime
      */
     public function getExpirationDate()
     {
-        return $this->container['expiration_date'];
+        return $this->container['expirationDate'];
     }
 
     /**
-     * Sets expiration_date
+     * Sets expirationDate
      *
-     * @param \DateTime $expiration_date the expiration date of the patron's borrowing privileges in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $expirationDate the expiration date of the patron's borrowing privileges in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setExpirationDate($expiration_date)
+    public function setExpirationDate($expirationDate)
     {
-        $this->container['expiration_date'] = $expiration_date;
+        $this->container['expirationDate'] = $expirationDate;
 
         return $this;
     }
 
     /**
-     * Gets birth_date
+     * Gets birthDate
      *
      * @return \DateTime
      */
     public function getBirthDate()
     {
-        return $this->container['birth_date'];
+        return $this->container['birthDate'];
     }
 
     /**
-     * Sets birth_date
+     * Sets birthDate
      *
-     * @param \DateTime $birth_date the patron's date of birth in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $birthDate the patron's date of birth in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setBirthDate($birth_date)
+    public function setBirthDate($birthDate)
     {
-        $this->container['birth_date'] = $birth_date;
+        $this->container['birthDate'] = $birthDate;
 
         return $this;
     }
 
     /**
-     * Gets patron_codes
+     * Gets patronCodes
      *
-     * @return \Sierra\Models\Codes
+     * @return \III\Sierra\Models\Codes
      */
     public function getPatronCodes()
     {
-        return $this->container['patron_codes'];
+        return $this->container['patronCodes'];
     }
 
     /**
-     * Sets patron_codes
+     * Sets patronCodes
      *
-     * @param \Sierra\Models\Codes $patron_codes a list of patron codes
+     * @param \III\Sierra\Models\Codes $patronCodes a list of patron codes
      *
      * @return $this
      */
-    public function setPatronCodes($patron_codes)
+    public function setPatronCodes($patronCodes)
     {
-        $this->container['patron_codes'] = $patron_codes;
+        $this->container['patronCodes'] = $patronCodes;
 
         return $this;
     }
 
     /**
-     * Gets block_info
+     * Gets blockInfo
      *
-     * @return \Sierra\Models\Block
+     * @return \III\Sierra\Models\Block
      */
     public function getBlockInfo()
     {
-        return $this->container['block_info'];
+        return $this->container['blockInfo'];
     }
 
     /**
-     * Sets block_info
+     * Sets blockInfo
      *
-     * @param \Sierra\Models\Block $block_info patron block information
+     * @param \III\Sierra\Models\Block $blockInfo patron block information
      *
      * @return $this
      */
-    public function setBlockInfo($block_info)
+    public function setBlockInfo($blockInfo)
     {
-        $this->container['block_info'] = $block_info;
+        $this->container['blockInfo'] = $blockInfo;
 
         return $this;
     }
 
     /**
-     * Gets unique_ids
+     * Gets uniqueIds
      *
      * @return string[]
      */
     public function getUniqueIds()
     {
-        return $this->container['unique_ids'];
+        return $this->container['uniqueIds'];
     }
 
     /**
-     * Sets unique_ids
+     * Sets uniqueIds
      *
-     * @param string[] $unique_ids the patron's unique IDs
+     * @param string[] $uniqueIds the patron's unique IDs
      *
      * @return $this
      */
-    public function setUniqueIds($unique_ids)
+    public function setUniqueIds($uniqueIds)
     {
-        $this->container['unique_ids'] = $unique_ids;
+        $this->container['uniqueIds'] = $uniqueIds;
 
         return $this;
     }
 
     /**
-     * Gets p_message
+     * Gets pMessage
      *
      * @return string
      */
     public function getPMessage()
     {
-        return $this->container['p_message'];
+        return $this->container['pMessage'];
     }
 
     /**
-     * Sets p_message
+     * Sets pMessage
      *
-     * @param string $p_message the patron's message
+     * @param string $pMessage the patron's message
      *
      * @return $this
      */
-    public function setPMessage($p_message)
+    public function setPMessage($pMessage)
     {
-        $this->container['p_message'] = $p_message;
+        $this->container['pMessage'] = $pMessage;
 
         return $this;
     }
 
     /**
-     * Gets home_library_code
+     * Gets homeLibraryCode
      *
      * @return string
      */
     public function getHomeLibraryCode()
     {
-        return $this->container['home_library_code'];
+        return $this->container['homeLibraryCode'];
     }
 
     /**
-     * Sets home_library_code
+     * Sets homeLibraryCode
      *
-     * @param string $home_library_code the patron's home library
+     * @param string $homeLibraryCode the patron's home library
      *
      * @return $this
      */
-    public function setHomeLibraryCode($home_library_code)
+    public function setHomeLibraryCode($homeLibraryCode)
     {
-        $this->container['home_library_code'] = $home_library_code;
+        $this->container['homeLibraryCode'] = $homeLibraryCode;
 
         return $this;
     }
 
     /**
-     * Gets lang_pref
+     * Gets langPref
      *
      * @return string
      */
     public function getLangPref()
     {
-        return $this->container['lang_pref'];
+        return $this->container['langPref'];
     }
 
     /**
-     * Sets lang_pref
+     * Sets langPref
      *
-     * @param string $lang_pref the patron's language preference
+     * @param string $langPref the patron's language preference
      *
      * @return $this
      */
-    public function setLangPref($lang_pref)
+    public function setLangPref($langPref)
     {
-        $this->container['lang_pref'] = $lang_pref;
+        $this->container['langPref'] = $langPref;
 
         return $this;
     }
 
     /**
-     * Gets fixed_fields
+     * Gets fixedFields
      *
-     * @return \Sierra\Models\map
+     * @return \III\Sierra\Models\map
      */
     public function getFixedFields()
     {
-        return $this->container['fixed_fields'];
+        return $this->container['fixedFields'];
     }
 
     /**
-     * Sets fixed_fields
+     * Sets fixedFields
      *
-     * @param \Sierra\Models\map $fixed_fields the fixed-length fields from the patron record
+     * @param \III\Sierra\Models\map $fixedFields the fixed-length fields from the patron record
      *
      * @return $this
      */
-    public function setFixedFields($fixed_fields)
+    public function setFixedFields($fixedFields)
     {
-        $this->container['fixed_fields'] = $fixed_fields;
+        $this->container['fixedFields'] = $fixedFields;
 
         return $this;
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the patron record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the patron record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

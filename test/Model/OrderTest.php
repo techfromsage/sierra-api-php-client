@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * OrderTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the order
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_date"
+     * Test attribute "updatedDate"
      */
     public function testPropertyUpdatedDate()
     {
     }
 
     /**
-     * Test attribute "created_date"
+     * Test attribute "createdDate"
      */
     public function testPropertyCreatedDate()
     {
     }
 
     /**
-     * Test attribute "deleted_date"
+     * Test attribute "deletedDate"
      */
     public function testPropertyDeletedDate()
     {
@@ -117,56 +117,56 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "accounting_unit"
+     * Test attribute "accountingUnit"
      */
     public function testPropertyAccountingUnit()
     {
     }
 
     /**
-     * Test attribute "estimated_price"
+     * Test attribute "estimatedPrice"
      */
     public function testPropertyEstimatedPrice()
     {
     }
 
     /**
-     * Test attribute "vendor_record_code"
+     * Test attribute "vendorRecordCode"
      */
     public function testPropertyVendorRecordCode()
     {
     }
 
     /**
-     * Test attribute "order_date"
+     * Test attribute "orderDate"
      */
     public function testPropertyOrderDate()
     {
     }
 
     /**
-     * Test attribute "charged_funds"
+     * Test attribute "chargedFunds"
      */
     public function testPropertyChargedFunds()
     {
     }
 
     /**
-     * Test attribute "vendor_titles"
+     * Test attribute "vendorTitles"
      */
     public function testPropertyVendorTitles()
     {
     }
 
     /**
-     * Test attribute "fixed_fields"
+     * Test attribute "fixedFields"
      */
     public function testPropertyFixedFields()
     {
     }
 
     /**
-     * Test attribute "var_fields"
+     * Test attribute "varFields"
      */
     public function testPropertyVarFields()
     {

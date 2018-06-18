@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Info Class Doc Comment
  *
  * @category Class
  * @description API information details
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,13 +55,13 @@ class Info implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_info' => '\Sierra\Models\DisplayableApiInfo',
-        'db_settings' => '\Sierra\Models\DbSettings',
-        'ds_settings' => '\Sierra\Models\DsSettings',
-        'admin_settings' => '\Sierra\Models\AdminSettings',
-        'webpac_settings' => '\Sierra\Models\WebpacPXClientSettings',
-        'pin_verification_settings' => '\Sierra\Models\PinVerificationSettings',
-        'marc2_inn_settings' => '\Sierra\Models\Marc2INNSettings'
+        'apiInfo' => '\III\Sierra\Models\DisplayableApiInfo',
+        'dbSettings' => '\III\Sierra\Models\DbSettings',
+        'dsSettings' => '\III\Sierra\Models\DsSettings',
+        'adminSettings' => '\III\Sierra\Models\AdminSettings',
+        'webpacSettings' => '\III\Sierra\Models\WebpacPXClientSettings',
+        'pinVerificationSettings' => '\III\Sierra\Models\PinVerificationSettings',
+        'marc2INNSettings' => '\III\Sierra\Models\Marc2INNSettings'
     ];
 
     /**
@@ -70,13 +70,13 @@ class Info implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'api_info' => null,
-        'db_settings' => null,
-        'ds_settings' => null,
-        'admin_settings' => null,
-        'webpac_settings' => null,
-        'pin_verification_settings' => null,
-        'marc2_inn_settings' => null
+        'apiInfo' => null,
+        'dbSettings' => null,
+        'dsSettings' => null,
+        'adminSettings' => null,
+        'webpacSettings' => null,
+        'pinVerificationSettings' => null,
+        'marc2INNSettings' => null
     ];
 
     /**
@@ -106,13 +106,13 @@ class Info implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_info' => 'apiInfo',
-        'db_settings' => 'dbSettings',
-        'ds_settings' => 'dsSettings',
-        'admin_settings' => 'adminSettings',
-        'webpac_settings' => 'webpacSettings',
-        'pin_verification_settings' => 'pinVerificationSettings',
-        'marc2_inn_settings' => 'marc2INNSettings'
+        'apiInfo' => 'apiInfo',
+        'dbSettings' => 'dbSettings',
+        'dsSettings' => 'dsSettings',
+        'adminSettings' => 'adminSettings',
+        'webpacSettings' => 'webpacSettings',
+        'pinVerificationSettings' => 'pinVerificationSettings',
+        'marc2INNSettings' => 'marc2INNSettings'
     ];
 
     /**
@@ -121,13 +121,13 @@ class Info implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'api_info' => 'setApiInfo',
-        'db_settings' => 'setDbSettings',
-        'ds_settings' => 'setDsSettings',
-        'admin_settings' => 'setAdminSettings',
-        'webpac_settings' => 'setWebpacSettings',
-        'pin_verification_settings' => 'setPinVerificationSettings',
-        'marc2_inn_settings' => 'setMarc2InnSettings'
+        'apiInfo' => 'setApiInfo',
+        'dbSettings' => 'setDbSettings',
+        'dsSettings' => 'setDsSettings',
+        'adminSettings' => 'setAdminSettings',
+        'webpacSettings' => 'setWebpacSettings',
+        'pinVerificationSettings' => 'setPinVerificationSettings',
+        'marc2INNSettings' => 'setMarc2INNSettings'
     ];
 
     /**
@@ -136,13 +136,13 @@ class Info implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'api_info' => 'getApiInfo',
-        'db_settings' => 'getDbSettings',
-        'ds_settings' => 'getDsSettings',
-        'admin_settings' => 'getAdminSettings',
-        'webpac_settings' => 'getWebpacSettings',
-        'pin_verification_settings' => 'getPinVerificationSettings',
-        'marc2_inn_settings' => 'getMarc2InnSettings'
+        'apiInfo' => 'getApiInfo',
+        'dbSettings' => 'getDbSettings',
+        'dsSettings' => 'getDsSettings',
+        'adminSettings' => 'getAdminSettings',
+        'webpacSettings' => 'getWebpacSettings',
+        'pinVerificationSettings' => 'getPinVerificationSettings',
+        'marc2INNSettings' => 'getMarc2INNSettings'
     ];
 
     /**
@@ -205,13 +205,13 @@ class Info implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['api_info'] = isset($data['api_info']) ? $data['api_info'] : null;
-        $this->container['db_settings'] = isset($data['db_settings']) ? $data['db_settings'] : null;
-        $this->container['ds_settings'] = isset($data['ds_settings']) ? $data['ds_settings'] : null;
-        $this->container['admin_settings'] = isset($data['admin_settings']) ? $data['admin_settings'] : null;
-        $this->container['webpac_settings'] = isset($data['webpac_settings']) ? $data['webpac_settings'] : null;
-        $this->container['pin_verification_settings'] = isset($data['pin_verification_settings']) ? $data['pin_verification_settings'] : null;
-        $this->container['marc2_inn_settings'] = isset($data['marc2_inn_settings']) ? $data['marc2_inn_settings'] : null;
+        $this->container['apiInfo'] = isset($data['apiInfo']) ? $data['apiInfo'] : null;
+        $this->container['dbSettings'] = isset($data['dbSettings']) ? $data['dbSettings'] : null;
+        $this->container['dsSettings'] = isset($data['dsSettings']) ? $data['dsSettings'] : null;
+        $this->container['adminSettings'] = isset($data['adminSettings']) ? $data['adminSettings'] : null;
+        $this->container['webpacSettings'] = isset($data['webpacSettings']) ? $data['webpacSettings'] : null;
+        $this->container['pinVerificationSettings'] = isset($data['pinVerificationSettings']) ? $data['pinVerificationSettings'] : null;
+        $this->container['marc2INNSettings'] = isset($data['marc2INNSettings']) ? $data['marc2INNSettings'] : null;
     }
 
     /**
@@ -223,26 +223,26 @@ class Info implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['api_info'] === null) {
-            $invalidProperties[] = "'api_info' can't be null";
+        if ($this->container['apiInfo'] === null) {
+            $invalidProperties[] = "'apiInfo' can't be null";
         }
-        if ($this->container['db_settings'] === null) {
-            $invalidProperties[] = "'db_settings' can't be null";
+        if ($this->container['dbSettings'] === null) {
+            $invalidProperties[] = "'dbSettings' can't be null";
         }
-        if ($this->container['ds_settings'] === null) {
-            $invalidProperties[] = "'ds_settings' can't be null";
+        if ($this->container['dsSettings'] === null) {
+            $invalidProperties[] = "'dsSettings' can't be null";
         }
-        if ($this->container['admin_settings'] === null) {
-            $invalidProperties[] = "'admin_settings' can't be null";
+        if ($this->container['adminSettings'] === null) {
+            $invalidProperties[] = "'adminSettings' can't be null";
         }
-        if ($this->container['webpac_settings'] === null) {
-            $invalidProperties[] = "'webpac_settings' can't be null";
+        if ($this->container['webpacSettings'] === null) {
+            $invalidProperties[] = "'webpacSettings' can't be null";
         }
-        if ($this->container['pin_verification_settings'] === null) {
-            $invalidProperties[] = "'pin_verification_settings' can't be null";
+        if ($this->container['pinVerificationSettings'] === null) {
+            $invalidProperties[] = "'pinVerificationSettings' can't be null";
         }
-        if ($this->container['marc2_inn_settings'] === null) {
-            $invalidProperties[] = "'marc2_inn_settings' can't be null";
+        if ($this->container['marc2INNSettings'] === null) {
+            $invalidProperties[] = "'marc2INNSettings' can't be null";
         }
         return $invalidProperties;
     }
@@ -256,25 +256,25 @@ class Info implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['api_info'] === null) {
+        if ($this->container['apiInfo'] === null) {
             return false;
         }
-        if ($this->container['db_settings'] === null) {
+        if ($this->container['dbSettings'] === null) {
             return false;
         }
-        if ($this->container['ds_settings'] === null) {
+        if ($this->container['dsSettings'] === null) {
             return false;
         }
-        if ($this->container['admin_settings'] === null) {
+        if ($this->container['adminSettings'] === null) {
             return false;
         }
-        if ($this->container['webpac_settings'] === null) {
+        if ($this->container['webpacSettings'] === null) {
             return false;
         }
-        if ($this->container['pin_verification_settings'] === null) {
+        if ($this->container['pinVerificationSettings'] === null) {
             return false;
         }
-        if ($this->container['marc2_inn_settings'] === null) {
+        if ($this->container['marc2INNSettings'] === null) {
             return false;
         }
         return true;
@@ -282,169 +282,169 @@ class Info implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets api_info
+     * Gets apiInfo
      *
-     * @return \Sierra\Models\DisplayableApiInfo
+     * @return \III\Sierra\Models\DisplayableApiInfo
      */
     public function getApiInfo()
     {
-        return $this->container['api_info'];
+        return $this->container['apiInfo'];
     }
 
     /**
-     * Sets api_info
+     * Sets apiInfo
      *
-     * @param \Sierra\Models\DisplayableApiInfo $api_info the API name, version, and revision
+     * @param \III\Sierra\Models\DisplayableApiInfo $apiInfo the API name, version, and revision
      *
      * @return $this
      */
-    public function setApiInfo($api_info)
+    public function setApiInfo($apiInfo)
     {
-        $this->container['api_info'] = $api_info;
+        $this->container['apiInfo'] = $apiInfo;
 
         return $this;
     }
 
     /**
-     * Gets db_settings
+     * Gets dbSettings
      *
-     * @return \Sierra\Models\DbSettings
+     * @return \III\Sierra\Models\DbSettings
      */
     public function getDbSettings()
     {
-        return $this->container['db_settings'];
+        return $this->container['dbSettings'];
     }
 
     /**
-     * Sets db_settings
+     * Sets dbSettings
      *
-     * @param \Sierra\Models\DbSettings $db_settings the database settings
+     * @param \III\Sierra\Models\DbSettings $dbSettings the database settings
      *
      * @return $this
      */
-    public function setDbSettings($db_settings)
+    public function setDbSettings($dbSettings)
     {
-        $this->container['db_settings'] = $db_settings;
+        $this->container['dbSettings'] = $dbSettings;
 
         return $this;
     }
 
     /**
-     * Gets ds_settings
+     * Gets dsSettings
      *
-     * @return \Sierra\Models\DsSettings
+     * @return \III\Sierra\Models\DsSettings
      */
     public function getDsSettings()
     {
-        return $this->container['ds_settings'];
+        return $this->container['dsSettings'];
     }
 
     /**
-     * Sets ds_settings
+     * Sets dsSettings
      *
-     * @param \Sierra\Models\DsSettings $ds_settings the dataservice settings
+     * @param \III\Sierra\Models\DsSettings $dsSettings the dataservice settings
      *
      * @return $this
      */
-    public function setDsSettings($ds_settings)
+    public function setDsSettings($dsSettings)
     {
-        $this->container['ds_settings'] = $ds_settings;
+        $this->container['dsSettings'] = $dsSettings;
 
         return $this;
     }
 
     /**
-     * Gets admin_settings
+     * Gets adminSettings
      *
-     * @return \Sierra\Models\AdminSettings
+     * @return \III\Sierra\Models\AdminSettings
      */
     public function getAdminSettings()
     {
-        return $this->container['admin_settings'];
+        return $this->container['adminSettings'];
     }
 
     /**
-     * Sets admin_settings
+     * Sets adminSettings
      *
-     * @param \Sierra\Models\AdminSettings $admin_settings the admin settings
+     * @param \III\Sierra\Models\AdminSettings $adminSettings the admin settings
      *
      * @return $this
      */
-    public function setAdminSettings($admin_settings)
+    public function setAdminSettings($adminSettings)
     {
-        $this->container['admin_settings'] = $admin_settings;
+        $this->container['adminSettings'] = $adminSettings;
 
         return $this;
     }
 
     /**
-     * Gets webpac_settings
+     * Gets webpacSettings
      *
-     * @return \Sierra\Models\WebpacPXClientSettings
+     * @return \III\Sierra\Models\WebpacPXClientSettings
      */
     public function getWebpacSettings()
     {
-        return $this->container['webpac_settings'];
+        return $this->container['webpacSettings'];
     }
 
     /**
-     * Sets webpac_settings
+     * Sets webpacSettings
      *
-     * @param \Sierra\Models\WebpacPXClientSettings $webpac_settings the WebPAC settings
+     * @param \III\Sierra\Models\WebpacPXClientSettings $webpacSettings the WebPAC settings
      *
      * @return $this
      */
-    public function setWebpacSettings($webpac_settings)
+    public function setWebpacSettings($webpacSettings)
     {
-        $this->container['webpac_settings'] = $webpac_settings;
+        $this->container['webpacSettings'] = $webpacSettings;
 
         return $this;
     }
 
     /**
-     * Gets pin_verification_settings
+     * Gets pinVerificationSettings
      *
-     * @return \Sierra\Models\PinVerificationSettings
+     * @return \III\Sierra\Models\PinVerificationSettings
      */
     public function getPinVerificationSettings()
     {
-        return $this->container['pin_verification_settings'];
+        return $this->container['pinVerificationSettings'];
     }
 
     /**
-     * Sets pin_verification_settings
+     * Sets pinVerificationSettings
      *
-     * @param \Sierra\Models\PinVerificationSettings $pin_verification_settings the settings for PIN verification
+     * @param \III\Sierra\Models\PinVerificationSettings $pinVerificationSettings the settings for PIN verification
      *
      * @return $this
      */
-    public function setPinVerificationSettings($pin_verification_settings)
+    public function setPinVerificationSettings($pinVerificationSettings)
     {
-        $this->container['pin_verification_settings'] = $pin_verification_settings;
+        $this->container['pinVerificationSettings'] = $pinVerificationSettings;
 
         return $this;
     }
 
     /**
-     * Gets marc2_inn_settings
+     * Gets marc2INNSettings
      *
-     * @return \Sierra\Models\Marc2INNSettings
+     * @return \III\Sierra\Models\Marc2INNSettings
      */
-    public function getMarc2InnSettings()
+    public function getMarc2INNSettings()
     {
-        return $this->container['marc2_inn_settings'];
+        return $this->container['marc2INNSettings'];
     }
 
     /**
-     * Sets marc2_inn_settings
+     * Sets marc2INNSettings
      *
-     * @param \Sierra\Models\Marc2INNSettings $marc2_inn_settings the settings for marc2INN
+     * @param \III\Sierra\Models\Marc2INNSettings $marc2INNSettings the settings for marc2INN
      *
      * @return $this
      */
-    public function setMarc2InnSettings($marc2_inn_settings)
+    public function setMarc2INNSettings($marc2INNSettings)
     {
-        $this->container['marc2_inn_settings'] = $marc2_inn_settings;
+        $this->container['marc2INNSettings'] = $marc2INNSettings;
 
         return $this;
     }

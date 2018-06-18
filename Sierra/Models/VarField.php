@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * VarField Class Doc Comment
  *
  * @category Class
  * @description a variable-length field for a bibliographic record or item record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,12 +55,12 @@ class VarField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'field_tag' => '\Sierra\Models\Char',
-        'marc_tag' => 'string',
-        'ind1' => '\Sierra\Models\Char',
-        'ind2' => '\Sierra\Models\Char',
+        'fieldTag' => '\III\Sierra\Models\Char',
+        'marcTag' => 'string',
+        'ind1' => '\III\Sierra\Models\Char',
+        'ind2' => '\III\Sierra\Models\Char',
         'content' => 'string',
-        'subfields' => '\Sierra\Models\SubField[]'
+        'subfields' => '\III\Sierra\Models\SubField[]'
     ];
 
     /**
@@ -69,8 +69,8 @@ class VarField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'field_tag' => null,
-        'marc_tag' => null,
+        'fieldTag' => null,
+        'marcTag' => null,
         'ind1' => null,
         'ind2' => null,
         'content' => null,
@@ -104,8 +104,8 @@ class VarField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'field_tag' => 'fieldTag',
-        'marc_tag' => 'marcTag',
+        'fieldTag' => 'fieldTag',
+        'marcTag' => 'marcTag',
         'ind1' => 'ind1',
         'ind2' => 'ind2',
         'content' => 'content',
@@ -118,8 +118,8 @@ class VarField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'field_tag' => 'setFieldTag',
-        'marc_tag' => 'setMarcTag',
+        'fieldTag' => 'setFieldTag',
+        'marcTag' => 'setMarcTag',
         'ind1' => 'setInd1',
         'ind2' => 'setInd2',
         'content' => 'setContent',
@@ -132,8 +132,8 @@ class VarField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'field_tag' => 'getFieldTag',
-        'marc_tag' => 'getMarcTag',
+        'fieldTag' => 'getFieldTag',
+        'marcTag' => 'getMarcTag',
         'ind1' => 'getInd1',
         'ind2' => 'getInd2',
         'content' => 'getContent',
@@ -200,8 +200,8 @@ class VarField implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['field_tag'] = isset($data['field_tag']) ? $data['field_tag'] : null;
-        $this->container['marc_tag'] = isset($data['marc_tag']) ? $data['marc_tag'] : null;
+        $this->container['fieldTag'] = isset($data['fieldTag']) ? $data['fieldTag'] : null;
+        $this->container['marcTag'] = isset($data['marcTag']) ? $data['marcTag'] : null;
         $this->container['ind1'] = isset($data['ind1']) ? $data['ind1'] : null;
         $this->container['ind2'] = isset($data['ind2']) ? $data['ind2'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
@@ -217,8 +217,8 @@ class VarField implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['field_tag'] === null) {
-            $invalidProperties[] = "'field_tag' can't be null";
+        if ($this->container['fieldTag'] === null) {
+            $invalidProperties[] = "'fieldTag' can't be null";
         }
         return $invalidProperties;
     }
@@ -232,7 +232,7 @@ class VarField implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['field_tag'] === null) {
+        if ($this->container['fieldTag'] === null) {
             return false;
         }
         return true;
@@ -240,49 +240,49 @@ class VarField implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets field_tag
+     * Gets fieldTag
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getFieldTag()
     {
-        return $this->container['field_tag'];
+        return $this->container['fieldTag'];
     }
 
     /**
-     * Sets field_tag
+     * Sets fieldTag
      *
-     * @param \Sierra\Models\Char $field_tag the Innovative variable-length field type tag
+     * @param \III\Sierra\Models\Char $fieldTag the Innovative variable-length field type tag
      *
      * @return $this
      */
-    public function setFieldTag($field_tag)
+    public function setFieldTag($fieldTag)
     {
-        $this->container['field_tag'] = $field_tag;
+        $this->container['fieldTag'] = $fieldTag;
 
         return $this;
     }
 
     /**
-     * Gets marc_tag
+     * Gets marcTag
      *
      * @return string
      */
     public function getMarcTag()
     {
-        return $this->container['marc_tag'];
+        return $this->container['marcTag'];
     }
 
     /**
-     * Sets marc_tag
+     * Sets marcTag
      *
-     * @param string $marc_tag the MARC tag
+     * @param string $marcTag the MARC tag
      *
      * @return $this
      */
-    public function setMarcTag($marc_tag)
+    public function setMarcTag($marcTag)
     {
-        $this->container['marc_tag'] = $marc_tag;
+        $this->container['marcTag'] = $marcTag;
 
         return $this;
     }
@@ -290,7 +290,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Gets ind1
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getInd1()
     {
@@ -300,7 +300,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Sets ind1
      *
-     * @param \Sierra\Models\Char $ind1 the first MARC indicator, if present
+     * @param \III\Sierra\Models\Char $ind1 the first MARC indicator, if present
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Gets ind2
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getInd2()
     {
@@ -324,7 +324,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Sets ind2
      *
-     * @param \Sierra\Models\Char $ind2 the second MARC indicator, if present
+     * @param \III\Sierra\Models\Char $ind2 the second MARC indicator, if present
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Gets subfields
      *
-     * @return \Sierra\Models\SubField[]
+     * @return \III\Sierra\Models\SubField[]
      */
     public function getSubfields()
     {
@@ -372,7 +372,7 @@ class VarField implements ModelInterface, ArrayAccess
     /**
      * Sets subfields
      *
-     * @param \Sierra\Models\SubField[] $subfields a list of subfields, if present
+     * @param \III\Sierra\Models\SubField[] $subfields a list of subfields, if present
      *
      * @return $this
      */

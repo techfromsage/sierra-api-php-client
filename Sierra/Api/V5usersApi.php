@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5usersApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -84,11 +84,11 @@ class V5usersApi
      *
      * Validate a sierra user by username and password
      *
-     * @param  \Sierra\Models\User $body post request (required)
+     * @param  \III\Sierra\Models\User $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function validateASierraUserByUsernameAndPassword($body)
     {
@@ -101,15 +101,15 @@ class V5usersApi
      *
      * Validate a sierra user by username and password
      *
-     * @param  \Sierra\Models\User $body post request (required)
+     * @param  \III\Sierra\Models\User $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateASierraUserByUsernameAndPasswordWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->validateASierraUserByUsernameAndPasswordRequest($body);
 
         try {
@@ -161,7 +161,7 @@ class V5usersApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class V5usersApi
      *
      * Validate a sierra user by username and password
      *
-     * @param  \Sierra\Models\User $body post request (required)
+     * @param  \III\Sierra\Models\User $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -196,14 +196,14 @@ class V5usersApi
      *
      * Validate a sierra user by username and password
      *
-     * @param  \Sierra\Models\User $body post request (required)
+     * @param  \III\Sierra\Models\User $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function validateASierraUserByUsernameAndPasswordAsyncWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->validateASierraUserByUsernameAndPasswordRequest($body);
 
         return $this->client
@@ -246,7 +246,7 @@ class V5usersApi
     /**
      * Create request for operation 'validateASierraUserByUsernameAndPassword'
      *
-     * @param  \Sierra\Models\User $body post request (required)
+     * @param  \III\Sierra\Models\User $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

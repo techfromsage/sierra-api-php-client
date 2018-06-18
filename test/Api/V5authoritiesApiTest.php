@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,17 +23,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
-use \Sierra\Configuration;
-use \Sierra\ApiException;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\Configuration;
+use \III\Sierra\ApiException;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * V5authoritiesApiTest Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

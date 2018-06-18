@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * DisplayableApiInfoTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description API displayable information details
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -89,14 +89,14 @@ class DisplayableApiInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sierra_version"
+     * Test attribute "sierraVersion"
      */
     public function testPropertySierraVersion()
     {
     }
 
     /**
-     * Test attribute "full_version"
+     * Test attribute "fullVersion"
      */
     public function testPropertyFullVersion()
     {
@@ -110,14 +110,14 @@ class DisplayableApiInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "revision_date"
+     * Test attribute "revisionDate"
      */
     public function testPropertyRevisionDate()
     {
     }
 
     /**
-     * Test attribute "backwards_compatible_versions"
+     * Test attribute "backwardsCompatibleVersions"
      */
     public function testPropertyBackwardsCompatibleVersions()
     {

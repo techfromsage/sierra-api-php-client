@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Authority Class Doc Comment
  *
  * @category Class
  * @description an authority record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,12 +56,12 @@ class Authority implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'updated_date' => '\DateTime',
-        'created_date' => '\DateTime',
-        'deleted_date' => '\DateTime',
+        'updatedDate' => '\DateTime',
+        'createdDate' => '\DateTime',
+        'deletedDate' => '\DateTime',
         'deleted' => 'bool',
         'suppressed' => 'bool',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -71,12 +71,12 @@ class Authority implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'updated_date' => 'date-time',
-        'created_date' => 'date-time',
-        'deleted_date' => 'date',
+        'updatedDate' => 'date-time',
+        'createdDate' => 'date-time',
+        'deletedDate' => 'date',
         'deleted' => null,
         'suppressed' => null,
-        'var_fields' => null
+        'varFields' => null
     ];
 
     /**
@@ -107,12 +107,12 @@ class Authority implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'updated_date' => 'updatedDate',
-        'created_date' => 'createdDate',
-        'deleted_date' => 'deletedDate',
+        'updatedDate' => 'updatedDate',
+        'createdDate' => 'createdDate',
+        'deletedDate' => 'deletedDate',
         'deleted' => 'deleted',
         'suppressed' => 'suppressed',
-        'var_fields' => 'varFields'
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -122,12 +122,12 @@ class Authority implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'updated_date' => 'setUpdatedDate',
-        'created_date' => 'setCreatedDate',
-        'deleted_date' => 'setDeletedDate',
+        'updatedDate' => 'setUpdatedDate',
+        'createdDate' => 'setCreatedDate',
+        'deletedDate' => 'setDeletedDate',
         'deleted' => 'setDeleted',
         'suppressed' => 'setSuppressed',
-        'var_fields' => 'setVarFields'
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -137,12 +137,12 @@ class Authority implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'updated_date' => 'getUpdatedDate',
-        'created_date' => 'getCreatedDate',
-        'deleted_date' => 'getDeletedDate',
+        'updatedDate' => 'getUpdatedDate',
+        'createdDate' => 'getCreatedDate',
+        'deletedDate' => 'getDeletedDate',
         'deleted' => 'getDeleted',
         'suppressed' => 'getSuppressed',
-        'var_fields' => 'getVarFields'
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -206,12 +206,12 @@ class Authority implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['updated_date'] = isset($data['updated_date']) ? $data['updated_date'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['deleted_date'] = isset($data['deleted_date']) ? $data['deleted_date'] : null;
+        $this->container['updatedDate'] = isset($data['updatedDate']) ? $data['updatedDate'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['deletedDate'] = isset($data['deletedDate']) ? $data['deletedDate'] : null;
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['suppressed'] = isset($data['suppressed']) ? $data['suppressed'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -229,8 +229,8 @@ class Authority implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             $invalidProperties[] = "'deleted' can't be null";
         }
-        if ($this->container['var_fields'] === null) {
-            $invalidProperties[] = "'var_fields' can't be null";
+        if ($this->container['varFields'] === null) {
+            $invalidProperties[] = "'varFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -250,7 +250,7 @@ class Authority implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             return false;
         }
-        if ($this->container['var_fields'] === null) {
+        if ($this->container['varFields'] === null) {
             return false;
         }
         return true;
@@ -282,73 +282,73 @@ class Authority implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets updated_date
+     * Gets updatedDate
      *
      * @return \DateTime
      */
     public function getUpdatedDate()
     {
-        return $this->container['updated_date'];
+        return $this->container['updatedDate'];
     }
 
     /**
-     * Sets updated_date
+     * Sets updatedDate
      *
-     * @param \DateTime $updated_date the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $updatedDate the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setUpdatedDate($updated_date)
+    public function setUpdatedDate($updatedDate)
     {
-        $this->container['updated_date'] = $updated_date;
+        $this->container['updatedDate'] = $updatedDate;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime $created_date the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $createdDate the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets deleted_date
+     * Gets deletedDate
      *
      * @return \DateTime
      */
     public function getDeletedDate()
     {
-        return $this->container['deleted_date'];
+        return $this->container['deletedDate'];
     }
 
     /**
-     * Sets deleted_date
+     * Sets deletedDate
      *
-     * @param \DateTime $deleted_date the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $deletedDate the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setDeletedDate($deleted_date)
+    public function setDeletedDate($deletedDate)
     {
-        $this->container['deleted_date'] = $deleted_date;
+        $this->container['deletedDate'] = $deletedDate;
 
         return $this;
     }
@@ -402,25 +402,25 @@ class Authority implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the authority record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the authority record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

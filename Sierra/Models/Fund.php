@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Fund Class Doc Comment
  *
  * @category Class
  * @description the properties of a fund
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,12 +56,12 @@ class Fund implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-        'code_number' => 'int',
-        'accounting_unit_code_number' => 'int',
-        'fund_name' => 'string',
+        'codeNumber' => 'int',
+        'accountingUnitCodeNumber' => 'int',
+        'fundName' => 'string',
         'note1' => 'string',
-        'ext_code' => 'int',
-        'ext_fund_name' => 'string'
+        'extCode' => 'int',
+        'extFundName' => 'string'
     ];
 
     /**
@@ -71,12 +71,12 @@ class Fund implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'code' => null,
-        'code_number' => 'int32',
-        'accounting_unit_code_number' => 'int32',
-        'fund_name' => null,
+        'codeNumber' => 'int32',
+        'accountingUnitCodeNumber' => 'int32',
+        'fundName' => null,
         'note1' => null,
-        'ext_code' => 'int32',
-        'ext_fund_name' => null
+        'extCode' => 'int32',
+        'extFundName' => null
     ];
 
     /**
@@ -107,12 +107,12 @@ class Fund implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'code' => 'code',
-        'code_number' => 'codeNumber',
-        'accounting_unit_code_number' => 'accountingUnitCodeNumber',
-        'fund_name' => 'fundName',
+        'codeNumber' => 'codeNumber',
+        'accountingUnitCodeNumber' => 'accountingUnitCodeNumber',
+        'fundName' => 'fundName',
         'note1' => 'note1',
-        'ext_code' => 'extCode',
-        'ext_fund_name' => 'extFundName'
+        'extCode' => 'extCode',
+        'extFundName' => 'extFundName'
     ];
 
     /**
@@ -122,12 +122,12 @@ class Fund implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'code' => 'setCode',
-        'code_number' => 'setCodeNumber',
-        'accounting_unit_code_number' => 'setAccountingUnitCodeNumber',
-        'fund_name' => 'setFundName',
+        'codeNumber' => 'setCodeNumber',
+        'accountingUnitCodeNumber' => 'setAccountingUnitCodeNumber',
+        'fundName' => 'setFundName',
         'note1' => 'setNote1',
-        'ext_code' => 'setExtCode',
-        'ext_fund_name' => 'setExtFundName'
+        'extCode' => 'setExtCode',
+        'extFundName' => 'setExtFundName'
     ];
 
     /**
@@ -137,12 +137,12 @@ class Fund implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'code' => 'getCode',
-        'code_number' => 'getCodeNumber',
-        'accounting_unit_code_number' => 'getAccountingUnitCodeNumber',
-        'fund_name' => 'getFundName',
+        'codeNumber' => 'getCodeNumber',
+        'accountingUnitCodeNumber' => 'getAccountingUnitCodeNumber',
+        'fundName' => 'getFundName',
         'note1' => 'getNote1',
-        'ext_code' => 'getExtCode',
-        'ext_fund_name' => 'getExtFundName'
+        'extCode' => 'getExtCode',
+        'extFundName' => 'getExtFundName'
     ];
 
     /**
@@ -206,12 +206,12 @@ class Fund implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['code_number'] = isset($data['code_number']) ? $data['code_number'] : null;
-        $this->container['accounting_unit_code_number'] = isset($data['accounting_unit_code_number']) ? $data['accounting_unit_code_number'] : null;
-        $this->container['fund_name'] = isset($data['fund_name']) ? $data['fund_name'] : null;
+        $this->container['codeNumber'] = isset($data['codeNumber']) ? $data['codeNumber'] : null;
+        $this->container['accountingUnitCodeNumber'] = isset($data['accountingUnitCodeNumber']) ? $data['accountingUnitCodeNumber'] : null;
+        $this->container['fundName'] = isset($data['fundName']) ? $data['fundName'] : null;
         $this->container['note1'] = isset($data['note1']) ? $data['note1'] : null;
-        $this->container['ext_code'] = isset($data['ext_code']) ? $data['ext_code'] : null;
-        $this->container['ext_fund_name'] = isset($data['ext_fund_name']) ? $data['ext_fund_name'] : null;
+        $this->container['extCode'] = isset($data['extCode']) ? $data['extCode'] : null;
+        $this->container['extFundName'] = isset($data['extFundName']) ? $data['extFundName'] : null;
     }
 
     /**
@@ -226,11 +226,11 @@ class Fund implements ModelInterface, ArrayAccess
         if ($this->container['code'] === null) {
             $invalidProperties[] = "'code' can't be null";
         }
-        if ($this->container['code_number'] === null) {
-            $invalidProperties[] = "'code_number' can't be null";
+        if ($this->container['codeNumber'] === null) {
+            $invalidProperties[] = "'codeNumber' can't be null";
         }
-        if ($this->container['accounting_unit_code_number'] === null) {
-            $invalidProperties[] = "'accounting_unit_code_number' can't be null";
+        if ($this->container['accountingUnitCodeNumber'] === null) {
+            $invalidProperties[] = "'accountingUnitCodeNumber' can't be null";
         }
         return $invalidProperties;
     }
@@ -247,10 +247,10 @@ class Fund implements ModelInterface, ArrayAccess
         if ($this->container['code'] === null) {
             return false;
         }
-        if ($this->container['code_number'] === null) {
+        if ($this->container['codeNumber'] === null) {
             return false;
         }
-        if ($this->container['accounting_unit_code_number'] === null) {
+        if ($this->container['accountingUnitCodeNumber'] === null) {
             return false;
         }
         return true;
@@ -282,73 +282,73 @@ class Fund implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets code_number
+     * Gets codeNumber
      *
      * @return int
      */
     public function getCodeNumber()
     {
-        return $this->container['code_number'];
+        return $this->container['codeNumber'];
     }
 
     /**
-     * Sets code_number
+     * Sets codeNumber
      *
-     * @param int $code_number a fund code number
+     * @param int $codeNumber a fund code number
      *
      * @return $this
      */
-    public function setCodeNumber($code_number)
+    public function setCodeNumber($codeNumber)
     {
-        $this->container['code_number'] = $code_number;
+        $this->container['codeNumber'] = $codeNumber;
 
         return $this;
     }
 
     /**
-     * Gets accounting_unit_code_number
+     * Gets accountingUnitCodeNumber
      *
      * @return int
      */
     public function getAccountingUnitCodeNumber()
     {
-        return $this->container['accounting_unit_code_number'];
+        return $this->container['accountingUnitCodeNumber'];
     }
 
     /**
-     * Sets accounting_unit_code_number
+     * Sets accountingUnitCodeNumber
      *
-     * @param int $accounting_unit_code_number an accounting unit code number
+     * @param int $accountingUnitCodeNumber an accounting unit code number
      *
      * @return $this
      */
-    public function setAccountingUnitCodeNumber($accounting_unit_code_number)
+    public function setAccountingUnitCodeNumber($accountingUnitCodeNumber)
     {
-        $this->container['accounting_unit_code_number'] = $accounting_unit_code_number;
+        $this->container['accountingUnitCodeNumber'] = $accountingUnitCodeNumber;
 
         return $this;
     }
 
     /**
-     * Gets fund_name
+     * Gets fundName
      *
      * @return string
      */
     public function getFundName()
     {
-        return $this->container['fund_name'];
+        return $this->container['fundName'];
     }
 
     /**
-     * Sets fund_name
+     * Sets fundName
      *
-     * @param string $fund_name the fund name
+     * @param string $fundName the fund name
      *
      * @return $this
      */
-    public function setFundName($fund_name)
+    public function setFundName($fundName)
     {
-        $this->container['fund_name'] = $fund_name;
+        $this->container['fundName'] = $fundName;
 
         return $this;
     }
@@ -378,49 +378,49 @@ class Fund implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ext_code
+     * Gets extCode
      *
      * @return int
      */
     public function getExtCode()
     {
-        return $this->container['ext_code'];
+        return $this->container['extCode'];
     }
 
     /**
-     * Sets ext_code
+     * Sets extCode
      *
-     * @param int $ext_code an external fund code used to link the fund to an external fund
+     * @param int $extCode an external fund code used to link the fund to an external fund
      *
      * @return $this
      */
-    public function setExtCode($ext_code)
+    public function setExtCode($extCode)
     {
-        $this->container['ext_code'] = $ext_code;
+        $this->container['extCode'] = $extCode;
 
         return $this;
     }
 
     /**
-     * Gets ext_fund_name
+     * Gets extFundName
      *
      * @return string
      */
     public function getExtFundName()
     {
-        return $this->container['ext_fund_name'];
+        return $this->container['extFundName'];
     }
 
     /**
-     * Sets ext_fund_name
+     * Sets extFundName
      *
-     * @param string $ext_fund_name the external fund name
+     * @param string $extFundName the external fund name
      *
      * @return $this
      */
-    public function setExtFundName($ext_fund_name)
+    public function setExtFundName($extFundName)
     {
-        $this->container['ext_fund_name'] = $ext_fund_name;
+        $this->container['extFundName'] = $extFundName;
 
         return $this;
     }

@@ -1,4 +1,4 @@
-# Sierra\V5agenciesApi
+# III\Sierra\V5agenciesApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getAListOfAgencies**
-> \Sierra\Models\AgencyResultSet getAListOfAgencies($language)
+> \III\Sierra\Models\AgencyResultSet getAListOfAgencies($language)
 
 Get a list of agencies
 
@@ -19,7 +19,7 @@ Get a list of agencies
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5agenciesApi(
+$apiInstance = new III\Sierra\Api\V5agenciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\AgencyResultSet**](../Model/AgencyResultSet.md)
+[**\III\Sierra\Models\AgencyResultSet**](../Model/AgencyResultSet.md)
 
 ### Authorization
 

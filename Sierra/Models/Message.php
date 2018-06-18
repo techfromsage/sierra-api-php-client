@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Message Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -54,8 +54,8 @@ class Message implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\Sierra\Models\Char',
-        'account_messages' => 'string[]'
+        'code' => '\III\Sierra\Models\Char',
+        'accountMessages' => 'string[]'
     ];
 
     /**
@@ -65,7 +65,7 @@ class Message implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'code' => null,
-        'account_messages' => null
+        'accountMessages' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class Message implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'code' => 'code',
-        'account_messages' => 'accountMessages'
+        'accountMessages' => 'accountMessages'
     ];
 
     /**
@@ -106,7 +106,7 @@ class Message implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'code' => 'setCode',
-        'account_messages' => 'setAccountMessages'
+        'accountMessages' => 'setAccountMessages'
     ];
 
     /**
@@ -116,7 +116,7 @@ class Message implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'code' => 'getCode',
-        'account_messages' => 'getAccountMessages'
+        'accountMessages' => 'getAccountMessages'
     ];
 
     /**
@@ -180,7 +180,7 @@ class Message implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['account_messages'] = isset($data['account_messages']) ? $data['account_messages'] : null;
+        $this->container['accountMessages'] = isset($data['accountMessages']) ? $data['accountMessages'] : null;
     }
 
     /**
@@ -211,7 +211,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getCode()
     {
@@ -221,7 +221,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param \Sierra\Models\Char $code a library-defined patron message code
+     * @param \III\Sierra\Models\Char $code a library-defined patron message code
      *
      * @return $this
      */
@@ -233,25 +233,25 @@ class Message implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets account_messages
+     * Gets accountMessages
      *
      * @return string[]
      */
     public function getAccountMessages()
     {
-        return $this->container['account_messages'];
+        return $this->container['accountMessages'];
     }
 
     /**
-     * Sets account_messages
+     * Sets accountMessages
      *
-     * @param string[] $account_messages patron account messages
+     * @param string[] $accountMessages patron account messages
      *
      * @return $this
      */
-    public function setAccountMessages($account_messages)
+    public function setAccountMessages($accountMessages)
     {
-        $this->container['account_messages'] = $account_messages;
+        $this->container['accountMessages'] = $accountMessages;
 
         return $this;
     }

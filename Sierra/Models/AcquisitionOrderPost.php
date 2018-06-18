@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * AcquisitionOrderPost Class Doc Comment
  *
  * @category Class
  * @description an aquisition order post
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,8 +55,8 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order' => '\Sierra\Models\AcquisitionOrder',
-        'marc_content_type' => 'string'
+        'order' => '\III\Sierra\Models\AcquisitionOrder',
+        'marcContentType' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'order' => null,
-        'marc_content_type' => null
+        'marcContentType' => null
     ];
 
     /**
@@ -97,7 +97,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'order' => 'order',
-        'marc_content_type' => 'marcContentType'
+        'marcContentType' => 'marcContentType'
     ];
 
     /**
@@ -107,7 +107,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'order' => 'setOrder',
-        'marc_content_type' => 'setMarcContentType'
+        'marcContentType' => 'setMarcContentType'
     ];
 
     /**
@@ -117,7 +117,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'order' => 'getOrder',
-        'marc_content_type' => 'getMarcContentType'
+        'marcContentType' => 'getMarcContentType'
     ];
 
     /**
@@ -181,7 +181,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
-        $this->container['marc_content_type'] = isset($data['marc_content_type']) ? $data['marc_content_type'] : null;
+        $this->container['marcContentType'] = isset($data['marcContentType']) ? $data['marcContentType'] : null;
     }
 
     /**
@@ -196,8 +196,8 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
         if ($this->container['order'] === null) {
             $invalidProperties[] = "'order' can't be null";
         }
-        if ($this->container['marc_content_type'] === null) {
-            $invalidProperties[] = "'marc_content_type' can't be null";
+        if ($this->container['marcContentType'] === null) {
+            $invalidProperties[] = "'marcContentType' can't be null";
         }
         return $invalidProperties;
     }
@@ -214,7 +214,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
         if ($this->container['order'] === null) {
             return false;
         }
-        if ($this->container['marc_content_type'] === null) {
+        if ($this->container['marcContentType'] === null) {
             return false;
         }
         return true;
@@ -224,7 +224,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \Sierra\Models\AcquisitionOrder
+     * @return \III\Sierra\Models\AcquisitionOrder
      */
     public function getOrder()
     {
@@ -234,7 +234,7 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \Sierra\Models\AcquisitionOrder $order the order information and MARC records in application/marc-json, application/marc-in-json, or application/marc-xml format
+     * @param \III\Sierra\Models\AcquisitionOrder $order the order information and MARC records in application/marc-json, application/marc-in-json, or application/marc-xml format
      *
      * @return $this
      */
@@ -246,25 +246,25 @@ class AcquisitionOrderPost implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets marc_content_type
+     * Gets marcContentType
      *
      * @return string
      */
     public function getMarcContentType()
     {
-        return $this->container['marc_content_type'];
+        return $this->container['marcContentType'];
     }
 
     /**
-     * Sets marc_content_type
+     * Sets marcContentType
      *
-     * @param string $marc_content_type the format in which the MARC content is encoded, such as application/marc-json or application/marc-xml
+     * @param string $marcContentType the format in which the MARC content is encoded, such as application/marc-json or application/marc-xml
      *
      * @return $this
      */
-    public function setMarcContentType($marc_content_type)
+    public function setMarcContentType($marcContentType)
     {
-        $this->container['marc_content_type'] = $marc_content_type;
+        $this->container['marcContentType'] = $marcContentType;
 
         return $this;
     }

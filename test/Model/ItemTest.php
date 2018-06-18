@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * ItemTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an item record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class ItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_date"
+     * Test attribute "updatedDate"
      */
     public function testPropertyUpdatedDate()
     {
     }
 
     /**
-     * Test attribute "created_date"
+     * Test attribute "createdDate"
      */
     public function testPropertyCreatedDate()
     {
     }
 
     /**
-     * Test attribute "deleted_date"
+     * Test attribute "deletedDate"
      */
     public function testPropertyDeletedDate()
     {
@@ -110,7 +110,7 @@ class ItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "bib_ids"
+     * Test attribute "bibIds"
      */
     public function testPropertyBibIds()
     {
@@ -138,28 +138,28 @@ class ItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "call_number"
+     * Test attribute "callNumber"
      */
     public function testPropertyCallNumber()
     {
     }
 
     /**
-     * Test attribute "item_type"
+     * Test attribute "itemType"
      */
     public function testPropertyItemType()
     {
     }
 
     /**
-     * Test attribute "fixed_fields"
+     * Test attribute "fixedFields"
      */
     public function testPropertyFixedFields()
     {
     }
 
     /**
-     * Test attribute "var_fields"
+     * Test attribute "varFields"
      */
     public function testPropertyVarFields()
     {

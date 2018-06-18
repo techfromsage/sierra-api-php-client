@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5finesApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,16 +88,16 @@ class V5finesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of fine records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
-     * @param  int[] $agency_codes fine data for the specified agencies is returned (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  int[] $agencyCodes fine data for the specified agencies is returned (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\FineResultSet
+     * @return \III\Sierra\Models\FineResultSet
      */
-    public function getAListOfFines($limit = null, $offset = null, $id = null, $fields = null, $assessed_date = null, $agency_codes = null)
+    public function getAListOfFines($limit = null, $offset = null, $id = null, $fields = null, $assessedDate = null, $agencyCodes = null)
     {
-        list($response) = $this->getAListOfFinesWithHttpInfo($limit, $offset, $id, $fields, $assessed_date, $agency_codes);
+        list($response) = $this->getAListOfFinesWithHttpInfo($limit, $offset, $id, $fields, $assessedDate, $agencyCodes);
         return $response;
     }
 
@@ -110,17 +110,17 @@ class V5finesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of fine records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
-     * @param  int[] $agency_codes fine data for the specified agencies is returned (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  int[] $agencyCodes fine data for the specified agencies is returned (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\FineResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\FineResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfFinesWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $assessed_date = null, $agency_codes = null)
+    public function getAListOfFinesWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $assessedDate = null, $agencyCodes = null)
     {
-        $returnType = '\Sierra\Models\FineResultSet';
-        $request = $this->getAListOfFinesRequest($limit, $offset, $id, $fields, $assessed_date, $agency_codes);
+        $returnType = '\III\Sierra\Models\FineResultSet';
+        $request = $this->getAListOfFinesRequest($limit, $offset, $id, $fields, $assessedDate, $agencyCodes);
 
         try {
             $options = $this->createHttpClientOption();
@@ -171,7 +171,7 @@ class V5finesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\FineResultSet',
+                        '\III\Sierra\Models\FineResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,15 +190,15 @@ class V5finesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of fine records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
-     * @param  int[] $agency_codes fine data for the specified agencies is returned (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  int[] $agencyCodes fine data for the specified agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfFinesAsync($limit = null, $offset = null, $id = null, $fields = null, $assessed_date = null, $agency_codes = null)
+    public function getAListOfFinesAsync($limit = null, $offset = null, $id = null, $fields = null, $assessedDate = null, $agencyCodes = null)
     {
-        return $this->getAListOfFinesAsyncWithHttpInfo($limit, $offset, $id, $fields, $assessed_date, $agency_codes)
+        return $this->getAListOfFinesAsyncWithHttpInfo($limit, $offset, $id, $fields, $assessedDate, $agencyCodes)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,16 +215,16 @@ class V5finesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of fine records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
-     * @param  int[] $agency_codes fine data for the specified agencies is returned (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  int[] $agencyCodes fine data for the specified agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfFinesAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $assessed_date = null, $agency_codes = null)
+    public function getAListOfFinesAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $assessedDate = null, $agencyCodes = null)
     {
-        $returnType = '\Sierra\Models\FineResultSet';
-        $request = $this->getAListOfFinesRequest($limit, $offset, $id, $fields, $assessed_date, $agency_codes);
+        $returnType = '\III\Sierra\Models\FineResultSet';
+        $request = $this->getAListOfFinesRequest($limit, $offset, $id, $fields, $assessedDate, $agencyCodes);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -270,13 +270,13 @@ class V5finesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of fine records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
-     * @param  int[] $agency_codes fine data for the specified agencies is returned (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  int[] $agencyCodes fine data for the specified agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfFinesRequest($limit = null, $offset = null, $id = null, $fields = null, $assessed_date = null, $agency_codes = null)
+    protected function getAListOfFinesRequest($limit = null, $offset = null, $id = null, $fields = null, $assessedDate = null, $agencyCodes = null)
     {
 
         $resourcePath = '/v5/fines/';
@@ -309,15 +309,15 @@ class V5finesApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($assessed_date !== null) {
-            $queryParams['assessedDate'] = ObjectSerializer::toQueryValue($assessed_date);
+        if ($assessedDate !== null) {
+            $queryParams['assessedDate'] = ObjectSerializer::toQueryValue($assessedDate);
         }
         // query params
-        if (is_array($agency_codes)) {
-            $agency_codes = ObjectSerializer::serializeCollection($agency_codes, 'csv', true);
+        if (is_array($agencyCodes)) {
+            $agencyCodes = ObjectSerializer::serializeCollection($agencyCodes, 'csv', true);
         }
-        if ($agency_codes !== null) {
-            $queryParams['agencyCodes'] = ObjectSerializer::toQueryValue($agency_codes);
+        if ($agencyCodes !== null) {
+            $queryParams['agencyCodes'] = ObjectSerializer::toQueryValue($agencyCodes);
         }
 
 

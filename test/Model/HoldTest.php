@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * HoldTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the data describing a hold
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -110,21 +110,21 @@ class HoldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "not_needed_after_date"
+     * Test attribute "notNeededAfterDate"
      */
     public function testPropertyNotNeededAfterDate()
     {
     }
 
     /**
-     * Test attribute "not_wanted_before_date"
+     * Test attribute "notWantedBeforeDate"
      */
     public function testPropertyNotWantedBeforeDate()
     {
     }
 
     /**
-     * Test attribute "pickup_by_date"
+     * Test attribute "pickupByDate"
      */
     public function testPropertyPickupByDate()
     {
@@ -138,7 +138,7 @@ class HoldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "pickup_location"
+     * Test attribute "pickupLocation"
      */
     public function testPropertyPickupLocation()
     {
@@ -152,7 +152,7 @@ class HoldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "record_type"
+     * Test attribute "recordType"
      */
     public function testPropertyRecordType()
     {
@@ -166,7 +166,7 @@ class HoldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "priority_queue_length"
+     * Test attribute "priorityQueueLength"
      */
     public function testPropertyPriorityQueueLength()
     {

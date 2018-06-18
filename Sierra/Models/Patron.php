@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Patron Class Doc Comment
  *
  * @category Class
  * @description a patron record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,29 +56,29 @@ class Patron implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'updated_date' => '\DateTime',
-        'created_date' => '\DateTime',
-        'deleted_date' => '\DateTime',
+        'updatedDate' => '\DateTime',
+        'createdDate' => '\DateTime',
+        'deletedDate' => '\DateTime',
         'deleted' => 'bool',
         'suppressed' => 'bool',
         'names' => 'string[]',
         'barcodes' => 'string[]',
-        'expiration_date' => '\DateTime',
-        'birth_date' => '\DateTime',
+        'expirationDate' => '\DateTime',
+        'birthDate' => '\DateTime',
         'emails' => 'string[]',
-        'patron_type' => 'int',
-        'patron_codes' => '\Sierra\Models\Codes',
-        'home_library_code' => 'string',
-        'message' => '\Sierra\Models\Message',
-        'block_info' => '\Sierra\Models\Block',
-        'addresses' => '\Sierra\Models\Address[]',
-        'phones' => '\Sierra\Models\Phone[]',
-        'unique_ids' => 'string[]',
-        'money_owed' => 'double',
-        'p_message' => 'string',
-        'lang_pref' => 'string',
-        'fixed_fields' => '\Sierra\Models\map',
-        'var_fields' => '\Sierra\Models\VarField[]'
+        'patronType' => 'int',
+        'patronCodes' => '\III\Sierra\Models\Codes',
+        'homeLibraryCode' => 'string',
+        'message' => '\III\Sierra\Models\Message',
+        'blockInfo' => '\III\Sierra\Models\Block',
+        'addresses' => '\III\Sierra\Models\Address[]',
+        'phones' => '\III\Sierra\Models\Phone[]',
+        'uniqueIds' => 'string[]',
+        'moneyOwed' => 'double',
+        'pMessage' => 'string',
+        'langPref' => 'string',
+        'fixedFields' => '\III\Sierra\Models\map',
+        'varFields' => '\III\Sierra\Models\VarField[]'
     ];
 
     /**
@@ -88,29 +88,29 @@ class Patron implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'updated_date' => 'date-time',
-        'created_date' => 'date-time',
-        'deleted_date' => 'date',
+        'updatedDate' => 'date-time',
+        'createdDate' => 'date-time',
+        'deletedDate' => 'date',
         'deleted' => null,
         'suppressed' => null,
         'names' => null,
         'barcodes' => null,
-        'expiration_date' => 'date',
-        'birth_date' => 'date',
+        'expirationDate' => 'date',
+        'birthDate' => 'date',
         'emails' => null,
-        'patron_type' => 'int32',
-        'patron_codes' => null,
-        'home_library_code' => null,
+        'patronType' => 'int32',
+        'patronCodes' => null,
+        'homeLibraryCode' => null,
         'message' => null,
-        'block_info' => null,
+        'blockInfo' => null,
         'addresses' => null,
         'phones' => null,
-        'unique_ids' => null,
-        'money_owed' => 'double',
-        'p_message' => null,
-        'lang_pref' => null,
-        'fixed_fields' => null,
-        'var_fields' => null
+        'uniqueIds' => null,
+        'moneyOwed' => 'double',
+        'pMessage' => null,
+        'langPref' => null,
+        'fixedFields' => null,
+        'varFields' => null
     ];
 
     /**
@@ -141,29 +141,29 @@ class Patron implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'updated_date' => 'updatedDate',
-        'created_date' => 'createdDate',
-        'deleted_date' => 'deletedDate',
+        'updatedDate' => 'updatedDate',
+        'createdDate' => 'createdDate',
+        'deletedDate' => 'deletedDate',
         'deleted' => 'deleted',
         'suppressed' => 'suppressed',
         'names' => 'names',
         'barcodes' => 'barcodes',
-        'expiration_date' => 'expirationDate',
-        'birth_date' => 'birthDate',
+        'expirationDate' => 'expirationDate',
+        'birthDate' => 'birthDate',
         'emails' => 'emails',
-        'patron_type' => 'patronType',
-        'patron_codes' => 'patronCodes',
-        'home_library_code' => 'homeLibraryCode',
+        'patronType' => 'patronType',
+        'patronCodes' => 'patronCodes',
+        'homeLibraryCode' => 'homeLibraryCode',
         'message' => 'message',
-        'block_info' => 'blockInfo',
+        'blockInfo' => 'blockInfo',
         'addresses' => 'addresses',
         'phones' => 'phones',
-        'unique_ids' => 'uniqueIds',
-        'money_owed' => 'moneyOwed',
-        'p_message' => 'pMessage',
-        'lang_pref' => 'langPref',
-        'fixed_fields' => 'fixedFields',
-        'var_fields' => 'varFields'
+        'uniqueIds' => 'uniqueIds',
+        'moneyOwed' => 'moneyOwed',
+        'pMessage' => 'pMessage',
+        'langPref' => 'langPref',
+        'fixedFields' => 'fixedFields',
+        'varFields' => 'varFields'
     ];
 
     /**
@@ -173,29 +173,29 @@ class Patron implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'updated_date' => 'setUpdatedDate',
-        'created_date' => 'setCreatedDate',
-        'deleted_date' => 'setDeletedDate',
+        'updatedDate' => 'setUpdatedDate',
+        'createdDate' => 'setCreatedDate',
+        'deletedDate' => 'setDeletedDate',
         'deleted' => 'setDeleted',
         'suppressed' => 'setSuppressed',
         'names' => 'setNames',
         'barcodes' => 'setBarcodes',
-        'expiration_date' => 'setExpirationDate',
-        'birth_date' => 'setBirthDate',
+        'expirationDate' => 'setExpirationDate',
+        'birthDate' => 'setBirthDate',
         'emails' => 'setEmails',
-        'patron_type' => 'setPatronType',
-        'patron_codes' => 'setPatronCodes',
-        'home_library_code' => 'setHomeLibraryCode',
+        'patronType' => 'setPatronType',
+        'patronCodes' => 'setPatronCodes',
+        'homeLibraryCode' => 'setHomeLibraryCode',
         'message' => 'setMessage',
-        'block_info' => 'setBlockInfo',
+        'blockInfo' => 'setBlockInfo',
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
-        'unique_ids' => 'setUniqueIds',
-        'money_owed' => 'setMoneyOwed',
-        'p_message' => 'setPMessage',
-        'lang_pref' => 'setLangPref',
-        'fixed_fields' => 'setFixedFields',
-        'var_fields' => 'setVarFields'
+        'uniqueIds' => 'setUniqueIds',
+        'moneyOwed' => 'setMoneyOwed',
+        'pMessage' => 'setPMessage',
+        'langPref' => 'setLangPref',
+        'fixedFields' => 'setFixedFields',
+        'varFields' => 'setVarFields'
     ];
 
     /**
@@ -205,29 +205,29 @@ class Patron implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'updated_date' => 'getUpdatedDate',
-        'created_date' => 'getCreatedDate',
-        'deleted_date' => 'getDeletedDate',
+        'updatedDate' => 'getUpdatedDate',
+        'createdDate' => 'getCreatedDate',
+        'deletedDate' => 'getDeletedDate',
         'deleted' => 'getDeleted',
         'suppressed' => 'getSuppressed',
         'names' => 'getNames',
         'barcodes' => 'getBarcodes',
-        'expiration_date' => 'getExpirationDate',
-        'birth_date' => 'getBirthDate',
+        'expirationDate' => 'getExpirationDate',
+        'birthDate' => 'getBirthDate',
         'emails' => 'getEmails',
-        'patron_type' => 'getPatronType',
-        'patron_codes' => 'getPatronCodes',
-        'home_library_code' => 'getHomeLibraryCode',
+        'patronType' => 'getPatronType',
+        'patronCodes' => 'getPatronCodes',
+        'homeLibraryCode' => 'getHomeLibraryCode',
         'message' => 'getMessage',
-        'block_info' => 'getBlockInfo',
+        'blockInfo' => 'getBlockInfo',
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
-        'unique_ids' => 'getUniqueIds',
-        'money_owed' => 'getMoneyOwed',
-        'p_message' => 'getPMessage',
-        'lang_pref' => 'getLangPref',
-        'fixed_fields' => 'getFixedFields',
-        'var_fields' => 'getVarFields'
+        'uniqueIds' => 'getUniqueIds',
+        'moneyOwed' => 'getMoneyOwed',
+        'pMessage' => 'getPMessage',
+        'langPref' => 'getLangPref',
+        'fixedFields' => 'getFixedFields',
+        'varFields' => 'getVarFields'
     ];
 
     /**
@@ -291,29 +291,29 @@ class Patron implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['updated_date'] = isset($data['updated_date']) ? $data['updated_date'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['deleted_date'] = isset($data['deleted_date']) ? $data['deleted_date'] : null;
+        $this->container['updatedDate'] = isset($data['updatedDate']) ? $data['updatedDate'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['deletedDate'] = isset($data['deletedDate']) ? $data['deletedDate'] : null;
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['suppressed'] = isset($data['suppressed']) ? $data['suppressed'] : null;
         $this->container['names'] = isset($data['names']) ? $data['names'] : null;
         $this->container['barcodes'] = isset($data['barcodes']) ? $data['barcodes'] : null;
-        $this->container['expiration_date'] = isset($data['expiration_date']) ? $data['expiration_date'] : null;
-        $this->container['birth_date'] = isset($data['birth_date']) ? $data['birth_date'] : null;
+        $this->container['expirationDate'] = isset($data['expirationDate']) ? $data['expirationDate'] : null;
+        $this->container['birthDate'] = isset($data['birthDate']) ? $data['birthDate'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
-        $this->container['patron_type'] = isset($data['patron_type']) ? $data['patron_type'] : null;
-        $this->container['patron_codes'] = isset($data['patron_codes']) ? $data['patron_codes'] : null;
-        $this->container['home_library_code'] = isset($data['home_library_code']) ? $data['home_library_code'] : null;
+        $this->container['patronType'] = isset($data['patronType']) ? $data['patronType'] : null;
+        $this->container['patronCodes'] = isset($data['patronCodes']) ? $data['patronCodes'] : null;
+        $this->container['homeLibraryCode'] = isset($data['homeLibraryCode']) ? $data['homeLibraryCode'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['block_info'] = isset($data['block_info']) ? $data['block_info'] : null;
+        $this->container['blockInfo'] = isset($data['blockInfo']) ? $data['blockInfo'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['phones'] = isset($data['phones']) ? $data['phones'] : null;
-        $this->container['unique_ids'] = isset($data['unique_ids']) ? $data['unique_ids'] : null;
-        $this->container['money_owed'] = isset($data['money_owed']) ? $data['money_owed'] : null;
-        $this->container['p_message'] = isset($data['p_message']) ? $data['p_message'] : null;
-        $this->container['lang_pref'] = isset($data['lang_pref']) ? $data['lang_pref'] : null;
-        $this->container['fixed_fields'] = isset($data['fixed_fields']) ? $data['fixed_fields'] : null;
-        $this->container['var_fields'] = isset($data['var_fields']) ? $data['var_fields'] : null;
+        $this->container['uniqueIds'] = isset($data['uniqueIds']) ? $data['uniqueIds'] : null;
+        $this->container['moneyOwed'] = isset($data['moneyOwed']) ? $data['moneyOwed'] : null;
+        $this->container['pMessage'] = isset($data['pMessage']) ? $data['pMessage'] : null;
+        $this->container['langPref'] = isset($data['langPref']) ? $data['langPref'] : null;
+        $this->container['fixedFields'] = isset($data['fixedFields']) ? $data['fixedFields'] : null;
+        $this->container['varFields'] = isset($data['varFields']) ? $data['varFields'] : null;
     }
 
     /**
@@ -331,11 +331,11 @@ class Patron implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             $invalidProperties[] = "'deleted' can't be null";
         }
-        if ($this->container['fixed_fields'] === null) {
-            $invalidProperties[] = "'fixed_fields' can't be null";
+        if ($this->container['fixedFields'] === null) {
+            $invalidProperties[] = "'fixedFields' can't be null";
         }
-        if ($this->container['var_fields'] === null) {
-            $invalidProperties[] = "'var_fields' can't be null";
+        if ($this->container['varFields'] === null) {
+            $invalidProperties[] = "'varFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -355,10 +355,10 @@ class Patron implements ModelInterface, ArrayAccess
         if ($this->container['deleted'] === null) {
             return false;
         }
-        if ($this->container['fixed_fields'] === null) {
+        if ($this->container['fixedFields'] === null) {
             return false;
         }
-        if ($this->container['var_fields'] === null) {
+        if ($this->container['varFields'] === null) {
             return false;
         }
         return true;
@@ -390,73 +390,73 @@ class Patron implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets updated_date
+     * Gets updatedDate
      *
      * @return \DateTime
      */
     public function getUpdatedDate()
     {
-        return $this->container['updated_date'];
+        return $this->container['updatedDate'];
     }
 
     /**
-     * Sets updated_date
+     * Sets updatedDate
      *
-     * @param \DateTime $updated_date the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $updatedDate the date and time of the last update to the record, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setUpdatedDate($updated_date)
+    public function setUpdatedDate($updatedDate)
     {
-        $this->container['updated_date'] = $updated_date;
+        $this->container['updatedDate'] = $updatedDate;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime $created_date the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $createdDate the date and time the record was created, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets deleted_date
+     * Gets deletedDate
      *
      * @return \DateTime
      */
     public function getDeletedDate()
     {
-        return $this->container['deleted_date'];
+        return $this->container['deletedDate'];
     }
 
     /**
-     * Sets deleted_date
+     * Sets deletedDate
      *
-     * @param \DateTime $deleted_date the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $deletedDate the date the record was deleted, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setDeletedDate($deleted_date)
+    public function setDeletedDate($deletedDate)
     {
-        $this->container['deleted_date'] = $deleted_date;
+        $this->container['deletedDate'] = $deletedDate;
 
         return $this;
     }
@@ -558,49 +558,49 @@ class Patron implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets expiration_date
+     * Gets expirationDate
      *
      * @return \DateTime
      */
     public function getExpirationDate()
     {
-        return $this->container['expiration_date'];
+        return $this->container['expirationDate'];
     }
 
     /**
-     * Sets expiration_date
+     * Sets expirationDate
      *
-     * @param \DateTime $expiration_date the expiration date of the patron's borrowing privileges in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $expirationDate the expiration date of the patron's borrowing privileges in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setExpirationDate($expiration_date)
+    public function setExpirationDate($expirationDate)
     {
-        $this->container['expiration_date'] = $expiration_date;
+        $this->container['expirationDate'] = $expirationDate;
 
         return $this;
     }
 
     /**
-     * Gets birth_date
+     * Gets birthDate
      *
      * @return \DateTime
      */
     public function getBirthDate()
     {
-        return $this->container['birth_date'];
+        return $this->container['birthDate'];
     }
 
     /**
-     * Sets birth_date
+     * Sets birthDate
      *
-     * @param \DateTime $birth_date the patron's date of birth in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $birthDate the patron's date of birth in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setBirthDate($birth_date)
+    public function setBirthDate($birthDate)
     {
-        $this->container['birth_date'] = $birth_date;
+        $this->container['birthDate'] = $birthDate;
 
         return $this;
     }
@@ -630,73 +630,73 @@ class Patron implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets patron_type
+     * Gets patronType
      *
      * @return int
      */
     public function getPatronType()
     {
-        return $this->container['patron_type'];
+        return $this->container['patronType'];
     }
 
     /**
-     * Sets patron_type
+     * Sets patronType
      *
-     * @param int $patron_type the patron type code
+     * @param int $patronType the patron type code
      *
      * @return $this
      */
-    public function setPatronType($patron_type)
+    public function setPatronType($patronType)
     {
-        $this->container['patron_type'] = $patron_type;
+        $this->container['patronType'] = $patronType;
 
         return $this;
     }
 
     /**
-     * Gets patron_codes
+     * Gets patronCodes
      *
-     * @return \Sierra\Models\Codes
+     * @return \III\Sierra\Models\Codes
      */
     public function getPatronCodes()
     {
-        return $this->container['patron_codes'];
+        return $this->container['patronCodes'];
     }
 
     /**
-     * Sets patron_codes
+     * Sets patronCodes
      *
-     * @param \Sierra\Models\Codes $patron_codes the library-defined pcodes associated with the patron
+     * @param \III\Sierra\Models\Codes $patronCodes the library-defined pcodes associated with the patron
      *
      * @return $this
      */
-    public function setPatronCodes($patron_codes)
+    public function setPatronCodes($patronCodes)
     {
-        $this->container['patron_codes'] = $patron_codes;
+        $this->container['patronCodes'] = $patronCodes;
 
         return $this;
     }
 
     /**
-     * Gets home_library_code
+     * Gets homeLibraryCode
      *
      * @return string
      */
     public function getHomeLibraryCode()
     {
-        return $this->container['home_library_code'];
+        return $this->container['homeLibraryCode'];
     }
 
     /**
-     * Sets home_library_code
+     * Sets homeLibraryCode
      *
-     * @param string $home_library_code the patron's home library
+     * @param string $homeLibraryCode the patron's home library
      *
      * @return $this
      */
-    public function setHomeLibraryCode($home_library_code)
+    public function setHomeLibraryCode($homeLibraryCode)
     {
-        $this->container['home_library_code'] = $home_library_code;
+        $this->container['homeLibraryCode'] = $homeLibraryCode;
 
         return $this;
     }
@@ -704,7 +704,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return \Sierra\Models\Message
+     * @return \III\Sierra\Models\Message
      */
     public function getMessage()
     {
@@ -714,7 +714,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param \Sierra\Models\Message $message message-related data for the patron
+     * @param \III\Sierra\Models\Message $message message-related data for the patron
      *
      * @return $this
      */
@@ -726,25 +726,25 @@ class Patron implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets block_info
+     * Gets blockInfo
      *
-     * @return \Sierra\Models\Block
+     * @return \III\Sierra\Models\Block
      */
     public function getBlockInfo()
     {
-        return $this->container['block_info'];
+        return $this->container['blockInfo'];
     }
 
     /**
-     * Sets block_info
+     * Sets blockInfo
      *
-     * @param \Sierra\Models\Block $block_info patron block information
+     * @param \III\Sierra\Models\Block $blockInfo patron block information
      *
      * @return $this
      */
-    public function setBlockInfo($block_info)
+    public function setBlockInfo($blockInfo)
     {
-        $this->container['block_info'] = $block_info;
+        $this->container['blockInfo'] = $blockInfo;
 
         return $this;
     }
@@ -752,7 +752,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Sierra\Models\Address[]
+     * @return \III\Sierra\Models\Address[]
      */
     public function getAddresses()
     {
@@ -762,7 +762,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Sierra\Models\Address[] $addresses the patron's addresses
+     * @param \III\Sierra\Models\Address[] $addresses the patron's addresses
      *
      * @return $this
      */
@@ -776,7 +776,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Gets phones
      *
-     * @return \Sierra\Models\Phone[]
+     * @return \III\Sierra\Models\Phone[]
      */
     public function getPhones()
     {
@@ -786,7 +786,7 @@ class Patron implements ModelInterface, ArrayAccess
     /**
      * Sets phones
      *
-     * @param \Sierra\Models\Phone[] $phones the patron's telephone numbers
+     * @param \III\Sierra\Models\Phone[] $phones the patron's telephone numbers
      *
      * @return $this
      */
@@ -798,145 +798,145 @@ class Patron implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets unique_ids
+     * Gets uniqueIds
      *
      * @return string[]
      */
     public function getUniqueIds()
     {
-        return $this->container['unique_ids'];
+        return $this->container['uniqueIds'];
     }
 
     /**
-     * Sets unique_ids
+     * Sets uniqueIds
      *
-     * @param string[] $unique_ids the patron's unique IDs
+     * @param string[] $uniqueIds the patron's unique IDs
      *
      * @return $this
      */
-    public function setUniqueIds($unique_ids)
+    public function setUniqueIds($uniqueIds)
     {
-        $this->container['unique_ids'] = $unique_ids;
+        $this->container['uniqueIds'] = $uniqueIds;
 
         return $this;
     }
 
     /**
-     * Gets money_owed
+     * Gets moneyOwed
      *
      * @return double
      */
     public function getMoneyOwed()
     {
-        return $this->container['money_owed'];
+        return $this->container['moneyOwed'];
     }
 
     /**
-     * Sets money_owed
+     * Sets moneyOwed
      *
-     * @param double $money_owed the amount of money the patron owes in fines and charges
+     * @param double $moneyOwed the amount of money the patron owes in fines and charges
      *
      * @return $this
      */
-    public function setMoneyOwed($money_owed)
+    public function setMoneyOwed($moneyOwed)
     {
-        $this->container['money_owed'] = $money_owed;
+        $this->container['moneyOwed'] = $moneyOwed;
 
         return $this;
     }
 
     /**
-     * Gets p_message
+     * Gets pMessage
      *
      * @return string
      */
     public function getPMessage()
     {
-        return $this->container['p_message'];
+        return $this->container['pMessage'];
     }
 
     /**
-     * Sets p_message
+     * Sets pMessage
      *
-     * @param string $p_message the patron's message
+     * @param string $pMessage the patron's message
      *
      * @return $this
      */
-    public function setPMessage($p_message)
+    public function setPMessage($pMessage)
     {
-        $this->container['p_message'] = $p_message;
+        $this->container['pMessage'] = $pMessage;
 
         return $this;
     }
 
     /**
-     * Gets lang_pref
+     * Gets langPref
      *
      * @return string
      */
     public function getLangPref()
     {
-        return $this->container['lang_pref'];
+        return $this->container['langPref'];
     }
 
     /**
-     * Sets lang_pref
+     * Sets langPref
      *
-     * @param string $lang_pref the patron's language preference
+     * @param string $langPref the patron's language preference
      *
      * @return $this
      */
-    public function setLangPref($lang_pref)
+    public function setLangPref($langPref)
     {
-        $this->container['lang_pref'] = $lang_pref;
+        $this->container['langPref'] = $langPref;
 
         return $this;
     }
 
     /**
-     * Gets fixed_fields
+     * Gets fixedFields
      *
-     * @return \Sierra\Models\map
+     * @return \III\Sierra\Models\map
      */
     public function getFixedFields()
     {
-        return $this->container['fixed_fields'];
+        return $this->container['fixedFields'];
     }
 
     /**
-     * Sets fixed_fields
+     * Sets fixedFields
      *
-     * @param \Sierra\Models\map $fixed_fields the fixed-length fields from the patron record
+     * @param \III\Sierra\Models\map $fixedFields the fixed-length fields from the patron record
      *
      * @return $this
      */
-    public function setFixedFields($fixed_fields)
+    public function setFixedFields($fixedFields)
     {
-        $this->container['fixed_fields'] = $fixed_fields;
+        $this->container['fixedFields'] = $fixedFields;
 
         return $this;
     }
 
     /**
-     * Gets var_fields
+     * Gets varFields
      *
-     * @return \Sierra\Models\VarField[]
+     * @return \III\Sierra\Models\VarField[]
      */
     public function getVarFields()
     {
-        return $this->container['var_fields'];
+        return $this->container['varFields'];
     }
 
     /**
-     * Sets var_fields
+     * Sets varFields
      *
-     * @param \Sierra\Models\VarField[] $var_fields the variable-length fields from the patron record
+     * @param \III\Sierra\Models\VarField[] $varFields the variable-length fields from the patron record
      *
      * @return $this
      */
-    public function setVarFields($var_fields)
+    public function setVarFields($varFields)
     {
-        $this->container['var_fields'] = $var_fields;
+        $this->container['varFields'] = $varFields;
 
         return $this;
     }

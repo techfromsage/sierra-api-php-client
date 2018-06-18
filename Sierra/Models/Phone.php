@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Phone Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class Phone implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'number' => 'string',
-        'type' => '\Sierra\Models\Char'
+        'type' => '\III\Sierra\Models\Char'
     ];
 
     /**
@@ -247,7 +247,7 @@ class Phone implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getType()
     {
@@ -257,7 +257,7 @@ class Phone implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Sierra\Models\Char $type the phone type (t,p,o)
+     * @param \III\Sierra\Models\Char $type the phone type (t,p,o)
      *
      * @return $this
      */

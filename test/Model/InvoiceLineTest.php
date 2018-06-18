@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * InvoiceLineTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an invoice line item record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -96,28 +96,28 @@ class InvoiceLineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "paid_amount"
+     * Test attribute "paidAmount"
      */
     public function testPropertyPaidAmount()
     {
     }
 
     /**
-     * Test attribute "lien_amount"
+     * Test attribute "lienAmount"
      */
     public function testPropertyLienAmount()
     {
     }
 
     /**
-     * Test attribute "lien_flag"
+     * Test attribute "lienFlag"
      */
     public function testPropertyLienFlag()
     {
     }
 
     /**
-     * Test attribute "list_price"
+     * Test attribute "listPrice"
      */
     public function testPropertyListPrice()
     {
@@ -131,42 +131,42 @@ class InvoiceLineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sub_fund"
+     * Test attribute "subFund"
      */
     public function testPropertySubFund()
     {
     }
 
     /**
-     * Test attribute "no_of_copies"
+     * Test attribute "noOfCopies"
      */
     public function testPropertyNoOfCopies()
     {
     }
 
     /**
-     * Test attribute "external_fund"
+     * Test attribute "externalFund"
      */
     public function testPropertyExternalFund()
     {
     }
 
     /**
-     * Test attribute "order_status"
+     * Test attribute "orderStatus"
      */
     public function testPropertyOrderStatus()
     {
     }
 
     /**
-     * Test attribute "use_tax"
+     * Test attribute "useTax"
      */
     public function testPropertyUseTax()
     {
     }
 
     /**
-     * Test attribute "line_item_note"
+     * Test attribute "lineItemNote"
      */
     public function testPropertyLineItemNote()
     {
@@ -180,7 +180,7 @@ class InvoiceLineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "multi_flag"
+     * Test attribute "multiFlag"
      */
     public function testPropertyMultiFlag()
     {
@@ -194,14 +194,14 @@ class InvoiceLineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sub_starting_date"
+     * Test attribute "subStartingDate"
      */
     public function testPropertySubStartingDate()
     {
     }
 
     /**
-     * Test attribute "sub_ending_date"
+     * Test attribute "subEndingDate"
      */
     public function testPropertySubEndingDate()
     {

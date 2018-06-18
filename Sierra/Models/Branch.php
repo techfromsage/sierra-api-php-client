@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Branch Class Doc Comment
  *
  * @category Class
  * @description branch information
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class Branch implements ModelInterface, ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'address' => 'string',
-        'email_source' => 'string',
-        'email_reply_to' => 'string',
+        'emailSource' => 'string',
+        'emailReplyTo' => 'string',
         'latitude' => 'double',
         'longitude' => 'double'
     ];
@@ -73,8 +73,8 @@ class Branch implements ModelInterface, ArrayAccess
         'id' => 'int32',
         'name' => null,
         'address' => null,
-        'email_source' => null,
-        'email_reply_to' => null,
+        'emailSource' => null,
+        'emailReplyTo' => null,
         'latitude' => 'double',
         'longitude' => 'double'
     ];
@@ -109,8 +109,8 @@ class Branch implements ModelInterface, ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'address' => 'address',
-        'email_source' => 'emailSource',
-        'email_reply_to' => 'emailReplyTo',
+        'emailSource' => 'emailSource',
+        'emailReplyTo' => 'emailReplyTo',
         'latitude' => 'latitude',
         'longitude' => 'longitude'
     ];
@@ -124,8 +124,8 @@ class Branch implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'address' => 'setAddress',
-        'email_source' => 'setEmailSource',
-        'email_reply_to' => 'setEmailReplyTo',
+        'emailSource' => 'setEmailSource',
+        'emailReplyTo' => 'setEmailReplyTo',
         'latitude' => 'setLatitude',
         'longitude' => 'setLongitude'
     ];
@@ -139,8 +139,8 @@ class Branch implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'address' => 'getAddress',
-        'email_source' => 'getEmailSource',
-        'email_reply_to' => 'getEmailReplyTo',
+        'emailSource' => 'getEmailSource',
+        'emailReplyTo' => 'getEmailReplyTo',
         'latitude' => 'getLatitude',
         'longitude' => 'getLongitude'
     ];
@@ -208,8 +208,8 @@ class Branch implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['email_source'] = isset($data['email_source']) ? $data['email_source'] : null;
-        $this->container['email_reply_to'] = isset($data['email_reply_to']) ? $data['email_reply_to'] : null;
+        $this->container['emailSource'] = isset($data['emailSource']) ? $data['emailSource'] : null;
+        $this->container['emailReplyTo'] = isset($data['emailReplyTo']) ? $data['emailReplyTo'] : null;
         $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
         $this->container['longitude'] = isset($data['longitude']) ? $data['longitude'] : null;
     }
@@ -318,49 +318,49 @@ class Branch implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets email_source
+     * Gets emailSource
      *
      * @return string
      */
     public function getEmailSource()
     {
-        return $this->container['email_source'];
+        return $this->container['emailSource'];
     }
 
     /**
-     * Sets email_source
+     * Sets emailSource
      *
-     * @param string $email_source the \"From\" address in the header of an emailed overdue notice
+     * @param string $emailSource the \"From\" address in the header of an emailed overdue notice
      *
      * @return $this
      */
-    public function setEmailSource($email_source)
+    public function setEmailSource($emailSource)
     {
-        $this->container['email_source'] = $email_source;
+        $this->container['emailSource'] = $emailSource;
 
         return $this;
     }
 
     /**
-     * Gets email_reply_to
+     * Gets emailReplyTo
      *
      * @return string
      */
     public function getEmailReplyTo()
     {
-        return $this->container['email_reply_to'];
+        return $this->container['emailReplyTo'];
     }
 
     /**
-     * Sets email_reply_to
+     * Sets emailReplyTo
      *
-     * @param string $email_reply_to the \"Reply To\" address in the header of an emailed overdue notice
+     * @param string $emailReplyTo the \"Reply To\" address in the header of an emailed overdue notice
      *
      * @return $this
      */
-    public function setEmailReplyTo($email_reply_to)
+    public function setEmailReplyTo($emailReplyTo)
     {
-        $this->container['email_reply_to'] = $email_reply_to;
+        $this->container['emailReplyTo'] = $emailReplyTo;
 
         return $this;
     }

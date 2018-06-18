@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5ordersApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5ordersApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\QueryResultSet
+     * @return \III\Sierra\Models\QueryResultSet
      */
     public function filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
     {
@@ -107,13 +107,13 @@ class V5ordersApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function filterTheRecordsByAQueryInJSONFormatWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         try {
@@ -165,7 +165,7 @@ class V5ordersApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\QueryResultSet',
+                        '\III\Sierra\Models\QueryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5ordersApi
      */
     public function filterTheRecordsByAQueryInJSONFormatAsyncWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         return $this->client
@@ -375,19 +375,19 @@ class V5ordersApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of order records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted order records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) order records (optional)
      * @param  bool $suppressed the suppressed flag value of order records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\OrderResultSet
+     * @return \III\Sierra\Models\OrderResultSet
      */
-    public function getAListOfOrders($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfOrders($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        list($response) = $this->getAListOfOrdersWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        list($response) = $this->getAListOfOrdersWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
         return $response;
     }
 
@@ -400,20 +400,20 @@ class V5ordersApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of order records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted order records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) order records (optional)
      * @param  bool $suppressed the suppressed flag value of order records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\OrderResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\OrderResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfOrdersWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfOrdersWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\OrderResultSet';
-        $request = $this->getAListOfOrdersRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        $returnType = '\III\Sierra\Models\OrderResultSet';
+        $request = $this->getAListOfOrdersRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
 
         try {
             $options = $this->createHttpClientOption();
@@ -464,7 +464,7 @@ class V5ordersApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\OrderResultSet',
+                        '\III\Sierra\Models\OrderResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,18 +483,18 @@ class V5ordersApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of order records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted order records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) order records (optional)
      * @param  bool $suppressed the suppressed flag value of order records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfOrdersAsync($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfOrdersAsync($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        return $this->getAListOfOrdersAsyncWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed)
+        return $this->getAListOfOrdersAsyncWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -511,19 +511,19 @@ class V5ordersApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of order records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted order records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) order records (optional)
      * @param  bool $suppressed the suppressed flag value of order records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfOrdersAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfOrdersAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\OrderResultSet';
-        $request = $this->getAListOfOrdersRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        $returnType = '\III\Sierra\Models\OrderResultSet';
+        $request = $this->getAListOfOrdersRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -569,16 +569,16 @@ class V5ordersApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of order records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of order records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of order records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted order records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) order records (optional)
      * @param  bool $suppressed the suppressed flag value of order records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfOrdersRequest($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    protected function getAListOfOrdersRequest($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
 
         $resourcePath = '/v5/orders/';
@@ -611,16 +611,16 @@ class V5ordersApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
-        if ($deleted_date !== null) {
-            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deleted_date);
+        if ($deletedDate !== null) {
+            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deletedDate);
         }
         // query params
         if ($deleted !== null) {
@@ -704,9 +704,9 @@ class V5ordersApi
      * @param  int $id the order record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Order
+     * @return \III\Sierra\Models\Order
      */
     public function getAnOrderByRecordID($id, $fields = null)
     {
@@ -722,13 +722,13 @@ class V5ordersApi
      * @param  int $id the order record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAnOrderByRecordIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Order';
+        $returnType = '\III\Sierra\Models\Order';
         $request = $this->getAnOrderByRecordIDRequest($id, $fields);
 
         try {
@@ -780,7 +780,7 @@ class V5ordersApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Order',
+                        '\III\Sierra\Models\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -824,7 +824,7 @@ class V5ordersApi
      */
     public function getAnOrderByRecordIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Order';
+        $returnType = '\III\Sierra\Models\Order';
         $request = $this->getAnOrderByRecordIDRequest($id, $fields);
 
         return $this->client
@@ -975,16 +975,16 @@ class V5ordersApi
      *
      * Get the properties of a given Fund
      *
-     * @param  int $acct_unit the associated accounting unit (required)
-     * @param  int $fund_code_num the fund code number (required)
+     * @param  int $acctUnit the associated accounting unit (required)
+     * @param  int $fundCodeNum the fund code number (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Fund
+     * @return \III\Sierra\Models\Fund
      */
-    public function getThePropertiesOfAGivenFund($acct_unit, $fund_code_num)
+    public function getThePropertiesOfAGivenFund($acctUnit, $fundCodeNum)
     {
-        list($response) = $this->getThePropertiesOfAGivenFundWithHttpInfo($acct_unit, $fund_code_num);
+        list($response) = $this->getThePropertiesOfAGivenFundWithHttpInfo($acctUnit, $fundCodeNum);
         return $response;
     }
 
@@ -993,17 +993,17 @@ class V5ordersApi
      *
      * Get the properties of a given Fund
      *
-     * @param  int $acct_unit the associated accounting unit (required)
-     * @param  int $fund_code_num the fund code number (required)
+     * @param  int $acctUnit the associated accounting unit (required)
+     * @param  int $fundCodeNum the fund code number (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Fund, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Fund, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getThePropertiesOfAGivenFundWithHttpInfo($acct_unit, $fund_code_num)
+    public function getThePropertiesOfAGivenFundWithHttpInfo($acctUnit, $fundCodeNum)
     {
-        $returnType = '\Sierra\Models\Fund';
-        $request = $this->getThePropertiesOfAGivenFundRequest($acct_unit, $fund_code_num);
+        $returnType = '\III\Sierra\Models\Fund';
+        $request = $this->getThePropertiesOfAGivenFundRequest($acctUnit, $fundCodeNum);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1054,7 +1054,7 @@ class V5ordersApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Fund',
+                        '\III\Sierra\Models\Fund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1069,15 +1069,15 @@ class V5ordersApi
      *
      * Get the properties of a given Fund
      *
-     * @param  int $acct_unit the associated accounting unit (required)
-     * @param  int $fund_code_num the fund code number (required)
+     * @param  int $acctUnit the associated accounting unit (required)
+     * @param  int $fundCodeNum the fund code number (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getThePropertiesOfAGivenFundAsync($acct_unit, $fund_code_num)
+    public function getThePropertiesOfAGivenFundAsync($acctUnit, $fundCodeNum)
     {
-        return $this->getThePropertiesOfAGivenFundAsyncWithHttpInfo($acct_unit, $fund_code_num)
+        return $this->getThePropertiesOfAGivenFundAsyncWithHttpInfo($acctUnit, $fundCodeNum)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1090,16 +1090,16 @@ class V5ordersApi
      *
      * Get the properties of a given Fund
      *
-     * @param  int $acct_unit the associated accounting unit (required)
-     * @param  int $fund_code_num the fund code number (required)
+     * @param  int $acctUnit the associated accounting unit (required)
+     * @param  int $fundCodeNum the fund code number (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getThePropertiesOfAGivenFundAsyncWithHttpInfo($acct_unit, $fund_code_num)
+    public function getThePropertiesOfAGivenFundAsyncWithHttpInfo($acctUnit, $fundCodeNum)
     {
-        $returnType = '\Sierra\Models\Fund';
-        $request = $this->getThePropertiesOfAGivenFundRequest($acct_unit, $fund_code_num);
+        $returnType = '\III\Sierra\Models\Fund';
+        $request = $this->getThePropertiesOfAGivenFundRequest($acctUnit, $fundCodeNum);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1141,24 +1141,24 @@ class V5ordersApi
     /**
      * Create request for operation 'getThePropertiesOfAGivenFund'
      *
-     * @param  int $acct_unit the associated accounting unit (required)
-     * @param  int $fund_code_num the fund code number (required)
+     * @param  int $acctUnit the associated accounting unit (required)
+     * @param  int $fundCodeNum the fund code number (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getThePropertiesOfAGivenFundRequest($acct_unit, $fund_code_num)
+    protected function getThePropertiesOfAGivenFundRequest($acctUnit, $fundCodeNum)
     {
-        // verify the required parameter 'acct_unit' is set
-        if ($acct_unit === null) {
+        // verify the required parameter 'acctUnit' is set
+        if ($acctUnit === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $acct_unit when calling getThePropertiesOfAGivenFund'
+                'Missing the required parameter $acctUnit when calling getThePropertiesOfAGivenFund'
             );
         }
-        // verify the required parameter 'fund_code_num' is set
-        if ($fund_code_num === null) {
+        // verify the required parameter 'fundCodeNum' is set
+        if ($fundCodeNum === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $fund_code_num when calling getThePropertiesOfAGivenFund'
+                'Missing the required parameter $fundCodeNum when calling getThePropertiesOfAGivenFund'
             );
         }
 
@@ -1171,18 +1171,18 @@ class V5ordersApi
 
 
         // path params
-        if ($acct_unit !== null) {
+        if ($acctUnit !== null) {
             $resourcePath = str_replace(
                 '{' . 'acctUnit' . '}',
-                ObjectSerializer::toPathValue($acct_unit),
+                ObjectSerializer::toPathValue($acctUnit),
                 $resourcePath
             );
         }
         // path params
-        if ($fund_code_num !== null) {
+        if ($fundCodeNum !== null) {
             $resourcePath = str_replace(
                 '{' . 'fundCodeNum' . '}',
-                ObjectSerializer::toPathValue($fund_code_num),
+                ObjectSerializer::toPathValue($fundCodeNum),
                 $resourcePath
             );
         }

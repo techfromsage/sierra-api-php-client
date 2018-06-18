@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5authoritiesApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5authoritiesApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\QueryResultSet
+     * @return \III\Sierra\Models\QueryResultSet
      */
     public function filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
     {
@@ -107,13 +107,13 @@ class V5authoritiesApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function filterTheRecordsByAQueryInJSONFormatWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         try {
@@ -165,7 +165,7 @@ class V5authoritiesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\QueryResultSet',
+                        '\III\Sierra\Models\QueryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5authoritiesApi
      */
     public function filterTheRecordsByAQueryInJSONFormatAsyncWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         return $this->client
@@ -375,19 +375,19 @@ class V5authoritiesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  int[] $id a comma-delimited list of IDs of authority records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted authority records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) authority records (optional)
      * @param  bool $suppressed the suppressed flag value of authority records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\AuthorityResultSet
+     * @return \III\Sierra\Models\AuthorityResultSet
      */
-    public function getAListOfAuthorityRecords($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfAuthorityRecords($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        list($response) = $this->getAListOfAuthorityRecordsWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        list($response) = $this->getAListOfAuthorityRecordsWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
         return $response;
     }
 
@@ -400,20 +400,20 @@ class V5authoritiesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  int[] $id a comma-delimited list of IDs of authority records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted authority records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) authority records (optional)
      * @param  bool $suppressed the suppressed flag value of authority records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\AuthorityResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\AuthorityResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfAuthorityRecordsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfAuthorityRecordsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\AuthorityResultSet';
-        $request = $this->getAListOfAuthorityRecordsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        $returnType = '\III\Sierra\Models\AuthorityResultSet';
+        $request = $this->getAListOfAuthorityRecordsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
 
         try {
             $options = $this->createHttpClientOption();
@@ -464,7 +464,7 @@ class V5authoritiesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\AuthorityResultSet',
+                        '\III\Sierra\Models\AuthorityResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,18 +483,18 @@ class V5authoritiesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  int[] $id a comma-delimited list of IDs of authority records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted authority records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) authority records (optional)
      * @param  bool $suppressed the suppressed flag value of authority records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfAuthorityRecordsAsync($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfAuthorityRecordsAsync($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        return $this->getAListOfAuthorityRecordsAsyncWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed)
+        return $this->getAListOfAuthorityRecordsAsyncWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -511,19 +511,19 @@ class V5authoritiesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  int[] $id a comma-delimited list of IDs of authority records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted authority records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) authority records (optional)
      * @param  bool $suppressed the suppressed flag value of authority records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfAuthorityRecordsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    public function getAListOfAuthorityRecordsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\AuthorityResultSet';
-        $request = $this->getAListOfAuthorityRecordsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed);
+        $returnType = '\III\Sierra\Models\AuthorityResultSet';
+        $request = $this->getAListOfAuthorityRecordsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -569,16 +569,16 @@ class V5authoritiesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  int[] $id a comma-delimited list of IDs of authority records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of authority records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of authority records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted authority records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) authority records (optional)
      * @param  bool $suppressed the suppressed flag value of authority records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfAuthorityRecordsRequest($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null)
+    protected function getAListOfAuthorityRecordsRequest($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null)
     {
 
         $resourcePath = '/v5/authorities/';
@@ -611,16 +611,16 @@ class V5authoritiesApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
-        if ($deleted_date !== null) {
-            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deleted_date);
+        if ($deletedDate !== null) {
+            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deletedDate);
         }
         // query params
         if ($deleted !== null) {
@@ -704,9 +704,9 @@ class V5authoritiesApi
      * @param  int $id the authority record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Authority
+     * @return \III\Sierra\Models\Authority
      */
     public function getAnAuthorityRecordByRecordID($id, $fields = null)
     {
@@ -722,13 +722,13 @@ class V5authoritiesApi
      * @param  int $id the authority record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Authority, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Authority, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAnAuthorityRecordByRecordIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Authority';
+        $returnType = '\III\Sierra\Models\Authority';
         $request = $this->getAnAuthorityRecordByRecordIDRequest($id, $fields);
 
         try {
@@ -780,7 +780,7 @@ class V5authoritiesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Authority',
+                        '\III\Sierra\Models\Authority',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -824,7 +824,7 @@ class V5authoritiesApi
      */
     public function getAnAuthorityRecordByRecordIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Authority';
+        $returnType = '\III\Sierra\Models\Authority';
         $request = $this->getAnAuthorityRecordByRecordIDRequest($id, $fields);
 
         return $this->client
@@ -977,9 +977,9 @@ class V5authoritiesApi
      *
      * @param  int $id the authority record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function getTheMARCDataForASingleAuthorityRecord($id)
     {
@@ -994,13 +994,13 @@ class V5authoritiesApi
      *
      * @param  int $id the authority record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTheMARCDataForASingleAuthorityRecordWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->getTheMARCDataForASingleAuthorityRecordRequest($id);
 
         try {
@@ -1052,7 +1052,7 @@ class V5authoritiesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1094,7 +1094,7 @@ class V5authoritiesApi
      */
     public function getTheMARCDataForASingleAuthorityRecordAsyncWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->getTheMARCDataForASingleAuthorityRecordRequest($id);
 
         return $this->client

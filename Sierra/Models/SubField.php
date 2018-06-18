@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * SubField Class Doc Comment
  *
  * @category Class
  * @description a subfield of a variable-length field
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class SubField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tag' => '\Sierra\Models\Char',
+        'tag' => '\III\Sierra\Models\Char',
         'content' => 'string'
     ];
 
@@ -224,7 +224,7 @@ class SubField implements ModelInterface, ArrayAccess
     /**
      * Gets tag
      *
-     * @return \Sierra\Models\Char
+     * @return \III\Sierra\Models\Char
      */
     public function getTag()
     {
@@ -234,7 +234,7 @@ class SubField implements ModelInterface, ArrayAccess
     /**
      * Sets tag
      *
-     * @param \Sierra\Models\Char $tag a subfield code
+     * @param \III\Sierra\Models\Char $tag a subfield code
      *
      * @return $this
      */

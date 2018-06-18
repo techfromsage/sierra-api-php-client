@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5invoicesApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5invoicesApi
      * @param  int $id the invoice line ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\InvoiceLine
+     * @return \III\Sierra\Models\InvoiceLine
      */
     public function getALineItemRecordByLineID($login, $id, $fields = null)
     {
@@ -107,13 +107,13 @@ class V5invoicesApi
      * @param  int $id the invoice line ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\InvoiceLine, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\InvoiceLine, HTTP status code, HTTP response headers (array of strings)
      */
     public function getALineItemRecordByLineIDWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\InvoiceLine';
+        $returnType = '\III\Sierra\Models\InvoiceLine';
         $request = $this->getALineItemRecordByLineIDRequest($login, $id, $fields);
 
         try {
@@ -165,7 +165,7 @@ class V5invoicesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\InvoiceLine',
+                        '\III\Sierra\Models\InvoiceLine',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5invoicesApi
      */
     public function getALineItemRecordByLineIDAsyncWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\InvoiceLine';
+        $returnType = '\III\Sierra\Models\InvoiceLine';
         $request = $this->getALineItemRecordByLineIDRequest($login, $id, $fields);
 
         return $this->client
@@ -377,21 +377,21 @@ class V5invoicesApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of invoices to retrieve (optional)
-     * @param  string $inv_num a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
-     * @param  string[] $status_code a comma-delimited list of invoice status codes (optional)
+     * @param  string $invNum a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
+     * @param  string[] $statusCode a comma-delimited list of invoice status codes (optional)
      * @param  string[] $fields if none provided, data for all fields are returned; otherwise only specified fields are returned (optional)
-     * @param  \DateTime $invoice_date the date of invoice records (can be a range) (optional)
-     * @param  \DateTime $created_date the creation date of invoice records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $invoiceDate the date of invoice records (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of invoice records to retrieve (can be a range) (optional)
      * @param  bool $suppressed the suppressed flag value of invoice records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\InvoiceResultSet
+     * @return \III\Sierra\Models\InvoiceResultSet
      */
-    public function getAListOfInvoices($login, $limit = null, $offset = null, $id = null, $inv_num = null, $status_code = null, $fields = null, $invoice_date = null, $created_date = null, $updated_date = null, $suppressed = null)
+    public function getAListOfInvoices($login, $limit = null, $offset = null, $id = null, $invNum = null, $statusCode = null, $fields = null, $invoiceDate = null, $createdDate = null, $updatedDate = null, $suppressed = null)
     {
-        list($response) = $this->getAListOfInvoicesWithHttpInfo($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed);
+        list($response) = $this->getAListOfInvoicesWithHttpInfo($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed);
         return $response;
     }
 
@@ -404,22 +404,22 @@ class V5invoicesApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of invoices to retrieve (optional)
-     * @param  string $inv_num a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
-     * @param  string[] $status_code a comma-delimited list of invoice status codes (optional)
+     * @param  string $invNum a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
+     * @param  string[] $statusCode a comma-delimited list of invoice status codes (optional)
      * @param  string[] $fields if none provided, data for all fields are returned; otherwise only specified fields are returned (optional)
-     * @param  \DateTime $invoice_date the date of invoice records (can be a range) (optional)
-     * @param  \DateTime $created_date the creation date of invoice records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $invoiceDate the date of invoice records (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of invoice records to retrieve (can be a range) (optional)
      * @param  bool $suppressed the suppressed flag value of invoice records to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\InvoiceResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\InvoiceResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfInvoicesWithHttpInfo($login, $limit = null, $offset = null, $id = null, $inv_num = null, $status_code = null, $fields = null, $invoice_date = null, $created_date = null, $updated_date = null, $suppressed = null)
+    public function getAListOfInvoicesWithHttpInfo($login, $limit = null, $offset = null, $id = null, $invNum = null, $statusCode = null, $fields = null, $invoiceDate = null, $createdDate = null, $updatedDate = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\InvoiceResultSet';
-        $request = $this->getAListOfInvoicesRequest($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed);
+        $returnType = '\III\Sierra\Models\InvoiceResultSet';
+        $request = $this->getAListOfInvoicesRequest($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed);
 
         try {
             $options = $this->createHttpClientOption();
@@ -470,7 +470,7 @@ class V5invoicesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\InvoiceResultSet',
+                        '\III\Sierra\Models\InvoiceResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -489,20 +489,20 @@ class V5invoicesApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of invoices to retrieve (optional)
-     * @param  string $inv_num a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
-     * @param  string[] $status_code a comma-delimited list of invoice status codes (optional)
+     * @param  string $invNum a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
+     * @param  string[] $statusCode a comma-delimited list of invoice status codes (optional)
      * @param  string[] $fields if none provided, data for all fields are returned; otherwise only specified fields are returned (optional)
-     * @param  \DateTime $invoice_date the date of invoice records (can be a range) (optional)
-     * @param  \DateTime $created_date the creation date of invoice records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $invoiceDate the date of invoice records (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of invoice records to retrieve (can be a range) (optional)
      * @param  bool $suppressed the suppressed flag value of invoice records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfInvoicesAsync($login, $limit = null, $offset = null, $id = null, $inv_num = null, $status_code = null, $fields = null, $invoice_date = null, $created_date = null, $updated_date = null, $suppressed = null)
+    public function getAListOfInvoicesAsync($login, $limit = null, $offset = null, $id = null, $invNum = null, $statusCode = null, $fields = null, $invoiceDate = null, $createdDate = null, $updatedDate = null, $suppressed = null)
     {
-        return $this->getAListOfInvoicesAsyncWithHttpInfo($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed)
+        return $this->getAListOfInvoicesAsyncWithHttpInfo($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -519,21 +519,21 @@ class V5invoicesApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of invoices to retrieve (optional)
-     * @param  string $inv_num a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
-     * @param  string[] $status_code a comma-delimited list of invoice status codes (optional)
+     * @param  string $invNum a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
+     * @param  string[] $statusCode a comma-delimited list of invoice status codes (optional)
      * @param  string[] $fields if none provided, data for all fields are returned; otherwise only specified fields are returned (optional)
-     * @param  \DateTime $invoice_date the date of invoice records (can be a range) (optional)
-     * @param  \DateTime $created_date the creation date of invoice records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $invoiceDate the date of invoice records (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of invoice records to retrieve (can be a range) (optional)
      * @param  bool $suppressed the suppressed flag value of invoice records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfInvoicesAsyncWithHttpInfo($login, $limit = null, $offset = null, $id = null, $inv_num = null, $status_code = null, $fields = null, $invoice_date = null, $created_date = null, $updated_date = null, $suppressed = null)
+    public function getAListOfInvoicesAsyncWithHttpInfo($login, $limit = null, $offset = null, $id = null, $invNum = null, $statusCode = null, $fields = null, $invoiceDate = null, $createdDate = null, $updatedDate = null, $suppressed = null)
     {
-        $returnType = '\Sierra\Models\InvoiceResultSet';
-        $request = $this->getAListOfInvoicesRequest($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed);
+        $returnType = '\III\Sierra\Models\InvoiceResultSet';
+        $request = $this->getAListOfInvoicesRequest($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -579,18 +579,18 @@ class V5invoicesApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of invoices to retrieve (optional)
-     * @param  string $inv_num a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
-     * @param  string[] $status_code a comma-delimited list of invoice status codes (optional)
+     * @param  string $invNum a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
+     * @param  string[] $statusCode a comma-delimited list of invoice status codes (optional)
      * @param  string[] $fields if none provided, data for all fields are returned; otherwise only specified fields are returned (optional)
-     * @param  \DateTime $invoice_date the date of invoice records (can be a range) (optional)
-     * @param  \DateTime $created_date the creation date of invoice records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $invoiceDate the date of invoice records (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of invoice records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of invoice records to retrieve (can be a range) (optional)
      * @param  bool $suppressed the suppressed flag value of invoice records to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfInvoicesRequest($login, $limit = null, $offset = null, $id = null, $inv_num = null, $status_code = null, $fields = null, $invoice_date = null, $created_date = null, $updated_date = null, $suppressed = null)
+    protected function getAListOfInvoicesRequest($login, $limit = null, $offset = null, $id = null, $invNum = null, $statusCode = null, $fields = null, $invoiceDate = null, $createdDate = null, $updatedDate = null, $suppressed = null)
     {
         // verify the required parameter 'login' is set
         if ($login === null) {
@@ -626,15 +626,15 @@ class V5invoicesApi
             $queryParams['id'] = ObjectSerializer::toQueryValue($id);
         }
         // query params
-        if ($inv_num !== null) {
-            $queryParams['invNum'] = ObjectSerializer::toQueryValue($inv_num);
+        if ($invNum !== null) {
+            $queryParams['invNum'] = ObjectSerializer::toQueryValue($invNum);
         }
         // query params
-        if (is_array($status_code)) {
-            $status_code = ObjectSerializer::serializeCollection($status_code, 'csv', true);
+        if (is_array($statusCode)) {
+            $statusCode = ObjectSerializer::serializeCollection($statusCode, 'csv', true);
         }
-        if ($status_code !== null) {
-            $queryParams['statusCode'] = ObjectSerializer::toQueryValue($status_code);
+        if ($statusCode !== null) {
+            $queryParams['statusCode'] = ObjectSerializer::toQueryValue($statusCode);
         }
         // query params
         if (is_array($fields)) {
@@ -644,16 +644,16 @@ class V5invoicesApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($invoice_date !== null) {
-            $queryParams['invoiceDate'] = ObjectSerializer::toQueryValue($invoice_date);
+        if ($invoiceDate !== null) {
+            $queryParams['invoiceDate'] = ObjectSerializer::toQueryValue($invoiceDate);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
         if ($suppressed !== null) {
@@ -733,9 +733,9 @@ class V5invoicesApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Metadata[]
+     * @return \III\Sierra\Models\Metadata[]
      */
     public function getAListOfMetadata($fields = null, $language = null)
     {
@@ -751,13 +751,13 @@ class V5invoicesApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfMetadataWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         try {
@@ -809,7 +809,7 @@ class V5invoicesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Metadata[]',
+                        '\III\Sierra\Models\Metadata[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -853,7 +853,7 @@ class V5invoicesApi
      */
     public function getAListOfMetadataAsyncWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         return $this->client
@@ -995,9 +995,9 @@ class V5invoicesApi
      * @param  int $id the invoice record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Invoice
+     * @return \III\Sierra\Models\Invoice
      */
     public function getAnInvoiceByRecordID($login, $id, $fields = null)
     {
@@ -1014,13 +1014,13 @@ class V5invoicesApi
      * @param  int $id the invoice record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAnInvoiceByRecordIDWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Invoice';
+        $returnType = '\III\Sierra\Models\Invoice';
         $request = $this->getAnInvoiceByRecordIDRequest($login, $id, $fields);
 
         try {
@@ -1072,7 +1072,7 @@ class V5invoicesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Invoice',
+                        '\III\Sierra\Models\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1118,7 +1118,7 @@ class V5invoicesApi
      */
     public function getAnInvoiceByRecordIDAsyncWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Invoice';
+        $returnType = '\III\Sierra\Models\Invoice';
         $request = $this->getAnInvoiceByRecordIDRequest($login, $id, $fields);
 
         return $this->client
@@ -1284,9 +1284,9 @@ class V5invoicesApi
      * @param  int $id the invoice record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\InvoiceLineResultSet
+     * @return \III\Sierra\Models\InvoiceLineResultSet
      */
     public function getTheLineItemDataForASingleInvoiceRecord($login, $id, $fields = null)
     {
@@ -1303,13 +1303,13 @@ class V5invoicesApi
      * @param  int $id the invoice record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\InvoiceLineResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\InvoiceLineResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTheLineItemDataForASingleInvoiceRecordWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\InvoiceLineResultSet';
+        $returnType = '\III\Sierra\Models\InvoiceLineResultSet';
         $request = $this->getTheLineItemDataForASingleInvoiceRecordRequest($login, $id, $fields);
 
         try {
@@ -1361,7 +1361,7 @@ class V5invoicesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\InvoiceLineResultSet',
+                        '\III\Sierra\Models\InvoiceLineResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class V5invoicesApi
      */
     public function getTheLineItemDataForASingleInvoiceRecordAsyncWithHttpInfo($login, $id, $fields = null)
     {
-        $returnType = '\Sierra\Models\InvoiceLineResultSet';
+        $returnType = '\III\Sierra\Models\InvoiceLineResultSet';
         $request = $this->getTheLineItemDataForASingleInvoiceRecordRequest($login, $id, $fields);
 
         return $this->client

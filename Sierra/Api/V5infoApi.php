@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5infoApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -85,9 +85,9 @@ class V5infoApi
      * Get token information
      *
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\TokenInfo
+     * @return \III\Sierra\Models\TokenInfo
      */
     public function getTokenInformation()
     {
@@ -101,13 +101,13 @@ class V5infoApi
      * Get token information
      *
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\TokenInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\TokenInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenInformationWithHttpInfo()
     {
-        $returnType = '\Sierra\Models\TokenInfo';
+        $returnType = '\III\Sierra\Models\TokenInfo';
         $request = $this->getTokenInformationRequest();
 
         try {
@@ -159,7 +159,7 @@ class V5infoApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\TokenInfo',
+                        '\III\Sierra\Models\TokenInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -199,7 +199,7 @@ class V5infoApi
      */
     public function getTokenInformationAsyncWithHttpInfo()
     {
-        $returnType = '\Sierra\Models\TokenInfo';
+        $returnType = '\III\Sierra\Models\TokenInfo';
         $request = $this->getTokenInformationRequest();
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * OrderBibLinks Class Doc Comment
  *
  * @category Class
  * @description the links to the new order and bib records
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,12 +55,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'control_number' => 'string',
-        'order_id' => 'string',
-        'bib_id' => 'string',
+        'controlNumber' => 'string',
+        'orderId' => 'string',
+        'bibId' => 'string',
         'warnings' => 'string[]',
-        'vendor_id_numbers' => 'string[]',
-        'legacy_order_id' => 'string'
+        'vendorIDNumbers' => 'string[]',
+        'legacyOrderId' => 'string'
     ];
 
     /**
@@ -69,12 +69,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'control_number' => null,
-        'order_id' => null,
-        'bib_id' => null,
+        'controlNumber' => null,
+        'orderId' => null,
+        'bibId' => null,
         'warnings' => null,
-        'vendor_id_numbers' => null,
-        'legacy_order_id' => null
+        'vendorIDNumbers' => null,
+        'legacyOrderId' => null
     ];
 
     /**
@@ -104,12 +104,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'control_number' => 'controlNumber',
-        'order_id' => 'orderId',
-        'bib_id' => 'bibId',
+        'controlNumber' => 'controlNumber',
+        'orderId' => 'orderId',
+        'bibId' => 'bibId',
         'warnings' => 'warnings',
-        'vendor_id_numbers' => 'vendorIDNumbers',
-        'legacy_order_id' => 'legacyOrderId'
+        'vendorIDNumbers' => 'vendorIDNumbers',
+        'legacyOrderId' => 'legacyOrderId'
     ];
 
     /**
@@ -118,12 +118,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'control_number' => 'setControlNumber',
-        'order_id' => 'setOrderId',
-        'bib_id' => 'setBibId',
+        'controlNumber' => 'setControlNumber',
+        'orderId' => 'setOrderId',
+        'bibId' => 'setBibId',
         'warnings' => 'setWarnings',
-        'vendor_id_numbers' => 'setVendorIdNumbers',
-        'legacy_order_id' => 'setLegacyOrderId'
+        'vendorIDNumbers' => 'setVendorIDNumbers',
+        'legacyOrderId' => 'setLegacyOrderId'
     ];
 
     /**
@@ -132,12 +132,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'control_number' => 'getControlNumber',
-        'order_id' => 'getOrderId',
-        'bib_id' => 'getBibId',
+        'controlNumber' => 'getControlNumber',
+        'orderId' => 'getOrderId',
+        'bibId' => 'getBibId',
         'warnings' => 'getWarnings',
-        'vendor_id_numbers' => 'getVendorIdNumbers',
-        'legacy_order_id' => 'getLegacyOrderId'
+        'vendorIDNumbers' => 'getVendorIDNumbers',
+        'legacyOrderId' => 'getLegacyOrderId'
     ];
 
     /**
@@ -200,12 +200,12 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['control_number'] = isset($data['control_number']) ? $data['control_number'] : null;
-        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
-        $this->container['bib_id'] = isset($data['bib_id']) ? $data['bib_id'] : null;
+        $this->container['controlNumber'] = isset($data['controlNumber']) ? $data['controlNumber'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['bibId'] = isset($data['bibId']) ? $data['bibId'] : null;
         $this->container['warnings'] = isset($data['warnings']) ? $data['warnings'] : null;
-        $this->container['vendor_id_numbers'] = isset($data['vendor_id_numbers']) ? $data['vendor_id_numbers'] : null;
-        $this->container['legacy_order_id'] = isset($data['legacy_order_id']) ? $data['legacy_order_id'] : null;
+        $this->container['vendorIDNumbers'] = isset($data['vendorIDNumbers']) ? $data['vendorIDNumbers'] : null;
+        $this->container['legacyOrderId'] = isset($data['legacyOrderId']) ? $data['legacyOrderId'] : null;
     }
 
     /**
@@ -217,14 +217,14 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
+        if ($this->container['orderId'] === null) {
+            $invalidProperties[] = "'orderId' can't be null";
         }
-        if ($this->container['bib_id'] === null) {
-            $invalidProperties[] = "'bib_id' can't be null";
+        if ($this->container['bibId'] === null) {
+            $invalidProperties[] = "'bibId' can't be null";
         }
-        if ($this->container['legacy_order_id'] === null) {
-            $invalidProperties[] = "'legacy_order_id' can't be null";
+        if ($this->container['legacyOrderId'] === null) {
+            $invalidProperties[] = "'legacyOrderId' can't be null";
         }
         return $invalidProperties;
     }
@@ -238,13 +238,13 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['order_id'] === null) {
+        if ($this->container['orderId'] === null) {
             return false;
         }
-        if ($this->container['bib_id'] === null) {
+        if ($this->container['bibId'] === null) {
             return false;
         }
-        if ($this->container['legacy_order_id'] === null) {
+        if ($this->container['legacyOrderId'] === null) {
             return false;
         }
         return true;
@@ -252,73 +252,73 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets control_number
+     * Gets controlNumber
      *
      * @return string
      */
     public function getControlNumber()
     {
-        return $this->container['control_number'];
+        return $this->container['controlNumber'];
     }
 
     /**
-     * Sets control_number
+     * Sets controlNumber
      *
-     * @param string $control_number the control number of the MARC record
+     * @param string $controlNumber the control number of the MARC record
      *
      * @return $this
      */
-    public function setControlNumber($control_number)
+    public function setControlNumber($controlNumber)
     {
-        $this->container['control_number'] = $control_number;
+        $this->container['controlNumber'] = $controlNumber;
 
         return $this;
     }
 
     /**
-     * Gets order_id
+     * Gets orderId
      *
      * @return string
      */
     public function getOrderId()
     {
-        return $this->container['order_id'];
+        return $this->container['orderId'];
     }
 
     /**
-     * Sets order_id
+     * Sets orderId
      *
-     * @param string $order_id the order ID
+     * @param string $orderId the order ID
      *
      * @return $this
      */
-    public function setOrderId($order_id)
+    public function setOrderId($orderId)
     {
-        $this->container['order_id'] = $order_id;
+        $this->container['orderId'] = $orderId;
 
         return $this;
     }
 
     /**
-     * Gets bib_id
+     * Gets bibId
      *
      * @return string
      */
     public function getBibId()
     {
-        return $this->container['bib_id'];
+        return $this->container['bibId'];
     }
 
     /**
-     * Sets bib_id
+     * Sets bibId
      *
-     * @param string $bib_id the bib ID
+     * @param string $bibId the bib ID
      *
      * @return $this
      */
-    public function setBibId($bib_id)
+    public function setBibId($bibId)
     {
-        $this->container['bib_id'] = $bib_id;
+        $this->container['bibId'] = $bibId;
 
         return $this;
     }
@@ -348,49 +348,49 @@ class OrderBibLinks implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets vendor_id_numbers
+     * Gets vendorIDNumbers
      *
      * @return string[]
      */
-    public function getVendorIdNumbers()
+    public function getVendorIDNumbers()
     {
-        return $this->container['vendor_id_numbers'];
+        return $this->container['vendorIDNumbers'];
     }
 
     /**
-     * Sets vendor_id_numbers
+     * Sets vendorIDNumbers
      *
-     * @param string[] $vendor_id_numbers the list of the vendor's identification numbers for the associated title
+     * @param string[] $vendorIDNumbers the list of the vendor's identification numbers for the associated title
      *
      * @return $this
      */
-    public function setVendorIdNumbers($vendor_id_numbers)
+    public function setVendorIDNumbers($vendorIDNumbers)
     {
-        $this->container['vendor_id_numbers'] = $vendor_id_numbers;
+        $this->container['vendorIDNumbers'] = $vendorIDNumbers;
 
         return $this;
     }
 
     /**
-     * Gets legacy_order_id
+     * Gets legacyOrderId
      *
      * @return string
      */
     public function getLegacyOrderId()
     {
-        return $this->container['legacy_order_id'];
+        return $this->container['legacyOrderId'];
     }
 
     /**
-     * Sets legacy_order_id
+     * Sets legacyOrderId
      *
-     * @param string $legacy_order_id the order ID in Innovative format, e.g., '.o12345678'
+     * @param string $legacyOrderId the order ID in Innovative format, e.g., '.o12345678'
      *
      * @return $this
      */
-    public function setLegacyOrderId($legacy_order_id)
+    public function setLegacyOrderId($legacyOrderId)
     {
-        $this->container['legacy_order_id'] = $legacy_order_id;
+        $this->container['legacyOrderId'] = $legacyOrderId;
 
         return $this;
     }

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5patronsApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -85,15 +85,15 @@ class V5patronsApi
      * Cancel all holds for the specified patron
      *
      * @param  int $id the patron record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
-    public function cancelAllHoldsForTheSpecifiedPatron($id, $accept_language = null)
+    public function cancelAllHoldsForTheSpecifiedPatron($id, $acceptLanguage = null)
     {
-        list($response) = $this->cancelAllHoldsForTheSpecifiedPatronWithHttpInfo($id, $accept_language);
+        list($response) = $this->cancelAllHoldsForTheSpecifiedPatronWithHttpInfo($id, $acceptLanguage);
         return $response;
     }
 
@@ -103,16 +103,16 @@ class V5patronsApi
      * Cancel all holds for the specified patron
      *
      * @param  int $id the patron record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelAllHoldsForTheSpecifiedPatronWithHttpInfo($id, $accept_language = null)
+    public function cancelAllHoldsForTheSpecifiedPatronWithHttpInfo($id, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->cancelAllHoldsForTheSpecifiedPatronRequest($id, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->cancelAllHoldsForTheSpecifiedPatronRequest($id, $acceptLanguage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -163,7 +163,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,14 +179,14 @@ class V5patronsApi
      * Cancel all holds for the specified patron
      *
      * @param  int $id the patron record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelAllHoldsForTheSpecifiedPatronAsync($id, $accept_language = null)
+    public function cancelAllHoldsForTheSpecifiedPatronAsync($id, $acceptLanguage = null)
     {
-        return $this->cancelAllHoldsForTheSpecifiedPatronAsyncWithHttpInfo($id, $accept_language)
+        return $this->cancelAllHoldsForTheSpecifiedPatronAsyncWithHttpInfo($id, $acceptLanguage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -200,15 +200,15 @@ class V5patronsApi
      * Cancel all holds for the specified patron
      *
      * @param  int $id the patron record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelAllHoldsForTheSpecifiedPatronAsyncWithHttpInfo($id, $accept_language = null)
+    public function cancelAllHoldsForTheSpecifiedPatronAsyncWithHttpInfo($id, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->cancelAllHoldsForTheSpecifiedPatronRequest($id, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->cancelAllHoldsForTheSpecifiedPatronRequest($id, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,12 +251,12 @@ class V5patronsApi
      * Create request for operation 'cancelAllHoldsForTheSpecifiedPatron'
      *
      * @param  int $id the patron record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function cancelAllHoldsForTheSpecifiedPatronRequest($id, $accept_language = null)
+    protected function cancelAllHoldsForTheSpecifiedPatronRequest($id, $acceptLanguage = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -273,8 +273,8 @@ class V5patronsApi
         $multipart = false;
 
         // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        if ($acceptLanguage !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
         }
 
         // path params
@@ -355,11 +355,11 @@ class V5patronsApi
      *
      * Create a patron record
      *
-     * @param  \Sierra\Models\PatronPatch $body post request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\PatronResult
+     * @return \III\Sierra\Models\PatronResult
      */
     public function createAPatronRecord($body)
     {
@@ -372,15 +372,15 @@ class V5patronsApi
      *
      * Create a patron record
      *
-     * @param  \Sierra\Models\PatronPatch $body post request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\PatronResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\PatronResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAPatronRecordWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\PatronResult';
+        $returnType = '\III\Sierra\Models\PatronResult';
         $request = $this->createAPatronRecordRequest($body);
 
         try {
@@ -432,7 +432,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\PatronResult',
+                        '\III\Sierra\Models\PatronResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -447,7 +447,7 @@ class V5patronsApi
      *
      * Create a patron record
      *
-     * @param  \Sierra\Models\PatronPatch $body post request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -467,14 +467,14 @@ class V5patronsApi
      *
      * Create a patron record
      *
-     * @param  \Sierra\Models\PatronPatch $body post request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAPatronRecordAsyncWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\PatronResult';
+        $returnType = '\III\Sierra\Models\PatronResult';
         $request = $this->createAPatronRecordRequest($body);
 
         return $this->client
@@ -517,7 +517,7 @@ class V5patronsApi
     /**
      * Create request for operation 'createAPatronRecord'
      *
-     * @param  \Sierra\Models\PatronPatch $body post request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -612,16 +612,16 @@ class V5patronsApi
      *
      * Delete a hold by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
-    public function deleteAHoldByHoldID($hold_id, $accept_language = null)
+    public function deleteAHoldByHoldID($holdId, $acceptLanguage = null)
     {
-        list($response) = $this->deleteAHoldByHoldIDWithHttpInfo($hold_id, $accept_language);
+        list($response) = $this->deleteAHoldByHoldIDWithHttpInfo($holdId, $acceptLanguage);
         return $response;
     }
 
@@ -630,17 +630,17 @@ class V5patronsApi
      *
      * Delete a hold by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteAHoldByHoldIDWithHttpInfo($hold_id, $accept_language = null)
+    public function deleteAHoldByHoldIDWithHttpInfo($holdId, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->deleteAHoldByHoldIDRequest($hold_id, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->deleteAHoldByHoldIDRequest($holdId, $acceptLanguage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -691,7 +691,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -706,15 +706,15 @@ class V5patronsApi
      *
      * Delete a hold by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteAHoldByHoldIDAsync($hold_id, $accept_language = null)
+    public function deleteAHoldByHoldIDAsync($holdId, $acceptLanguage = null)
     {
-        return $this->deleteAHoldByHoldIDAsyncWithHttpInfo($hold_id, $accept_language)
+        return $this->deleteAHoldByHoldIDAsyncWithHttpInfo($holdId, $acceptLanguage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -727,16 +727,16 @@ class V5patronsApi
      *
      * Delete a hold by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteAHoldByHoldIDAsyncWithHttpInfo($hold_id, $accept_language = null)
+    public function deleteAHoldByHoldIDAsyncWithHttpInfo($holdId, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->deleteAHoldByHoldIDRequest($hold_id, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->deleteAHoldByHoldIDRequest($holdId, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -778,18 +778,18 @@ class V5patronsApi
     /**
      * Create request for operation 'deleteAHoldByHoldID'
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteAHoldByHoldIDRequest($hold_id, $accept_language = null)
+    protected function deleteAHoldByHoldIDRequest($holdId, $acceptLanguage = null)
     {
-        // verify the required parameter 'hold_id' is set
-        if ($hold_id === null) {
+        // verify the required parameter 'holdId' is set
+        if ($holdId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $hold_id when calling deleteAHoldByHoldID'
+                'Missing the required parameter $holdId when calling deleteAHoldByHoldID'
             );
         }
 
@@ -801,15 +801,15 @@ class V5patronsApi
         $multipart = false;
 
         // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        if ($acceptLanguage !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
         }
 
         // path params
-        if ($hold_id !== null) {
+        if ($holdId !== null) {
             $resourcePath = str_replace(
                 '{' . 'holdId' . '}',
-                ObjectSerializer::toPathValue($hold_id),
+                ObjectSerializer::toPathValue($holdId),
                 $resourcePath
             );
         }
@@ -885,9 +885,9 @@ class V5patronsApi
      *
      * @param  int $id the patron record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function deleteAPatronRecord($id)
     {
@@ -902,13 +902,13 @@ class V5patronsApi
      *
      * @param  int $id the patron record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAPatronRecordWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->deleteAPatronRecordRequest($id);
 
         try {
@@ -960,7 +960,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class V5patronsApi
      */
     public function deleteAPatronRecordAsyncWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->deleteAPatronRecordRequest($id);
 
         return $this->client
@@ -1149,9 +1149,9 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\QueryResultSet
+     * @return \III\Sierra\Models\QueryResultSet
      */
     public function filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
     {
@@ -1168,13 +1168,13 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function filterTheRecordsByAQueryInJSONFormatWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         try {
@@ -1226,7 +1226,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\QueryResultSet',
+                        '\III\Sierra\Models\QueryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1272,7 +1272,7 @@ class V5patronsApi
      */
     public function filterTheRecordsByAQueryInJSONFormatAsyncWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         return $this->client
@@ -1432,17 +1432,17 @@ class V5patronsApi
      *
      * Find a patron by varField fieldTag and varField content
      *
-     * @param  string $var_field_tag the varField fieldTag to search by (required)
-     * @param  string $var_field_content the varField content to search by (required)
+     * @param  string $varFieldTag the varField fieldTag to search by (required)
+     * @param  string $varFieldContent the varField content to search by (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Patron
+     * @return \III\Sierra\Models\Patron
      */
-    public function findAPatronByVarFieldFieldTagAndVarFieldContent($var_field_tag, $var_field_content, $fields = null)
+    public function findAPatronByVarFieldFieldTagAndVarFieldContent($varFieldTag, $varFieldContent, $fields = null)
     {
-        list($response) = $this->findAPatronByVarFieldFieldTagAndVarFieldContentWithHttpInfo($var_field_tag, $var_field_content, $fields);
+        list($response) = $this->findAPatronByVarFieldFieldTagAndVarFieldContentWithHttpInfo($varFieldTag, $varFieldContent, $fields);
         return $response;
     }
 
@@ -1451,18 +1451,18 @@ class V5patronsApi
      *
      * Find a patron by varField fieldTag and varField content
      *
-     * @param  string $var_field_tag the varField fieldTag to search by (required)
-     * @param  string $var_field_content the varField content to search by (required)
+     * @param  string $varFieldTag the varField fieldTag to search by (required)
+     * @param  string $varFieldContent the varField content to search by (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Patron, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Patron, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findAPatronByVarFieldFieldTagAndVarFieldContentWithHttpInfo($var_field_tag, $var_field_content, $fields = null)
+    public function findAPatronByVarFieldFieldTagAndVarFieldContentWithHttpInfo($varFieldTag, $varFieldContent, $fields = null)
     {
-        $returnType = '\Sierra\Models\Patron';
-        $request = $this->findAPatronByVarFieldFieldTagAndVarFieldContentRequest($var_field_tag, $var_field_content, $fields);
+        $returnType = '\III\Sierra\Models\Patron';
+        $request = $this->findAPatronByVarFieldFieldTagAndVarFieldContentRequest($varFieldTag, $varFieldContent, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1513,7 +1513,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Patron',
+                        '\III\Sierra\Models\Patron',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1528,16 +1528,16 @@ class V5patronsApi
      *
      * Find a patron by varField fieldTag and varField content
      *
-     * @param  string $var_field_tag the varField fieldTag to search by (required)
-     * @param  string $var_field_content the varField content to search by (required)
+     * @param  string $varFieldTag the varField fieldTag to search by (required)
+     * @param  string $varFieldContent the varField content to search by (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findAPatronByVarFieldFieldTagAndVarFieldContentAsync($var_field_tag, $var_field_content, $fields = null)
+    public function findAPatronByVarFieldFieldTagAndVarFieldContentAsync($varFieldTag, $varFieldContent, $fields = null)
     {
-        return $this->findAPatronByVarFieldFieldTagAndVarFieldContentAsyncWithHttpInfo($var_field_tag, $var_field_content, $fields)
+        return $this->findAPatronByVarFieldFieldTagAndVarFieldContentAsyncWithHttpInfo($varFieldTag, $varFieldContent, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1550,17 +1550,17 @@ class V5patronsApi
      *
      * Find a patron by varField fieldTag and varField content
      *
-     * @param  string $var_field_tag the varField fieldTag to search by (required)
-     * @param  string $var_field_content the varField content to search by (required)
+     * @param  string $varFieldTag the varField fieldTag to search by (required)
+     * @param  string $varFieldContent the varField content to search by (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findAPatronByVarFieldFieldTagAndVarFieldContentAsyncWithHttpInfo($var_field_tag, $var_field_content, $fields = null)
+    public function findAPatronByVarFieldFieldTagAndVarFieldContentAsyncWithHttpInfo($varFieldTag, $varFieldContent, $fields = null)
     {
-        $returnType = '\Sierra\Models\Patron';
-        $request = $this->findAPatronByVarFieldFieldTagAndVarFieldContentRequest($var_field_tag, $var_field_content, $fields);
+        $returnType = '\III\Sierra\Models\Patron';
+        $request = $this->findAPatronByVarFieldFieldTagAndVarFieldContentRequest($varFieldTag, $varFieldContent, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1602,25 +1602,25 @@ class V5patronsApi
     /**
      * Create request for operation 'findAPatronByVarFieldFieldTagAndVarFieldContent'
      *
-     * @param  string $var_field_tag the varField fieldTag to search by (required)
-     * @param  string $var_field_content the varField content to search by (required)
+     * @param  string $varFieldTag the varField fieldTag to search by (required)
+     * @param  string $varFieldContent the varField content to search by (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function findAPatronByVarFieldFieldTagAndVarFieldContentRequest($var_field_tag, $var_field_content, $fields = null)
+    protected function findAPatronByVarFieldFieldTagAndVarFieldContentRequest($varFieldTag, $varFieldContent, $fields = null)
     {
-        // verify the required parameter 'var_field_tag' is set
-        if ($var_field_tag === null) {
+        // verify the required parameter 'varFieldTag' is set
+        if ($varFieldTag === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $var_field_tag when calling findAPatronByVarFieldFieldTagAndVarFieldContent'
+                'Missing the required parameter $varFieldTag when calling findAPatronByVarFieldFieldTagAndVarFieldContent'
             );
         }
-        // verify the required parameter 'var_field_content' is set
-        if ($var_field_content === null) {
+        // verify the required parameter 'varFieldContent' is set
+        if ($varFieldContent === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $var_field_content when calling findAPatronByVarFieldFieldTagAndVarFieldContent'
+                'Missing the required parameter $varFieldContent when calling findAPatronByVarFieldFieldTagAndVarFieldContent'
             );
         }
 
@@ -1632,12 +1632,12 @@ class V5patronsApi
         $multipart = false;
 
         // query params
-        if ($var_field_tag !== null) {
-            $queryParams['varFieldTag'] = ObjectSerializer::toQueryValue($var_field_tag);
+        if ($varFieldTag !== null) {
+            $queryParams['varFieldTag'] = ObjectSerializer::toQueryValue($varFieldTag);
         }
         // query params
-        if ($var_field_content !== null) {
-            $queryParams['varFieldContent'] = ObjectSerializer::toQueryValue($var_field_content);
+        if ($varFieldContent !== null) {
+            $queryParams['varFieldContent'] = ObjectSerializer::toQueryValue($varFieldContent);
         }
         // query params
         if (is_array($fields)) {
@@ -1717,16 +1717,16 @@ class V5patronsApi
      *
      * Get a checkout by checkout ID
      *
-     * @param  int $checkout_id the checkout record ID (required)
+     * @param  int $checkoutId the checkout record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Checkout
+     * @return \III\Sierra\Models\Checkout
      */
-    public function getACheckoutByCheckoutID($checkout_id, $fields = null)
+    public function getACheckoutByCheckoutID($checkoutId, $fields = null)
     {
-        list($response) = $this->getACheckoutByCheckoutIDWithHttpInfo($checkout_id, $fields);
+        list($response) = $this->getACheckoutByCheckoutIDWithHttpInfo($checkoutId, $fields);
         return $response;
     }
 
@@ -1735,17 +1735,17 @@ class V5patronsApi
      *
      * Get a checkout by checkout ID
      *
-     * @param  int $checkout_id the checkout record ID (required)
+     * @param  int $checkoutId the checkout record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Checkout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Checkout, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getACheckoutByCheckoutIDWithHttpInfo($checkout_id, $fields = null)
+    public function getACheckoutByCheckoutIDWithHttpInfo($checkoutId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Checkout';
-        $request = $this->getACheckoutByCheckoutIDRequest($checkout_id, $fields);
+        $returnType = '\III\Sierra\Models\Checkout';
+        $request = $this->getACheckoutByCheckoutIDRequest($checkoutId, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1796,7 +1796,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Checkout',
+                        '\III\Sierra\Models\Checkout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1811,15 +1811,15 @@ class V5patronsApi
      *
      * Get a checkout by checkout ID
      *
-     * @param  int $checkout_id the checkout record ID (required)
+     * @param  int $checkoutId the checkout record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getACheckoutByCheckoutIDAsync($checkout_id, $fields = null)
+    public function getACheckoutByCheckoutIDAsync($checkoutId, $fields = null)
     {
-        return $this->getACheckoutByCheckoutIDAsyncWithHttpInfo($checkout_id, $fields)
+        return $this->getACheckoutByCheckoutIDAsyncWithHttpInfo($checkoutId, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1832,16 +1832,16 @@ class V5patronsApi
      *
      * Get a checkout by checkout ID
      *
-     * @param  int $checkout_id the checkout record ID (required)
+     * @param  int $checkoutId the checkout record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getACheckoutByCheckoutIDAsyncWithHttpInfo($checkout_id, $fields = null)
+    public function getACheckoutByCheckoutIDAsyncWithHttpInfo($checkoutId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Checkout';
-        $request = $this->getACheckoutByCheckoutIDRequest($checkout_id, $fields);
+        $returnType = '\III\Sierra\Models\Checkout';
+        $request = $this->getACheckoutByCheckoutIDRequest($checkoutId, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1883,18 +1883,18 @@ class V5patronsApi
     /**
      * Create request for operation 'getACheckoutByCheckoutID'
      *
-     * @param  int $checkout_id the checkout record ID (required)
+     * @param  int $checkoutId the checkout record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getACheckoutByCheckoutIDRequest($checkout_id, $fields = null)
+    protected function getACheckoutByCheckoutIDRequest($checkoutId, $fields = null)
     {
-        // verify the required parameter 'checkout_id' is set
-        if ($checkout_id === null) {
+        // verify the required parameter 'checkoutId' is set
+        if ($checkoutId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $checkout_id when calling getACheckoutByCheckoutID'
+                'Missing the required parameter $checkoutId when calling getACheckoutByCheckoutID'
             );
         }
 
@@ -1914,10 +1914,10 @@ class V5patronsApi
         }
 
         // path params
-        if ($checkout_id !== null) {
+        if ($checkoutId !== null) {
             $resourcePath = str_replace(
                 '{' . 'checkoutId' . '}',
-                ObjectSerializer::toPathValue($checkout_id),
+                ObjectSerializer::toPathValue($checkoutId),
                 $resourcePath
             );
         }
@@ -1991,16 +1991,16 @@ class V5patronsApi
      *
      * Get a fine record by fine ID
      *
-     * @param  int $fine_id the fine record ID (required)
+     * @param  int $fineId the fine record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Fine
+     * @return \III\Sierra\Models\Fine
      */
-    public function getAFineRecordByFineID($fine_id, $fields = null)
+    public function getAFineRecordByFineID($fineId, $fields = null)
     {
-        list($response) = $this->getAFineRecordByFineIDWithHttpInfo($fine_id, $fields);
+        list($response) = $this->getAFineRecordByFineIDWithHttpInfo($fineId, $fields);
         return $response;
     }
 
@@ -2009,17 +2009,17 @@ class V5patronsApi
      *
      * Get a fine record by fine ID
      *
-     * @param  int $fine_id the fine record ID (required)
+     * @param  int $fineId the fine record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Fine, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Fine, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAFineRecordByFineIDWithHttpInfo($fine_id, $fields = null)
+    public function getAFineRecordByFineIDWithHttpInfo($fineId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Fine';
-        $request = $this->getAFineRecordByFineIDRequest($fine_id, $fields);
+        $returnType = '\III\Sierra\Models\Fine';
+        $request = $this->getAFineRecordByFineIDRequest($fineId, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2070,7 +2070,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Fine',
+                        '\III\Sierra\Models\Fine',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2085,15 +2085,15 @@ class V5patronsApi
      *
      * Get a fine record by fine ID
      *
-     * @param  int $fine_id the fine record ID (required)
+     * @param  int $fineId the fine record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAFineRecordByFineIDAsync($fine_id, $fields = null)
+    public function getAFineRecordByFineIDAsync($fineId, $fields = null)
     {
-        return $this->getAFineRecordByFineIDAsyncWithHttpInfo($fine_id, $fields)
+        return $this->getAFineRecordByFineIDAsyncWithHttpInfo($fineId, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2106,16 +2106,16 @@ class V5patronsApi
      *
      * Get a fine record by fine ID
      *
-     * @param  int $fine_id the fine record ID (required)
+     * @param  int $fineId the fine record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAFineRecordByFineIDAsyncWithHttpInfo($fine_id, $fields = null)
+    public function getAFineRecordByFineIDAsyncWithHttpInfo($fineId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Fine';
-        $request = $this->getAFineRecordByFineIDRequest($fine_id, $fields);
+        $returnType = '\III\Sierra\Models\Fine';
+        $request = $this->getAFineRecordByFineIDRequest($fineId, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2157,18 +2157,18 @@ class V5patronsApi
     /**
      * Create request for operation 'getAFineRecordByFineID'
      *
-     * @param  int $fine_id the fine record ID (required)
+     * @param  int $fineId the fine record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAFineRecordByFineIDRequest($fine_id, $fields = null)
+    protected function getAFineRecordByFineIDRequest($fineId, $fields = null)
     {
-        // verify the required parameter 'fine_id' is set
-        if ($fine_id === null) {
+        // verify the required parameter 'fineId' is set
+        if ($fineId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $fine_id when calling getAFineRecordByFineID'
+                'Missing the required parameter $fineId when calling getAFineRecordByFineID'
             );
         }
 
@@ -2188,10 +2188,10 @@ class V5patronsApi
         }
 
         // path params
-        if ($fine_id !== null) {
+        if ($fineId !== null) {
             $resourcePath = str_replace(
                 '{' . 'fineId' . '}',
-                ObjectSerializer::toPathValue($fine_id),
+                ObjectSerializer::toPathValue($fineId),
                 $resourcePath
             );
         }
@@ -2265,16 +2265,16 @@ class V5patronsApi
      *
      * Get a hold record by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
+     * @param  int $holdId the hold record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Hold
+     * @return \III\Sierra\Models\Hold
      */
-    public function getAHoldRecordByHoldID($hold_id, $fields = null)
+    public function getAHoldRecordByHoldID($holdId, $fields = null)
     {
-        list($response) = $this->getAHoldRecordByHoldIDWithHttpInfo($hold_id, $fields);
+        list($response) = $this->getAHoldRecordByHoldIDWithHttpInfo($holdId, $fields);
         return $response;
     }
 
@@ -2283,17 +2283,17 @@ class V5patronsApi
      *
      * Get a hold record by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
+     * @param  int $holdId the hold record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Hold, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Hold, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAHoldRecordByHoldIDWithHttpInfo($hold_id, $fields = null)
+    public function getAHoldRecordByHoldIDWithHttpInfo($holdId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Hold';
-        $request = $this->getAHoldRecordByHoldIDRequest($hold_id, $fields);
+        $returnType = '\III\Sierra\Models\Hold';
+        $request = $this->getAHoldRecordByHoldIDRequest($holdId, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2344,7 +2344,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Hold',
+                        '\III\Sierra\Models\Hold',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2359,15 +2359,15 @@ class V5patronsApi
      *
      * Get a hold record by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
+     * @param  int $holdId the hold record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAHoldRecordByHoldIDAsync($hold_id, $fields = null)
+    public function getAHoldRecordByHoldIDAsync($holdId, $fields = null)
     {
-        return $this->getAHoldRecordByHoldIDAsyncWithHttpInfo($hold_id, $fields)
+        return $this->getAHoldRecordByHoldIDAsyncWithHttpInfo($holdId, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2380,16 +2380,16 @@ class V5patronsApi
      *
      * Get a hold record by hold ID
      *
-     * @param  int $hold_id the hold record ID (required)
+     * @param  int $holdId the hold record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAHoldRecordByHoldIDAsyncWithHttpInfo($hold_id, $fields = null)
+    public function getAHoldRecordByHoldIDAsyncWithHttpInfo($holdId, $fields = null)
     {
-        $returnType = '\Sierra\Models\Hold';
-        $request = $this->getAHoldRecordByHoldIDRequest($hold_id, $fields);
+        $returnType = '\III\Sierra\Models\Hold';
+        $request = $this->getAHoldRecordByHoldIDRequest($holdId, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2431,18 +2431,18 @@ class V5patronsApi
     /**
      * Create request for operation 'getAHoldRecordByHoldID'
      *
-     * @param  int $hold_id the hold record ID (required)
+     * @param  int $holdId the hold record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAHoldRecordByHoldIDRequest($hold_id, $fields = null)
+    protected function getAHoldRecordByHoldIDRequest($holdId, $fields = null)
     {
-        // verify the required parameter 'hold_id' is set
-        if ($hold_id === null) {
+        // verify the required parameter 'holdId' is set
+        if ($holdId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $hold_id when calling getAHoldRecordByHoldID'
+                'Missing the required parameter $holdId when calling getAHoldRecordByHoldID'
             );
         }
 
@@ -2462,10 +2462,10 @@ class V5patronsApi
         }
 
         // path params
-        if ($hold_id !== null) {
+        if ($holdId !== null) {
             $resourcePath = str_replace(
                 '{' . 'holdId' . '}',
-                ObjectSerializer::toPathValue($hold_id),
+                ObjectSerializer::toPathValue($holdId),
                 $resourcePath
             );
         }
@@ -2542,9 +2542,9 @@ class V5patronsApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Metadata[]
+     * @return \III\Sierra\Models\Metadata[]
      */
     public function getAListOfMetadata($fields = null, $language = null)
     {
@@ -2560,13 +2560,13 @@ class V5patronsApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfMetadataWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         try {
@@ -2618,7 +2618,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Metadata[]',
+                        '\III\Sierra\Models\Metadata[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2662,7 +2662,7 @@ class V5patronsApi
      */
     public function getAListOfMetadataAsyncWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         return $this->client
@@ -2804,20 +2804,20 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of patron records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted patron records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) patron records (optional)
      * @param  bool $suppressed the suppressed flag value of patron records to retrieve (optional)
-     * @param  int[] $agency_codes patron data for the specified and valid agencies is returned (optional)
+     * @param  int[] $agencyCodes patron data for the specified and valid agencies is returned (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\PatronResultSet
+     * @return \III\Sierra\Models\PatronResultSet
      */
-    public function getAListOfPatrons($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $agency_codes = null)
+    public function getAListOfPatrons($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $agencyCodes = null)
     {
-        list($response) = $this->getAListOfPatronsWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes);
+        list($response) = $this->getAListOfPatronsWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes);
         return $response;
     }
 
@@ -2830,21 +2830,21 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of patron records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted patron records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) patron records (optional)
      * @param  bool $suppressed the suppressed flag value of patron records to retrieve (optional)
-     * @param  int[] $agency_codes patron data for the specified and valid agencies is returned (optional)
+     * @param  int[] $agencyCodes patron data for the specified and valid agencies is returned (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\PatronResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\PatronResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfPatronsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $agency_codes = null)
+    public function getAListOfPatronsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $agencyCodes = null)
     {
-        $returnType = '\Sierra\Models\PatronResultSet';
-        $request = $this->getAListOfPatronsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes);
+        $returnType = '\III\Sierra\Models\PatronResultSet';
+        $request = $this->getAListOfPatronsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2895,7 +2895,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\PatronResultSet',
+                        '\III\Sierra\Models\PatronResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2914,19 +2914,19 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of patron records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted patron records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) patron records (optional)
      * @param  bool $suppressed the suppressed flag value of patron records to retrieve (optional)
-     * @param  int[] $agency_codes patron data for the specified and valid agencies is returned (optional)
+     * @param  int[] $agencyCodes patron data for the specified and valid agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfPatronsAsync($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $agency_codes = null)
+    public function getAListOfPatronsAsync($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $agencyCodes = null)
     {
-        return $this->getAListOfPatronsAsyncWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes)
+        return $this->getAListOfPatronsAsyncWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2943,20 +2943,20 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of patron records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted patron records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) patron records (optional)
      * @param  bool $suppressed the suppressed flag value of patron records to retrieve (optional)
-     * @param  int[] $agency_codes patron data for the specified and valid agencies is returned (optional)
+     * @param  int[] $agencyCodes patron data for the specified and valid agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfPatronsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $agency_codes = null)
+    public function getAListOfPatronsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $agencyCodes = null)
     {
-        $returnType = '\Sierra\Models\PatronResultSet';
-        $request = $this->getAListOfPatronsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes);
+        $returnType = '\III\Sierra\Models\PatronResultSet';
+        $request = $this->getAListOfPatronsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3002,17 +3002,17 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of patron records to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of patron records to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of patron records to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted patron records to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) patron records (optional)
      * @param  bool $suppressed the suppressed flag value of patron records to retrieve (optional)
-     * @param  int[] $agency_codes patron data for the specified and valid agencies is returned (optional)
+     * @param  int[] $agencyCodes patron data for the specified and valid agencies is returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfPatronsRequest($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $agency_codes = null)
+    protected function getAListOfPatronsRequest($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $agencyCodes = null)
     {
 
         $resourcePath = '/v5/patrons/';
@@ -3045,16 +3045,16 @@ class V5patronsApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
-        if ($deleted_date !== null) {
-            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deleted_date);
+        if ($deletedDate !== null) {
+            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deletedDate);
         }
         // query params
         if ($deleted !== null) {
@@ -3065,11 +3065,11 @@ class V5patronsApi
             $queryParams['suppressed'] = ObjectSerializer::toQueryValue($suppressed);
         }
         // query params
-        if (is_array($agency_codes)) {
-            $agency_codes = ObjectSerializer::serializeCollection($agency_codes, 'csv', true);
+        if (is_array($agencyCodes)) {
+            $agencyCodes = ObjectSerializer::serializeCollection($agencyCodes, 'csv', true);
         }
-        if ($agency_codes !== null) {
-            $queryParams['agencyCodes'] = ObjectSerializer::toQueryValue($agency_codes);
+        if ($agencyCodes !== null) {
+            $queryParams['agencyCodes'] = ObjectSerializer::toQueryValue($agencyCodes);
         }
 
 
@@ -3145,9 +3145,9 @@ class V5patronsApi
      * @param  int $id the patron record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Patron
+     * @return \III\Sierra\Models\Patron
      */
     public function getAPatronByRecordID($id, $fields = null)
     {
@@ -3163,13 +3163,13 @@ class V5patronsApi
      * @param  int $id the patron record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Patron, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Patron, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAPatronByRecordIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Patron';
+        $returnType = '\III\Sierra\Models\Patron';
         $request = $this->getAPatronByRecordIDRequest($id, $fields);
 
         try {
@@ -3221,7 +3221,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Patron',
+                        '\III\Sierra\Models\Patron',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3265,7 +3265,7 @@ class V5patronsApi
      */
     public function getAPatronByRecordIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Patron';
+        $returnType = '\III\Sierra\Models\Patron';
         $request = $this->getAPatronByRecordIDRequest($id, $fields);
 
         return $this->client
@@ -3421,9 +3421,9 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\CheckoutResultSet
+     * @return \III\Sierra\Models\CheckoutResultSet
      */
     public function getCheckoutDataForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null)
     {
@@ -3441,13 +3441,13 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\CheckoutResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\CheckoutResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCheckoutDataForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\CheckoutResultSet';
+        $returnType = '\III\Sierra\Models\CheckoutResultSet';
         $request = $this->getCheckoutDataForASinglePatronRecordRequest($id, $limit, $offset, $fields);
 
         try {
@@ -3499,7 +3499,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\CheckoutResultSet',
+                        '\III\Sierra\Models\CheckoutResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3547,7 +3547,7 @@ class V5patronsApi
      */
     public function getCheckoutDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\CheckoutResultSet';
+        $returnType = '\III\Sierra\Models\CheckoutResultSet';
         $request = $this->getCheckoutDataForASinglePatronRecordRequest($id, $limit, $offset, $fields);
 
         return $this->client
@@ -3712,16 +3712,16 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  string $sort_field a field to sort on (optional)
-     * @param  string $sort_order the order to sort by desc or asc (optional)
+     * @param  string $sortField a field to sort on (optional)
+     * @param  string $sortOrder the order to sort by desc or asc (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\CheckoutHistoryResultSet
+     * @return \III\Sierra\Models\CheckoutHistoryResultSet
      */
-    public function getCheckoutreadHistoryForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null, $sort_field = null, $sort_order = null)
+    public function getCheckoutreadHistoryForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null, $sortField = null, $sortOrder = null)
     {
-        list($response) = $this->getCheckoutreadHistoryForASinglePatronRecordWithHttpInfo($id, $limit, $offset, $fields, $sort_field, $sort_order);
+        list($response) = $this->getCheckoutreadHistoryForASinglePatronRecordWithHttpInfo($id, $limit, $offset, $fields, $sortField, $sortOrder);
         return $response;
     }
 
@@ -3734,17 +3734,17 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  string $sort_field a field to sort on (optional)
-     * @param  string $sort_order the order to sort by desc or asc (optional)
+     * @param  string $sortField a field to sort on (optional)
+     * @param  string $sortOrder the order to sort by desc or asc (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\CheckoutHistoryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\CheckoutHistoryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCheckoutreadHistoryForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $sort_field = null, $sort_order = null)
+    public function getCheckoutreadHistoryForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $sortField = null, $sortOrder = null)
     {
-        $returnType = '\Sierra\Models\CheckoutHistoryResultSet';
-        $request = $this->getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit, $offset, $fields, $sort_field, $sort_order);
+        $returnType = '\III\Sierra\Models\CheckoutHistoryResultSet';
+        $request = $this->getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit, $offset, $fields, $sortField, $sortOrder);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3795,7 +3795,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\CheckoutHistoryResultSet',
+                        '\III\Sierra\Models\CheckoutHistoryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3814,15 +3814,15 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  string $sort_field a field to sort on (optional)
-     * @param  string $sort_order the order to sort by desc or asc (optional)
+     * @param  string $sortField a field to sort on (optional)
+     * @param  string $sortOrder the order to sort by desc or asc (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCheckoutreadHistoryForASinglePatronRecordAsync($id, $limit = null, $offset = null, $fields = null, $sort_field = null, $sort_order = null)
+    public function getCheckoutreadHistoryForASinglePatronRecordAsync($id, $limit = null, $offset = null, $fields = null, $sortField = null, $sortOrder = null)
     {
-        return $this->getCheckoutreadHistoryForASinglePatronRecordAsyncWithHttpInfo($id, $limit, $offset, $fields, $sort_field, $sort_order)
+        return $this->getCheckoutreadHistoryForASinglePatronRecordAsyncWithHttpInfo($id, $limit, $offset, $fields, $sortField, $sortOrder)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3839,16 +3839,16 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  string $sort_field a field to sort on (optional)
-     * @param  string $sort_order the order to sort by desc or asc (optional)
+     * @param  string $sortField a field to sort on (optional)
+     * @param  string $sortOrder the order to sort by desc or asc (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCheckoutreadHistoryForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $sort_field = null, $sort_order = null)
+    public function getCheckoutreadHistoryForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $sortField = null, $sortOrder = null)
     {
-        $returnType = '\Sierra\Models\CheckoutHistoryResultSet';
-        $request = $this->getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit, $offset, $fields, $sort_field, $sort_order);
+        $returnType = '\III\Sierra\Models\CheckoutHistoryResultSet';
+        $request = $this->getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit, $offset, $fields, $sortField, $sortOrder);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3894,13 +3894,13 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  string $sort_field a field to sort on (optional)
-     * @param  string $sort_order the order to sort by desc or asc (optional)
+     * @param  string $sortField a field to sort on (optional)
+     * @param  string $sortOrder the order to sort by desc or asc (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit = null, $offset = null, $fields = null, $sort_field = null, $sort_order = null)
+    protected function getCheckoutreadHistoryForASinglePatronRecordRequest($id, $limit = null, $offset = null, $fields = null, $sortField = null, $sortOrder = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -3932,12 +3932,12 @@ class V5patronsApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($sort_field !== null) {
-            $queryParams['sortField'] = ObjectSerializer::toQueryValue($sort_field);
+        if ($sortField !== null) {
+            $queryParams['sortField'] = ObjectSerializer::toQueryValue($sortField);
         }
         // query params
-        if ($sort_order !== null) {
-            $queryParams['sortOrder'] = ObjectSerializer::toQueryValue($sort_order);
+        if ($sortOrder !== null) {
+            $queryParams['sortOrder'] = ObjectSerializer::toQueryValue($sortOrder);
         }
 
         // path params
@@ -4022,15 +4022,15 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\FineResultSet
+     * @return \III\Sierra\Models\FineResultSet
      */
-    public function getTheFinesDataForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null, $assessed_date = null)
+    public function getTheFinesDataForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null, $assessedDate = null)
     {
-        list($response) = $this->getTheFinesDataForASinglePatronRecordWithHttpInfo($id, $limit, $offset, $fields, $assessed_date);
+        list($response) = $this->getTheFinesDataForASinglePatronRecordWithHttpInfo($id, $limit, $offset, $fields, $assessedDate);
         return $response;
     }
 
@@ -4043,16 +4043,16 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\FineResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\FineResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTheFinesDataForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $assessed_date = null)
+    public function getTheFinesDataForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $assessedDate = null)
     {
-        $returnType = '\Sierra\Models\FineResultSet';
-        $request = $this->getTheFinesDataForASinglePatronRecordRequest($id, $limit, $offset, $fields, $assessed_date);
+        $returnType = '\III\Sierra\Models\FineResultSet';
+        $request = $this->getTheFinesDataForASinglePatronRecordRequest($id, $limit, $offset, $fields, $assessedDate);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4103,7 +4103,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\FineResultSet',
+                        '\III\Sierra\Models\FineResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4122,14 +4122,14 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTheFinesDataForASinglePatronRecordAsync($id, $limit = null, $offset = null, $fields = null, $assessed_date = null)
+    public function getTheFinesDataForASinglePatronRecordAsync($id, $limit = null, $offset = null, $fields = null, $assessedDate = null)
     {
-        return $this->getTheFinesDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit, $offset, $fields, $assessed_date)
+        return $this->getTheFinesDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit, $offset, $fields, $assessedDate)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4146,15 +4146,15 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTheFinesDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $assessed_date = null)
+    public function getTheFinesDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null, $assessedDate = null)
     {
-        $returnType = '\Sierra\Models\FineResultSet';
-        $request = $this->getTheFinesDataForASinglePatronRecordRequest($id, $limit, $offset, $fields, $assessed_date);
+        $returnType = '\III\Sierra\Models\FineResultSet';
+        $request = $this->getTheFinesDataForASinglePatronRecordRequest($id, $limit, $offset, $fields, $assessedDate);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4200,12 +4200,12 @@ class V5patronsApi
      * @param  int $limit the maximum number of results (optional)
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $assessed_date the assessed date of fines to retrieve (can be a range) (optional)
+     * @param  \DateTime $assessedDate the assessed date of fines to retrieve (can be a range) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTheFinesDataForASinglePatronRecordRequest($id, $limit = null, $offset = null, $fields = null, $assessed_date = null)
+    protected function getTheFinesDataForASinglePatronRecordRequest($id, $limit = null, $offset = null, $fields = null, $assessedDate = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -4237,8 +4237,8 @@ class V5patronsApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($assessed_date !== null) {
-            $queryParams['assessedDate'] = ObjectSerializer::toQueryValue($assessed_date);
+        if ($assessedDate !== null) {
+            $queryParams['assessedDate'] = ObjectSerializer::toQueryValue($assessedDate);
         }
 
         // path params
@@ -4324,9 +4324,9 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\HoldResultSet
+     * @return \III\Sierra\Models\HoldResultSet
      */
     public function getTheHoldsDataForASinglePatronRecord($id, $limit = null, $offset = null, $fields = null)
     {
@@ -4344,13 +4344,13 @@ class V5patronsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\HoldResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\HoldResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTheHoldsDataForASinglePatronRecordWithHttpInfo($id, $limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\HoldResultSet';
+        $returnType = '\III\Sierra\Models\HoldResultSet';
         $request = $this->getTheHoldsDataForASinglePatronRecordRequest($id, $limit, $offset, $fields);
 
         try {
@@ -4402,7 +4402,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\HoldResultSet',
+                        '\III\Sierra\Models\HoldResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4450,7 +4450,7 @@ class V5patronsApi
      */
     public function getTheHoldsDataForASinglePatronRecordAsyncWithHttpInfo($id, $limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\HoldResultSet';
+        $returnType = '\III\Sierra\Models\HoldResultSet';
         $request = $this->getTheHoldsDataForASinglePatronRecordRequest($id, $limit, $offset, $fields);
 
         return $this->client
@@ -4611,17 +4611,17 @@ class V5patronsApi
      *
      * Modify a hold
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  \Sierra\Models\PatronHoldPut $body the details of the hold (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  \III\Sierra\Models\PatronHoldPut $body the details of the hold (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
-    public function modifyAHold($hold_id, $body, $accept_language = null)
+    public function modifyAHold($holdId, $body, $acceptLanguage = null)
     {
-        list($response) = $this->modifyAHoldWithHttpInfo($hold_id, $body, $accept_language);
+        list($response) = $this->modifyAHoldWithHttpInfo($holdId, $body, $acceptLanguage);
         return $response;
     }
 
@@ -4630,18 +4630,18 @@ class V5patronsApi
      *
      * Modify a hold
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  \Sierra\Models\PatronHoldPut $body the details of the hold (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  \III\Sierra\Models\PatronHoldPut $body the details of the hold (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
-    public function modifyAHoldWithHttpInfo($hold_id, $body, $accept_language = null)
+    public function modifyAHoldWithHttpInfo($holdId, $body, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->modifyAHoldRequest($hold_id, $body, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->modifyAHoldRequest($holdId, $body, $acceptLanguage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4692,7 +4692,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4707,16 +4707,16 @@ class V5patronsApi
      *
      * Modify a hold
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  \Sierra\Models\PatronHoldPut $body the details of the hold (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  \III\Sierra\Models\PatronHoldPut $body the details of the hold (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function modifyAHoldAsync($hold_id, $body, $accept_language = null)
+    public function modifyAHoldAsync($holdId, $body, $acceptLanguage = null)
     {
-        return $this->modifyAHoldAsyncWithHttpInfo($hold_id, $body, $accept_language)
+        return $this->modifyAHoldAsyncWithHttpInfo($holdId, $body, $acceptLanguage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4729,17 +4729,17 @@ class V5patronsApi
      *
      * Modify a hold
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  \Sierra\Models\PatronHoldPut $body the details of the hold (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  \III\Sierra\Models\PatronHoldPut $body the details of the hold (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function modifyAHoldAsyncWithHttpInfo($hold_id, $body, $accept_language = null)
+    public function modifyAHoldAsyncWithHttpInfo($holdId, $body, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
-        $request = $this->modifyAHoldRequest($hold_id, $body, $accept_language);
+        $returnType = '\III\Sierra\Models\ErrorCode';
+        $request = $this->modifyAHoldRequest($holdId, $body, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4781,19 +4781,19 @@ class V5patronsApi
     /**
      * Create request for operation 'modifyAHold'
      *
-     * @param  int $hold_id the hold record ID (required)
-     * @param  \Sierra\Models\PatronHoldPut $body the details of the hold (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $holdId the hold record ID (required)
+     * @param  \III\Sierra\Models\PatronHoldPut $body the details of the hold (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function modifyAHoldRequest($hold_id, $body, $accept_language = null)
+    protected function modifyAHoldRequest($holdId, $body, $acceptLanguage = null)
     {
-        // verify the required parameter 'hold_id' is set
-        if ($hold_id === null) {
+        // verify the required parameter 'holdId' is set
+        if ($holdId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $hold_id when calling modifyAHold'
+                'Missing the required parameter $holdId when calling modifyAHold'
             );
         }
         // verify the required parameter 'body' is set
@@ -4811,15 +4811,15 @@ class V5patronsApi
         $multipart = false;
 
         // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        if ($acceptLanguage !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
         }
 
         // path params
-        if ($hold_id !== null) {
+        if ($holdId !== null) {
             $resourcePath = str_replace(
                 '{' . 'holdId' . '}',
-                ObjectSerializer::toPathValue($hold_id),
+                ObjectSerializer::toPathValue($holdId),
                 $resourcePath
             );
         }
@@ -4897,11 +4897,11 @@ class V5patronsApi
      * Place a new hold request
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronHoldPost $body details of the new hold (required)
+     * @param  \III\Sierra\Models\PatronHoldPost $body details of the new hold (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function placeANewHoldRequest($id, $body)
     {
@@ -4915,15 +4915,15 @@ class V5patronsApi
      * Place a new hold request
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronHoldPost $body details of the new hold (required)
+     * @param  \III\Sierra\Models\PatronHoldPost $body details of the new hold (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeANewHoldRequestWithHttpInfo($id, $body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->placeANewHoldRequestRequest($id, $body);
 
         try {
@@ -4975,7 +4975,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4991,7 +4991,7 @@ class V5patronsApi
      * Place a new hold request
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronHoldPost $body details of the new hold (required)
+     * @param  \III\Sierra\Models\PatronHoldPost $body details of the new hold (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5012,14 +5012,14 @@ class V5patronsApi
      * Place a new hold request
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronHoldPost $body details of the new hold (required)
+     * @param  \III\Sierra\Models\PatronHoldPost $body details of the new hold (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function placeANewHoldRequestAsyncWithHttpInfo($id, $body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->placeANewHoldRequestRequest($id, $body);
 
         return $this->client
@@ -5063,7 +5063,7 @@ class V5patronsApi
      * Create request for operation 'placeANewHoldRequest'
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronHoldPost $body details of the new hold (required)
+     * @param  \III\Sierra\Models\PatronHoldPost $body details of the new hold (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5172,16 +5172,16 @@ class V5patronsApi
      *
      * Request to renew a checkout
      *
-     * @param  int $checkout_id the checkout ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $checkoutId the checkout ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Checkout
+     * @return \III\Sierra\Models\Checkout
      */
-    public function requestToRenewACheckout($checkout_id, $accept_language = null)
+    public function requestToRenewACheckout($checkoutId, $acceptLanguage = null)
     {
-        list($response) = $this->requestToRenewACheckoutWithHttpInfo($checkout_id, $accept_language);
+        list($response) = $this->requestToRenewACheckoutWithHttpInfo($checkoutId, $acceptLanguage);
         return $response;
     }
 
@@ -5190,17 +5190,17 @@ class V5patronsApi
      *
      * Request to renew a checkout
      *
-     * @param  int $checkout_id the checkout ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $checkoutId the checkout ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Checkout, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Checkout, HTTP status code, HTTP response headers (array of strings)
      */
-    public function requestToRenewACheckoutWithHttpInfo($checkout_id, $accept_language = null)
+    public function requestToRenewACheckoutWithHttpInfo($checkoutId, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\Checkout';
-        $request = $this->requestToRenewACheckoutRequest($checkout_id, $accept_language);
+        $returnType = '\III\Sierra\Models\Checkout';
+        $request = $this->requestToRenewACheckoutRequest($checkoutId, $acceptLanguage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5251,7 +5251,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Checkout',
+                        '\III\Sierra\Models\Checkout',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5266,15 +5266,15 @@ class V5patronsApi
      *
      * Request to renew a checkout
      *
-     * @param  int $checkout_id the checkout ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $checkoutId the checkout ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function requestToRenewACheckoutAsync($checkout_id, $accept_language = null)
+    public function requestToRenewACheckoutAsync($checkoutId, $acceptLanguage = null)
     {
-        return $this->requestToRenewACheckoutAsyncWithHttpInfo($checkout_id, $accept_language)
+        return $this->requestToRenewACheckoutAsyncWithHttpInfo($checkoutId, $acceptLanguage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5287,16 +5287,16 @@ class V5patronsApi
      *
      * Request to renew a checkout
      *
-     * @param  int $checkout_id the checkout ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $checkoutId the checkout ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function requestToRenewACheckoutAsyncWithHttpInfo($checkout_id, $accept_language = null)
+    public function requestToRenewACheckoutAsyncWithHttpInfo($checkoutId, $acceptLanguage = null)
     {
-        $returnType = '\Sierra\Models\Checkout';
-        $request = $this->requestToRenewACheckoutRequest($checkout_id, $accept_language);
+        $returnType = '\III\Sierra\Models\Checkout';
+        $request = $this->requestToRenewACheckoutRequest($checkoutId, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5338,18 +5338,18 @@ class V5patronsApi
     /**
      * Create request for operation 'requestToRenewACheckout'
      *
-     * @param  int $checkout_id the checkout ID (required)
-     * @param  string $accept_language the Accept-Language header (optional)
+     * @param  int $checkoutId the checkout ID (required)
+     * @param  string $acceptLanguage the Accept-Language header (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function requestToRenewACheckoutRequest($checkout_id, $accept_language = null)
+    protected function requestToRenewACheckoutRequest($checkoutId, $acceptLanguage = null)
     {
-        // verify the required parameter 'checkout_id' is set
-        if ($checkout_id === null) {
+        // verify the required parameter 'checkoutId' is set
+        if ($checkoutId === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $checkout_id when calling requestToRenewACheckout'
+                'Missing the required parameter $checkoutId when calling requestToRenewACheckout'
             );
         }
 
@@ -5361,15 +5361,15 @@ class V5patronsApi
         $multipart = false;
 
         // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        if ($acceptLanguage !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
         }
 
         // path params
-        if ($checkout_id !== null) {
+        if ($checkoutId !== null) {
             $resourcePath = str_replace(
                 '{' . 'checkoutId' . '}',
-                ObjectSerializer::toPathValue($checkout_id),
+                ObjectSerializer::toPathValue($checkoutId),
                 $resourcePath
             );
         }
@@ -5444,11 +5444,11 @@ class V5patronsApi
      * Update the Patron record
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronPatch $body patron request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body patron request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function updateThePatronRecord($id, $body)
     {
@@ -5462,15 +5462,15 @@ class V5patronsApi
      * Update the Patron record
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronPatch $body patron request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body patron request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateThePatronRecordWithHttpInfo($id, $body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->updateThePatronRecordRequest($id, $body);
 
         try {
@@ -5522,7 +5522,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5538,7 +5538,7 @@ class V5patronsApi
      * Update the Patron record
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronPatch $body patron request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body patron request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5559,14 +5559,14 @@ class V5patronsApi
      * Update the Patron record
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronPatch $body patron request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body patron request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateThePatronRecordAsyncWithHttpInfo($id, $body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->updateThePatronRecordRequest($id, $body);
 
         return $this->client
@@ -5610,7 +5610,7 @@ class V5patronsApi
      * Create request for operation 'updateThePatronRecord'
      *
      * @param  int $id the patron record ID (required)
-     * @param  \Sierra\Models\PatronPatch $body patron request (required)
+     * @param  \III\Sierra\Models\PatronPatch $body patron request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5719,11 +5719,11 @@ class V5patronsApi
      *
      * Validate patron by barcode and PIN
      *
-     * @param  \Sierra\Models\PatronValidation $body post request (required)
+     * @param  \III\Sierra\Models\PatronValidation $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function validatePatronByBarcodeAndPIN($body)
     {
@@ -5736,15 +5736,15 @@ class V5patronsApi
      *
      * Validate patron by barcode and PIN
      *
-     * @param  \Sierra\Models\PatronValidation $body post request (required)
+     * @param  \III\Sierra\Models\PatronValidation $body post request (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function validatePatronByBarcodeAndPINWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->validatePatronByBarcodeAndPINRequest($body);
 
         try {
@@ -5796,7 +5796,7 @@ class V5patronsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5811,7 +5811,7 @@ class V5patronsApi
      *
      * Validate patron by barcode and PIN
      *
-     * @param  \Sierra\Models\PatronValidation $body post request (required)
+     * @param  \III\Sierra\Models\PatronValidation $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5831,14 +5831,14 @@ class V5patronsApi
      *
      * Validate patron by barcode and PIN
      *
-     * @param  \Sierra\Models\PatronValidation $body post request (required)
+     * @param  \III\Sierra\Models\PatronValidation $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function validatePatronByBarcodeAndPINAsyncWithHttpInfo($body)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->validatePatronByBarcodeAndPINRequest($body);
 
         return $this->client
@@ -5881,7 +5881,7 @@ class V5patronsApi
     /**
      * Create request for operation 'validatePatronByBarcodeAndPIN'
      *
-     * @param  \Sierra\Models\PatronValidation $body post request (required)
+     * @param  \III\Sierra\Models\PatronValidation $body post request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

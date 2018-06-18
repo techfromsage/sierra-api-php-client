@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * BibTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description a bibliographic record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class BibTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_date"
+     * Test attribute "updatedDate"
      */
     public function testPropertyUpdatedDate()
     {
     }
 
     /**
-     * Test attribute "created_date"
+     * Test attribute "createdDate"
      */
     public function testPropertyCreatedDate()
     {
     }
 
     /**
-     * Test attribute "deleted_date"
+     * Test attribute "deletedDate"
      */
     public function testPropertyDeletedDate()
     {
@@ -145,28 +145,28 @@ class BibTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "material_type"
+     * Test attribute "materialType"
      */
     public function testPropertyMaterialType()
     {
     }
 
     /**
-     * Test attribute "bib_level"
+     * Test attribute "bibLevel"
      */
     public function testPropertyBibLevel()
     {
     }
 
     /**
-     * Test attribute "publish_year"
+     * Test attribute "publishYear"
      */
     public function testPropertyPublishYear()
     {
     }
 
     /**
-     * Test attribute "catalog_date"
+     * Test attribute "catalogDate"
      */
     public function testPropertyCatalogDate()
     {
@@ -187,14 +187,14 @@ class BibTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "norm_title"
+     * Test attribute "normTitle"
      */
     public function testPropertyNormTitle()
     {
     }
 
     /**
-     * Test attribute "norm_author"
+     * Test attribute "normAuthor"
      */
     public function testPropertyNormAuthor()
     {
@@ -208,14 +208,14 @@ class BibTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "fixed_fields"
+     * Test attribute "fixedFields"
      */
     public function testPropertyFixedFields()
     {
     }
 
     /**
-     * Test attribute "var_fields"
+     * Test attribute "varFields"
      */
     public function testPropertyVarFields()
     {

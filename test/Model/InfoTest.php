@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * InfoTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description API information details
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,51 +75,51 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "api_info"
+     * Test attribute "apiInfo"
      */
     public function testPropertyApiInfo()
     {
     }
 
     /**
-     * Test attribute "db_settings"
+     * Test attribute "dbSettings"
      */
     public function testPropertyDbSettings()
     {
     }
 
     /**
-     * Test attribute "ds_settings"
+     * Test attribute "dsSettings"
      */
     public function testPropertyDsSettings()
     {
     }
 
     /**
-     * Test attribute "admin_settings"
+     * Test attribute "adminSettings"
      */
     public function testPropertyAdminSettings()
     {
     }
 
     /**
-     * Test attribute "webpac_settings"
+     * Test attribute "webpacSettings"
      */
     public function testPropertyWebpacSettings()
     {
     }
 
     /**
-     * Test attribute "pin_verification_settings"
+     * Test attribute "pinVerificationSettings"
      */
     public function testPropertyPinVerificationSettings()
     {
     }
 
     /**
-     * Test attribute "marc2_inn_settings"
+     * Test attribute "marc2INNSettings"
      */
-    public function testPropertyMarc2InnSettings()
+    public function testPropertyMarc2INNSettings()
     {
     }
 }

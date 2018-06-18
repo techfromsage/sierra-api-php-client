@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * MarcSummary Class Doc Comment
  *
  * @category Class
  * @description a summary of the generated binary MARC data file
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'file' => 'string',
-        'input_records' => 'int',
-        'deleted_records' => 'int',
-        'output_records' => 'int',
+        'inputRecords' => 'int',
+        'deletedRecords' => 'int',
+        'outputRecords' => 'int',
         'errors' => 'int'
     ];
 
@@ -69,9 +69,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'file' => null,
-        'input_records' => 'int32',
-        'deleted_records' => 'int32',
-        'output_records' => 'int32',
+        'inputRecords' => 'int32',
+        'deletedRecords' => 'int32',
+        'outputRecords' => 'int32',
         'errors' => 'int32'
     ];
 
@@ -103,9 +103,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'file' => 'file',
-        'input_records' => 'inputRecords',
-        'deleted_records' => 'deletedRecords',
-        'output_records' => 'outputRecords',
+        'inputRecords' => 'inputRecords',
+        'deletedRecords' => 'deletedRecords',
+        'outputRecords' => 'outputRecords',
         'errors' => 'errors'
     ];
 
@@ -116,9 +116,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'file' => 'setFile',
-        'input_records' => 'setInputRecords',
-        'deleted_records' => 'setDeletedRecords',
-        'output_records' => 'setOutputRecords',
+        'inputRecords' => 'setInputRecords',
+        'deletedRecords' => 'setDeletedRecords',
+        'outputRecords' => 'setOutputRecords',
         'errors' => 'setErrors'
     ];
 
@@ -129,9 +129,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'file' => 'getFile',
-        'input_records' => 'getInputRecords',
-        'deleted_records' => 'getDeletedRecords',
-        'output_records' => 'getOutputRecords',
+        'inputRecords' => 'getInputRecords',
+        'deletedRecords' => 'getDeletedRecords',
+        'outputRecords' => 'getOutputRecords',
         'errors' => 'getErrors'
     ];
 
@@ -196,9 +196,9 @@ class MarcSummary implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['file'] = isset($data['file']) ? $data['file'] : null;
-        $this->container['input_records'] = isset($data['input_records']) ? $data['input_records'] : null;
-        $this->container['deleted_records'] = isset($data['deleted_records']) ? $data['deleted_records'] : null;
-        $this->container['output_records'] = isset($data['output_records']) ? $data['output_records'] : null;
+        $this->container['inputRecords'] = isset($data['inputRecords']) ? $data['inputRecords'] : null;
+        $this->container['deletedRecords'] = isset($data['deletedRecords']) ? $data['deletedRecords'] : null;
+        $this->container['outputRecords'] = isset($data['outputRecords']) ? $data['outputRecords'] : null;
         $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
@@ -214,11 +214,11 @@ class MarcSummary implements ModelInterface, ArrayAccess
         if ($this->container['file'] === null) {
             $invalidProperties[] = "'file' can't be null";
         }
-        if ($this->container['input_records'] === null) {
-            $invalidProperties[] = "'input_records' can't be null";
+        if ($this->container['inputRecords'] === null) {
+            $invalidProperties[] = "'inputRecords' can't be null";
         }
-        if ($this->container['output_records'] === null) {
-            $invalidProperties[] = "'output_records' can't be null";
+        if ($this->container['outputRecords'] === null) {
+            $invalidProperties[] = "'outputRecords' can't be null";
         }
         if ($this->container['errors'] === null) {
             $invalidProperties[] = "'errors' can't be null";
@@ -238,10 +238,10 @@ class MarcSummary implements ModelInterface, ArrayAccess
         if ($this->container['file'] === null) {
             return false;
         }
-        if ($this->container['input_records'] === null) {
+        if ($this->container['inputRecords'] === null) {
             return false;
         }
-        if ($this->container['output_records'] === null) {
+        if ($this->container['outputRecords'] === null) {
             return false;
         }
         if ($this->container['errors'] === null) {
@@ -276,73 +276,73 @@ class MarcSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets input_records
+     * Gets inputRecords
      *
      * @return int
      */
     public function getInputRecords()
     {
-        return $this->container['input_records'];
+        return $this->container['inputRecords'];
     }
 
     /**
-     * Sets input_records
+     * Sets inputRecords
      *
-     * @param int $input_records the number of bibs processed
+     * @param int $inputRecords the number of bibs processed
      *
      * @return $this
      */
-    public function setInputRecords($input_records)
+    public function setInputRecords($inputRecords)
     {
-        $this->container['input_records'] = $input_records;
+        $this->container['inputRecords'] = $inputRecords;
 
         return $this;
     }
 
     /**
-     * Gets deleted_records
+     * Gets deletedRecords
      *
      * @return int
      */
     public function getDeletedRecords()
     {
-        return $this->container['deleted_records'];
+        return $this->container['deletedRecords'];
     }
 
     /**
-     * Sets deleted_records
+     * Sets deletedRecords
      *
-     * @param int $deleted_records the number of bibs processed that were in a deleted state
+     * @param int $deletedRecords the number of bibs processed that were in a deleted state
      *
      * @return $this
      */
-    public function setDeletedRecords($deleted_records)
+    public function setDeletedRecords($deletedRecords)
     {
-        $this->container['deleted_records'] = $deleted_records;
+        $this->container['deletedRecords'] = $deletedRecords;
 
         return $this;
     }
 
     /**
-     * Gets output_records
+     * Gets outputRecords
      *
      * @return int
      */
     public function getOutputRecords()
     {
-        return $this->container['output_records'];
+        return $this->container['outputRecords'];
     }
 
     /**
-     * Sets output_records
+     * Sets outputRecords
      *
-     * @param int $output_records the number of bibs written to the MARC data file
+     * @param int $outputRecords the number of bibs written to the MARC data file
      *
      * @return $this
      */
-    public function setOutputRecords($output_records)
+    public function setOutputRecords($outputRecords)
     {
-        $this->container['output_records'] = $output_records;
+        $this->container['outputRecords'] = $outputRecords;
 
         return $this;
     }

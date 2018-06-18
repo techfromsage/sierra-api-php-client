@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * ErrorCodeTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an error code
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,14 +82,14 @@ class ErrorCodeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "specific_code"
+     * Test attribute "specificCode"
      */
     public function testPropertySpecificCode()
     {
     }
 
     /**
-     * Test attribute "http_status"
+     * Test attribute "httpStatus"
      */
     public function testPropertyHttpStatus()
     {

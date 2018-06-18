@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * ErrorCode Class Doc Comment
  *
  * @category Class
  * @description an error code
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'int',
-        'specific_code' => 'int',
-        'http_status' => 'int',
+        'specificCode' => 'int',
+        'httpStatus' => 'int',
         'name' => 'string',
         'description' => 'string'
     ];
@@ -69,8 +69,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'code' => 'int32',
-        'specific_code' => 'int32',
-        'http_status' => 'int32',
+        'specificCode' => 'int32',
+        'httpStatus' => 'int32',
         'name' => null,
         'description' => null
     ];
@@ -103,8 +103,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'code' => 'code',
-        'specific_code' => 'specificCode',
-        'http_status' => 'httpStatus',
+        'specificCode' => 'specificCode',
+        'httpStatus' => 'httpStatus',
         'name' => 'name',
         'description' => 'description'
     ];
@@ -116,8 +116,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'code' => 'setCode',
-        'specific_code' => 'setSpecificCode',
-        'http_status' => 'setHttpStatus',
+        'specificCode' => 'setSpecificCode',
+        'httpStatus' => 'setHttpStatus',
         'name' => 'setName',
         'description' => 'setDescription'
     ];
@@ -129,8 +129,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'code' => 'getCode',
-        'specific_code' => 'getSpecificCode',
-        'http_status' => 'getHttpStatus',
+        'specificCode' => 'getSpecificCode',
+        'httpStatus' => 'getHttpStatus',
         'name' => 'getName',
         'description' => 'getDescription'
     ];
@@ -196,8 +196,8 @@ class ErrorCode implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['specific_code'] = isset($data['specific_code']) ? $data['specific_code'] : null;
-        $this->container['http_status'] = isset($data['http_status']) ? $data['http_status'] : null;
+        $this->container['specificCode'] = isset($data['specificCode']) ? $data['specificCode'] : null;
+        $this->container['httpStatus'] = isset($data['httpStatus']) ? $data['httpStatus'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -214,11 +214,11 @@ class ErrorCode implements ModelInterface, ArrayAccess
         if ($this->container['code'] === null) {
             $invalidProperties[] = "'code' can't be null";
         }
-        if ($this->container['specific_code'] === null) {
-            $invalidProperties[] = "'specific_code' can't be null";
+        if ($this->container['specificCode'] === null) {
+            $invalidProperties[] = "'specificCode' can't be null";
         }
-        if ($this->container['http_status'] === null) {
-            $invalidProperties[] = "'http_status' can't be null";
+        if ($this->container['httpStatus'] === null) {
+            $invalidProperties[] = "'httpStatus' can't be null";
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -238,10 +238,10 @@ class ErrorCode implements ModelInterface, ArrayAccess
         if ($this->container['code'] === null) {
             return false;
         }
-        if ($this->container['specific_code'] === null) {
+        if ($this->container['specificCode'] === null) {
             return false;
         }
-        if ($this->container['http_status'] === null) {
+        if ($this->container['httpStatus'] === null) {
             return false;
         }
         if ($this->container['name'] === null) {
@@ -276,49 +276,49 @@ class ErrorCode implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets specific_code
+     * Gets specificCode
      *
      * @return int
      */
     public function getSpecificCode()
     {
-        return $this->container['specific_code'];
+        return $this->container['specificCode'];
     }
 
     /**
-     * Sets specific_code
+     * Sets specificCode
      *
-     * @param int $specific_code an error code returned by an external service
+     * @param int $specificCode an error code returned by an external service
      *
      * @return $this
      */
-    public function setSpecificCode($specific_code)
+    public function setSpecificCode($specificCode)
     {
-        $this->container['specific_code'] = $specific_code;
+        $this->container['specificCode'] = $specificCode;
 
         return $this;
     }
 
     /**
-     * Gets http_status
+     * Gets httpStatus
      *
      * @return int
      */
     public function getHttpStatus()
     {
-        return $this->container['http_status'];
+        return $this->container['httpStatus'];
     }
 
     /**
-     * Sets http_status
+     * Sets httpStatus
      *
-     * @param int $http_status the HTTP status code
+     * @param int $httpStatus the HTTP status code
      *
      * @return $this
      */
-    public function setHttpStatus($http_status)
+    public function setHttpStatus($httpStatus)
     {
-        $this->container['http_status'] = $http_status;
+        $this->container['httpStatus'] = $httpStatus;
 
         return $this;
     }

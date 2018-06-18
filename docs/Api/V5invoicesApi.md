@@ -1,4 +1,4 @@
-# Sierra\V5invoicesApi
+# III\Sierra\V5invoicesApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **getALineItemRecordByLineID**
-> \Sierra\Models\InvoiceLine getALineItemRecordByLineID($login, $id, $fields)
+> \III\Sierra\Models\InvoiceLine getALineItemRecordByLineID($login, $id, $fields)
 
 Get a line item record by line ID
 
@@ -23,7 +23,7 @@ Get a line item record by line ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5invoicesApi(
+$apiInstance = new III\Sierra\Api\V5invoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\InvoiceLine**](../Model/InvoiceLine.md)
+[**\III\Sierra\Models\InvoiceLine**](../Model/InvoiceLine.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfInvoices**
-> \Sierra\Models\InvoiceResultSet getAListOfInvoices($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed)
+> \III\Sierra\Models\InvoiceResultSet getAListOfInvoices($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed)
 
 Get a list of invoices
 
@@ -76,7 +76,7 @@ Get a list of invoices
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5invoicesApi(
+$apiInstance = new III\Sierra\Api\V5invoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -85,16 +85,16 @@ $login = "login_example"; // string | Sierra login to verify user's credentials 
 $limit = 56; // int | the maximum number of results
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $id = array("id_example"); // string[] | a comma-delimited list of IDs of invoices to retrieve
-$inv_num = "inv_num_example"; // string | a comma-delimited list of invoice numbers (can include a single wildcard '*' to represent one or more final characters, for example, mult* or mul*)
-$status_code = array("status_code_example"); // string[] | a comma-delimited list of invoice status codes
+$invNum = "invNum_example"; // string | a comma-delimited list of invoice numbers (can include a single wildcard '*' to represent one or more final characters, for example, mult* or mul*)
+$statusCode = array("statusCode_example"); // string[] | a comma-delimited list of invoice status codes
 $fields = array("fields_example"); // string[] | if none provided, data for all fields are returned; otherwise only specified fields are returned
-$invoice_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the date of invoice records (can be a range)
-$created_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of invoice records to retrieve (can be a range)
-$updated_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of invoice records to retrieve (can be a range)
+$invoiceDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the date of invoice records (can be a range)
+$createdDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of invoice records to retrieve (can be a range)
+$updatedDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of invoice records to retrieve (can be a range)
 $suppressed = true; // bool | the suppressed flag value of invoice records to retrieve
 
 try {
-    $result = $apiInstance->getAListOfInvoices($login, $limit, $offset, $id, $inv_num, $status_code, $fields, $invoice_date, $created_date, $updated_date, $suppressed);
+    $result = $apiInstance->getAListOfInvoices($login, $limit, $offset, $id, $invNum, $statusCode, $fields, $invoiceDate, $createdDate, $updatedDate, $suppressed);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5invoicesApi->getAListOfInvoices: ', $e->getMessage(), PHP_EOL;
@@ -110,17 +110,17 @@ Name | Type | Description  | Notes
  **limit** | **int**| the maximum number of results | [optional]
  **offset** | **int**| the beginning record (zero-indexed) of the result set returned | [optional]
  **id** | [**string[]**](../Model/string.md)| a comma-delimited list of IDs of invoices to retrieve | [optional]
- **inv_num** | **string**| a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) | [optional]
- **status_code** | [**string[]**](../Model/string.md)| a comma-delimited list of invoice status codes | [optional]
+ **invNum** | **string**| a comma-delimited list of invoice numbers (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) | [optional]
+ **statusCode** | [**string[]**](../Model/string.md)| a comma-delimited list of invoice status codes | [optional]
  **fields** | [**string[]**](../Model/string.md)| if none provided, data for all fields are returned; otherwise only specified fields are returned | [optional]
- **invoice_date** | **\DateTime**| the date of invoice records (can be a range) | [optional]
- **created_date** | **\DateTime**| the creation date of invoice records to retrieve (can be a range) | [optional]
- **updated_date** | **\DateTime**| the modification date of invoice records to retrieve (can be a range) | [optional]
+ **invoiceDate** | **\DateTime**| the date of invoice records (can be a range) | [optional]
+ **createdDate** | **\DateTime**| the creation date of invoice records to retrieve (can be a range) | [optional]
+ **updatedDate** | **\DateTime**| the modification date of invoice records to retrieve (can be a range) | [optional]
  **suppressed** | **bool**| the suppressed flag value of invoice records to retrieve | [optional]
 
 ### Return type
 
-[**\Sierra\Models\InvoiceResultSet**](../Model/InvoiceResultSet.md)
+[**\III\Sierra\Models\InvoiceResultSet**](../Model/InvoiceResultSet.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfMetadata**
-> \Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
+> \III\Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
 
 Get a list of metadata
 
@@ -145,7 +145,7 @@ Get a list of metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5invoicesApi(
+$apiInstance = new III\Sierra\Api\V5invoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Metadata[]**](../Model/Metadata.md)
+[**\III\Sierra\Models\Metadata[]**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAnInvoiceByRecordID**
-> \Sierra\Models\Invoice getAnInvoiceByRecordID($login, $id, $fields)
+> \III\Sierra\Models\Invoice getAnInvoiceByRecordID($login, $id, $fields)
 
 Get an invoice by record ID
 
@@ -196,7 +196,7 @@ Get an invoice by record ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5invoicesApi(
+$apiInstance = new III\Sierra\Api\V5invoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Invoice**](../Model/Invoice.md)
+[**\III\Sierra\Models\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTheLineItemDataForASingleInvoiceRecord**
-> \Sierra\Models\InvoiceLineResultSet getTheLineItemDataForASingleInvoiceRecord($login, $id, $fields)
+> \III\Sierra\Models\InvoiceLineResultSet getTheLineItemDataForASingleInvoiceRecord($login, $id, $fields)
 
 Get the line item data for a single invoice record
 
@@ -249,7 +249,7 @@ Get the line item data for a single invoice record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5invoicesApi(
+$apiInstance = new III\Sierra\Api\V5invoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\InvoiceLineResultSet**](../Model/InvoiceLineResultSet.md)
+[**\III\Sierra\Models\InvoiceLineResultSet**](../Model/InvoiceLineResultSet.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PatronHoldPut Class Doc Comment
  *
  * @category Class
  * @description a hold patch
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pickup_location' => 'string',
+        'pickupLocation' => 'string',
         'freeze' => 'bool'
     ];
 
@@ -65,7 +65,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'pickup_location' => null,
+        'pickupLocation' => null,
         'freeze' => null
     ];
 
@@ -96,7 +96,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pickup_location' => 'pickupLocation',
+        'pickupLocation' => 'pickupLocation',
         'freeze' => 'freeze'
     ];
 
@@ -106,7 +106,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pickup_location' => 'setPickupLocation',
+        'pickupLocation' => 'setPickupLocation',
         'freeze' => 'setFreeze'
     ];
 
@@ -116,7 +116,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pickup_location' => 'getPickupLocation',
+        'pickupLocation' => 'getPickupLocation',
         'freeze' => 'getFreeze'
     ];
 
@@ -180,7 +180,7 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pickup_location'] = isset($data['pickup_location']) ? $data['pickup_location'] : null;
+        $this->container['pickupLocation'] = isset($data['pickupLocation']) ? $data['pickupLocation'] : null;
         $this->container['freeze'] = isset($data['freeze']) ? $data['freeze'] : null;
     }
 
@@ -210,25 +210,25 @@ class PatronHoldPut implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets pickup_location
+     * Gets pickupLocation
      *
      * @return string
      */
     public function getPickupLocation()
     {
-        return $this->container['pickup_location'];
+        return $this->container['pickupLocation'];
     }
 
     /**
-     * Sets pickup_location
+     * Sets pickupLocation
      *
-     * @param string $pickup_location the hold's pickup location code
+     * @param string $pickupLocation the hold's pickup location code
      *
      * @return $this
      */
-    public function setPickupLocation($pickup_location)
+    public function setPickupLocation($pickupLocation)
     {
-        $this->container['pickup_location'] = $pickup_location;
+        $this->container['pickupLocation'] = $pickupLocation;
 
         return $this;
     }

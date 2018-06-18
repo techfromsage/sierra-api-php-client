@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * TokenInfoTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the token information details
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,35 +75,35 @@ class TokenInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "patron_id"
+     * Test attribute "patronId"
      */
     public function testPropertyPatronId()
     {
     }
 
     /**
-     * Test attribute "key_id"
+     * Test attribute "keyId"
      */
     public function testPropertyKeyId()
     {
     }
 
     /**
-     * Test attribute "grant_type"
+     * Test attribute "grantType"
      */
     public function testPropertyGrantType()
     {
     }
 
     /**
-     * Test attribute "authorization_scheme"
+     * Test attribute "authorizationScheme"
      */
     public function testPropertyAuthorizationScheme()
     {
     }
 
     /**
-     * Test attribute "expires_in"
+     * Test attribute "expiresIn"
      */
     public function testPropertyExpiresIn()
     {

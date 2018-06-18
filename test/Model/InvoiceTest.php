@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * InvoiceTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description an invoice record
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,28 +82,28 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "accounting_unit"
+     * Test attribute "accountingUnit"
      */
     public function testPropertyAccountingUnit()
     {
     }
 
     /**
-     * Test attribute "inv_date"
+     * Test attribute "invDate"
      */
     public function testPropertyInvDate()
     {
     }
 
     /**
-     * Test attribute "inv_num"
+     * Test attribute "invNum"
      */
     public function testPropertyInvNum()
     {
     }
 
     /**
-     * Test attribute "tax_type"
+     * Test attribute "taxType"
      */
     public function testPropertyTaxType()
     {
@@ -117,35 +117,35 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "paid_date"
+     * Test attribute "paidDate"
      */
     public function testPropertyPaidDate()
     {
     }
 
     /**
-     * Test attribute "for_currency"
+     * Test attribute "forCurrency"
      */
     public function testPropertyForCurrency()
     {
     }
 
     /**
-     * Test attribute "inv_total"
+     * Test attribute "invTotal"
      */
     public function testPropertyInvTotal()
     {
     }
 
     /**
-     * Test attribute "use_tax"
+     * Test attribute "useTax"
      */
     public function testPropertyUseTax()
     {
     }
 
     /**
-     * Test attribute "line_items"
+     * Test attribute "lineItems"
      */
     public function testPropertyLineItems()
     {

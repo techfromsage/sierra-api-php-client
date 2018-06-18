@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * AdminSettingsTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description Administrator settings
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,63 +75,63 @@ class AdminSettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email_host"
+     * Test attribute "emailHost"
      */
     public function testPropertyEmailHost()
     {
     }
 
     /**
-     * Test attribute "email_user"
+     * Test attribute "emailUser"
      */
     public function testPropertyEmailUser()
     {
     }
 
     /**
-     * Test attribute "email_sender_name"
+     * Test attribute "emailSenderName"
      */
     public function testPropertyEmailSenderName()
     {
     }
 
     /**
-     * Test attribute "email_sender_email"
+     * Test attribute "emailSenderEmail"
      */
     public function testPropertyEmailSenderEmail()
     {
     }
 
     /**
-     * Test attribute "email_subject"
+     * Test attribute "emailSubject"
      */
     public function testPropertyEmailSubject()
     {
     }
 
     /**
-     * Test attribute "api_enabled"
+     * Test attribute "apiEnabled"
      */
     public function testPropertyApiEnabled()
     {
     }
 
     /**
-     * Test attribute "can_config"
+     * Test attribute "canConfig"
      */
     public function testPropertyCanConfig()
     {
     }
 
     /**
-     * Test attribute "access_tier"
+     * Test attribute "accessTier"
      */
     public function testPropertyAccessTier()
     {
     }
 
     /**
-     * Test attribute "root_url"
+     * Test attribute "rootUrl"
      */
     public function testPropertyRootUrl()
     {

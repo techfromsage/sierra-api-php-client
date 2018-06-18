@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * FundTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the properties of a fund
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class FundTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "code_number"
+     * Test attribute "codeNumber"
      */
     public function testPropertyCodeNumber()
     {
     }
 
     /**
-     * Test attribute "accounting_unit_code_number"
+     * Test attribute "accountingUnitCodeNumber"
      */
     public function testPropertyAccountingUnitCodeNumber()
     {
     }
 
     /**
-     * Test attribute "fund_name"
+     * Test attribute "fundName"
      */
     public function testPropertyFundName()
     {
@@ -110,14 +110,14 @@ class FundTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ext_code"
+     * Test attribute "extCode"
      */
     public function testPropertyExtCode()
     {
     }
 
     /**
-     * Test attribute "ext_fund_name"
+     * Test attribute "extFundName"
      */
     public function testPropertyExtFundName()
     {

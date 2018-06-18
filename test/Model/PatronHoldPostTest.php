@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * PatronHoldPostTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description a hold
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,35 +75,35 @@ class PatronHoldPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "record_type"
+     * Test attribute "recordType"
      */
     public function testPropertyRecordType()
     {
     }
 
     /**
-     * Test attribute "record_number"
+     * Test attribute "recordNumber"
      */
     public function testPropertyRecordNumber()
     {
     }
 
     /**
-     * Test attribute "pickup_location"
+     * Test attribute "pickupLocation"
      */
     public function testPropertyPickupLocation()
     {
     }
 
     /**
-     * Test attribute "needed_by"
+     * Test attribute "neededBy"
      */
     public function testPropertyNeededBy()
     {
     }
 
     /**
-     * Test attribute "number_of_copies"
+     * Test attribute "numberOfCopies"
      */
     public function testPropertyNumberOfCopies()
     {

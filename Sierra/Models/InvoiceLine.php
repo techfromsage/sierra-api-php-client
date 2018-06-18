@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * InvoiceLine Class Doc Comment
  *
  * @category Class
  * @description an invoice line item record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,22 +58,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         'id' => 'string',
         'invoice' => 'string',
         'order' => 'string',
-        'paid_amount' => 'double',
-        'lien_amount' => 'double',
-        'lien_flag' => 'int',
-        'list_price' => 'double',
+        'paidAmount' => 'double',
+        'lienAmount' => 'double',
+        'lienFlag' => 'int',
+        'listPrice' => 'double',
         'fund' => 'string',
-        'sub_fund' => 'int',
-        'no_of_copies' => 'int',
-        'external_fund' => 'int',
-        'order_status' => 'string',
-        'use_tax' => 'bool',
-        'line_item_note' => 'string',
+        'subFund' => 'int',
+        'noOfCopies' => 'int',
+        'externalFund' => 'int',
+        'orderStatus' => 'string',
+        'useTax' => 'bool',
+        'lineItemNote' => 'string',
         'title' => 'string',
-        'multi_flag' => 'string',
+        'multiFlag' => 'string',
         'vendor' => 'string',
-        'sub_starting_date' => '\DateTime',
-        'sub_ending_date' => '\DateTime',
+        'subStartingDate' => '\DateTime',
+        'subEndingDate' => '\DateTime',
         'tax' => 'double'
     ];
 
@@ -86,22 +86,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         'id' => null,
         'invoice' => null,
         'order' => null,
-        'paid_amount' => 'double',
-        'lien_amount' => 'double',
-        'lien_flag' => 'int32',
-        'list_price' => 'double',
+        'paidAmount' => 'double',
+        'lienAmount' => 'double',
+        'lienFlag' => 'int32',
+        'listPrice' => 'double',
         'fund' => null,
-        'sub_fund' => 'int32',
-        'no_of_copies' => 'int32',
-        'external_fund' => 'int32',
-        'order_status' => null,
-        'use_tax' => null,
-        'line_item_note' => null,
+        'subFund' => 'int32',
+        'noOfCopies' => 'int32',
+        'externalFund' => 'int32',
+        'orderStatus' => null,
+        'useTax' => null,
+        'lineItemNote' => null,
         'title' => null,
-        'multi_flag' => null,
+        'multiFlag' => null,
         'vendor' => null,
-        'sub_starting_date' => 'date-time',
-        'sub_ending_date' => 'date-time',
+        'subStartingDate' => 'date-time',
+        'subEndingDate' => 'date-time',
         'tax' => 'double'
     ];
 
@@ -135,22 +135,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         'id' => 'id',
         'invoice' => 'invoice',
         'order' => 'order',
-        'paid_amount' => 'paidAmount',
-        'lien_amount' => 'lienAmount',
-        'lien_flag' => 'lienFlag',
-        'list_price' => 'listPrice',
+        'paidAmount' => 'paidAmount',
+        'lienAmount' => 'lienAmount',
+        'lienFlag' => 'lienFlag',
+        'listPrice' => 'listPrice',
         'fund' => 'fund',
-        'sub_fund' => 'subFund',
-        'no_of_copies' => 'noOfCopies',
-        'external_fund' => 'externalFund',
-        'order_status' => 'orderStatus',
-        'use_tax' => 'useTax',
-        'line_item_note' => 'lineItemNote',
+        'subFund' => 'subFund',
+        'noOfCopies' => 'noOfCopies',
+        'externalFund' => 'externalFund',
+        'orderStatus' => 'orderStatus',
+        'useTax' => 'useTax',
+        'lineItemNote' => 'lineItemNote',
         'title' => 'title',
-        'multi_flag' => 'multiFlag',
+        'multiFlag' => 'multiFlag',
         'vendor' => 'vendor',
-        'sub_starting_date' => 'subStartingDate',
-        'sub_ending_date' => 'subEndingDate',
+        'subStartingDate' => 'subStartingDate',
+        'subEndingDate' => 'subEndingDate',
         'tax' => 'tax'
     ];
 
@@ -163,22 +163,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'invoice' => 'setInvoice',
         'order' => 'setOrder',
-        'paid_amount' => 'setPaidAmount',
-        'lien_amount' => 'setLienAmount',
-        'lien_flag' => 'setLienFlag',
-        'list_price' => 'setListPrice',
+        'paidAmount' => 'setPaidAmount',
+        'lienAmount' => 'setLienAmount',
+        'lienFlag' => 'setLienFlag',
+        'listPrice' => 'setListPrice',
         'fund' => 'setFund',
-        'sub_fund' => 'setSubFund',
-        'no_of_copies' => 'setNoOfCopies',
-        'external_fund' => 'setExternalFund',
-        'order_status' => 'setOrderStatus',
-        'use_tax' => 'setUseTax',
-        'line_item_note' => 'setLineItemNote',
+        'subFund' => 'setSubFund',
+        'noOfCopies' => 'setNoOfCopies',
+        'externalFund' => 'setExternalFund',
+        'orderStatus' => 'setOrderStatus',
+        'useTax' => 'setUseTax',
+        'lineItemNote' => 'setLineItemNote',
         'title' => 'setTitle',
-        'multi_flag' => 'setMultiFlag',
+        'multiFlag' => 'setMultiFlag',
         'vendor' => 'setVendor',
-        'sub_starting_date' => 'setSubStartingDate',
-        'sub_ending_date' => 'setSubEndingDate',
+        'subStartingDate' => 'setSubStartingDate',
+        'subEndingDate' => 'setSubEndingDate',
         'tax' => 'setTax'
     ];
 
@@ -191,22 +191,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'invoice' => 'getInvoice',
         'order' => 'getOrder',
-        'paid_amount' => 'getPaidAmount',
-        'lien_amount' => 'getLienAmount',
-        'lien_flag' => 'getLienFlag',
-        'list_price' => 'getListPrice',
+        'paidAmount' => 'getPaidAmount',
+        'lienAmount' => 'getLienAmount',
+        'lienFlag' => 'getLienFlag',
+        'listPrice' => 'getListPrice',
         'fund' => 'getFund',
-        'sub_fund' => 'getSubFund',
-        'no_of_copies' => 'getNoOfCopies',
-        'external_fund' => 'getExternalFund',
-        'order_status' => 'getOrderStatus',
-        'use_tax' => 'getUseTax',
-        'line_item_note' => 'getLineItemNote',
+        'subFund' => 'getSubFund',
+        'noOfCopies' => 'getNoOfCopies',
+        'externalFund' => 'getExternalFund',
+        'orderStatus' => 'getOrderStatus',
+        'useTax' => 'getUseTax',
+        'lineItemNote' => 'getLineItemNote',
         'title' => 'getTitle',
-        'multi_flag' => 'getMultiFlag',
+        'multiFlag' => 'getMultiFlag',
         'vendor' => 'getVendor',
-        'sub_starting_date' => 'getSubStartingDate',
-        'sub_ending_date' => 'getSubEndingDate',
+        'subStartingDate' => 'getSubStartingDate',
+        'subEndingDate' => 'getSubEndingDate',
         'tax' => 'getTax'
     ];
 
@@ -273,22 +273,22 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
-        $this->container['paid_amount'] = isset($data['paid_amount']) ? $data['paid_amount'] : null;
-        $this->container['lien_amount'] = isset($data['lien_amount']) ? $data['lien_amount'] : null;
-        $this->container['lien_flag'] = isset($data['lien_flag']) ? $data['lien_flag'] : null;
-        $this->container['list_price'] = isset($data['list_price']) ? $data['list_price'] : null;
+        $this->container['paidAmount'] = isset($data['paidAmount']) ? $data['paidAmount'] : null;
+        $this->container['lienAmount'] = isset($data['lienAmount']) ? $data['lienAmount'] : null;
+        $this->container['lienFlag'] = isset($data['lienFlag']) ? $data['lienFlag'] : null;
+        $this->container['listPrice'] = isset($data['listPrice']) ? $data['listPrice'] : null;
         $this->container['fund'] = isset($data['fund']) ? $data['fund'] : null;
-        $this->container['sub_fund'] = isset($data['sub_fund']) ? $data['sub_fund'] : null;
-        $this->container['no_of_copies'] = isset($data['no_of_copies']) ? $data['no_of_copies'] : null;
-        $this->container['external_fund'] = isset($data['external_fund']) ? $data['external_fund'] : null;
-        $this->container['order_status'] = isset($data['order_status']) ? $data['order_status'] : null;
-        $this->container['use_tax'] = isset($data['use_tax']) ? $data['use_tax'] : null;
-        $this->container['line_item_note'] = isset($data['line_item_note']) ? $data['line_item_note'] : null;
+        $this->container['subFund'] = isset($data['subFund']) ? $data['subFund'] : null;
+        $this->container['noOfCopies'] = isset($data['noOfCopies']) ? $data['noOfCopies'] : null;
+        $this->container['externalFund'] = isset($data['externalFund']) ? $data['externalFund'] : null;
+        $this->container['orderStatus'] = isset($data['orderStatus']) ? $data['orderStatus'] : null;
+        $this->container['useTax'] = isset($data['useTax']) ? $data['useTax'] : null;
+        $this->container['lineItemNote'] = isset($data['lineItemNote']) ? $data['lineItemNote'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['multi_flag'] = isset($data['multi_flag']) ? $data['multi_flag'] : null;
+        $this->container['multiFlag'] = isset($data['multiFlag']) ? $data['multiFlag'] : null;
         $this->container['vendor'] = isset($data['vendor']) ? $data['vendor'] : null;
-        $this->container['sub_starting_date'] = isset($data['sub_starting_date']) ? $data['sub_starting_date'] : null;
-        $this->container['sub_ending_date'] = isset($data['sub_ending_date']) ? $data['sub_ending_date'] : null;
+        $this->container['subStartingDate'] = isset($data['subStartingDate']) ? $data['subStartingDate'] : null;
+        $this->container['subEndingDate'] = isset($data['subEndingDate']) ? $data['subEndingDate'] : null;
         $this->container['tax'] = isset($data['tax']) ? $data['tax'] : null;
     }
 
@@ -307,8 +307,8 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         if ($this->container['invoice'] === null) {
             $invalidProperties[] = "'invoice' can't be null";
         }
-        if ($this->container['multi_flag'] === null) {
-            $invalidProperties[] = "'multi_flag' can't be null";
+        if ($this->container['multiFlag'] === null) {
+            $invalidProperties[] = "'multiFlag' can't be null";
         }
         return $invalidProperties;
     }
@@ -328,7 +328,7 @@ class InvoiceLine implements ModelInterface, ArrayAccess
         if ($this->container['invoice'] === null) {
             return false;
         }
-        if ($this->container['multi_flag'] === null) {
+        if ($this->container['multiFlag'] === null) {
             return false;
         }
         return true;
@@ -408,97 +408,97 @@ class InvoiceLine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets paid_amount
+     * Gets paidAmount
      *
      * @return double
      */
     public function getPaidAmount()
     {
-        return $this->container['paid_amount'];
+        return $this->container['paidAmount'];
     }
 
     /**
-     * Sets paid_amount
+     * Sets paidAmount
      *
-     * @param double $paid_amount paid amount, entered by user
+     * @param double $paidAmount paid amount, entered by user
      *
      * @return $this
      */
-    public function setPaidAmount($paid_amount)
+    public function setPaidAmount($paidAmount)
     {
-        $this->container['paid_amount'] = $paid_amount;
+        $this->container['paidAmount'] = $paidAmount;
 
         return $this;
     }
 
     /**
-     * Gets lien_amount
+     * Gets lienAmount
      *
      * @return double
      */
     public function getLienAmount()
     {
-        return $this->container['lien_amount'];
+        return $this->container['lienAmount'];
     }
 
     /**
-     * Sets lien_amount
+     * Sets lienAmount
      *
-     * @param double $lien_amount lien amount
+     * @param double $lienAmount lien amount
      *
      * @return $this
      */
-    public function setLienAmount($lien_amount)
+    public function setLienAmount($lienAmount)
     {
-        $this->container['lien_amount'] = $lien_amount;
+        $this->container['lienAmount'] = $lienAmount;
 
         return $this;
     }
 
     /**
-     * Gets lien_flag
+     * Gets lienFlag
      *
      * @return int
      */
     public function getLienFlag()
     {
-        return $this->container['lien_flag'];
+        return $this->container['lienFlag'];
     }
 
     /**
-     * Sets lien_flag
+     * Sets lienFlag
      *
-     * @param int $lien_flag lien flag
+     * @param int $lienFlag lien flag
      *
      * @return $this
      */
-    public function setLienFlag($lien_flag)
+    public function setLienFlag($lienFlag)
     {
-        $this->container['lien_flag'] = $lien_flag;
+        $this->container['lienFlag'] = $lienFlag;
 
         return $this;
     }
 
     /**
-     * Gets list_price
+     * Gets listPrice
      *
      * @return double
      */
     public function getListPrice()
     {
-        return $this->container['list_price'];
+        return $this->container['listPrice'];
     }
 
     /**
-     * Sets list_price
+     * Sets listPrice
      *
-     * @param double $list_price list price
+     * @param double $listPrice list price
      *
      * @return $this
      */
-    public function setListPrice($list_price)
+    public function setListPrice($listPrice)
     {
-        $this->container['list_price'] = $list_price;
+        $this->container['listPrice'] = $listPrice;
 
         return $this;
     }
@@ -528,145 +528,145 @@ class InvoiceLine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets sub_fund
+     * Gets subFund
      *
      * @return int
      */
     public function getSubFund()
     {
-        return $this->container['sub_fund'];
+        return $this->container['subFund'];
     }
 
     /**
-     * Sets sub_fund
+     * Sets subFund
      *
-     * @param int $sub_fund sub-fund associated with an internal fund code (max 7 per fund)
+     * @param int $subFund sub-fund associated with an internal fund code (max 7 per fund)
      *
      * @return $this
      */
-    public function setSubFund($sub_fund)
+    public function setSubFund($subFund)
     {
-        $this->container['sub_fund'] = $sub_fund;
+        $this->container['subFund'] = $subFund;
 
         return $this;
     }
 
     /**
-     * Gets no_of_copies
+     * Gets noOfCopies
      *
      * @return int
      */
     public function getNoOfCopies()
     {
-        return $this->container['no_of_copies'];
+        return $this->container['noOfCopies'];
     }
 
     /**
-     * Sets no_of_copies
+     * Sets noOfCopies
      *
-     * @param int $no_of_copies number of copies of the material contained in this line item
+     * @param int $noOfCopies number of copies of the material contained in this line item
      *
      * @return $this
      */
-    public function setNoOfCopies($no_of_copies)
+    public function setNoOfCopies($noOfCopies)
     {
-        $this->container['no_of_copies'] = $no_of_copies;
+        $this->container['noOfCopies'] = $noOfCopies;
 
         return $this;
     }
 
     /**
-     * Gets external_fund
+     * Gets externalFund
      *
      * @return int
      */
     public function getExternalFund()
     {
-        return $this->container['external_fund'];
+        return $this->container['externalFund'];
     }
 
     /**
-     * Sets external_fund
+     * Sets externalFund
      *
-     * @param int $external_fund external fund code
+     * @param int $externalFund external fund code
      *
      * @return $this
      */
-    public function setExternalFund($external_fund)
+    public function setExternalFund($externalFund)
     {
-        $this->container['external_fund'] = $external_fund;
+        $this->container['externalFund'] = $externalFund;
 
         return $this;
     }
 
     /**
-     * Gets order_status
+     * Gets orderStatus
      *
      * @return string
      */
     public function getOrderStatus()
     {
-        return $this->container['order_status'];
+        return $this->container['orderStatus'];
     }
 
     /**
-     * Sets order_status
+     * Sets orderStatus
      *
-     * @param string $order_status status of this line item
+     * @param string $orderStatus status of this line item
      *
      * @return $this
      */
-    public function setOrderStatus($order_status)
+    public function setOrderStatus($orderStatus)
     {
-        $this->container['order_status'] = $order_status;
+        $this->container['orderStatus'] = $orderStatus;
 
         return $this;
     }
 
     /**
-     * Gets use_tax
+     * Gets useTax
      *
      * @return bool
      */
     public function getUseTax()
     {
-        return $this->container['use_tax'];
+        return $this->container['useTax'];
     }
 
     /**
-     * Sets use_tax
+     * Sets useTax
      *
-     * @param bool $use_tax whether use tax is used for this line item
+     * @param bool $useTax whether use tax is used for this line item
      *
      * @return $this
      */
-    public function setUseTax($use_tax)
+    public function setUseTax($useTax)
     {
-        $this->container['use_tax'] = $use_tax;
+        $this->container['useTax'] = $useTax;
 
         return $this;
     }
 
     /**
-     * Gets line_item_note
+     * Gets lineItemNote
      *
      * @return string
      */
     public function getLineItemNote()
     {
-        return $this->container['line_item_note'];
+        return $this->container['lineItemNote'];
     }
 
     /**
-     * Sets line_item_note
+     * Sets lineItemNote
      *
-     * @param string $line_item_note note associated with this line item, entered by user
+     * @param string $lineItemNote note associated with this line item, entered by user
      *
      * @return $this
      */
-    public function setLineItemNote($line_item_note)
+    public function setLineItemNote($lineItemNote)
     {
-        $this->container['line_item_note'] = $line_item_note;
+        $this->container['lineItemNote'] = $lineItemNote;
 
         return $this;
     }
@@ -696,25 +696,25 @@ class InvoiceLine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets multi_flag
+     * Gets multiFlag
      *
      * @return string
      */
     public function getMultiFlag()
     {
-        return $this->container['multi_flag'];
+        return $this->container['multiFlag'];
     }
 
     /**
-     * Sets multi_flag
+     * Sets multiFlag
      *
-     * @param string $multi_flag multi-fund group code
+     * @param string $multiFlag multi-fund group code
      *
      * @return $this
      */
-    public function setMultiFlag($multi_flag)
+    public function setMultiFlag($multiFlag)
     {
-        $this->container['multi_flag'] = $multi_flag;
+        $this->container['multiFlag'] = $multiFlag;
 
         return $this;
     }
@@ -744,49 +744,49 @@ class InvoiceLine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets sub_starting_date
+     * Gets subStartingDate
      *
      * @return \DateTime
      */
     public function getSubStartingDate()
     {
-        return $this->container['sub_starting_date'];
+        return $this->container['subStartingDate'];
     }
 
     /**
-     * Sets sub_starting_date
+     * Sets subStartingDate
      *
-     * @param \DateTime $sub_starting_date subscription starting date, entered by user
+     * @param \DateTime $subStartingDate subscription starting date, entered by user
      *
      * @return $this
      */
-    public function setSubStartingDate($sub_starting_date)
+    public function setSubStartingDate($subStartingDate)
     {
-        $this->container['sub_starting_date'] = $sub_starting_date;
+        $this->container['subStartingDate'] = $subStartingDate;
 
         return $this;
     }
 
     /**
-     * Gets sub_ending_date
+     * Gets subEndingDate
      *
      * @return \DateTime
      */
     public function getSubEndingDate()
     {
-        return $this->container['sub_ending_date'];
+        return $this->container['subEndingDate'];
     }
 
     /**
-     * Sets sub_ending_date
+     * Sets subEndingDate
      *
-     * @param \DateTime $sub_ending_date subscription end date, entered by user
+     * @param \DateTime $subEndingDate subscription end date, entered by user
      *
      * @return $this
      */
-    public function setSubEndingDate($sub_ending_date)
+    public function setSubEndingDate($subEndingDate)
     {
-        $this->container['sub_ending_date'] = $sub_ending_date;
+        $this->container['subEndingDate'] = $subEndingDate;
 
         return $this;
     }

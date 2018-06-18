@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PatronValidation Class Doc Comment
  *
  * @category Class
  * @description Authentication request
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'barcode' => 'string',
         'pin' => 'string',
-        'case_sensitivity' => 'bool'
+        'caseSensitivity' => 'bool'
     ];
 
     /**
@@ -68,7 +68,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'barcode' => null,
         'pin' => null,
-        'case_sensitivity' => null
+        'caseSensitivity' => null
     ];
 
     /**
@@ -100,7 +100,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'barcode' => 'barcode',
         'pin' => 'pin',
-        'case_sensitivity' => 'caseSensitivity'
+        'caseSensitivity' => 'caseSensitivity'
     ];
 
     /**
@@ -111,7 +111,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     protected static $setters = [
         'barcode' => 'setBarcode',
         'pin' => 'setPin',
-        'case_sensitivity' => 'setCaseSensitivity'
+        'caseSensitivity' => 'setCaseSensitivity'
     ];
 
     /**
@@ -122,7 +122,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     protected static $getters = [
         'barcode' => 'getBarcode',
         'pin' => 'getPin',
-        'case_sensitivity' => 'getCaseSensitivity'
+        'caseSensitivity' => 'getCaseSensitivity'
     ];
 
     /**
@@ -187,7 +187,7 @@ class PatronValidation implements ModelInterface, ArrayAccess
     {
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
         $this->container['pin'] = isset($data['pin']) ? $data['pin'] : null;
-        $this->container['case_sensitivity'] = isset($data['case_sensitivity']) ? $data['case_sensitivity'] : null;
+        $this->container['caseSensitivity'] = isset($data['caseSensitivity']) ? $data['caseSensitivity'] : null;
     }
 
     /**
@@ -276,25 +276,25 @@ class PatronValidation implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets case_sensitivity
+     * Gets caseSensitivity
      *
      * @return bool
      */
     public function getCaseSensitivity()
     {
-        return $this->container['case_sensitivity'];
+        return $this->container['caseSensitivity'];
     }
 
     /**
-     * Sets case_sensitivity
+     * Sets caseSensitivity
      *
-     * @param bool $case_sensitivity Case sensitivity
+     * @param bool $caseSensitivity Case sensitivity
      *
      * @return $this
      */
-    public function setCaseSensitivity($case_sensitivity)
+    public function setCaseSensitivity($caseSensitivity)
     {
-        $this->container['case_sensitivity'] = $case_sensitivity;
+        $this->container['caseSensitivity'] = $caseSensitivity;
 
         return $this;
     }

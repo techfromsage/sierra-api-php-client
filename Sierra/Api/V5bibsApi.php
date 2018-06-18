@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5bibsApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5bibsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\QueryResultSet
+     * @return \III\Sierra\Models\QueryResultSet
      */
     public function filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
     {
@@ -107,13 +107,13 @@ class V5bibsApi
      * @param  int $limit the maximum number of results (required)
      * @param   $json a query in JSON format (see the Sierra API reference documentation for more information) (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\QueryResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function filterTheRecordsByAQueryInJSONFormatWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         try {
@@ -165,7 +165,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\QueryResultSet',
+                        '\III\Sierra\Models\QueryResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5bibsApi
      */
     public function filterTheRecordsByAQueryInJSONFormatAsyncWithHttpInfo($offset, $limit, $json)
     {
-        $returnType = '\Sierra\Models\QueryResultSet';
+        $returnType = '\III\Sierra\Models\QueryResultSet';
         $request = $this->filterTheRecordsByAQueryInJSONFormatRequest($offset, $limit, $json);
 
         return $this->client
@@ -377,9 +377,9 @@ class V5bibsApi
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      * @param  string $index keyword index to be searched (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\BibSearchResultSet
+     * @return \III\Sierra\Models\BibSearchResultSet
      */
     public function findBibInformationUsingAWSSearchByAuthorTitleOrKeyword($text, $limit = null, $offset = null, $fields = null, $index = null)
     {
@@ -398,13 +398,13 @@ class V5bibsApi
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      * @param  string $index keyword index to be searched (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\BibSearchResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\BibSearchResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function findBibInformationUsingAWSSearchByAuthorTitleOrKeywordWithHttpInfo($text, $limit = null, $offset = null, $fields = null, $index = null)
     {
-        $returnType = '\Sierra\Models\BibSearchResultSet';
+        $returnType = '\III\Sierra\Models\BibSearchResultSet';
         $request = $this->findBibInformationUsingAWSSearchByAuthorTitleOrKeywordRequest($text, $limit, $offset, $fields, $index);
 
         try {
@@ -456,7 +456,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\BibSearchResultSet',
+                        '\III\Sierra\Models\BibSearchResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class V5bibsApi
      */
     public function findBibInformationUsingAWSSearchByAuthorTitleOrKeywordAsyncWithHttpInfo($text, $limit = null, $offset = null, $fields = null, $index = null)
     {
-        $returnType = '\Sierra\Models\BibSearchResultSet';
+        $returnType = '\III\Sierra\Models\BibSearchResultSet';
         $request = $this->findBibInformationUsingAWSSearchByAuthorTitleOrKeywordRequest($text, $limit, $offset, $fields, $index);
 
         return $this->client
@@ -672,9 +672,9 @@ class V5bibsApi
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (can be a range) (optional)
      * @param  string $mapping the suffix of the Innovative-to-MARC mapping file to apply (a blank entry uses the default mapping file) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\MarcSummary
+     * @return \III\Sierra\Models\MarcSummary
      */
     public function generateABinaryMARCDataFileOfBibs($limit = null, $id = null, $mapping = null)
     {
@@ -691,13 +691,13 @@ class V5bibsApi
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (can be a range) (optional)
      * @param  string $mapping the suffix of the Innovative-to-MARC mapping file to apply (a blank entry uses the default mapping file) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\MarcSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\MarcSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateABinaryMARCDataFileOfBibsWithHttpInfo($limit = null, $id = null, $mapping = null)
     {
-        $returnType = '\Sierra\Models\MarcSummary';
+        $returnType = '\III\Sierra\Models\MarcSummary';
         $request = $this->generateABinaryMARCDataFileOfBibsRequest($limit, $id, $mapping);
 
         try {
@@ -749,7 +749,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\MarcSummary',
+                        '\III\Sierra\Models\MarcSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -795,7 +795,7 @@ class V5bibsApi
      */
     public function generateABinaryMARCDataFileOfBibsAsyncWithHttpInfo($limit = null, $id = null, $mapping = null)
     {
-        $returnType = '\Sierra\Models\MarcSummary';
+        $returnType = '\III\Sierra\Models\MarcSummary';
         $request = $this->generateABinaryMARCDataFileOfBibsRequest($limit, $id, $mapping);
 
         return $this->client
@@ -944,9 +944,9 @@ class V5bibsApi
      * @param  int $id the bib record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Bib
+     * @return \III\Sierra\Models\Bib
      */
     public function getABibByRecordID($id, $fields = null)
     {
@@ -962,13 +962,13 @@ class V5bibsApi
      * @param  int $id the bib record ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Bib, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Bib, HTTP status code, HTTP response headers (array of strings)
      */
     public function getABibByRecordIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Bib';
+        $returnType = '\III\Sierra\Models\Bib';
         $request = $this->getABibByRecordIDRequest($id, $fields);
 
         try {
@@ -1020,7 +1020,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Bib',
+                        '\III\Sierra\Models\Bib',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1064,7 +1064,7 @@ class V5bibsApi
      */
     public function getABibByRecordIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Bib';
+        $returnType = '\III\Sierra\Models\Bib';
         $request = $this->getABibByRecordIDRequest($id, $fields);
 
         return $this->client
@@ -1219,20 +1219,20 @@ class V5bibsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted bibs to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) bibs (optional)
      * @param  bool $suppressed the suppressed flag value of bibs to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\BibResultSet
+     * @return \III\Sierra\Models\BibResultSet
      */
-    public function getAListOfBibs($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $locations = null)
+    public function getAListOfBibs($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $locations = null)
     {
-        list($response) = $this->getAListOfBibsWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations);
+        list($response) = $this->getAListOfBibsWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations);
         return $response;
     }
 
@@ -1245,21 +1245,21 @@ class V5bibsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted bibs to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) bibs (optional)
      * @param  bool $suppressed the suppressed flag value of bibs to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\BibResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\BibResultSet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfBibsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $locations = null)
+    public function getAListOfBibsWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $locations = null)
     {
-        $returnType = '\Sierra\Models\BibResultSet';
-        $request = $this->getAListOfBibsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations);
+        $returnType = '\III\Sierra\Models\BibResultSet';
+        $request = $this->getAListOfBibsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1310,7 +1310,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\BibResultSet',
+                        '\III\Sierra\Models\BibResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1329,9 +1329,9 @@ class V5bibsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted bibs to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) bibs (optional)
      * @param  bool $suppressed the suppressed flag value of bibs to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
@@ -1339,9 +1339,9 @@ class V5bibsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfBibsAsync($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $locations = null)
+    public function getAListOfBibsAsync($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $locations = null)
     {
-        return $this->getAListOfBibsAsyncWithHttpInfo($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations)
+        return $this->getAListOfBibsAsyncWithHttpInfo($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1358,9 +1358,9 @@ class V5bibsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted bibs to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) bibs (optional)
      * @param  bool $suppressed the suppressed flag value of bibs to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
@@ -1368,10 +1368,10 @@ class V5bibsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfBibsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $locations = null)
+    public function getAListOfBibsAsyncWithHttpInfo($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $locations = null)
     {
-        $returnType = '\Sierra\Models\BibResultSet';
-        $request = $this->getAListOfBibsRequest($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations);
+        $returnType = '\III\Sierra\Models\BibResultSet';
+        $request = $this->getAListOfBibsRequest($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1417,9 +1417,9 @@ class V5bibsApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $id a comma-delimited list of IDs of bibs to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
-     * @param  \DateTime $created_date the creation date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $updated_date the modification date of bibs to retrieve (can be a range) (optional)
-     * @param  \DateTime $deleted_date the deletion date of deleted bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $createdDate the creation date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $updatedDate the modification date of bibs to retrieve (can be a range) (optional)
+     * @param  \DateTime $deletedDate the deletion date of deleted bibs to retrieve (can be a range) (optional)
      * @param  bool $deleted whether to retrieve only deleted (true) or non-deleted (false) bibs (optional)
      * @param  bool $suppressed the suppressed flag value of bibs to retrieve (optional)
      * @param  string $locations a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) (optional)
@@ -1427,7 +1427,7 @@ class V5bibsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfBibsRequest($limit = null, $offset = null, $id = null, $fields = null, $created_date = null, $updated_date = null, $deleted_date = null, $deleted = null, $suppressed = null, $locations = null)
+    protected function getAListOfBibsRequest($limit = null, $offset = null, $id = null, $fields = null, $createdDate = null, $updatedDate = null, $deletedDate = null, $deleted = null, $suppressed = null, $locations = null)
     {
 
         $resourcePath = '/v5/bibs/';
@@ -1460,16 +1460,16 @@ class V5bibsApi
             $queryParams['fields'] = ObjectSerializer::toQueryValue($fields);
         }
         // query params
-        if ($created_date !== null) {
-            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($created_date);
+        if ($createdDate !== null) {
+            $queryParams['createdDate'] = ObjectSerializer::toQueryValue($createdDate);
         }
         // query params
-        if ($updated_date !== null) {
-            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updated_date);
+        if ($updatedDate !== null) {
+            $queryParams['updatedDate'] = ObjectSerializer::toQueryValue($updatedDate);
         }
         // query params
-        if ($deleted_date !== null) {
-            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deleted_date);
+        if ($deletedDate !== null) {
+            $queryParams['deletedDate'] = ObjectSerializer::toQueryValue($deletedDate);
         }
         // query params
         if ($deleted !== null) {
@@ -1557,9 +1557,9 @@ class V5bibsApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Metadata[]
+     * @return \III\Sierra\Models\Metadata[]
      */
     public function getAListOfMetadata($fields = null, $language = null)
     {
@@ -1575,13 +1575,13 @@ class V5bibsApi
      * @param  string $fields list of comma separated metadata fields (optional)
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Metadata[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfMetadataWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         try {
@@ -1633,7 +1633,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Metadata[]',
+                        '\III\Sierra\Models\Metadata[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1677,7 +1677,7 @@ class V5bibsApi
      */
     public function getAListOfMetadataAsyncWithHttpInfo($fields = null, $language = null)
     {
-        $returnType = '\Sierra\Models\Metadata[]';
+        $returnType = '\III\Sierra\Models\Metadata[]';
         $request = $this->getAListOfMetadataRequest($fields, $language);
 
         return $this->client
@@ -1817,7 +1817,7 @@ class V5bibsApi
      *
      * @param  int $id the ID of the MARC data file to retrieve (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1833,7 +1833,7 @@ class V5bibsApi
      *
      * @param  int $id the ID of the MARC data file to retrieve (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2042,9 +2042,9 @@ class V5bibsApi
      *
      * @param  int $id the bib record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\ErrorCode
+     * @return \III\Sierra\Models\ErrorCode
      */
     public function getTheMARCDataForASingleBibRecord($id)
     {
@@ -2059,13 +2059,13 @@ class V5bibsApi
      *
      * @param  int $id the bib record ID (required)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\ErrorCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTheMARCDataForASingleBibRecordWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->getTheMARCDataForASingleBibRecordRequest($id);
 
         try {
@@ -2117,7 +2117,7 @@ class V5bibsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\ErrorCode',
+                        '\III\Sierra\Models\ErrorCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2159,7 +2159,7 @@ class V5bibsApi
      */
     public function getTheMARCDataForASingleBibRecordAsyncWithHttpInfo($id)
     {
-        $returnType = '\Sierra\Models\ErrorCode';
+        $returnType = '\III\Sierra\Models\ErrorCode';
         $request = $this->getTheMARCDataForASingleBibRecordRequest($id);
 
         return $this->client

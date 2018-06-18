@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **int** | the API error code | 
-**specific_code** | **int** | an error code returned by an external service | 
-**http_status** | **int** | the HTTP status code | 
+**specificCode** | **int** | an error code returned by an external service | 
+**httpStatus** | **int** | the HTTP status code | 
 **name** | **string** | the error name | 
 **description** | **string** | the error description | [optional] 
 

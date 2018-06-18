@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * MilprotoSettings Class Doc Comment
  *
  * @category Class
  * @description MILPROTO settings
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         'persistent' => 'bool',
         'username' => 'string',
         'password' => 'string',
-        'accounting_unit' => 'int'
+        'accountingUnit' => 'int'
     ];
 
     /**
@@ -74,7 +74,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         'persistent' => null,
         'username' => null,
         'password' => null,
-        'accounting_unit' => 'int32'
+        'accountingUnit' => 'int32'
     ];
 
     /**
@@ -109,7 +109,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         'persistent' => 'persistent',
         'username' => 'username',
         'password' => 'password',
-        'accounting_unit' => 'accountingUnit'
+        'accountingUnit' => 'accountingUnit'
     ];
 
     /**
@@ -123,7 +123,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         'persistent' => 'setPersistent',
         'username' => 'setUsername',
         'password' => 'setPassword',
-        'accounting_unit' => 'setAccountingUnit'
+        'accountingUnit' => 'setAccountingUnit'
     ];
 
     /**
@@ -137,7 +137,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         'persistent' => 'getPersistent',
         'username' => 'getUsername',
         'password' => 'getPassword',
-        'accounting_unit' => 'getAccountingUnit'
+        'accountingUnit' => 'getAccountingUnit'
     ];
 
     /**
@@ -205,7 +205,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         $this->container['persistent'] = isset($data['persistent']) ? $data['persistent'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['accounting_unit'] = isset($data['accounting_unit']) ? $data['accounting_unit'] : null;
+        $this->container['accountingUnit'] = isset($data['accountingUnit']) ? $data['accountingUnit'] : null;
     }
 
     /**
@@ -232,8 +232,8 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         if ($this->container['password'] === null) {
             $invalidProperties[] = "'password' can't be null";
         }
-        if ($this->container['accounting_unit'] === null) {
-            $invalidProperties[] = "'accounting_unit' can't be null";
+        if ($this->container['accountingUnit'] === null) {
+            $invalidProperties[] = "'accountingUnit' can't be null";
         }
         return $invalidProperties;
     }
@@ -262,7 +262,7 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
         if ($this->container['password'] === null) {
             return false;
         }
-        if ($this->container['accounting_unit'] === null) {
+        if ($this->container['accountingUnit'] === null) {
             return false;
         }
         return true;
@@ -390,25 +390,25 @@ class MilprotoSettings implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets accounting_unit
+     * Gets accountingUnit
      *
      * @return int
      */
     public function getAccountingUnit()
     {
-        return $this->container['accounting_unit'];
+        return $this->container['accountingUnit'];
     }
 
     /**
-     * Sets accounting_unit
+     * Sets accountingUnit
      *
-     * @param int $accounting_unit the accounting unit
+     * @param int $accountingUnit the accounting unit
      *
      * @return $this
      */
-    public function setAccountingUnit($accounting_unit)
+    public function setAccountingUnit($accountingUnit)
     {
-        $this->container['accounting_unit'] = $accounting_unit;
+        $this->container['accountingUnit'] = $accountingUnit;
 
         return $this;
     }

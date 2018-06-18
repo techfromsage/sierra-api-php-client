@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * TokenInfo Class Doc Comment
  *
  * @category Class
  * @description the token information details
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,12 +55,12 @@ class TokenInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'patron_id' => 'string',
-        'key_id' => 'string',
-        'grant_type' => 'string',
-        'authorization_scheme' => 'string',
-        'expires_in' => 'int',
-        'roles' => '\Sierra\Models\TokenInfoRole[]'
+        'patronId' => 'string',
+        'keyId' => 'string',
+        'grantType' => 'string',
+        'authorizationScheme' => 'string',
+        'expiresIn' => 'int',
+        'roles' => '\III\Sierra\Models\TokenInfoRole[]'
     ];
 
     /**
@@ -69,11 +69,11 @@ class TokenInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'patron_id' => null,
-        'key_id' => null,
-        'grant_type' => null,
-        'authorization_scheme' => null,
-        'expires_in' => 'int64',
+        'patronId' => null,
+        'keyId' => null,
+        'grantType' => null,
+        'authorizationScheme' => null,
+        'expiresIn' => 'int64',
         'roles' => null
     ];
 
@@ -104,11 +104,11 @@ class TokenInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'patron_id' => 'patronId',
-        'key_id' => 'keyId',
-        'grant_type' => 'grantType',
-        'authorization_scheme' => 'authorizationScheme',
-        'expires_in' => 'expiresIn',
+        'patronId' => 'patronId',
+        'keyId' => 'keyId',
+        'grantType' => 'grantType',
+        'authorizationScheme' => 'authorizationScheme',
+        'expiresIn' => 'expiresIn',
         'roles' => 'roles'
     ];
 
@@ -118,11 +118,11 @@ class TokenInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'patron_id' => 'setPatronId',
-        'key_id' => 'setKeyId',
-        'grant_type' => 'setGrantType',
-        'authorization_scheme' => 'setAuthorizationScheme',
-        'expires_in' => 'setExpiresIn',
+        'patronId' => 'setPatronId',
+        'keyId' => 'setKeyId',
+        'grantType' => 'setGrantType',
+        'authorizationScheme' => 'setAuthorizationScheme',
+        'expiresIn' => 'setExpiresIn',
         'roles' => 'setRoles'
     ];
 
@@ -132,11 +132,11 @@ class TokenInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'patron_id' => 'getPatronId',
-        'key_id' => 'getKeyId',
-        'grant_type' => 'getGrantType',
-        'authorization_scheme' => 'getAuthorizationScheme',
-        'expires_in' => 'getExpiresIn',
+        'patronId' => 'getPatronId',
+        'keyId' => 'getKeyId',
+        'grantType' => 'getGrantType',
+        'authorizationScheme' => 'getAuthorizationScheme',
+        'expiresIn' => 'getExpiresIn',
         'roles' => 'getRoles'
     ];
 
@@ -200,11 +200,11 @@ class TokenInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['patron_id'] = isset($data['patron_id']) ? $data['patron_id'] : null;
-        $this->container['key_id'] = isset($data['key_id']) ? $data['key_id'] : null;
-        $this->container['grant_type'] = isset($data['grant_type']) ? $data['grant_type'] : null;
-        $this->container['authorization_scheme'] = isset($data['authorization_scheme']) ? $data['authorization_scheme'] : null;
-        $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
+        $this->container['patronId'] = isset($data['patronId']) ? $data['patronId'] : null;
+        $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
+        $this->container['grantType'] = isset($data['grantType']) ? $data['grantType'] : null;
+        $this->container['authorizationScheme'] = isset($data['authorizationScheme']) ? $data['authorizationScheme'] : null;
+        $this->container['expiresIn'] = isset($data['expiresIn']) ? $data['expiresIn'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
     }
 
@@ -217,14 +217,14 @@ class TokenInfo implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['key_id'] === null) {
-            $invalidProperties[] = "'key_id' can't be null";
+        if ($this->container['keyId'] === null) {
+            $invalidProperties[] = "'keyId' can't be null";
         }
-        if ($this->container['authorization_scheme'] === null) {
-            $invalidProperties[] = "'authorization_scheme' can't be null";
+        if ($this->container['authorizationScheme'] === null) {
+            $invalidProperties[] = "'authorizationScheme' can't be null";
         }
-        if ($this->container['expires_in'] === null) {
-            $invalidProperties[] = "'expires_in' can't be null";
+        if ($this->container['expiresIn'] === null) {
+            $invalidProperties[] = "'expiresIn' can't be null";
         }
         if ($this->container['roles'] === null) {
             $invalidProperties[] = "'roles' can't be null";
@@ -241,13 +241,13 @@ class TokenInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['key_id'] === null) {
+        if ($this->container['keyId'] === null) {
             return false;
         }
-        if ($this->container['authorization_scheme'] === null) {
+        if ($this->container['authorizationScheme'] === null) {
             return false;
         }
-        if ($this->container['expires_in'] === null) {
+        if ($this->container['expiresIn'] === null) {
             return false;
         }
         if ($this->container['roles'] === null) {
@@ -258,121 +258,121 @@ class TokenInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets patron_id
+     * Gets patronId
      *
      * @return string
      */
     public function getPatronId()
     {
-        return $this->container['patron_id'];
+        return $this->container['patronId'];
     }
 
     /**
-     * Sets patron_id
+     * Sets patronId
      *
-     * @param string $patron_id the associated patron ID (applies only to authorization code grant sessions)
+     * @param string $patronId the associated patron ID (applies only to authorization code grant sessions)
      *
      * @return $this
      */
-    public function setPatronId($patron_id)
+    public function setPatronId($patronId)
     {
-        $this->container['patron_id'] = $patron_id;
+        $this->container['patronId'] = $patronId;
 
         return $this;
     }
 
     /**
-     * Gets key_id
+     * Gets keyId
      *
      * @return string
      */
     public function getKeyId()
     {
-        return $this->container['key_id'];
+        return $this->container['keyId'];
     }
 
     /**
-     * Sets key_id
+     * Sets keyId
      *
-     * @param string $key_id the key ID
+     * @param string $keyId the key ID
      *
      * @return $this
      */
-    public function setKeyId($key_id)
+    public function setKeyId($keyId)
     {
-        $this->container['key_id'] = $key_id;
+        $this->container['keyId'] = $keyId;
 
         return $this;
     }
 
     /**
-     * Gets grant_type
+     * Gets grantType
      *
      * @return string
      */
     public function getGrantType()
     {
-        return $this->container['grant_type'];
+        return $this->container['grantType'];
     }
 
     /**
-     * Sets grant_type
+     * Sets grantType
      *
-     * @param string $grant_type the grant type, i.e., authorization code grant or client credentials grant
+     * @param string $grantType the grant type, i.e., authorization code grant or client credentials grant
      *
      * @return $this
      */
-    public function setGrantType($grant_type)
+    public function setGrantType($grantType)
     {
-        $this->container['grant_type'] = $grant_type;
+        $this->container['grantType'] = $grantType;
 
         return $this;
     }
 
     /**
-     * Gets authorization_scheme
+     * Gets authorizationScheme
      *
      * @return string
      */
     public function getAuthorizationScheme()
     {
-        return $this->container['authorization_scheme'];
+        return $this->container['authorizationScheme'];
     }
 
     /**
-     * Sets authorization_scheme
+     * Sets authorizationScheme
      *
-     * @param string $authorization_scheme the authorization scheme, such as 'Bearer' or 'Basic'
+     * @param string $authorizationScheme the authorization scheme, such as 'Bearer' or 'Basic'
      *
      * @return $this
      */
-    public function setAuthorizationScheme($authorization_scheme)
+    public function setAuthorizationScheme($authorizationScheme)
     {
-        $this->container['authorization_scheme'] = $authorization_scheme;
+        $this->container['authorizationScheme'] = $authorizationScheme;
 
         return $this;
     }
 
     /**
-     * Gets expires_in
+     * Gets expiresIn
      *
      * @return int
      */
     public function getExpiresIn()
     {
-        return $this->container['expires_in'];
+        return $this->container['expiresIn'];
     }
 
     /**
-     * Sets expires_in
+     * Sets expiresIn
      *
-     * @param int $expires_in the remaining time (in seconds) after which the token expires
+     * @param int $expiresIn the remaining time (in seconds) after which the token expires
      *
      * @return $this
      */
-    public function setExpiresIn($expires_in)
+    public function setExpiresIn($expiresIn)
     {
-        $this->container['expires_in'] = $expires_in;
+        $this->container['expiresIn'] = $expiresIn;
 
         return $this;
     }
@@ -380,7 +380,7 @@ class TokenInfo implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Sierra\Models\TokenInfoRole[]
+     * @return \III\Sierra\Models\TokenInfoRole[]
      */
     public function getRoles()
     {
@@ -390,7 +390,7 @@ class TokenInfo implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Sierra\Models\TokenInfoRole[] $roles the user role associated with the token
+     * @param \III\Sierra\Models\TokenInfoRole[] $roles the user role associated with the token
      *
      * @return $this
      */

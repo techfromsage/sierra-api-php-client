@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * TokenInfoRole Class Doc Comment
  *
  * @category Class
  * @description the token information role details
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'token_lifetime' => 'int',
+        'tokenLifetime' => 'int',
         'permissions' => 'string[]'
     ];
 
@@ -67,7 +67,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'name' => null,
-        'token_lifetime' => 'int64',
+        'tokenLifetime' => 'int64',
         'permissions' => null
     ];
 
@@ -99,7 +99,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'token_lifetime' => 'tokenLifetime',
+        'tokenLifetime' => 'tokenLifetime',
         'permissions' => 'permissions'
     ];
 
@@ -110,7 +110,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'name' => 'setName',
-        'token_lifetime' => 'setTokenLifetime',
+        'tokenLifetime' => 'setTokenLifetime',
         'permissions' => 'setPermissions'
     ];
 
@@ -121,7 +121,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'name' => 'getName',
-        'token_lifetime' => 'getTokenLifetime',
+        'tokenLifetime' => 'getTokenLifetime',
         'permissions' => 'getPermissions'
     ];
 
@@ -186,7 +186,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['token_lifetime'] = isset($data['token_lifetime']) ? $data['token_lifetime'] : null;
+        $this->container['tokenLifetime'] = isset($data['tokenLifetime']) ? $data['tokenLifetime'] : null;
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
     }
 
@@ -202,8 +202,8 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['token_lifetime'] === null) {
-            $invalidProperties[] = "'token_lifetime' can't be null";
+        if ($this->container['tokenLifetime'] === null) {
+            $invalidProperties[] = "'tokenLifetime' can't be null";
         }
         if ($this->container['permissions'] === null) {
             $invalidProperties[] = "'permissions' can't be null";
@@ -223,7 +223,7 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             return false;
         }
-        if ($this->container['token_lifetime'] === null) {
+        if ($this->container['tokenLifetime'] === null) {
             return false;
         }
         if ($this->container['permissions'] === null) {
@@ -258,25 +258,25 @@ class TokenInfoRole implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets token_lifetime
+     * Gets tokenLifetime
      *
      * @return int
      */
     public function getTokenLifetime()
     {
-        return $this->container['token_lifetime'];
+        return $this->container['tokenLifetime'];
     }
 
     /**
-     * Sets token_lifetime
+     * Sets tokenLifetime
      *
-     * @param int $token_lifetime the token's lifetime in seconds
+     * @param int $tokenLifetime the token's lifetime in seconds
      *
      * @return $this
      */
-    public function setTokenLifetime($token_lifetime)
+    public function setTokenLifetime($tokenLifetime)
     {
-        $this->container['token_lifetime'] = $token_lifetime;
+        $this->container['tokenLifetime'] = $tokenLifetime;
 
         return $this;
     }

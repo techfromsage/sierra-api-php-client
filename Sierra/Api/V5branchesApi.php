@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5branchesApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,9 +87,9 @@ class V5branchesApi
      * @param  int $id the branch ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Branch
+     * @return \III\Sierra\Models\Branch
      */
     public function getABranchByBranchID($id, $fields = null)
     {
@@ -105,13 +105,13 @@ class V5branchesApi
      * @param  int $id the branch ID (required)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Branch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Branch, HTTP status code, HTTP response headers (array of strings)
      */
     public function getABranchByBranchIDWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Branch';
+        $returnType = '\III\Sierra\Models\Branch';
         $request = $this->getABranchByBranchIDRequest($id, $fields);
 
         try {
@@ -163,7 +163,7 @@ class V5branchesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Branch',
+                        '\III\Sierra\Models\Branch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class V5branchesApi
      */
     public function getABranchByBranchIDAsyncWithHttpInfo($id, $fields = null)
     {
-        $returnType = '\Sierra\Models\Branch';
+        $returnType = '\III\Sierra\Models\Branch';
         $request = $this->getABranchByBranchIDRequest($id, $fields);
 
         return $this->client
@@ -362,9 +362,9 @@ class V5branchesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\BranchResultSet
+     * @return \III\Sierra\Models\BranchResultSet
      */
     public function getAListOfBranches($limit = null, $offset = null, $fields = null)
     {
@@ -381,13 +381,13 @@ class V5branchesApi
      * @param  int $offset the beginning record (zero-indexed) of the result set returned (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\BranchResultSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\BranchResultSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfBranchesWithHttpInfo($limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\BranchResultSet';
+        $returnType = '\III\Sierra\Models\BranchResultSet';
         $request = $this->getAListOfBranchesRequest($limit, $offset, $fields);
 
         try {
@@ -439,7 +439,7 @@ class V5branchesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\BranchResultSet',
+                        '\III\Sierra\Models\BranchResultSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class V5branchesApi
      */
     public function getAListOfBranchesAsyncWithHttpInfo($limit = null, $offset = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\BranchResultSet';
+        $returnType = '\III\Sierra\Models\BranchResultSet';
         $request = $this->getAListOfBranchesRequest($limit, $offset, $fields);
 
         return $this->client
@@ -633,9 +633,9 @@ class V5branchesApi
      *
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Location[]
+     * @return \III\Sierra\Models\Location[]
      */
     public function getListOfPickupLocations($language = null)
     {
@@ -650,13 +650,13 @@ class V5branchesApi
      *
      * @param  string $language an ISO 639-1 language code (default is en) (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Location[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Location[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfPickupLocationsWithHttpInfo($language = null)
     {
-        $returnType = '\Sierra\Models\Location[]';
+        $returnType = '\III\Sierra\Models\Location[]';
         $request = $this->getListOfPickupLocationsRequest($language);
 
         try {
@@ -708,7 +708,7 @@ class V5branchesApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Location[]',
+                        '\III\Sierra\Models\Location[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -750,7 +750,7 @@ class V5branchesApi
      */
     public function getListOfPickupLocationsAsyncWithHttpInfo($language = null)
     {
-        $returnType = '\Sierra\Models\Location[]';
+        $returnType = '\III\Sierra\Models\Location[]';
         $request = $this->getListOfPickupLocationsRequest($language);
 
         return $this->client

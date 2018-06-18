@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location** | [**\Sierra\Models\Location**](Location.md) | the location for which the bib was ordered | 
+**location** | [**\III\Sierra\Models\Location**](Location.md) | the location for which the bib was ordered | 
 **copies** | **int** | the number of copies ordered | 
 **date** | [**\DateTime**](\DateTime.md) | the date the order was placed, in ISO 8601 format (yyyy-MM-dd) | [optional] 
 

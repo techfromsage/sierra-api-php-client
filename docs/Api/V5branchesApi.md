@@ -1,4 +1,4 @@
-# Sierra\V5branchesApi
+# III\Sierra\V5branchesApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getABranchByBranchID**
-> \Sierra\Models\Branch getABranchByBranchID($id, $fields)
+> \III\Sierra\Models\Branch getABranchByBranchID($id, $fields)
 
 Get a branch by branch ID
 
@@ -21,7 +21,7 @@ Get a branch by branch ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5branchesApi(
+$apiInstance = new III\Sierra\Api\V5branchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Branch**](../Model/Branch.md)
+[**\III\Sierra\Models\Branch**](../Model/Branch.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfBranches**
-> \Sierra\Models\BranchResultSet getAListOfBranches($limit, $offset, $fields)
+> \III\Sierra\Models\BranchResultSet getAListOfBranches($limit, $offset, $fields)
 
 Get a list of branches
 
@@ -72,7 +72,7 @@ Get a list of branches
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5branchesApi(
+$apiInstance = new III\Sierra\Api\V5branchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\BranchResultSet**](../Model/BranchResultSet.md)
+[**\III\Sierra\Models\BranchResultSet**](../Model/BranchResultSet.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getListOfPickupLocations**
-> \Sierra\Models\Location[] getListOfPickupLocations($language)
+> \III\Sierra\Models\Location[] getListOfPickupLocations($language)
 
 get list of pickup locations
 
@@ -125,7 +125,7 @@ get list of pickup locations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5branchesApi(
+$apiInstance = new III\Sierra\Api\V5branchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Location[]**](../Model/Location.md)
+[**\III\Sierra\Models\Location[]**](../Model/Location.md)
 
 ### Authorization
 

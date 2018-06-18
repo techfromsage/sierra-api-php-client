@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * UseTax Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -54,8 +54,8 @@ class UseTax implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'use_tax_fund' => 'string',
-        'percentage_rate' => 'double'
+        'useTaxFund' => 'string',
+        'percentageRate' => 'double'
     ];
 
     /**
@@ -64,8 +64,8 @@ class UseTax implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'use_tax_fund' => null,
-        'percentage_rate' => 'double'
+        'useTaxFund' => null,
+        'percentageRate' => 'double'
     ];
 
     /**
@@ -95,8 +95,8 @@ class UseTax implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'use_tax_fund' => 'useTaxFund',
-        'percentage_rate' => 'percentageRate'
+        'useTaxFund' => 'useTaxFund',
+        'percentageRate' => 'percentageRate'
     ];
 
     /**
@@ -105,8 +105,8 @@ class UseTax implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'use_tax_fund' => 'setUseTaxFund',
-        'percentage_rate' => 'setPercentageRate'
+        'useTaxFund' => 'setUseTaxFund',
+        'percentageRate' => 'setPercentageRate'
     ];
 
     /**
@@ -115,8 +115,8 @@ class UseTax implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'use_tax_fund' => 'getUseTaxFund',
-        'percentage_rate' => 'getPercentageRate'
+        'useTaxFund' => 'getUseTaxFund',
+        'percentageRate' => 'getPercentageRate'
     ];
 
     /**
@@ -179,8 +179,8 @@ class UseTax implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['use_tax_fund'] = isset($data['use_tax_fund']) ? $data['use_tax_fund'] : null;
-        $this->container['percentage_rate'] = isset($data['percentage_rate']) ? $data['percentage_rate'] : null;
+        $this->container['useTaxFund'] = isset($data['useTaxFund']) ? $data['useTaxFund'] : null;
+        $this->container['percentageRate'] = isset($data['percentageRate']) ? $data['percentageRate'] : null;
     }
 
     /**
@@ -209,49 +209,49 @@ class UseTax implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets use_tax_fund
+     * Gets useTaxFund
      *
      * @return string
      */
     public function getUseTaxFund()
     {
-        return $this->container['use_tax_fund'];
+        return $this->container['useTaxFund'];
     }
 
     /**
-     * Sets use_tax_fund
+     * Sets useTaxFund
      *
-     * @param string $use_tax_fund fund from which use tax is paid if the vendor does not charge or undercharges sales tax, but you remain liable to pay the tax
+     * @param string $useTaxFund fund from which use tax is paid if the vendor does not charge or undercharges sales tax, but you remain liable to pay the tax
      *
      * @return $this
      */
-    public function setUseTaxFund($use_tax_fund)
+    public function setUseTaxFund($useTaxFund)
     {
-        $this->container['use_tax_fund'] = $use_tax_fund;
+        $this->container['useTaxFund'] = $useTaxFund;
 
         return $this;
     }
 
     /**
-     * Gets percentage_rate
+     * Gets percentageRate
      *
      * @return double
      */
     public function getPercentageRate()
     {
-        return $this->container['percentage_rate'];
+        return $this->container['percentageRate'];
     }
 
     /**
-     * Sets percentage_rate
+     * Sets percentageRate
      *
-     * @param double $percentage_rate percentage at which the tax is set ; obtained from invoking the GET /v4/metadata/invoices endpoint
+     * @param double $percentageRate percentage at which the tax is set ; obtained from invoking the GET /v4/metadata/invoices endpoint
      *
      * @return $this
      */
-    public function setPercentageRate($percentage_rate)
+    public function setPercentageRate($percentageRate)
     {
-        $this->container['percentage_rate'] = $percentage_rate;
+        $this->container['percentageRate'] = $percentageRate;
 
         return $this;
     }

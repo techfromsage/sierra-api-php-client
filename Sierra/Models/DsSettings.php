@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * DsSettings Class Doc Comment
  *
  * @category Class
  * @description The data service settings
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,13 +55,13 @@ class DsSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dataservice_url' => 'string',
-        'milsh_port' => 'int',
-        'x_circ_settings' => '\Sierra\Models\XClientSettings',
-        'x_circ2_settings' => '\Sierra\Models\XClientSettings',
-        'message_tag' => 'string',
-        'mildata_settings' => '\Sierra\Models\MildataSettings',
-        'milproto_settings' => '\Sierra\Models\MilprotoSettings'
+        'dataserviceUrl' => 'string',
+        'milshPort' => 'int',
+        'xCircSettings' => '\III\Sierra\Models\XClientSettings',
+        'xCirc2Settings' => '\III\Sierra\Models\XClientSettings',
+        'messageTag' => 'string',
+        'mildataSettings' => '\III\Sierra\Models\MildataSettings',
+        'milprotoSettings' => '\III\Sierra\Models\MilprotoSettings'
     ];
 
     /**
@@ -70,13 +70,13 @@ class DsSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'dataservice_url' => null,
-        'milsh_port' => 'int32',
-        'x_circ_settings' => null,
-        'x_circ2_settings' => null,
-        'message_tag' => null,
-        'mildata_settings' => null,
-        'milproto_settings' => null
+        'dataserviceUrl' => null,
+        'milshPort' => 'int32',
+        'xCircSettings' => null,
+        'xCirc2Settings' => null,
+        'messageTag' => null,
+        'mildataSettings' => null,
+        'milprotoSettings' => null
     ];
 
     /**
@@ -106,13 +106,13 @@ class DsSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'dataservice_url' => 'dataserviceUrl',
-        'milsh_port' => 'milshPort',
-        'x_circ_settings' => 'xCircSettings',
-        'x_circ2_settings' => 'xCirc2Settings',
-        'message_tag' => 'messageTag',
-        'mildata_settings' => 'mildataSettings',
-        'milproto_settings' => 'milprotoSettings'
+        'dataserviceUrl' => 'dataserviceUrl',
+        'milshPort' => 'milshPort',
+        'xCircSettings' => 'xCircSettings',
+        'xCirc2Settings' => 'xCirc2Settings',
+        'messageTag' => 'messageTag',
+        'mildataSettings' => 'mildataSettings',
+        'milprotoSettings' => 'milprotoSettings'
     ];
 
     /**
@@ -121,13 +121,13 @@ class DsSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'dataservice_url' => 'setDataserviceUrl',
-        'milsh_port' => 'setMilshPort',
-        'x_circ_settings' => 'setXCircSettings',
-        'x_circ2_settings' => 'setXCirc2Settings',
-        'message_tag' => 'setMessageTag',
-        'mildata_settings' => 'setMildataSettings',
-        'milproto_settings' => 'setMilprotoSettings'
+        'dataserviceUrl' => 'setDataserviceUrl',
+        'milshPort' => 'setMilshPort',
+        'xCircSettings' => 'setXCircSettings',
+        'xCirc2Settings' => 'setXCirc2Settings',
+        'messageTag' => 'setMessageTag',
+        'mildataSettings' => 'setMildataSettings',
+        'milprotoSettings' => 'setMilprotoSettings'
     ];
 
     /**
@@ -136,13 +136,13 @@ class DsSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'dataservice_url' => 'getDataserviceUrl',
-        'milsh_port' => 'getMilshPort',
-        'x_circ_settings' => 'getXCircSettings',
-        'x_circ2_settings' => 'getXCirc2Settings',
-        'message_tag' => 'getMessageTag',
-        'mildata_settings' => 'getMildataSettings',
-        'milproto_settings' => 'getMilprotoSettings'
+        'dataserviceUrl' => 'getDataserviceUrl',
+        'milshPort' => 'getMilshPort',
+        'xCircSettings' => 'getXCircSettings',
+        'xCirc2Settings' => 'getXCirc2Settings',
+        'messageTag' => 'getMessageTag',
+        'mildataSettings' => 'getMildataSettings',
+        'milprotoSettings' => 'getMilprotoSettings'
     ];
 
     /**
@@ -205,13 +205,13 @@ class DsSettings implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['dataservice_url'] = isset($data['dataservice_url']) ? $data['dataservice_url'] : null;
-        $this->container['milsh_port'] = isset($data['milsh_port']) ? $data['milsh_port'] : null;
-        $this->container['x_circ_settings'] = isset($data['x_circ_settings']) ? $data['x_circ_settings'] : null;
-        $this->container['x_circ2_settings'] = isset($data['x_circ2_settings']) ? $data['x_circ2_settings'] : null;
-        $this->container['message_tag'] = isset($data['message_tag']) ? $data['message_tag'] : null;
-        $this->container['mildata_settings'] = isset($data['mildata_settings']) ? $data['mildata_settings'] : null;
-        $this->container['milproto_settings'] = isset($data['milproto_settings']) ? $data['milproto_settings'] : null;
+        $this->container['dataserviceUrl'] = isset($data['dataserviceUrl']) ? $data['dataserviceUrl'] : null;
+        $this->container['milshPort'] = isset($data['milshPort']) ? $data['milshPort'] : null;
+        $this->container['xCircSettings'] = isset($data['xCircSettings']) ? $data['xCircSettings'] : null;
+        $this->container['xCirc2Settings'] = isset($data['xCirc2Settings']) ? $data['xCirc2Settings'] : null;
+        $this->container['messageTag'] = isset($data['messageTag']) ? $data['messageTag'] : null;
+        $this->container['mildataSettings'] = isset($data['mildataSettings']) ? $data['mildataSettings'] : null;
+        $this->container['milprotoSettings'] = isset($data['milprotoSettings']) ? $data['milprotoSettings'] : null;
     }
 
     /**
@@ -223,26 +223,26 @@ class DsSettings implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['dataservice_url'] === null) {
-            $invalidProperties[] = "'dataservice_url' can't be null";
+        if ($this->container['dataserviceUrl'] === null) {
+            $invalidProperties[] = "'dataserviceUrl' can't be null";
         }
-        if ($this->container['milsh_port'] === null) {
-            $invalidProperties[] = "'milsh_port' can't be null";
+        if ($this->container['milshPort'] === null) {
+            $invalidProperties[] = "'milshPort' can't be null";
         }
-        if ($this->container['x_circ_settings'] === null) {
-            $invalidProperties[] = "'x_circ_settings' can't be null";
+        if ($this->container['xCircSettings'] === null) {
+            $invalidProperties[] = "'xCircSettings' can't be null";
         }
-        if ($this->container['x_circ2_settings'] === null) {
-            $invalidProperties[] = "'x_circ2_settings' can't be null";
+        if ($this->container['xCirc2Settings'] === null) {
+            $invalidProperties[] = "'xCirc2Settings' can't be null";
         }
-        if ($this->container['message_tag'] === null) {
-            $invalidProperties[] = "'message_tag' can't be null";
+        if ($this->container['messageTag'] === null) {
+            $invalidProperties[] = "'messageTag' can't be null";
         }
-        if ($this->container['mildata_settings'] === null) {
-            $invalidProperties[] = "'mildata_settings' can't be null";
+        if ($this->container['mildataSettings'] === null) {
+            $invalidProperties[] = "'mildataSettings' can't be null";
         }
-        if ($this->container['milproto_settings'] === null) {
-            $invalidProperties[] = "'milproto_settings' can't be null";
+        if ($this->container['milprotoSettings'] === null) {
+            $invalidProperties[] = "'milprotoSettings' can't be null";
         }
         return $invalidProperties;
     }
@@ -256,25 +256,25 @@ class DsSettings implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['dataservice_url'] === null) {
+        if ($this->container['dataserviceUrl'] === null) {
             return false;
         }
-        if ($this->container['milsh_port'] === null) {
+        if ($this->container['milshPort'] === null) {
             return false;
         }
-        if ($this->container['x_circ_settings'] === null) {
+        if ($this->container['xCircSettings'] === null) {
             return false;
         }
-        if ($this->container['x_circ2_settings'] === null) {
+        if ($this->container['xCirc2Settings'] === null) {
             return false;
         }
-        if ($this->container['message_tag'] === null) {
+        if ($this->container['messageTag'] === null) {
             return false;
         }
-        if ($this->container['mildata_settings'] === null) {
+        if ($this->container['mildataSettings'] === null) {
             return false;
         }
-        if ($this->container['milproto_settings'] === null) {
+        if ($this->container['milprotoSettings'] === null) {
             return false;
         }
         return true;
@@ -282,169 +282,169 @@ class DsSettings implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets dataservice_url
+     * Gets dataserviceUrl
      *
      * @return string
      */
     public function getDataserviceUrl()
     {
-        return $this->container['dataservice_url'];
+        return $this->container['dataserviceUrl'];
     }
 
     /**
-     * Sets dataservice_url
+     * Sets dataserviceUrl
      *
-     * @param string $dataservice_url the data service URL
+     * @param string $dataserviceUrl the data service URL
      *
      * @return $this
      */
-    public function setDataserviceUrl($dataservice_url)
+    public function setDataserviceUrl($dataserviceUrl)
     {
-        $this->container['dataservice_url'] = $dataservice_url;
+        $this->container['dataserviceUrl'] = $dataserviceUrl;
 
         return $this;
     }
 
     /**
-     * Gets milsh_port
+     * Gets milshPort
      *
      * @return int
      */
     public function getMilshPort()
     {
-        return $this->container['milsh_port'];
+        return $this->container['milshPort'];
     }
 
     /**
-     * Sets milsh_port
+     * Sets milshPort
      *
-     * @param int $milsh_port the data service milsh port
+     * @param int $milshPort the data service milsh port
      *
      * @return $this
      */
-    public function setMilshPort($milsh_port)
+    public function setMilshPort($milshPort)
     {
-        $this->container['milsh_port'] = $milsh_port;
+        $this->container['milshPort'] = $milshPort;
 
         return $this;
     }
 
     /**
-     * Gets x_circ_settings
+     * Gets xCircSettings
      *
-     * @return \Sierra\Models\XClientSettings
+     * @return \III\Sierra\Models\XClientSettings
      */
     public function getXCircSettings()
     {
-        return $this->container['x_circ_settings'];
+        return $this->container['xCircSettings'];
     }
 
     /**
-     * Sets x_circ_settings
+     * Sets xCircSettings
      *
-     * @param \Sierra\Models\XClientSettings $x_circ_settings the default data service xcirc settings
+     * @param \III\Sierra\Models\XClientSettings $xCircSettings the default data service xcirc settings
      *
      * @return $this
      */
-    public function setXCircSettings($x_circ_settings)
+    public function setXCircSettings($xCircSettings)
     {
-        $this->container['x_circ_settings'] = $x_circ_settings;
+        $this->container['xCircSettings'] = $xCircSettings;
 
         return $this;
     }
 
     /**
-     * Gets x_circ2_settings
+     * Gets xCirc2Settings
      *
-     * @return \Sierra\Models\XClientSettings
+     * @return \III\Sierra\Models\XClientSettings
      */
     public function getXCirc2Settings()
     {
-        return $this->container['x_circ2_settings'];
+        return $this->container['xCirc2Settings'];
     }
 
     /**
-     * Sets x_circ2_settings
+     * Sets xCirc2Settings
      *
-     * @param \Sierra\Models\XClientSettings $x_circ2_settings the data service xcirc2 settings
+     * @param \III\Sierra\Models\XClientSettings $xCirc2Settings the data service xcirc2 settings
      *
      * @return $this
      */
-    public function setXCirc2Settings($x_circ2_settings)
+    public function setXCirc2Settings($xCirc2Settings)
     {
-        $this->container['x_circ2_settings'] = $x_circ2_settings;
+        $this->container['xCirc2Settings'] = $xCirc2Settings;
 
         return $this;
     }
 
     /**
-     * Gets message_tag
+     * Gets messageTag
      *
      * @return string
      */
     public function getMessageTag()
     {
-        return $this->container['message_tag'];
+        return $this->container['messageTag'];
     }
 
     /**
-     * Sets message_tag
+     * Sets messageTag
      *
-     * @param string $message_tag a data service message tag
+     * @param string $messageTag a data service message tag
      *
      * @return $this
      */
-    public function setMessageTag($message_tag)
+    public function setMessageTag($messageTag)
     {
-        $this->container['message_tag'] = $message_tag;
+        $this->container['messageTag'] = $messageTag;
 
         return $this;
     }
 
     /**
-     * Gets mildata_settings
+     * Gets mildataSettings
      *
-     * @return \Sierra\Models\MildataSettings
+     * @return \III\Sierra\Models\MildataSettings
      */
     public function getMildataSettings()
     {
-        return $this->container['mildata_settings'];
+        return $this->container['mildataSettings'];
     }
 
     /**
-     * Sets mildata_settings
+     * Sets mildataSettings
      *
-     * @param \Sierra\Models\MildataSettings $mildata_settings MILDATA settings
+     * @param \III\Sierra\Models\MildataSettings $mildataSettings MILDATA settings
      *
      * @return $this
      */
-    public function setMildataSettings($mildata_settings)
+    public function setMildataSettings($mildataSettings)
     {
-        $this->container['mildata_settings'] = $mildata_settings;
+        $this->container['mildataSettings'] = $mildataSettings;
 
         return $this;
     }
 
     /**
-     * Gets milproto_settings
+     * Gets milprotoSettings
      *
-     * @return \Sierra\Models\MilprotoSettings
+     * @return \III\Sierra\Models\MilprotoSettings
      */
     public function getMilprotoSettings()
     {
-        return $this->container['milproto_settings'];
+        return $this->container['milprotoSettings'];
     }
 
     /**
-     * Sets milproto_settings
+     * Sets milprotoSettings
      *
-     * @param \Sierra\Models\MilprotoSettings $milproto_settings MILPROTO settings
+     * @param \III\Sierra\Models\MilprotoSettings $milprotoSettings MILPROTO settings
      *
      * @return $this
      */
-    public function setMilprotoSettings($milproto_settings)
+    public function setMilprotoSettings($milprotoSettings)
     {
-        $this->container['milproto_settings'] = $milproto_settings;
+        $this->container['milprotoSettings'] = $milprotoSettings;
 
         return $this;
     }

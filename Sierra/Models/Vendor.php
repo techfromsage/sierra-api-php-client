@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Vendor Class Doc Comment
  *
  * @category Class
  * @description an invoice vendor record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,9 +55,9 @@ class Vendor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'vendor_code' => 'string',
-        'voucher_num' => 'int',
-        'voucher_total' => 'int'
+        'vendorCode' => 'string',
+        'voucherNum' => 'int',
+        'voucherTotal' => 'int'
     ];
 
     /**
@@ -66,9 +66,9 @@ class Vendor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'vendor_code' => null,
-        'voucher_num' => 'int32',
-        'voucher_total' => 'int32'
+        'vendorCode' => null,
+        'voucherNum' => 'int32',
+        'voucherTotal' => 'int32'
     ];
 
     /**
@@ -98,9 +98,9 @@ class Vendor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'vendor_code' => 'vendorCode',
-        'voucher_num' => 'voucherNum',
-        'voucher_total' => 'voucherTotal'
+        'vendorCode' => 'vendorCode',
+        'voucherNum' => 'voucherNum',
+        'voucherTotal' => 'voucherTotal'
     ];
 
     /**
@@ -109,9 +109,9 @@ class Vendor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'vendor_code' => 'setVendorCode',
-        'voucher_num' => 'setVoucherNum',
-        'voucher_total' => 'setVoucherTotal'
+        'vendorCode' => 'setVendorCode',
+        'voucherNum' => 'setVoucherNum',
+        'voucherTotal' => 'setVoucherTotal'
     ];
 
     /**
@@ -120,9 +120,9 @@ class Vendor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'vendor_code' => 'getVendorCode',
-        'voucher_num' => 'getVoucherNum',
-        'voucher_total' => 'getVoucherTotal'
+        'vendorCode' => 'getVendorCode',
+        'voucherNum' => 'getVoucherNum',
+        'voucherTotal' => 'getVoucherTotal'
     ];
 
     /**
@@ -185,9 +185,9 @@ class Vendor implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['vendor_code'] = isset($data['vendor_code']) ? $data['vendor_code'] : null;
-        $this->container['voucher_num'] = isset($data['voucher_num']) ? $data['voucher_num'] : null;
-        $this->container['voucher_total'] = isset($data['voucher_total']) ? $data['voucher_total'] : null;
+        $this->container['vendorCode'] = isset($data['vendorCode']) ? $data['vendorCode'] : null;
+        $this->container['voucherNum'] = isset($data['voucherNum']) ? $data['voucherNum'] : null;
+        $this->container['voucherTotal'] = isset($data['voucherTotal']) ? $data['voucherTotal'] : null;
     }
 
     /**
@@ -199,8 +199,8 @@ class Vendor implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['vendor_code'] === null) {
-            $invalidProperties[] = "'vendor_code' can't be null";
+        if ($this->container['vendorCode'] === null) {
+            $invalidProperties[] = "'vendorCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -214,7 +214,7 @@ class Vendor implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['vendor_code'] === null) {
+        if ($this->container['vendorCode'] === null) {
             return false;
         }
         return true;
@@ -222,73 +222,73 @@ class Vendor implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets vendor_code
+     * Gets vendorCode
      *
      * @return string
      */
     public function getVendorCode()
     {
-        return $this->container['vendor_code'];
+        return $this->container['vendorCode'];
     }
 
     /**
-     * Sets vendor_code
+     * Sets vendorCode
      *
-     * @param string $vendor_code the vendor code
+     * @param string $vendorCode the vendor code
      *
      * @return $this
      */
-    public function setVendorCode($vendor_code)
+    public function setVendorCode($vendorCode)
     {
-        $this->container['vendor_code'] = $vendor_code;
+        $this->container['vendorCode'] = $vendorCode;
 
         return $this;
     }
 
     /**
-     * Gets voucher_num
+     * Gets voucherNum
      *
      * @return int
      */
     public function getVoucherNum()
     {
-        return $this->container['voucher_num'];
+        return $this->container['voucherNum'];
     }
 
     /**
-     * Sets voucher_num
+     * Sets voucherNum
      *
-     * @param int $voucher_num the voucher number
+     * @param int $voucherNum the voucher number
      *
      * @return $this
      */
-    public function setVoucherNum($voucher_num)
+    public function setVoucherNum($voucherNum)
     {
-        $this->container['voucher_num'] = $voucher_num;
+        $this->container['voucherNum'] = $voucherNum;
 
         return $this;
     }
 
     /**
-     * Gets voucher_total
+     * Gets voucherTotal
      *
      * @return int
      */
     public function getVoucherTotal()
     {
-        return $this->container['voucher_total'];
+        return $this->container['voucherTotal'];
     }
 
     /**
-     * Sets voucher_total
+     * Sets voucherTotal
      *
-     * @param int $voucher_total the voucher total
+     * @param int $voucherTotal the voucher total
      *
      * @return $this
      */
-    public function setVoucherTotal($voucher_total)
+    public function setVoucherTotal($voucherTotal)
     {
-        $this->container['voucher_total'] = $voucher_total;
+        $this->container['voucherTotal'] = $voucherTotal;
 
         return $this;
     }

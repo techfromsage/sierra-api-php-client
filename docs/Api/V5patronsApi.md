@@ -1,4 +1,4 @@
-# Sierra\V5patronsApi
+# III\Sierra\V5patronsApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 
 # **cancelAllHoldsForTheSpecifiedPatron**
-> \Sierra\Models\ErrorCode cancelAllHoldsForTheSpecifiedPatron($id, $accept_language)
+> \III\Sierra\Models\ErrorCode cancelAllHoldsForTheSpecifiedPatron($id, $acceptLanguage)
 
 Cancel all holds for the specified patron
 
@@ -39,16 +39,16 @@ Cancel all holds for the specified patron
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | the patron record ID
-$accept_language = "accept_language_example"; // string | the Accept-Language header
+$acceptLanguage = "acceptLanguage_example"; // string | the Accept-Language header
 
 try {
-    $result = $apiInstance->cancelAllHoldsForTheSpecifiedPatron($id, $accept_language);
+    $result = $apiInstance->cancelAllHoldsForTheSpecifiedPatron($id, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->cancelAllHoldsForTheSpecifiedPatron: ', $e->getMessage(), PHP_EOL;
@@ -61,11 +61,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| the patron record ID |
- **accept_language** | **string**| the Accept-Language header | [optional]
+ **acceptLanguage** | **string**| the Accept-Language header | [optional]
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAPatronRecord**
-> \Sierra\Models\PatronResult createAPatronRecord($body)
+> \III\Sierra\Models\PatronResult createAPatronRecord($body)
 
 Create a patron record
 
@@ -90,12 +90,12 @@ Create a patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Sierra\Models\PatronPatch(); // \Sierra\Models\PatronPatch | post request
+$body = new \III\Sierra\Models\PatronPatch(); // \III\Sierra\Models\PatronPatch | post request
 
 try {
     $result = $apiInstance->createAPatronRecord($body);
@@ -110,11 +110,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Sierra\Models\PatronPatch**](../Model/PatronPatch.md)| post request |
+ **body** | [**\III\Sierra\Models\PatronPatch**](../Model/PatronPatch.md)| post request |
 
 ### Return type
 
-[**\Sierra\Models\PatronResult**](../Model/PatronResult.md)
+[**\III\Sierra\Models\PatronResult**](../Model/PatronResult.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAHoldByHoldID**
-> \Sierra\Models\ErrorCode deleteAHoldByHoldID($hold_id, $accept_language)
+> \III\Sierra\Models\ErrorCode deleteAHoldByHoldID($holdId, $acceptLanguage)
 
 Delete a hold by hold ID
 
@@ -139,16 +139,16 @@ Delete a hold by hold ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$hold_id = 56; // int | the hold record ID
-$accept_language = "accept_language_example"; // string | the Accept-Language header
+$holdId = 56; // int | the hold record ID
+$acceptLanguage = "acceptLanguage_example"; // string | the Accept-Language header
 
 try {
-    $result = $apiInstance->deleteAHoldByHoldID($hold_id, $accept_language);
+    $result = $apiInstance->deleteAHoldByHoldID($holdId, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->deleteAHoldByHoldID: ', $e->getMessage(), PHP_EOL;
@@ -160,12 +160,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hold_id** | **int**| the hold record ID |
- **accept_language** | **string**| the Accept-Language header | [optional]
+ **holdId** | **int**| the hold record ID |
+ **acceptLanguage** | **string**| the Accept-Language header | [optional]
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAPatronRecord**
-> \Sierra\Models\ErrorCode deleteAPatronRecord($id)
+> \III\Sierra\Models\ErrorCode deleteAPatronRecord($id)
 
 Delete a patron record
 
@@ -190,7 +190,7 @@ Delete a patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **filterTheRecordsByAQueryInJSONFormat**
-> \Sierra\Models\QueryResultSet filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
+> \III\Sierra\Models\QueryResultSet filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
 
 Filter the records by a query in JSON format
 
@@ -239,14 +239,14 @@ Filter the records by a query in JSON format
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $limit = 56; // int | the maximum number of results
-$json = new \Sierra\Models\null(); //  | a query in JSON format (see the Sierra API reference documentation for more information)
+$json = new \III\Sierra\Models\null(); //  | a query in JSON format (see the Sierra API reference documentation for more information)
 
 try {
     $result = $apiInstance->filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json);
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\QueryResultSet**](../Model/QueryResultSet.md)
+[**\III\Sierra\Models\QueryResultSet**](../Model/QueryResultSet.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findAPatronByVarFieldFieldTagAndVarFieldContent**
-> \Sierra\Models\Patron findAPatronByVarFieldFieldTagAndVarFieldContent($var_field_tag, $var_field_content, $fields)
+> \III\Sierra\Models\Patron findAPatronByVarFieldFieldTagAndVarFieldContent($varFieldTag, $varFieldContent, $fields)
 
 Find a patron by varField fieldTag and varField content
 
@@ -292,17 +292,17 @@ Find a patron by varField fieldTag and varField content
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$var_field_tag = "var_field_tag_example"; // string | the varField fieldTag to search by
-$var_field_content = "var_field_content_example"; // string | the varField content to search by
+$varFieldTag = "varFieldTag_example"; // string | the varField fieldTag to search by
+$varFieldContent = "varFieldContent_example"; // string | the varField content to search by
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
 
 try {
-    $result = $apiInstance->findAPatronByVarFieldFieldTagAndVarFieldContent($var_field_tag, $var_field_content, $fields);
+    $result = $apiInstance->findAPatronByVarFieldFieldTagAndVarFieldContent($varFieldTag, $varFieldContent, $fields);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->findAPatronByVarFieldFieldTagAndVarFieldContent: ', $e->getMessage(), PHP_EOL;
@@ -314,13 +314,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **var_field_tag** | **string**| the varField fieldTag to search by |
- **var_field_content** | **string**| the varField content to search by |
+ **varFieldTag** | **string**| the varField fieldTag to search by |
+ **varFieldContent** | **string**| the varField content to search by |
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
 
 ### Return type
 
-[**\Sierra\Models\Patron**](../Model/Patron.md)
+[**\III\Sierra\Models\Patron**](../Model/Patron.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getACheckoutByCheckoutID**
-> \Sierra\Models\Checkout getACheckoutByCheckoutID($checkout_id, $fields)
+> \III\Sierra\Models\Checkout getACheckoutByCheckoutID($checkoutId, $fields)
 
 Get a checkout by checkout ID
 
@@ -345,16 +345,16 @@ Get a checkout by checkout ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$checkout_id = 56; // int | the checkout record ID
+$checkoutId = 56; // int | the checkout record ID
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
 
 try {
-    $result = $apiInstance->getACheckoutByCheckoutID($checkout_id, $fields);
+    $result = $apiInstance->getACheckoutByCheckoutID($checkoutId, $fields);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getACheckoutByCheckoutID: ', $e->getMessage(), PHP_EOL;
@@ -366,12 +366,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkout_id** | **int**| the checkout record ID |
+ **checkoutId** | **int**| the checkout record ID |
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
 
 ### Return type
 
-[**\Sierra\Models\Checkout**](../Model/Checkout.md)
+[**\III\Sierra\Models\Checkout**](../Model/Checkout.md)
 
 ### Authorization
 
@@ -385,7 +385,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAFineRecordByFineID**
-> \Sierra\Models\Fine getAFineRecordByFineID($fine_id, $fields)
+> \III\Sierra\Models\Fine getAFineRecordByFineID($fineId, $fields)
 
 Get a fine record by fine ID
 
@@ -396,16 +396,16 @@ Get a fine record by fine ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$fine_id = 56; // int | the fine record ID
+$fineId = 56; // int | the fine record ID
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
 
 try {
-    $result = $apiInstance->getAFineRecordByFineID($fine_id, $fields);
+    $result = $apiInstance->getAFineRecordByFineID($fineId, $fields);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getAFineRecordByFineID: ', $e->getMessage(), PHP_EOL;
@@ -417,12 +417,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fine_id** | **int**| the fine record ID |
+ **fineId** | **int**| the fine record ID |
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
 
 ### Return type
 
-[**\Sierra\Models\Fine**](../Model/Fine.md)
+[**\III\Sierra\Models\Fine**](../Model/Fine.md)
 
 ### Authorization
 
@@ -436,7 +436,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAHoldRecordByHoldID**
-> \Sierra\Models\Hold getAHoldRecordByHoldID($hold_id, $fields)
+> \III\Sierra\Models\Hold getAHoldRecordByHoldID($holdId, $fields)
 
 Get a hold record by hold ID
 
@@ -447,16 +447,16 @@ Get a hold record by hold ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$hold_id = 56; // int | the hold record ID
+$holdId = 56; // int | the hold record ID
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
 
 try {
-    $result = $apiInstance->getAHoldRecordByHoldID($hold_id, $fields);
+    $result = $apiInstance->getAHoldRecordByHoldID($holdId, $fields);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getAHoldRecordByHoldID: ', $e->getMessage(), PHP_EOL;
@@ -468,12 +468,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hold_id** | **int**| the hold record ID |
+ **holdId** | **int**| the hold record ID |
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
 
 ### Return type
 
-[**\Sierra\Models\Hold**](../Model/Hold.md)
+[**\III\Sierra\Models\Hold**](../Model/Hold.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfMetadata**
-> \Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
+> \III\Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
 
 Get a list of metadata
 
@@ -498,7 +498,7 @@ Get a list of metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Metadata[]**](../Model/Metadata.md)
+[**\III\Sierra\Models\Metadata[]**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -538,7 +538,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfPatrons**
-> \Sierra\Models\PatronResultSet getAListOfPatrons($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes)
+> \III\Sierra\Models\PatronResultSet getAListOfPatrons($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes)
 
 Get a list of patrons
 
@@ -549,7 +549,7 @@ Get a list of patrons
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -558,15 +558,15 @@ $limit = 56; // int | the maximum number of results
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $id = array("id_example"); // string[] | a comma-delimited list of IDs of patron records to retrieve
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
-$created_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of patron records to retrieve (can be a range)
-$updated_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of patron records to retrieve (can be a range)
-$deleted_date = new \DateTime("2013-10-20"); // \DateTime | the deletion date of deleted patron records to retrieve (can be a range)
+$createdDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of patron records to retrieve (can be a range)
+$updatedDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of patron records to retrieve (can be a range)
+$deletedDate = new \DateTime("2013-10-20"); // \DateTime | the deletion date of deleted patron records to retrieve (can be a range)
 $deleted = true; // bool | whether to retrieve only deleted (true) or non-deleted (false) patron records
 $suppressed = true; // bool | the suppressed flag value of patron records to retrieve
-$agency_codes = array(56); // int[] | patron data for the specified and valid agencies is returned
+$agencyCodes = array(56); // int[] | patron data for the specified and valid agencies is returned
 
 try {
-    $result = $apiInstance->getAListOfPatrons($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $agency_codes);
+    $result = $apiInstance->getAListOfPatrons($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $agencyCodes);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getAListOfPatrons: ', $e->getMessage(), PHP_EOL;
@@ -582,16 +582,16 @@ Name | Type | Description  | Notes
  **offset** | **int**| the beginning record (zero-indexed) of the result set returned | [optional]
  **id** | [**string[]**](../Model/string.md)| a comma-delimited list of IDs of patron records to retrieve | [optional]
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
- **created_date** | **\DateTime**| the creation date of patron records to retrieve (can be a range) | [optional]
- **updated_date** | **\DateTime**| the modification date of patron records to retrieve (can be a range) | [optional]
- **deleted_date** | **\DateTime**| the deletion date of deleted patron records to retrieve (can be a range) | [optional]
+ **createdDate** | **\DateTime**| the creation date of patron records to retrieve (can be a range) | [optional]
+ **updatedDate** | **\DateTime**| the modification date of patron records to retrieve (can be a range) | [optional]
+ **deletedDate** | **\DateTime**| the deletion date of deleted patron records to retrieve (can be a range) | [optional]
  **deleted** | **bool**| whether to retrieve only deleted (true) or non-deleted (false) patron records | [optional]
  **suppressed** | **bool**| the suppressed flag value of patron records to retrieve | [optional]
- **agency_codes** | [**int[]**](../Model/int.md)| patron data for the specified and valid agencies is returned | [optional]
+ **agencyCodes** | [**int[]**](../Model/int.md)| patron data for the specified and valid agencies is returned | [optional]
 
 ### Return type
 
-[**\Sierra\Models\PatronResultSet**](../Model/PatronResultSet.md)
+[**\III\Sierra\Models\PatronResultSet**](../Model/PatronResultSet.md)
 
 ### Authorization
 
@@ -605,7 +605,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAPatronByRecordID**
-> \Sierra\Models\Patron getAPatronByRecordID($id, $fields)
+> \III\Sierra\Models\Patron getAPatronByRecordID($id, $fields)
 
 Get a patron by record ID
 
@@ -616,7 +616,7 @@ Get a patron by record ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Patron**](../Model/Patron.md)
+[**\III\Sierra\Models\Patron**](../Model/Patron.md)
 
 ### Authorization
 
@@ -656,7 +656,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCheckoutDataForASinglePatronRecord**
-> \Sierra\Models\CheckoutResultSet getCheckoutDataForASinglePatronRecord($id, $limit, $offset, $fields)
+> \III\Sierra\Models\CheckoutResultSet getCheckoutDataForASinglePatronRecord($id, $limit, $offset, $fields)
 
 Get checkout data for a single patron record
 
@@ -667,7 +667,7 @@ Get checkout data for a single patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\CheckoutResultSet**](../Model/CheckoutResultSet.md)
+[**\III\Sierra\Models\CheckoutResultSet**](../Model/CheckoutResultSet.md)
 
 ### Authorization
 
@@ -711,7 +711,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCheckoutreadHistoryForASinglePatronRecord**
-> \Sierra\Models\CheckoutHistoryResultSet getCheckoutreadHistoryForASinglePatronRecord($id, $limit, $offset, $fields, $sort_field, $sort_order)
+> \III\Sierra\Models\CheckoutHistoryResultSet getCheckoutreadHistoryForASinglePatronRecord($id, $limit, $offset, $fields, $sortField, $sortOrder)
 
 Get checkout/read history for a single patron record
 
@@ -722,7 +722,7 @@ Get checkout/read history for a single patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -731,11 +731,11 @@ $id = 56; // int | the patron record ID
 $limit = 56; // int | the maximum number of results
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
-$sort_field = "sort_field_example"; // string | a field to sort on
-$sort_order = "sort_order_example"; // string | the order to sort by desc or asc
+$sortField = "sortField_example"; // string | a field to sort on
+$sortOrder = "sortOrder_example"; // string | the order to sort by desc or asc
 
 try {
-    $result = $apiInstance->getCheckoutreadHistoryForASinglePatronRecord($id, $limit, $offset, $fields, $sort_field, $sort_order);
+    $result = $apiInstance->getCheckoutreadHistoryForASinglePatronRecord($id, $limit, $offset, $fields, $sortField, $sortOrder);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getCheckoutreadHistoryForASinglePatronRecord: ', $e->getMessage(), PHP_EOL;
@@ -751,12 +751,12 @@ Name | Type | Description  | Notes
  **limit** | **int**| the maximum number of results | [optional]
  **offset** | **int**| the beginning record (zero-indexed) of the result set returned | [optional]
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
- **sort_field** | **string**| a field to sort on | [optional]
- **sort_order** | **string**| the order to sort by desc or asc | [optional]
+ **sortField** | **string**| a field to sort on | [optional]
+ **sortOrder** | **string**| the order to sort by desc or asc | [optional]
 
 ### Return type
 
-[**\Sierra\Models\CheckoutHistoryResultSet**](../Model/CheckoutHistoryResultSet.md)
+[**\III\Sierra\Models\CheckoutHistoryResultSet**](../Model/CheckoutHistoryResultSet.md)
 
 ### Authorization
 
@@ -770,7 +770,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTheFinesDataForASinglePatronRecord**
-> \Sierra\Models\FineResultSet getTheFinesDataForASinglePatronRecord($id, $limit, $offset, $fields, $assessed_date)
+> \III\Sierra\Models\FineResultSet getTheFinesDataForASinglePatronRecord($id, $limit, $offset, $fields, $assessedDate)
 
 Get the fines data for a single patron record
 
@@ -781,7 +781,7 @@ Get the fines data for a single patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -790,10 +790,10 @@ $id = 56; // int | the patron record ID
 $limit = 56; // int | the maximum number of results
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
-$assessed_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the assessed date of fines to retrieve (can be a range)
+$assessedDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the assessed date of fines to retrieve (can be a range)
 
 try {
-    $result = $apiInstance->getTheFinesDataForASinglePatronRecord($id, $limit, $offset, $fields, $assessed_date);
+    $result = $apiInstance->getTheFinesDataForASinglePatronRecord($id, $limit, $offset, $fields, $assessedDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->getTheFinesDataForASinglePatronRecord: ', $e->getMessage(), PHP_EOL;
@@ -809,11 +809,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| the maximum number of results | [optional]
  **offset** | **int**| the beginning record (zero-indexed) of the result set returned | [optional]
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
- **assessed_date** | **\DateTime**| the assessed date of fines to retrieve (can be a range) | [optional]
+ **assessedDate** | **\DateTime**| the assessed date of fines to retrieve (can be a range) | [optional]
 
 ### Return type
 
-[**\Sierra\Models\FineResultSet**](../Model/FineResultSet.md)
+[**\III\Sierra\Models\FineResultSet**](../Model/FineResultSet.md)
 
 ### Authorization
 
@@ -827,7 +827,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTheHoldsDataForASinglePatronRecord**
-> \Sierra\Models\HoldResultSet getTheHoldsDataForASinglePatronRecord($id, $limit, $offset, $fields)
+> \III\Sierra\Models\HoldResultSet getTheHoldsDataForASinglePatronRecord($id, $limit, $offset, $fields)
 
 Get the holds data for a single patron record
 
@@ -838,7 +838,7 @@ Get the holds data for a single patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -868,7 +868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\HoldResultSet**](../Model/HoldResultSet.md)
+[**\III\Sierra\Models\HoldResultSet**](../Model/HoldResultSet.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **modifyAHold**
-> \Sierra\Models\ErrorCode modifyAHold($hold_id, $body, $accept_language)
+> \III\Sierra\Models\ErrorCode modifyAHold($holdId, $body, $acceptLanguage)
 
 Modify a hold
 
@@ -893,17 +893,17 @@ Modify a hold
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$hold_id = 56; // int | the hold record ID
-$body = new \Sierra\Models\PatronHoldPut(); // \Sierra\Models\PatronHoldPut | the details of the hold
-$accept_language = "accept_language_example"; // string | the Accept-Language header
+$holdId = 56; // int | the hold record ID
+$body = new \III\Sierra\Models\PatronHoldPut(); // \III\Sierra\Models\PatronHoldPut | the details of the hold
+$acceptLanguage = "acceptLanguage_example"; // string | the Accept-Language header
 
 try {
-    $result = $apiInstance->modifyAHold($hold_id, $body, $accept_language);
+    $result = $apiInstance->modifyAHold($holdId, $body, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->modifyAHold: ', $e->getMessage(), PHP_EOL;
@@ -915,13 +915,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hold_id** | **int**| the hold record ID |
- **body** | [**\Sierra\Models\PatronHoldPut**](../Model/PatronHoldPut.md)| the details of the hold |
- **accept_language** | **string**| the Accept-Language header | [optional]
+ **holdId** | **int**| the hold record ID |
+ **body** | [**\III\Sierra\Models\PatronHoldPut**](../Model/PatronHoldPut.md)| the details of the hold |
+ **acceptLanguage** | **string**| the Accept-Language header | [optional]
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -935,7 +935,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeANewHoldRequest**
-> \Sierra\Models\ErrorCode placeANewHoldRequest($id, $body)
+> \III\Sierra\Models\ErrorCode placeANewHoldRequest($id, $body)
 
 Place a new hold request
 
@@ -946,13 +946,13 @@ Place a new hold request
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | the patron record ID
-$body = new \Sierra\Models\PatronHoldPost(); // \Sierra\Models\PatronHoldPost | details of the new hold
+$body = new \III\Sierra\Models\PatronHoldPost(); // \III\Sierra\Models\PatronHoldPost | details of the new hold
 
 try {
     $result = $apiInstance->placeANewHoldRequest($id, $body);
@@ -968,11 +968,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| the patron record ID |
- **body** | [**\Sierra\Models\PatronHoldPost**](../Model/PatronHoldPost.md)| details of the new hold |
+ **body** | [**\III\Sierra\Models\PatronHoldPost**](../Model/PatronHoldPost.md)| details of the new hold |
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -986,7 +986,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **requestToRenewACheckout**
-> \Sierra\Models\Checkout requestToRenewACheckout($checkout_id, $accept_language)
+> \III\Sierra\Models\Checkout requestToRenewACheckout($checkoutId, $acceptLanguage)
 
 Request to renew a checkout
 
@@ -997,16 +997,16 @@ Request to renew a checkout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$checkout_id = 56; // int | the checkout ID
-$accept_language = "accept_language_example"; // string | the Accept-Language header
+$checkoutId = 56; // int | the checkout ID
+$acceptLanguage = "acceptLanguage_example"; // string | the Accept-Language header
 
 try {
-    $result = $apiInstance->requestToRenewACheckout($checkout_id, $accept_language);
+    $result = $apiInstance->requestToRenewACheckout($checkoutId, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5patronsApi->requestToRenewACheckout: ', $e->getMessage(), PHP_EOL;
@@ -1018,12 +1018,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkout_id** | **int**| the checkout ID |
- **accept_language** | **string**| the Accept-Language header | [optional]
+ **checkoutId** | **int**| the checkout ID |
+ **acceptLanguage** | **string**| the Accept-Language header | [optional]
 
 ### Return type
 
-[**\Sierra\Models\Checkout**](../Model/Checkout.md)
+[**\III\Sierra\Models\Checkout**](../Model/Checkout.md)
 
 ### Authorization
 
@@ -1037,7 +1037,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateThePatronRecord**
-> \Sierra\Models\ErrorCode updateThePatronRecord($id, $body)
+> \III\Sierra\Models\ErrorCode updateThePatronRecord($id, $body)
 
 Update the Patron record
 
@@ -1048,13 +1048,13 @@ Update the Patron record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | the patron record ID
-$body = new \Sierra\Models\PatronPatch(); // \Sierra\Models\PatronPatch | patron request
+$body = new \III\Sierra\Models\PatronPatch(); // \III\Sierra\Models\PatronPatch | patron request
 
 try {
     $result = $apiInstance->updateThePatronRecord($id, $body);
@@ -1070,11 +1070,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| the patron record ID |
- **body** | [**\Sierra\Models\PatronPatch**](../Model/PatronPatch.md)| patron request |
+ **body** | [**\III\Sierra\Models\PatronPatch**](../Model/PatronPatch.md)| patron request |
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 
@@ -1088,7 +1088,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **validatePatronByBarcodeAndPIN**
-> \Sierra\Models\ErrorCode validatePatronByBarcodeAndPIN($body)
+> \III\Sierra\Models\ErrorCode validatePatronByBarcodeAndPIN($body)
 
 Validate patron by barcode and PIN
 
@@ -1099,12 +1099,12 @@ Validate patron by barcode and PIN
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5patronsApi(
+$apiInstance = new III\Sierra\Api\V5patronsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Sierra\Models\PatronValidation(); // \Sierra\Models\PatronValidation | post request
+$body = new \III\Sierra\Models\PatronValidation(); // \III\Sierra\Models\PatronValidation | post request
 
 try {
     $result = $apiInstance->validatePatronByBarcodeAndPIN($body);
@@ -1119,11 +1119,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Sierra\Models\PatronValidation**](../Model/PatronValidation.md)| post request |
+ **body** | [**\III\Sierra\Models\PatronValidation**](../Model/PatronValidation.md)| post request |
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 

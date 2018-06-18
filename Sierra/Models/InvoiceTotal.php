@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * InvoiceTotal Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -54,11 +54,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sub_total' => 'double',
+        'subTotal' => 'double',
         'shipping' => 'double',
         'tax' => 'double',
-        'discount_or_service' => 'double',
-        'grand_total' => 'double'
+        'discountOrService' => 'double',
+        'grandTotal' => 'double'
     ];
 
     /**
@@ -67,11 +67,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'sub_total' => 'double',
+        'subTotal' => 'double',
         'shipping' => 'double',
         'tax' => 'double',
-        'discount_or_service' => 'double',
-        'grand_total' => 'double'
+        'discountOrService' => 'double',
+        'grandTotal' => 'double'
     ];
 
     /**
@@ -101,11 +101,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'sub_total' => 'subTotal',
+        'subTotal' => 'subTotal',
         'shipping' => 'shipping',
         'tax' => 'tax',
-        'discount_or_service' => 'discountOrService',
-        'grand_total' => 'grandTotal'
+        'discountOrService' => 'discountOrService',
+        'grandTotal' => 'grandTotal'
     ];
 
     /**
@@ -114,11 +114,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'sub_total' => 'setSubTotal',
+        'subTotal' => 'setSubTotal',
         'shipping' => 'setShipping',
         'tax' => 'setTax',
-        'discount_or_service' => 'setDiscountOrService',
-        'grand_total' => 'setGrandTotal'
+        'discountOrService' => 'setDiscountOrService',
+        'grandTotal' => 'setGrandTotal'
     ];
 
     /**
@@ -127,11 +127,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'sub_total' => 'getSubTotal',
+        'subTotal' => 'getSubTotal',
         'shipping' => 'getShipping',
         'tax' => 'getTax',
-        'discount_or_service' => 'getDiscountOrService',
-        'grand_total' => 'getGrandTotal'
+        'discountOrService' => 'getDiscountOrService',
+        'grandTotal' => 'getGrandTotal'
     ];
 
     /**
@@ -194,11 +194,11 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['sub_total'] = isset($data['sub_total']) ? $data['sub_total'] : null;
+        $this->container['subTotal'] = isset($data['subTotal']) ? $data['subTotal'] : null;
         $this->container['shipping'] = isset($data['shipping']) ? $data['shipping'] : null;
         $this->container['tax'] = isset($data['tax']) ? $data['tax'] : null;
-        $this->container['discount_or_service'] = isset($data['discount_or_service']) ? $data['discount_or_service'] : null;
-        $this->container['grand_total'] = isset($data['grand_total']) ? $data['grand_total'] : null;
+        $this->container['discountOrService'] = isset($data['discountOrService']) ? $data['discountOrService'] : null;
+        $this->container['grandTotal'] = isset($data['grandTotal']) ? $data['grandTotal'] : null;
     }
 
     /**
@@ -227,25 +227,25 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets sub_total
+     * Gets subTotal
      *
      * @return double
      */
     public function getSubTotal()
     {
-        return $this->container['sub_total'];
+        return $this->container['subTotal'];
     }
 
     /**
-     * Sets sub_total
+     * Sets subTotal
      *
-     * @param double $sub_total sub-total of the invoice
+     * @param double $subTotal sub-total of the invoice
      *
      * @return $this
      */
-    public function setSubTotal($sub_total)
+    public function setSubTotal($subTotal)
     {
-        $this->container['sub_total'] = $sub_total;
+        $this->container['subTotal'] = $subTotal;
 
         return $this;
     }
@@ -299,49 +299,49 @@ class InvoiceTotal implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets discount_or_service
+     * Gets discountOrService
      *
      * @return double
      */
     public function getDiscountOrService()
     {
-        return $this->container['discount_or_service'];
+        return $this->container['discountOrService'];
     }
 
     /**
-     * Sets discount_or_service
+     * Sets discountOrService
      *
-     * @param double $discount_or_service discount or service charges associated with this invoice
+     * @param double $discountOrService discount or service charges associated with this invoice
      *
      * @return $this
      */
-    public function setDiscountOrService($discount_or_service)
+    public function setDiscountOrService($discountOrService)
     {
-        $this->container['discount_or_service'] = $discount_or_service;
+        $this->container['discountOrService'] = $discountOrService;
 
         return $this;
     }
 
     /**
-     * Gets grand_total
+     * Gets grandTotal
      *
      * @return double
      */
     public function getGrandTotal()
     {
-        return $this->container['grand_total'];
+        return $this->container['grandTotal'];
     }
 
     /**
-     * Sets grand_total
+     * Sets grandTotal
      *
-     * @param double $grand_total invoice total of sub total, shipping charges, tax and discount/service charges
+     * @param double $grandTotal invoice total of sub total, shipping charges, tax and discount/service charges
      *
      * @return $this
      */
-    public function setGrandTotal($grand_total)
+    public function setGrandTotal($grandTotal)
     {
-        $this->container['grand_total'] = $grand_total;
+        $this->container['grandTotal'] = $grandTotal;
 
         return $this;
     }

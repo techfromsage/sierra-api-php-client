@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * CheckoutResultSet Class Doc Comment
  *
  * @category Class
  * @description a paged set of checkout results
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class CheckoutResultSet implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'total' => 'int',
         'start' => 'int',
-        'entries' => '\Sierra\Models\Checkout[]'
+        'entries' => '\III\Sierra\Models\Checkout[]'
     ];
 
     /**
@@ -272,7 +272,7 @@ class CheckoutResultSet implements ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Sierra\Models\Checkout[]
+     * @return \III\Sierra\Models\Checkout[]
      */
     public function getEntries()
     {
@@ -282,7 +282,7 @@ class CheckoutResultSet implements ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Sierra\Models\Checkout[] $entries the checkout entries
+     * @param \III\Sierra\Models\Checkout[] $entries the checkout entries
      *
      * @return $this
      */

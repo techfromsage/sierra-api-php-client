@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PatronResultSet Class Doc Comment
  *
  * @category Class
  * @description a paged set of patron results
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PatronResultSet implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'total' => 'int',
         'start' => 'int',
-        'entries' => '\Sierra\Models\Patron[]'
+        'entries' => '\III\Sierra\Models\Patron[]'
     ];
 
     /**
@@ -272,7 +272,7 @@ class PatronResultSet implements ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Sierra\Models\Patron[]
+     * @return \III\Sierra\Models\Patron[]
      */
     public function getEntries()
     {
@@ -282,7 +282,7 @@ class PatronResultSet implements ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Sierra\Models\Patron[] $entries the patron entries
+     * @param \III\Sierra\Models\Patron[] $entries the patron entries
      *
      * @return $this
      */

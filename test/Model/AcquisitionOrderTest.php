@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * AcquisitionOrderTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the aquisition order&#39;s details
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -110,7 +110,7 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "acquisition_type"
+     * Test attribute "acquisitionType"
      */
     public function testPropertyAcquisitionType()
     {
@@ -159,14 +159,14 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "order_note"
+     * Test attribute "orderNote"
      */
     public function testPropertyOrderNote()
     {
     }
 
     /**
-     * Test attribute "order_type"
+     * Test attribute "orderType"
      */
     public function testPropertyOrderType()
     {
@@ -243,23 +243,23 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "staff_note"
+     * Test attribute "staffNote"
      */
     public function testPropertyStaffNote()
     {
     }
 
     /**
-     * Test attribute "vendor_note"
+     * Test attribute "vendorNote"
      */
     public function testPropertyVendorNote()
     {
     }
 
     /**
-     * Test attribute "vendor_id_number"
+     * Test attribute "vendorIDNumber"
      */
-    public function testPropertyVendorIdNumber()
+    public function testPropertyVendorIDNumber()
     {
     }
 
@@ -271,14 +271,14 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "vendor_account"
+     * Test attribute "vendorAccount"
      */
     public function testPropertyVendorAccount()
     {
     }
 
     /**
-     * Test attribute "currency_code"
+     * Test attribute "currencyCode"
      */
     public function testPropertyCurrencyCode()
     {
@@ -292,7 +292,7 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ship_to"
+     * Test attribute "shipTo"
      */
     public function testPropertyShipTo()
     {
@@ -306,49 +306,49 @@ class AcquisitionOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "old_order_number"
+     * Test attribute "oldOrderNumber"
      */
     public function testPropertyOldOrderNumber()
     {
     }
 
     /**
-     * Test attribute "paid_note"
+     * Test attribute "paidNote"
      */
     public function testPropertyPaidNote()
     {
     }
 
     /**
-     * Test attribute "vendor_address"
+     * Test attribute "vendorAddress"
      */
     public function testPropertyVendorAddress()
     {
     }
 
     /**
-     * Test attribute "custom_var_field1"
+     * Test attribute "customVarField1"
      */
     public function testPropertyCustomVarField1()
     {
     }
 
     /**
-     * Test attribute "custom_var_field2"
+     * Test attribute "customVarField2"
      */
     public function testPropertyCustomVarField2()
     {
     }
 
     /**
-     * Test attribute "custom_var_field3"
+     * Test attribute "customVarField3"
      */
     public function testPropertyCustomVarField3()
     {
     }
 
     /**
-     * Test attribute "custom_var_field4"
+     * Test attribute "customVarField4"
      */
     public function testPropertyCustomVarField4()
     {

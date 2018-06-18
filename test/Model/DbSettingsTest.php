@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * DbSettingsTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description The database settings
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -124,49 +124,49 @@ class DbSettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "min_pool_size"
+     * Test attribute "minPoolSize"
      */
     public function testPropertyMinPoolSize()
     {
     }
 
     /**
-     * Test attribute "max_pool_size"
+     * Test attribute "maxPoolSize"
      */
     public function testPropertyMaxPoolSize()
     {
     }
 
     /**
-     * Test attribute "pool_increment"
+     * Test attribute "poolIncrement"
      */
     public function testPropertyPoolIncrement()
     {
     }
 
     /**
-     * Test attribute "test_connection_on_checkout"
+     * Test attribute "testConnectionOnCheckout"
      */
     public function testPropertyTestConnectionOnCheckout()
     {
     }
 
     /**
-     * Test attribute "test_connection_on_checkin"
+     * Test attribute "testConnectionOnCheckin"
      */
     public function testPropertyTestConnectionOnCheckin()
     {
     }
 
     /**
-     * Test attribute "idle_connection_test_period"
+     * Test attribute "idleConnectionTestPeriod"
      */
     public function testPropertyIdleConnectionTestPeriod()
     {
     }
 
     /**
-     * Test attribute "use_java_melody"
+     * Test attribute "useJavaMelody"
      */
     public function testPropertyUseJavaMelody()
     {

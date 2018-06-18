@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * PatronPatchTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description a patron PUT request
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -117,77 +117,77 @@ class PatronPatchTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "patron_type"
+     * Test attribute "patronType"
      */
     public function testPropertyPatronType()
     {
     }
 
     /**
-     * Test attribute "expiration_date"
+     * Test attribute "expirationDate"
      */
     public function testPropertyExpirationDate()
     {
     }
 
     /**
-     * Test attribute "birth_date"
+     * Test attribute "birthDate"
      */
     public function testPropertyBirthDate()
     {
     }
 
     /**
-     * Test attribute "patron_codes"
+     * Test attribute "patronCodes"
      */
     public function testPropertyPatronCodes()
     {
     }
 
     /**
-     * Test attribute "block_info"
+     * Test attribute "blockInfo"
      */
     public function testPropertyBlockInfo()
     {
     }
 
     /**
-     * Test attribute "unique_ids"
+     * Test attribute "uniqueIds"
      */
     public function testPropertyUniqueIds()
     {
     }
 
     /**
-     * Test attribute "p_message"
+     * Test attribute "pMessage"
      */
     public function testPropertyPMessage()
     {
     }
 
     /**
-     * Test attribute "home_library_code"
+     * Test attribute "homeLibraryCode"
      */
     public function testPropertyHomeLibraryCode()
     {
     }
 
     /**
-     * Test attribute "lang_pref"
+     * Test attribute "langPref"
      */
     public function testPropertyLangPref()
     {
     }
 
     /**
-     * Test attribute "fixed_fields"
+     * Test attribute "fixedFields"
      */
     public function testPropertyFixedFields()
     {
     }
 
     /**
-     * Test attribute "var_fields"
+     * Test attribute "varFields"
      */
     public function testPropertyVarFields()
     {

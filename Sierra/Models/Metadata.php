@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Metadata Class Doc Comment
  *
  * @category Class
  * @description Metadata result
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class Metadata implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'field' => 'string',
-        'values' => '\Sierra\Models\MetadataValue[]'
+        'values' => '\III\Sierra\Models\MetadataValue[]'
     ];
 
     /**
@@ -248,7 +248,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
      * Gets values
      *
-     * @return \Sierra\Models\MetadataValue[]
+     * @return \III\Sierra\Models\MetadataValue[]
      */
     public function getValues()
     {
@@ -258,7 +258,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
      * Sets values
      *
-     * @param \Sierra\Models\MetadataValue[] $values Metadata values
+     * @param \III\Sierra\Models\MetadataValue[] $values Metadata values
      *
      * @return $this
      */

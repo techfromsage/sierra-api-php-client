@@ -1,4 +1,4 @@
-# Sierra\V5usersApi
+# III\Sierra\V5usersApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **validateASierraUserByUsernameAndPassword**
-> \Sierra\Models\ErrorCode validateASierraUserByUsernameAndPassword($body)
+> \III\Sierra\Models\ErrorCode validateASierraUserByUsernameAndPassword($body)
 
 Validate a sierra user by username and password
 
@@ -19,12 +19,12 @@ Validate a sierra user by username and password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5usersApi(
+$apiInstance = new III\Sierra\Api\V5usersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Sierra\Models\User(); // \Sierra\Models\User | post request
+$body = new \III\Sierra\Models\User(); // \III\Sierra\Models\User | post request
 
 try {
     $result = $apiInstance->validateASierraUserByUsernameAndPassword($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Sierra\Models\User**](../Model/User.md)| post request |
+ **body** | [**\III\Sierra\Models\User**](../Model/User.md)| post request |
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 

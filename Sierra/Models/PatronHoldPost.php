@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * PatronHoldPost Class Doc Comment
  *
  * @category Class
  * @description a hold
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -55,11 +55,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'record_type' => 'string',
-        'record_number' => 'int',
-        'pickup_location' => 'string',
-        'needed_by' => '\DateTime',
-        'number_of_copies' => 'int',
+        'recordType' => 'string',
+        'recordNumber' => 'int',
+        'pickupLocation' => 'string',
+        'neededBy' => '\DateTime',
+        'numberOfCopies' => 'int',
         'note' => 'string'
     ];
 
@@ -69,11 +69,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'record_type' => null,
-        'record_number' => 'int64',
-        'pickup_location' => null,
-        'needed_by' => 'date',
-        'number_of_copies' => 'int32',
+        'recordType' => null,
+        'recordNumber' => 'int64',
+        'pickupLocation' => null,
+        'neededBy' => 'date',
+        'numberOfCopies' => 'int32',
         'note' => null
     ];
 
@@ -104,11 +104,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'record_type' => 'recordType',
-        'record_number' => 'recordNumber',
-        'pickup_location' => 'pickupLocation',
-        'needed_by' => 'neededBy',
-        'number_of_copies' => 'numberOfCopies',
+        'recordType' => 'recordType',
+        'recordNumber' => 'recordNumber',
+        'pickupLocation' => 'pickupLocation',
+        'neededBy' => 'neededBy',
+        'numberOfCopies' => 'numberOfCopies',
         'note' => 'note'
     ];
 
@@ -118,11 +118,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'record_type' => 'setRecordType',
-        'record_number' => 'setRecordNumber',
-        'pickup_location' => 'setPickupLocation',
-        'needed_by' => 'setNeededBy',
-        'number_of_copies' => 'setNumberOfCopies',
+        'recordType' => 'setRecordType',
+        'recordNumber' => 'setRecordNumber',
+        'pickupLocation' => 'setPickupLocation',
+        'neededBy' => 'setNeededBy',
+        'numberOfCopies' => 'setNumberOfCopies',
         'note' => 'setNote'
     ];
 
@@ -132,11 +132,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'record_type' => 'getRecordType',
-        'record_number' => 'getRecordNumber',
-        'pickup_location' => 'getPickupLocation',
-        'needed_by' => 'getNeededBy',
-        'number_of_copies' => 'getNumberOfCopies',
+        'recordType' => 'getRecordType',
+        'recordNumber' => 'getRecordNumber',
+        'pickupLocation' => 'getPickupLocation',
+        'neededBy' => 'getNeededBy',
+        'numberOfCopies' => 'getNumberOfCopies',
         'note' => 'getNote'
     ];
 
@@ -200,11 +200,11 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['record_type'] = isset($data['record_type']) ? $data['record_type'] : null;
-        $this->container['record_number'] = isset($data['record_number']) ? $data['record_number'] : null;
-        $this->container['pickup_location'] = isset($data['pickup_location']) ? $data['pickup_location'] : null;
-        $this->container['needed_by'] = isset($data['needed_by']) ? $data['needed_by'] : null;
-        $this->container['number_of_copies'] = isset($data['number_of_copies']) ? $data['number_of_copies'] : null;
+        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : null;
+        $this->container['recordNumber'] = isset($data['recordNumber']) ? $data['recordNumber'] : null;
+        $this->container['pickupLocation'] = isset($data['pickupLocation']) ? $data['pickupLocation'] : null;
+        $this->container['neededBy'] = isset($data['neededBy']) ? $data['neededBy'] : null;
+        $this->container['numberOfCopies'] = isset($data['numberOfCopies']) ? $data['numberOfCopies'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
     }
 
@@ -217,14 +217,14 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['record_type'] === null) {
-            $invalidProperties[] = "'record_type' can't be null";
+        if ($this->container['recordType'] === null) {
+            $invalidProperties[] = "'recordType' can't be null";
         }
-        if ($this->container['record_number'] === null) {
-            $invalidProperties[] = "'record_number' can't be null";
+        if ($this->container['recordNumber'] === null) {
+            $invalidProperties[] = "'recordNumber' can't be null";
         }
-        if ($this->container['pickup_location'] === null) {
-            $invalidProperties[] = "'pickup_location' can't be null";
+        if ($this->container['pickupLocation'] === null) {
+            $invalidProperties[] = "'pickupLocation' can't be null";
         }
         return $invalidProperties;
     }
@@ -238,13 +238,13 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['record_type'] === null) {
+        if ($this->container['recordType'] === null) {
             return false;
         }
-        if ($this->container['record_number'] === null) {
+        if ($this->container['recordNumber'] === null) {
             return false;
         }
-        if ($this->container['pickup_location'] === null) {
+        if ($this->container['pickupLocation'] === null) {
             return false;
         }
         return true;
@@ -252,121 +252,121 @@ class PatronHoldPost implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets record_type
+     * Gets recordType
      *
      * @return string
      */
     public function getRecordType()
     {
-        return $this->container['record_type'];
+        return $this->container['recordType'];
     }
 
     /**
-     * Sets record_type
+     * Sets recordType
      *
-     * @param string $record_type the record type code, i.e., bib (b), item (i), or volume (j), associated with the hold
+     * @param string $recordType the record type code, i.e., bib (b), item (i), or volume (j), associated with the hold
      *
      * @return $this
      */
-    public function setRecordType($record_type)
+    public function setRecordType($recordType)
     {
-        $this->container['record_type'] = $record_type;
+        $this->container['recordType'] = $recordType;
 
         return $this;
     }
 
     /**
-     * Gets record_number
+     * Gets recordNumber
      *
      * @return int
      */
     public function getRecordNumber()
     {
-        return $this->container['record_number'];
+        return $this->container['recordNumber'];
     }
 
     /**
-     * Sets record_number
+     * Sets recordNumber
      *
-     * @param int $record_number the held record number
+     * @param int $recordNumber the held record number
      *
      * @return $this
      */
-    public function setRecordNumber($record_number)
+    public function setRecordNumber($recordNumber)
     {
-        $this->container['record_number'] = $record_number;
+        $this->container['recordNumber'] = $recordNumber;
 
         return $this;
     }
 
     /**
-     * Gets pickup_location
+     * Gets pickupLocation
      *
      * @return string
      */
     public function getPickupLocation()
     {
-        return $this->container['pickup_location'];
+        return $this->container['pickupLocation'];
     }
 
     /**
-     * Sets pickup_location
+     * Sets pickupLocation
      *
-     * @param string $pickup_location the pickup location code
+     * @param string $pickupLocation the pickup location code
      *
      * @return $this
      */
-    public function setPickupLocation($pickup_location)
+    public function setPickupLocation($pickupLocation)
     {
-        $this->container['pickup_location'] = $pickup_location;
+        $this->container['pickupLocation'] = $pickupLocation;
 
         return $this;
     }
 
     /**
-     * Gets needed_by
+     * Gets neededBy
      *
      * @return \DateTime
      */
     public function getNeededBy()
     {
-        return $this->container['needed_by'];
+        return $this->container['neededBy'];
     }
 
     /**
-     * Sets needed_by
+     * Sets neededBy
      *
-     * @param \DateTime $needed_by the date after which the held item is no longer needed, in ISO 8601 format (yyyy-MM-dd)
+     * @param \DateTime $neededBy the date after which the held item is no longer needed, in ISO 8601 format (yyyy-MM-dd)
      *
      * @return $this
      */
-    public function setNeededBy($needed_by)
+    public function setNeededBy($neededBy)
     {
-        $this->container['needed_by'] = $needed_by;
+        $this->container['neededBy'] = $neededBy;
 
         return $this;
     }
 
     /**
-     * Gets number_of_copies
+     * Gets numberOfCopies
      *
      * @return int
      */
     public function getNumberOfCopies()
     {
-        return $this->container['number_of_copies'];
+        return $this->container['numberOfCopies'];
     }
 
     /**
-     * Sets number_of_copies
+     * Sets numberOfCopies
      *
-     * @param int $number_of_copies the number of copies to hold
+     * @param int $numberOfCopies the number of copies to hold
      *
      * @return $this
      */
-    public function setNumberOfCopies($number_of_copies)
+    public function setNumberOfCopies($numberOfCopies)
     {
-        $this->container['number_of_copies'] = $number_of_copies;
+        $this->container['numberOfCopies'] = $numberOfCopies;
 
         return $this;
     }

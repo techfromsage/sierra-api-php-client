@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * WebpacPXClientSettings Class Doc Comment
  *
  * @category Class
  * @description the WebPAC PX client settings
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'host' => 'string',
         'port' => 'int',
-        'url_context' => 'string'
+        'urlContext' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'host' => null,
         'port' => 'int32',
-        'url_context' => null
+        'urlContext' => null
     ];
 
     /**
@@ -100,7 +100,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'host' => 'host',
         'port' => 'port',
-        'url_context' => 'urlContext'
+        'urlContext' => 'urlContext'
     ];
 
     /**
@@ -111,7 +111,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     protected static $setters = [
         'host' => 'setHost',
         'port' => 'setPort',
-        'url_context' => 'setUrlContext'
+        'urlContext' => 'setUrlContext'
     ];
 
     /**
@@ -122,7 +122,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     protected static $getters = [
         'host' => 'getHost',
         'port' => 'getPort',
-        'url_context' => 'getUrlContext'
+        'urlContext' => 'getUrlContext'
     ];
 
     /**
@@ -187,7 +187,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     {
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['url_context'] = isset($data['url_context']) ? $data['url_context'] : null;
+        $this->container['urlContext'] = isset($data['urlContext']) ? $data['urlContext'] : null;
     }
 
     /**
@@ -205,8 +205,8 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
         }
-        if ($this->container['url_context'] === null) {
-            $invalidProperties[] = "'url_context' can't be null";
+        if ($this->container['urlContext'] === null) {
+            $invalidProperties[] = "'urlContext' can't be null";
         }
         return $invalidProperties;
     }
@@ -226,7 +226,7 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
         if ($this->container['port'] === null) {
             return false;
         }
-        if ($this->container['url_context'] === null) {
+        if ($this->container['urlContext'] === null) {
             return false;
         }
         return true;
@@ -282,25 +282,25 @@ class WebpacPXClientSettings implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets url_context
+     * Gets urlContext
      *
      * @return string
      */
     public function getUrlContext()
     {
-        return $this->container['url_context'];
+        return $this->container['urlContext'];
     }
 
     /**
-     * Sets url_context
+     * Sets urlContext
      *
-     * @param string $url_context the WebPAC PX client URL context
+     * @param string $urlContext the WebPAC PX client URL context
      *
      * @return $this
      */
-    public function setUrlContext($url_context)
+    public function setUrlContext($urlContext)
     {
-        $this->container['url_context'] = $url_context;
+        $this->container['urlContext'] = $urlContext;
 
         return $this;
     }

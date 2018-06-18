@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * BibSearchResultSet Class Doc Comment
  *
  * @category Class
  * @description a paged set of bib search results
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class BibSearchResultSet implements ModelInterface, ArrayAccess
         'count' => 'int',
         'total' => 'int',
         'start' => 'int',
-        'entries' => '\Sierra\Models\BibSearchResultEntry[]'
+        'entries' => '\III\Sierra\Models\BibSearchResultEntry[]'
     ];
 
     /**
@@ -308,7 +308,7 @@ class BibSearchResultSet implements ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Sierra\Models\BibSearchResultEntry[]
+     * @return \III\Sierra\Models\BibSearchResultEntry[]
      */
     public function getEntries()
     {
@@ -318,7 +318,7 @@ class BibSearchResultSet implements ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Sierra\Models\BibSearchResultEntry[] $entries the search result entries in this set
+     * @param \III\Sierra\Models\BibSearchResultEntry[] $entries the search result entries in this set
      *
      * @return $this
      */

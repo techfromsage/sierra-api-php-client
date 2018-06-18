@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * AcquisitionOrder Class Doc Comment
  *
  * @category Class
  * @description the aquisition order&#39;s details
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,18 +57,18 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'login' => 'string',
         'copies' => 'int',
-        'allocation' => '\Sierra\Models\AcquisitionOrderAllocation[]',
+        'allocation' => '\III\Sierra\Models\AcquisitionOrderAllocation[]',
         'vendor' => 'string',
         'price' => 'double',
-        'acquisition_type' => 'string',
+        'acquisitionType' => 'string',
         'claim' => 'string',
         'code1' => 'string',
         'code2' => 'string',
         'code3' => 'string',
         'code4' => 'string',
         'format' => 'string',
-        'order_note' => 'string',
-        'order_type' => 'string',
+        'orderNote' => 'string',
+        'orderType' => 'string',
         'raction' => 'string',
         'rloc' => 'string',
         'bloc' => 'string',
@@ -79,22 +79,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'country' => 'string',
         'volume' => 'int',
         'note' => 'string[]',
-        'staff_note' => 'string[]',
-        'vendor_note' => 'string[]',
-        'vendor_id_number' => 'string[]',
+        'staffNote' => 'string[]',
+        'vendorNote' => 'string[]',
+        'vendorIDNumber' => 'string[]',
         'selector' => 'string[]',
-        'vendor_account' => 'string[]',
-        'currency_code' => 'string',
+        'vendorAccount' => 'string[]',
+        'currencyCode' => 'string',
         'identity' => 'string[]',
-        'ship_to' => 'string[]',
+        'shipTo' => 'string[]',
         'requestor' => 'string[]',
-        'old_order_number' => 'string[]',
-        'paid_note' => 'string[]',
-        'vendor_address' => 'string[]',
-        'custom_var_field1' => 'string[]',
-        'custom_var_field2' => 'string[]',
-        'custom_var_field3' => 'string[]',
-        'custom_var_field4' => 'string[]'
+        'oldOrderNumber' => 'string[]',
+        'paidNote' => 'string[]',
+        'vendorAddress' => 'string[]',
+        'customVarField1' => 'string[]',
+        'customVarField2' => 'string[]',
+        'customVarField3' => 'string[]',
+        'customVarField4' => 'string[]'
     ];
 
     /**
@@ -108,15 +108,15 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'allocation' => null,
         'vendor' => null,
         'price' => 'double',
-        'acquisition_type' => null,
+        'acquisitionType' => null,
         'claim' => null,
         'code1' => null,
         'code2' => null,
         'code3' => null,
         'code4' => null,
         'format' => null,
-        'order_note' => null,
-        'order_type' => null,
+        'orderNote' => null,
+        'orderType' => null,
         'raction' => null,
         'rloc' => null,
         'bloc' => null,
@@ -127,22 +127,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'country' => null,
         'volume' => 'int32',
         'note' => null,
-        'staff_note' => null,
-        'vendor_note' => null,
-        'vendor_id_number' => null,
+        'staffNote' => null,
+        'vendorNote' => null,
+        'vendorIDNumber' => null,
         'selector' => null,
-        'vendor_account' => null,
-        'currency_code' => null,
+        'vendorAccount' => null,
+        'currencyCode' => null,
         'identity' => null,
-        'ship_to' => null,
+        'shipTo' => null,
         'requestor' => null,
-        'old_order_number' => null,
-        'paid_note' => null,
-        'vendor_address' => null,
-        'custom_var_field1' => null,
-        'custom_var_field2' => null,
-        'custom_var_field3' => null,
-        'custom_var_field4' => null
+        'oldOrderNumber' => null,
+        'paidNote' => null,
+        'vendorAddress' => null,
+        'customVarField1' => null,
+        'customVarField2' => null,
+        'customVarField3' => null,
+        'customVarField4' => null
     ];
 
     /**
@@ -177,15 +177,15 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'allocation' => 'allocation',
         'vendor' => 'vendor',
         'price' => 'price',
-        'acquisition_type' => 'acquisitionType',
+        'acquisitionType' => 'acquisitionType',
         'claim' => 'claim',
         'code1' => 'code1',
         'code2' => 'code2',
         'code3' => 'code3',
         'code4' => 'code4',
         'format' => 'format',
-        'order_note' => 'orderNote',
-        'order_type' => 'orderType',
+        'orderNote' => 'orderNote',
+        'orderType' => 'orderType',
         'raction' => 'raction',
         'rloc' => 'rloc',
         'bloc' => 'bloc',
@@ -196,22 +196,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'country' => 'country',
         'volume' => 'volume',
         'note' => 'note',
-        'staff_note' => 'staffNote',
-        'vendor_note' => 'vendorNote',
-        'vendor_id_number' => 'vendorIDNumber',
+        'staffNote' => 'staffNote',
+        'vendorNote' => 'vendorNote',
+        'vendorIDNumber' => 'vendorIDNumber',
         'selector' => 'selector',
-        'vendor_account' => 'vendorAccount',
-        'currency_code' => 'currencyCode',
+        'vendorAccount' => 'vendorAccount',
+        'currencyCode' => 'currencyCode',
         'identity' => 'identity',
-        'ship_to' => 'shipTo',
+        'shipTo' => 'shipTo',
         'requestor' => 'requestor',
-        'old_order_number' => 'oldOrderNumber',
-        'paid_note' => 'paidNote',
-        'vendor_address' => 'vendorAddress',
-        'custom_var_field1' => 'customVarField1',
-        'custom_var_field2' => 'customVarField2',
-        'custom_var_field3' => 'customVarField3',
-        'custom_var_field4' => 'customVarField4'
+        'oldOrderNumber' => 'oldOrderNumber',
+        'paidNote' => 'paidNote',
+        'vendorAddress' => 'vendorAddress',
+        'customVarField1' => 'customVarField1',
+        'customVarField2' => 'customVarField2',
+        'customVarField3' => 'customVarField3',
+        'customVarField4' => 'customVarField4'
     ];
 
     /**
@@ -225,15 +225,15 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'allocation' => 'setAllocation',
         'vendor' => 'setVendor',
         'price' => 'setPrice',
-        'acquisition_type' => 'setAcquisitionType',
+        'acquisitionType' => 'setAcquisitionType',
         'claim' => 'setClaim',
         'code1' => 'setCode1',
         'code2' => 'setCode2',
         'code3' => 'setCode3',
         'code4' => 'setCode4',
         'format' => 'setFormat',
-        'order_note' => 'setOrderNote',
-        'order_type' => 'setOrderType',
+        'orderNote' => 'setOrderNote',
+        'orderType' => 'setOrderType',
         'raction' => 'setRaction',
         'rloc' => 'setRloc',
         'bloc' => 'setBloc',
@@ -244,22 +244,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'country' => 'setCountry',
         'volume' => 'setVolume',
         'note' => 'setNote',
-        'staff_note' => 'setStaffNote',
-        'vendor_note' => 'setVendorNote',
-        'vendor_id_number' => 'setVendorIdNumber',
+        'staffNote' => 'setStaffNote',
+        'vendorNote' => 'setVendorNote',
+        'vendorIDNumber' => 'setVendorIDNumber',
         'selector' => 'setSelector',
-        'vendor_account' => 'setVendorAccount',
-        'currency_code' => 'setCurrencyCode',
+        'vendorAccount' => 'setVendorAccount',
+        'currencyCode' => 'setCurrencyCode',
         'identity' => 'setIdentity',
-        'ship_to' => 'setShipTo',
+        'shipTo' => 'setShipTo',
         'requestor' => 'setRequestor',
-        'old_order_number' => 'setOldOrderNumber',
-        'paid_note' => 'setPaidNote',
-        'vendor_address' => 'setVendorAddress',
-        'custom_var_field1' => 'setCustomVarField1',
-        'custom_var_field2' => 'setCustomVarField2',
-        'custom_var_field3' => 'setCustomVarField3',
-        'custom_var_field4' => 'setCustomVarField4'
+        'oldOrderNumber' => 'setOldOrderNumber',
+        'paidNote' => 'setPaidNote',
+        'vendorAddress' => 'setVendorAddress',
+        'customVarField1' => 'setCustomVarField1',
+        'customVarField2' => 'setCustomVarField2',
+        'customVarField3' => 'setCustomVarField3',
+        'customVarField4' => 'setCustomVarField4'
     ];
 
     /**
@@ -273,15 +273,15 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'allocation' => 'getAllocation',
         'vendor' => 'getVendor',
         'price' => 'getPrice',
-        'acquisition_type' => 'getAcquisitionType',
+        'acquisitionType' => 'getAcquisitionType',
         'claim' => 'getClaim',
         'code1' => 'getCode1',
         'code2' => 'getCode2',
         'code3' => 'getCode3',
         'code4' => 'getCode4',
         'format' => 'getFormat',
-        'order_note' => 'getOrderNote',
-        'order_type' => 'getOrderType',
+        'orderNote' => 'getOrderNote',
+        'orderType' => 'getOrderType',
         'raction' => 'getRaction',
         'rloc' => 'getRloc',
         'bloc' => 'getBloc',
@@ -292,22 +292,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         'country' => 'getCountry',
         'volume' => 'getVolume',
         'note' => 'getNote',
-        'staff_note' => 'getStaffNote',
-        'vendor_note' => 'getVendorNote',
-        'vendor_id_number' => 'getVendorIdNumber',
+        'staffNote' => 'getStaffNote',
+        'vendorNote' => 'getVendorNote',
+        'vendorIDNumber' => 'getVendorIDNumber',
         'selector' => 'getSelector',
-        'vendor_account' => 'getVendorAccount',
-        'currency_code' => 'getCurrencyCode',
+        'vendorAccount' => 'getVendorAccount',
+        'currencyCode' => 'getCurrencyCode',
         'identity' => 'getIdentity',
-        'ship_to' => 'getShipTo',
+        'shipTo' => 'getShipTo',
         'requestor' => 'getRequestor',
-        'old_order_number' => 'getOldOrderNumber',
-        'paid_note' => 'getPaidNote',
-        'vendor_address' => 'getVendorAddress',
-        'custom_var_field1' => 'getCustomVarField1',
-        'custom_var_field2' => 'getCustomVarField2',
-        'custom_var_field3' => 'getCustomVarField3',
-        'custom_var_field4' => 'getCustomVarField4'
+        'oldOrderNumber' => 'getOldOrderNumber',
+        'paidNote' => 'getPaidNote',
+        'vendorAddress' => 'getVendorAddress',
+        'customVarField1' => 'getCustomVarField1',
+        'customVarField2' => 'getCustomVarField2',
+        'customVarField3' => 'getCustomVarField3',
+        'customVarField4' => 'getCustomVarField4'
     ];
 
     /**
@@ -375,15 +375,15 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         $this->container['allocation'] = isset($data['allocation']) ? $data['allocation'] : null;
         $this->container['vendor'] = isset($data['vendor']) ? $data['vendor'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
-        $this->container['acquisition_type'] = isset($data['acquisition_type']) ? $data['acquisition_type'] : null;
+        $this->container['acquisitionType'] = isset($data['acquisitionType']) ? $data['acquisitionType'] : null;
         $this->container['claim'] = isset($data['claim']) ? $data['claim'] : null;
         $this->container['code1'] = isset($data['code1']) ? $data['code1'] : null;
         $this->container['code2'] = isset($data['code2']) ? $data['code2'] : null;
         $this->container['code3'] = isset($data['code3']) ? $data['code3'] : null;
         $this->container['code4'] = isset($data['code4']) ? $data['code4'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
-        $this->container['order_note'] = isset($data['order_note']) ? $data['order_note'] : null;
-        $this->container['order_type'] = isset($data['order_type']) ? $data['order_type'] : null;
+        $this->container['orderNote'] = isset($data['orderNote']) ? $data['orderNote'] : null;
+        $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
         $this->container['raction'] = isset($data['raction']) ? $data['raction'] : null;
         $this->container['rloc'] = isset($data['rloc']) ? $data['rloc'] : null;
         $this->container['bloc'] = isset($data['bloc']) ? $data['bloc'] : null;
@@ -394,22 +394,22 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['staff_note'] = isset($data['staff_note']) ? $data['staff_note'] : null;
-        $this->container['vendor_note'] = isset($data['vendor_note']) ? $data['vendor_note'] : null;
-        $this->container['vendor_id_number'] = isset($data['vendor_id_number']) ? $data['vendor_id_number'] : null;
+        $this->container['staffNote'] = isset($data['staffNote']) ? $data['staffNote'] : null;
+        $this->container['vendorNote'] = isset($data['vendorNote']) ? $data['vendorNote'] : null;
+        $this->container['vendorIDNumber'] = isset($data['vendorIDNumber']) ? $data['vendorIDNumber'] : null;
         $this->container['selector'] = isset($data['selector']) ? $data['selector'] : null;
-        $this->container['vendor_account'] = isset($data['vendor_account']) ? $data['vendor_account'] : null;
-        $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
+        $this->container['vendorAccount'] = isset($data['vendorAccount']) ? $data['vendorAccount'] : null;
+        $this->container['currencyCode'] = isset($data['currencyCode']) ? $data['currencyCode'] : null;
         $this->container['identity'] = isset($data['identity']) ? $data['identity'] : null;
-        $this->container['ship_to'] = isset($data['ship_to']) ? $data['ship_to'] : null;
+        $this->container['shipTo'] = isset($data['shipTo']) ? $data['shipTo'] : null;
         $this->container['requestor'] = isset($data['requestor']) ? $data['requestor'] : null;
-        $this->container['old_order_number'] = isset($data['old_order_number']) ? $data['old_order_number'] : null;
-        $this->container['paid_note'] = isset($data['paid_note']) ? $data['paid_note'] : null;
-        $this->container['vendor_address'] = isset($data['vendor_address']) ? $data['vendor_address'] : null;
-        $this->container['custom_var_field1'] = isset($data['custom_var_field1']) ? $data['custom_var_field1'] : null;
-        $this->container['custom_var_field2'] = isset($data['custom_var_field2']) ? $data['custom_var_field2'] : null;
-        $this->container['custom_var_field3'] = isset($data['custom_var_field3']) ? $data['custom_var_field3'] : null;
-        $this->container['custom_var_field4'] = isset($data['custom_var_field4']) ? $data['custom_var_field4'] : null;
+        $this->container['oldOrderNumber'] = isset($data['oldOrderNumber']) ? $data['oldOrderNumber'] : null;
+        $this->container['paidNote'] = isset($data['paidNote']) ? $data['paidNote'] : null;
+        $this->container['vendorAddress'] = isset($data['vendorAddress']) ? $data['vendorAddress'] : null;
+        $this->container['customVarField1'] = isset($data['customVarField1']) ? $data['customVarField1'] : null;
+        $this->container['customVarField2'] = isset($data['customVarField2']) ? $data['customVarField2'] : null;
+        $this->container['customVarField3'] = isset($data['customVarField3']) ? $data['customVarField3'] : null;
+        $this->container['customVarField4'] = isset($data['customVarField4']) ? $data['customVarField4'] : null;
     }
 
     /**
@@ -433,50 +433,50 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         if ($this->container['note'] === null) {
             $invalidProperties[] = "'note' can't be null";
         }
-        if ($this->container['staff_note'] === null) {
-            $invalidProperties[] = "'staff_note' can't be null";
+        if ($this->container['staffNote'] === null) {
+            $invalidProperties[] = "'staffNote' can't be null";
         }
-        if ($this->container['vendor_note'] === null) {
-            $invalidProperties[] = "'vendor_note' can't be null";
+        if ($this->container['vendorNote'] === null) {
+            $invalidProperties[] = "'vendorNote' can't be null";
         }
-        if ($this->container['vendor_id_number'] === null) {
-            $invalidProperties[] = "'vendor_id_number' can't be null";
+        if ($this->container['vendorIDNumber'] === null) {
+            $invalidProperties[] = "'vendorIDNumber' can't be null";
         }
         if ($this->container['selector'] === null) {
             $invalidProperties[] = "'selector' can't be null";
         }
-        if ($this->container['vendor_account'] === null) {
-            $invalidProperties[] = "'vendor_account' can't be null";
+        if ($this->container['vendorAccount'] === null) {
+            $invalidProperties[] = "'vendorAccount' can't be null";
         }
         if ($this->container['identity'] === null) {
             $invalidProperties[] = "'identity' can't be null";
         }
-        if ($this->container['ship_to'] === null) {
-            $invalidProperties[] = "'ship_to' can't be null";
+        if ($this->container['shipTo'] === null) {
+            $invalidProperties[] = "'shipTo' can't be null";
         }
         if ($this->container['requestor'] === null) {
             $invalidProperties[] = "'requestor' can't be null";
         }
-        if ($this->container['old_order_number'] === null) {
-            $invalidProperties[] = "'old_order_number' can't be null";
+        if ($this->container['oldOrderNumber'] === null) {
+            $invalidProperties[] = "'oldOrderNumber' can't be null";
         }
-        if ($this->container['paid_note'] === null) {
-            $invalidProperties[] = "'paid_note' can't be null";
+        if ($this->container['paidNote'] === null) {
+            $invalidProperties[] = "'paidNote' can't be null";
         }
-        if ($this->container['vendor_address'] === null) {
-            $invalidProperties[] = "'vendor_address' can't be null";
+        if ($this->container['vendorAddress'] === null) {
+            $invalidProperties[] = "'vendorAddress' can't be null";
         }
-        if ($this->container['custom_var_field1'] === null) {
-            $invalidProperties[] = "'custom_var_field1' can't be null";
+        if ($this->container['customVarField1'] === null) {
+            $invalidProperties[] = "'customVarField1' can't be null";
         }
-        if ($this->container['custom_var_field2'] === null) {
-            $invalidProperties[] = "'custom_var_field2' can't be null";
+        if ($this->container['customVarField2'] === null) {
+            $invalidProperties[] = "'customVarField2' can't be null";
         }
-        if ($this->container['custom_var_field3'] === null) {
-            $invalidProperties[] = "'custom_var_field3' can't be null";
+        if ($this->container['customVarField3'] === null) {
+            $invalidProperties[] = "'customVarField3' can't be null";
         }
-        if ($this->container['custom_var_field4'] === null) {
-            $invalidProperties[] = "'custom_var_field4' can't be null";
+        if ($this->container['customVarField4'] === null) {
+            $invalidProperties[] = "'customVarField4' can't be null";
         }
         return $invalidProperties;
     }
@@ -502,49 +502,49 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
         if ($this->container['note'] === null) {
             return false;
         }
-        if ($this->container['staff_note'] === null) {
+        if ($this->container['staffNote'] === null) {
             return false;
         }
-        if ($this->container['vendor_note'] === null) {
+        if ($this->container['vendorNote'] === null) {
             return false;
         }
-        if ($this->container['vendor_id_number'] === null) {
+        if ($this->container['vendorIDNumber'] === null) {
             return false;
         }
         if ($this->container['selector'] === null) {
             return false;
         }
-        if ($this->container['vendor_account'] === null) {
+        if ($this->container['vendorAccount'] === null) {
             return false;
         }
         if ($this->container['identity'] === null) {
             return false;
         }
-        if ($this->container['ship_to'] === null) {
+        if ($this->container['shipTo'] === null) {
             return false;
         }
         if ($this->container['requestor'] === null) {
             return false;
         }
-        if ($this->container['old_order_number'] === null) {
+        if ($this->container['oldOrderNumber'] === null) {
             return false;
         }
-        if ($this->container['paid_note'] === null) {
+        if ($this->container['paidNote'] === null) {
             return false;
         }
-        if ($this->container['vendor_address'] === null) {
+        if ($this->container['vendorAddress'] === null) {
             return false;
         }
-        if ($this->container['custom_var_field1'] === null) {
+        if ($this->container['customVarField1'] === null) {
             return false;
         }
-        if ($this->container['custom_var_field2'] === null) {
+        if ($this->container['customVarField2'] === null) {
             return false;
         }
-        if ($this->container['custom_var_field3'] === null) {
+        if ($this->container['customVarField3'] === null) {
             return false;
         }
-        if ($this->container['custom_var_field4'] === null) {
+        if ($this->container['customVarField4'] === null) {
             return false;
         }
         return true;
@@ -602,7 +602,7 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     /**
      * Gets allocation
      *
-     * @return \Sierra\Models\AcquisitionOrderAllocation[]
+     * @return \III\Sierra\Models\AcquisitionOrderAllocation[]
      */
     public function getAllocation()
     {
@@ -612,7 +612,7 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     /**
      * Sets allocation
      *
-     * @param \Sierra\Models\AcquisitionOrderAllocation[] $allocation a list of data describing how the order is allocated
+     * @param \III\Sierra\Models\AcquisitionOrderAllocation[] $allocation a list of data describing how the order is allocated
      *
      * @return $this
      */
@@ -672,25 +672,25 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets acquisition_type
+     * Gets acquisitionType
      *
      * @return string
      */
     public function getAcquisitionType()
     {
-        return $this->container['acquisition_type'];
+        return $this->container['acquisitionType'];
     }
 
     /**
-     * Sets acquisition_type
+     * Sets acquisitionType
      *
-     * @param string $acquisition_type the library-defined acquisition type code or the method of paying for the material
+     * @param string $acquisitionType the library-defined acquisition type code or the method of paying for the material
      *
      * @return $this
      */
-    public function setAcquisitionType($acquisition_type)
+    public function setAcquisitionType($acquisitionType)
     {
-        $this->container['acquisition_type'] = $acquisition_type;
+        $this->container['acquisitionType'] = $acquisitionType;
 
         return $this;
     }
@@ -840,49 +840,49 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets order_note
+     * Gets orderNote
      *
      * @return string
      */
     public function getOrderNote()
     {
-        return $this->container['order_note'];
+        return $this->container['orderNote'];
     }
 
     /**
-     * Sets order_note
+     * Sets orderNote
      *
-     * @param string $order_note a code representing an order note to print on the purchase order form
+     * @param string $orderNote a code representing an order note to print on the purchase order form
      *
      * @return $this
      */
-    public function setOrderNote($order_note)
+    public function setOrderNote($orderNote)
     {
-        $this->container['order_note'] = $order_note;
+        $this->container['orderNote'] = $orderNote;
 
         return $this;
     }
 
     /**
-     * Gets order_type
+     * Gets orderType
      *
      * @return string
      */
     public function getOrderType()
     {
-        return $this->container['order_type'];
+        return $this->container['orderType'];
     }
 
     /**
-     * Sets order_type
+     * Sets orderType
      *
-     * @param string $order_type a code representing the type of order
+     * @param string $orderType a code representing the type of order
      *
      * @return $this
      */
-    public function setOrderType($order_type)
+    public function setOrderType($orderType)
     {
-        $this->container['order_type'] = $order_type;
+        $this->container['orderType'] = $orderType;
 
         return $this;
     }
@@ -1128,73 +1128,73 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets staff_note
+     * Gets staffNote
      *
      * @return string[]
      */
     public function getStaffNote()
     {
-        return $this->container['staff_note'];
+        return $this->container['staffNote'];
     }
 
     /**
-     * Sets staff_note
+     * Sets staffNote
      *
-     * @param string[] $staff_note a free-text internal (staff) note (repeatable parameter)
+     * @param string[] $staffNote a free-text internal (staff) note (repeatable parameter)
      *
      * @return $this
      */
-    public function setStaffNote($staff_note)
+    public function setStaffNote($staffNote)
     {
-        $this->container['staff_note'] = $staff_note;
+        $this->container['staffNote'] = $staffNote;
 
         return $this;
     }
 
     /**
-     * Gets vendor_note
+     * Gets vendorNote
      *
      * @return string[]
      */
     public function getVendorNote()
     {
-        return $this->container['vendor_note'];
+        return $this->container['vendorNote'];
     }
 
     /**
-     * Sets vendor_note
+     * Sets vendorNote
      *
-     * @param string[] $vendor_note a free-text note for vendor order information (repeatable parameter)
+     * @param string[] $vendorNote a free-text note for vendor order information (repeatable parameter)
      *
      * @return $this
      */
-    public function setVendorNote($vendor_note)
+    public function setVendorNote($vendorNote)
     {
-        $this->container['vendor_note'] = $vendor_note;
+        $this->container['vendorNote'] = $vendorNote;
 
         return $this;
     }
 
     /**
-     * Gets vendor_id_number
+     * Gets vendorIDNumber
      *
      * @return string[]
      */
-    public function getVendorIdNumber()
+    public function getVendorIDNumber()
     {
-        return $this->container['vendor_id_number'];
+        return $this->container['vendorIDNumber'];
     }
 
     /**
-     * Sets vendor_id_number
+     * Sets vendorIDNumber
      *
-     * @param string[] $vendor_id_number the vendor's identification number for this title (repeatable parameter)
+     * @param string[] $vendorIDNumber the vendor's identification number for this title (repeatable parameter)
      *
      * @return $this
      */
-    public function setVendorIdNumber($vendor_id_number)
+    public function setVendorIDNumber($vendorIDNumber)
     {
-        $this->container['vendor_id_number'] = $vendor_id_number;
+        $this->container['vendorIDNumber'] = $vendorIDNumber;
 
         return $this;
     }
@@ -1224,49 +1224,49 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets vendor_account
+     * Gets vendorAccount
      *
      * @return string[]
      */
     public function getVendorAccount()
     {
-        return $this->container['vendor_account'];
+        return $this->container['vendorAccount'];
     }
 
     /**
-     * Sets vendor_account
+     * Sets vendorAccount
      *
-     * @param string[] $vendor_account the vendor account number (repeatable parameter)
+     * @param string[] $vendorAccount the vendor account number (repeatable parameter)
      *
      * @return $this
      */
-    public function setVendorAccount($vendor_account)
+    public function setVendorAccount($vendorAccount)
     {
-        $this->container['vendor_account'] = $vendor_account;
+        $this->container['vendorAccount'] = $vendorAccount;
 
         return $this;
     }
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      *
      * @return string
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
+     * Sets currencyCode
      *
-     * @param string $currency_code the foreign currency code
+     * @param string $currencyCode the foreign currency code
      *
      * @return $this
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }
@@ -1296,25 +1296,25 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ship_to
+     * Gets shipTo
      *
      * @return string[]
      */
     public function getShipTo()
     {
-        return $this->container['ship_to'];
+        return $this->container['shipTo'];
     }
 
     /**
-     * Sets ship_to
+     * Sets shipTo
      *
-     * @param string[] $ship_to the library address to which the vendor should ship materials (repeatable parameter)
+     * @param string[] $shipTo the library address to which the vendor should ship materials (repeatable parameter)
      *
      * @return $this
      */
-    public function setShipTo($ship_to)
+    public function setShipTo($shipTo)
     {
-        $this->container['ship_to'] = $ship_to;
+        $this->container['shipTo'] = $shipTo;
 
         return $this;
     }
@@ -1344,169 +1344,169 @@ class AcquisitionOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets old_order_number
+     * Gets oldOrderNumber
      *
      * @return string[]
      */
     public function getOldOrderNumber()
     {
-        return $this->container['old_order_number'];
+        return $this->container['oldOrderNumber'];
     }
 
     /**
-     * Sets old_order_number
+     * Sets oldOrderNumber
      *
-     * @param string[] $old_order_number the old order number (repeatable parameter)
+     * @param string[] $oldOrderNumber the old order number (repeatable parameter)
      *
      * @return $this
      */
-    public function setOldOrderNumber($old_order_number)
+    public function setOldOrderNumber($oldOrderNumber)
     {
-        $this->container['old_order_number'] = $old_order_number;
+        $this->container['oldOrderNumber'] = $oldOrderNumber;
 
         return $this;
     }
 
     /**
-     * Gets paid_note
+     * Gets paidNote
      *
      * @return string[]
      */
     public function getPaidNote()
     {
-        return $this->container['paid_note'];
+        return $this->container['paidNote'];
     }
 
     /**
-     * Sets paid_note
+     * Sets paidNote
      *
-     * @param string[] $paid_note the paid note (repeatable parameter)
+     * @param string[] $paidNote the paid note (repeatable parameter)
      *
      * @return $this
      */
-    public function setPaidNote($paid_note)
+    public function setPaidNote($paidNote)
     {
-        $this->container['paid_note'] = $paid_note;
+        $this->container['paidNote'] = $paidNote;
 
         return $this;
     }
 
     /**
-     * Gets vendor_address
+     * Gets vendorAddress
      *
      * @return string[]
      */
     public function getVendorAddress()
     {
-        return $this->container['vendor_address'];
+        return $this->container['vendorAddress'];
     }
 
     /**
-     * Sets vendor_address
+     * Sets vendorAddress
      *
-     * @param string[] $vendor_address the vendor address (repeatable parameter)
+     * @param string[] $vendorAddress the vendor address (repeatable parameter)
      *
      * @return $this
      */
-    public function setVendorAddress($vendor_address)
+    public function setVendorAddress($vendorAddress)
     {
-        $this->container['vendor_address'] = $vendor_address;
+        $this->container['vendorAddress'] = $vendorAddress;
 
         return $this;
     }
 
     /**
-     * Gets custom_var_field1
+     * Gets customVarField1
      *
      * @return string[]
      */
     public function getCustomVarField1()
     {
-        return $this->container['custom_var_field1'];
+        return $this->container['customVarField1'];
     }
 
     /**
-     * Sets custom_var_field1
+     * Sets customVarField1
      *
-     * @param string[] $custom_var_field1 custom var field 1 (repeatable parameter)
+     * @param string[] $customVarField1 custom var field 1 (repeatable parameter)
      *
      * @return $this
      */
-    public function setCustomVarField1($custom_var_field1)
+    public function setCustomVarField1($customVarField1)
     {
-        $this->container['custom_var_field1'] = $custom_var_field1;
+        $this->container['customVarField1'] = $customVarField1;
 
         return $this;
     }
 
     /**
-     * Gets custom_var_field2
+     * Gets customVarField2
      *
      * @return string[]
      */
     public function getCustomVarField2()
     {
-        return $this->container['custom_var_field2'];
+        return $this->container['customVarField2'];
     }
 
     /**
-     * Sets custom_var_field2
+     * Sets customVarField2
      *
-     * @param string[] $custom_var_field2 custom var field 2 (repeatable parameter)
+     * @param string[] $customVarField2 custom var field 2 (repeatable parameter)
      *
      * @return $this
      */
-    public function setCustomVarField2($custom_var_field2)
+    public function setCustomVarField2($customVarField2)
     {
-        $this->container['custom_var_field2'] = $custom_var_field2;
+        $this->container['customVarField2'] = $customVarField2;
 
         return $this;
     }
 
     /**
-     * Gets custom_var_field3
+     * Gets customVarField3
      *
      * @return string[]
      */
     public function getCustomVarField3()
     {
-        return $this->container['custom_var_field3'];
+        return $this->container['customVarField3'];
     }
 
     /**
-     * Sets custom_var_field3
+     * Sets customVarField3
      *
-     * @param string[] $custom_var_field3 custom var field 3 (repeatable parameter)
+     * @param string[] $customVarField3 custom var field 3 (repeatable parameter)
      *
      * @return $this
      */
-    public function setCustomVarField3($custom_var_field3)
+    public function setCustomVarField3($customVarField3)
     {
-        $this->container['custom_var_field3'] = $custom_var_field3;
+        $this->container['customVarField3'] = $customVarField3;
 
         return $this;
     }
 
     /**
-     * Gets custom_var_field4
+     * Gets customVarField4
      *
      * @return string[]
      */
     public function getCustomVarField4()
     {
-        return $this->container['custom_var_field4'];
+        return $this->container['customVarField4'];
     }
 
     /**
-     * Sets custom_var_field4
+     * Sets customVarField4
      *
-     * @param string[] $custom_var_field4 custom var field 4 (repeatable parameter)
+     * @param string[] $customVarField4 custom var field 4 (repeatable parameter)
      *
      * @return $this
      */
-    public function setCustomVarField4($custom_var_field4)
+    public function setCustomVarField4($customVarField4)
     {
-        $this->container['custom_var_field4'] = $custom_var_field4;
+        $this->container['customVarField4'] = $customVarField4;
 
         return $this;
     }

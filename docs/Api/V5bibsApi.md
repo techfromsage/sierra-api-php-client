@@ -1,4 +1,4 @@
-# Sierra\V5bibsApi
+# III\Sierra\V5bibsApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **filterTheRecordsByAQueryInJSONFormat**
-> \Sierra\Models\QueryResultSet filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
+> \III\Sierra\Models\QueryResultSet filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json)
 
 Filter the records by a query in JSON format
 
@@ -26,14 +26,14 @@ Filter the records by a query in JSON format
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $limit = 56; // int | the maximum number of results
-$json = new \Sierra\Models\null(); //  | a query in JSON format (see the Sierra API reference documentation for more information)
+$json = new \III\Sierra\Models\null(); //  | a query in JSON format (see the Sierra API reference documentation for more information)
 
 try {
     $result = $apiInstance->filterTheRecordsByAQueryInJSONFormat($offset, $limit, $json);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\QueryResultSet**](../Model/QueryResultSet.md)
+[**\III\Sierra\Models\QueryResultSet**](../Model/QueryResultSet.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findBibInformationUsingAWSSearchByAuthorTitleOrKeyword**
-> \Sierra\Models\BibSearchResultSet findBibInformationUsingAWSSearchByAuthorTitleOrKeyword($text, $limit, $offset, $fields, $index)
+> \III\Sierra\Models\BibSearchResultSet findBibInformationUsingAWSSearchByAuthorTitleOrKeyword($text, $limit, $offset, $fields, $index)
 
 Find bib information using AWS search by author, title, or keyword
 
@@ -79,7 +79,7 @@ Find bib information using AWS search by author, title, or keyword
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\BibSearchResultSet**](../Model/BibSearchResultSet.md)
+[**\III\Sierra\Models\BibSearchResultSet**](../Model/BibSearchResultSet.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **generateABinaryMARCDataFileOfBibs**
-> \Sierra\Models\MarcSummary generateABinaryMARCDataFileOfBibs($limit, $id, $mapping)
+> \III\Sierra\Models\MarcSummary generateABinaryMARCDataFileOfBibs($limit, $id, $mapping)
 
 Generate a binary MARC data file of bibs
 
@@ -136,7 +136,7 @@ Generate a binary MARC data file of bibs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\MarcSummary**](../Model/MarcSummary.md)
+[**\III\Sierra\Models\MarcSummary**](../Model/MarcSummary.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getABibByRecordID**
-> \Sierra\Models\Bib getABibByRecordID($id, $fields)
+> \III\Sierra\Models\Bib getABibByRecordID($id, $fields)
 
 Get a bib by record ID
 
@@ -189,7 +189,7 @@ Get a bib by record ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Bib**](../Model/Bib.md)
+[**\III\Sierra\Models\Bib**](../Model/Bib.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfBibs**
-> \Sierra\Models\BibResultSet getAListOfBibs($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations)
+> \III\Sierra\Models\BibResultSet getAListOfBibs($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations)
 
 Get a list of bibs
 
@@ -240,7 +240,7 @@ Get a list of bibs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -249,15 +249,15 @@ $limit = 56; // int | the maximum number of results
 $offset = 56; // int | the beginning record (zero-indexed) of the result set returned
 $id = array("id_example"); // string[] | a comma-delimited list of IDs of bibs to retrieve
 $fields = array("fields_example"); // string[] | a comma-delimited list of fields to retrieve
-$created_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of bibs to retrieve (can be a range)
-$updated_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of bibs to retrieve (can be a range)
-$deleted_date = new \DateTime("2013-10-20"); // \DateTime | the deletion date of deleted bibs to retrieve (can be a range)
+$createdDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the creation date of bibs to retrieve (can be a range)
+$updatedDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | the modification date of bibs to retrieve (can be a range)
+$deletedDate = new \DateTime("2013-10-20"); // \DateTime | the deletion date of deleted bibs to retrieve (can be a range)
 $deleted = true; // bool | whether to retrieve only deleted (true) or non-deleted (false) bibs
 $suppressed = true; // bool | the suppressed flag value of bibs to retrieve
 $locations = "locations_example"; // string | a comma-delimited list of location codes (can include a single wildcard '*' to represent one or more final characters, for example, mult* or mul*)
 
 try {
-    $result = $apiInstance->getAListOfBibs($limit, $offset, $id, $fields, $created_date, $updated_date, $deleted_date, $deleted, $suppressed, $locations);
+    $result = $apiInstance->getAListOfBibs($limit, $offset, $id, $fields, $createdDate, $updatedDate, $deletedDate, $deleted, $suppressed, $locations);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling V5bibsApi->getAListOfBibs: ', $e->getMessage(), PHP_EOL;
@@ -273,16 +273,16 @@ Name | Type | Description  | Notes
  **offset** | **int**| the beginning record (zero-indexed) of the result set returned | [optional]
  **id** | [**string[]**](../Model/string.md)| a comma-delimited list of IDs of bibs to retrieve | [optional]
  **fields** | [**string[]**](../Model/string.md)| a comma-delimited list of fields to retrieve | [optional]
- **created_date** | **\DateTime**| the creation date of bibs to retrieve (can be a range) | [optional]
- **updated_date** | **\DateTime**| the modification date of bibs to retrieve (can be a range) | [optional]
- **deleted_date** | **\DateTime**| the deletion date of deleted bibs to retrieve (can be a range) | [optional]
+ **createdDate** | **\DateTime**| the creation date of bibs to retrieve (can be a range) | [optional]
+ **updatedDate** | **\DateTime**| the modification date of bibs to retrieve (can be a range) | [optional]
+ **deletedDate** | **\DateTime**| the deletion date of deleted bibs to retrieve (can be a range) | [optional]
  **deleted** | **bool**| whether to retrieve only deleted (true) or non-deleted (false) bibs | [optional]
  **suppressed** | **bool**| the suppressed flag value of bibs to retrieve | [optional]
  **locations** | **string**| a comma-delimited list of location codes (can include a single wildcard &#39;*&#39; to represent one or more final characters, for example, mult* or mul*) | [optional]
 
 ### Return type
 
-[**\Sierra\Models\BibResultSet**](../Model/BibResultSet.md)
+[**\III\Sierra\Models\BibResultSet**](../Model/BibResultSet.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAListOfMetadata**
-> \Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
+> \III\Sierra\Models\Metadata[] getAListOfMetadata($fields, $language)
 
 Get a list of metadata
 
@@ -307,7 +307,7 @@ Get a list of metadata
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Metadata[]**](../Model/Metadata.md)
+[**\III\Sierra\Models\Metadata[]**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ Get the generated binary MARC data file
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -395,7 +395,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTheMARCDataForASingleBibRecord**
-> \Sierra\Models\ErrorCode getTheMARCDataForASingleBibRecord($id)
+> \III\Sierra\Models\ErrorCode getTheMARCDataForASingleBibRecord($id)
 
 Get the MARC data for a single bib record
 
@@ -406,7 +406,7 @@ Get the MARC data for a single bib record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5bibsApi(
+$apiInstance = new III\Sierra\Api\V5bibsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
+[**\III\Sierra\Models\ErrorCode**](../Model/ErrorCode.md)
 
 ### Authorization
 

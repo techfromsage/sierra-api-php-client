@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Checkout Class Doc Comment
  *
  * @category Class
  * @description the data describing a checkout
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,11 +59,11 @@ class Checkout implements ModelInterface, ArrayAccess
         'patron' => 'string',
         'item' => 'string',
         'barcode' => 'string',
-        'due_date' => '\DateTime',
-        'call_number' => 'string',
-        'number_of_renewals' => 'int',
-        'out_date' => '\DateTime',
-        'recall_date' => '\DateTime'
+        'dueDate' => '\DateTime',
+        'callNumber' => 'string',
+        'numberOfRenewals' => 'int',
+        'outDate' => '\DateTime',
+        'recallDate' => '\DateTime'
     ];
 
     /**
@@ -76,11 +76,11 @@ class Checkout implements ModelInterface, ArrayAccess
         'patron' => null,
         'item' => null,
         'barcode' => null,
-        'due_date' => 'date-time',
-        'call_number' => null,
-        'number_of_renewals' => 'int32',
-        'out_date' => 'date-time',
-        'recall_date' => 'date-time'
+        'dueDate' => 'date-time',
+        'callNumber' => null,
+        'numberOfRenewals' => 'int32',
+        'outDate' => 'date-time',
+        'recallDate' => 'date-time'
     ];
 
     /**
@@ -114,11 +114,11 @@ class Checkout implements ModelInterface, ArrayAccess
         'patron' => 'patron',
         'item' => 'item',
         'barcode' => 'barcode',
-        'due_date' => 'dueDate',
-        'call_number' => 'callNumber',
-        'number_of_renewals' => 'numberOfRenewals',
-        'out_date' => 'outDate',
-        'recall_date' => 'recallDate'
+        'dueDate' => 'dueDate',
+        'callNumber' => 'callNumber',
+        'numberOfRenewals' => 'numberOfRenewals',
+        'outDate' => 'outDate',
+        'recallDate' => 'recallDate'
     ];
 
     /**
@@ -131,11 +131,11 @@ class Checkout implements ModelInterface, ArrayAccess
         'patron' => 'setPatron',
         'item' => 'setItem',
         'barcode' => 'setBarcode',
-        'due_date' => 'setDueDate',
-        'call_number' => 'setCallNumber',
-        'number_of_renewals' => 'setNumberOfRenewals',
-        'out_date' => 'setOutDate',
-        'recall_date' => 'setRecallDate'
+        'dueDate' => 'setDueDate',
+        'callNumber' => 'setCallNumber',
+        'numberOfRenewals' => 'setNumberOfRenewals',
+        'outDate' => 'setOutDate',
+        'recallDate' => 'setRecallDate'
     ];
 
     /**
@@ -148,11 +148,11 @@ class Checkout implements ModelInterface, ArrayAccess
         'patron' => 'getPatron',
         'item' => 'getItem',
         'barcode' => 'getBarcode',
-        'due_date' => 'getDueDate',
-        'call_number' => 'getCallNumber',
-        'number_of_renewals' => 'getNumberOfRenewals',
-        'out_date' => 'getOutDate',
-        'recall_date' => 'getRecallDate'
+        'dueDate' => 'getDueDate',
+        'callNumber' => 'getCallNumber',
+        'numberOfRenewals' => 'getNumberOfRenewals',
+        'outDate' => 'getOutDate',
+        'recallDate' => 'getRecallDate'
     ];
 
     /**
@@ -219,11 +219,11 @@ class Checkout implements ModelInterface, ArrayAccess
         $this->container['patron'] = isset($data['patron']) ? $data['patron'] : null;
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
-        $this->container['due_date'] = isset($data['due_date']) ? $data['due_date'] : null;
-        $this->container['call_number'] = isset($data['call_number']) ? $data['call_number'] : null;
-        $this->container['number_of_renewals'] = isset($data['number_of_renewals']) ? $data['number_of_renewals'] : null;
-        $this->container['out_date'] = isset($data['out_date']) ? $data['out_date'] : null;
-        $this->container['recall_date'] = isset($data['recall_date']) ? $data['recall_date'] : null;
+        $this->container['dueDate'] = isset($data['dueDate']) ? $data['dueDate'] : null;
+        $this->container['callNumber'] = isset($data['callNumber']) ? $data['callNumber'] : null;
+        $this->container['numberOfRenewals'] = isset($data['numberOfRenewals']) ? $data['numberOfRenewals'] : null;
+        $this->container['outDate'] = isset($data['outDate']) ? $data['outDate'] : null;
+        $this->container['recallDate'] = isset($data['recallDate']) ? $data['recallDate'] : null;
     }
 
     /**
@@ -366,121 +366,121 @@ class Checkout implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime $due_date the due date of the item, in ISO 8601 format
+     * @param \DateTime $dueDate the due date of the item, in ISO 8601 format
      *
      * @return $this
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
 
     /**
-     * Gets call_number
+     * Gets callNumber
      *
      * @return string
      */
     public function getCallNumber()
     {
-        return $this->container['call_number'];
+        return $this->container['callNumber'];
     }
 
     /**
-     * Sets call_number
+     * Sets callNumber
      *
-     * @param string $call_number the call number of the associated item
+     * @param string $callNumber the call number of the associated item
      *
      * @return $this
      */
-    public function setCallNumber($call_number)
+    public function setCallNumber($callNumber)
     {
-        $this->container['call_number'] = $call_number;
+        $this->container['callNumber'] = $callNumber;
 
         return $this;
     }
 
     /**
-     * Gets number_of_renewals
+     * Gets numberOfRenewals
      *
      * @return int
      */
     public function getNumberOfRenewals()
     {
-        return $this->container['number_of_renewals'];
+        return $this->container['numberOfRenewals'];
     }
 
     /**
-     * Sets number_of_renewals
+     * Sets numberOfRenewals
      *
-     * @param int $number_of_renewals the total number of times the item has been renewed
+     * @param int $numberOfRenewals the total number of times the item has been renewed
      *
      * @return $this
      */
-    public function setNumberOfRenewals($number_of_renewals)
+    public function setNumberOfRenewals($numberOfRenewals)
     {
-        $this->container['number_of_renewals'] = $number_of_renewals;
+        $this->container['numberOfRenewals'] = $numberOfRenewals;
 
         return $this;
     }
 
     /**
-     * Gets out_date
+     * Gets outDate
      *
      * @return \DateTime
      */
     public function getOutDate()
     {
-        return $this->container['out_date'];
+        return $this->container['outDate'];
     }
 
     /**
-     * Sets out_date
+     * Sets outDate
      *
-     * @param \DateTime $out_date the checkout date and time for the item, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $outDate the checkout date and time for the item, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setOutDate($out_date)
+    public function setOutDate($outDate)
     {
-        $this->container['out_date'] = $out_date;
+        $this->container['outDate'] = $outDate;
 
         return $this;
     }
 
     /**
-     * Gets recall_date
+     * Gets recallDate
      *
      * @return \DateTime
      */
     public function getRecallDate()
     {
-        return $this->container['recall_date'];
+        return $this->container['recallDate'];
     }
 
     /**
-     * Sets recall_date
+     * Sets recallDate
      *
-     * @param \DateTime $recall_date the date the item was recalled (blank if the item has not been recalled), in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $recallDate the date the item was recalled (blank if the item has not been recalled), in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setRecallDate($recall_date)
+    public function setRecallDate($recallDate)
     {
-        $this->container['recall_date'] = $recall_date;
+        $this->container['recallDate'] = $recallDate;
 
         return $this;
     }

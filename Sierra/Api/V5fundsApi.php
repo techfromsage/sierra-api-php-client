@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Api;
+namespace III\Sierra\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -31,16 +31,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Sierra\ApiException;
-use Sierra\Configuration;
-use Sierra\HeaderSelector;
-use Sierra\ObjectSerializer;
+use III\Sierra\ApiException;
+use III\Sierra\Configuration;
+use III\Sierra\HeaderSelector;
+use III\Sierra\ObjectSerializer;
 
 /**
  * V5fundsApi Class Doc Comment
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -88,9 +88,9 @@ class V5fundsApi
      * @param  string[] $code a comma-delimited list of fund codes to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Sierra\Models\Fund[]
+     * @return \III\Sierra\Models\Fund[]
      */
     public function getAListOfFunds($login, $code = null, $fields = null)
     {
@@ -107,13 +107,13 @@ class V5fundsApi
      * @param  string[] $code a comma-delimited list of fund codes to retrieve (optional)
      * @param  string[] $fields a comma-delimited list of fields to retrieve (optional)
      *
-     * @throws \Sierra\ApiException on non-2xx response
+     * @throws \III\Sierra\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Sierra\Models\Fund[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \III\Sierra\Models\Fund[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfFundsWithHttpInfo($login, $code = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\Fund[]';
+        $returnType = '\III\Sierra\Models\Fund[]';
         $request = $this->getAListOfFundsRequest($login, $code, $fields);
 
         try {
@@ -165,7 +165,7 @@ class V5fundsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Sierra\Models\Fund[]',
+                        '\III\Sierra\Models\Fund[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class V5fundsApi
      */
     public function getAListOfFundsAsyncWithHttpInfo($login, $code = null, $fields = null)
     {
-        $returnType = '\Sierra\Models\Fund[]';
+        $returnType = '\III\Sierra\Models\Fund[]';
         $request = $this->getAListOfFundsRequest($login, $code, $fields);
 
         return $this->client

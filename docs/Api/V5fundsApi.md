@@ -1,4 +1,4 @@
-# Sierra\V5fundsApi
+# III\Sierra\V5fundsApi
 
 All URIs are relative to *https://sandbox.iii.com/iii/sierra-api*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getAListOfFunds**
-> \Sierra\Models\Fund[] getAListOfFunds($login, $code, $fields)
+> \III\Sierra\Models\Fund[] getAListOfFunds($login, $code, $fields)
 
 Get a list of funds
 
@@ -19,7 +19,7 @@ Get a list of funds
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Sierra\Api\V5fundsApi(
+$apiInstance = new III\Sierra\Api\V5fundsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sierra\Models\Fund[]**](../Model/Fund.md)
+[**\III\Sierra\Models\Fund[]**](../Model/Fund.md)
 
 ### Authorization
 

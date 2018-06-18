@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * InvoiceTotalTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description InvoiceTotal
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -75,7 +75,7 @@ class InvoiceTotalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sub_total"
+     * Test attribute "subTotal"
      */
     public function testPropertySubTotal()
     {
@@ -96,14 +96,14 @@ class InvoiceTotalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "discount_or_service"
+     * Test attribute "discountOrService"
      */
     public function testPropertyDiscountOrService()
     {
     }
 
     /**
-     * Test attribute "grand_total"
+     * Test attribute "grandTotal"
      */
     public function testPropertyGrandTotal()
     {

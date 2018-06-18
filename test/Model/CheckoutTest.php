@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * CheckoutTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description the data describing a checkout
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -103,35 +103,35 @@ class CheckoutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "due_date"
+     * Test attribute "dueDate"
      */
     public function testPropertyDueDate()
     {
     }
 
     /**
-     * Test attribute "call_number"
+     * Test attribute "callNumber"
      */
     public function testPropertyCallNumber()
     {
     }
 
     /**
-     * Test attribute "number_of_renewals"
+     * Test attribute "numberOfRenewals"
      */
     public function testPropertyNumberOfRenewals()
     {
     }
 
     /**
-     * Test attribute "out_date"
+     * Test attribute "outDate"
      */
     public function testPropertyOutDate()
     {
     }
 
     /**
-     * Test attribute "recall_date"
+     * Test attribute "recallDate"
      */
     public function testPropertyRecallDate()
     {

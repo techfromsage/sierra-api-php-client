@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,7 +24,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Sierra;
+namespace III\Sierra;
 
 /**
  * MarcSummaryTest Class Doc Comment
@@ -32,7 +32,7 @@ namespace Sierra;
  * @category    Class */
 // * @description a summary of the generated binary MARC data file
 /**
- * @package     Sierra
+ * @package     III\Sierra
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -82,21 +82,21 @@ class MarcSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "input_records"
+     * Test attribute "inputRecords"
      */
     public function testPropertyInputRecords()
     {
     }
 
     /**
-     * Test attribute "deleted_records"
+     * Test attribute "deletedRecords"
      */
     public function testPropertyDeletedRecords()
     {
     }
 
     /**
-     * Test attribute "output_records"
+     * Test attribute "outputRecords"
      */
     public function testPropertyOutputRecords()
     {

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Fine Class Doc Comment
  *
  * @category Class
  * @description a patron fine
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,23 +58,23 @@ class Fine implements ModelInterface, ArrayAccess
         'id' => 'string',
         'patron' => 'string',
         'item' => 'string',
-        'assessed_date' => '\DateTime',
+        'assessedDate' => '\DateTime',
         'description' => 'string',
-        'invoice_number' => 'int',
-        'charge_type' => '\Sierra\Models\ChargeType',
-        'item_charge' => 'double',
-        'processing_fee' => 'double',
-        'billing_fee' => 'double',
-        'paid_amount' => 'double',
-        'location' => '\Sierra\Models\Location',
+        'invoiceNumber' => 'int',
+        'chargeType' => '\III\Sierra\Models\ChargeType',
+        'itemCharge' => 'double',
+        'processingFee' => 'double',
+        'billingFee' => 'double',
+        'paidAmount' => 'double',
+        'location' => '\III\Sierra\Models\Location',
         'initials' => 'string',
-        'creation_method' => 'string',
-        'date_paid' => '\DateTime',
-        'original_patron' => 'string',
-        'print_bill' => 'bool',
-        'terminal_number' => 'int',
-        'transfer_date' => '\DateTime',
-        'return_date' => '\DateTime'
+        'creationMethod' => 'string',
+        'datePaid' => '\DateTime',
+        'originalPatron' => 'string',
+        'printBill' => 'bool',
+        'terminalNumber' => 'int',
+        'transferDate' => '\DateTime',
+        'returnDate' => '\DateTime'
     ];
 
     /**
@@ -86,23 +86,23 @@ class Fine implements ModelInterface, ArrayAccess
         'id' => null,
         'patron' => null,
         'item' => null,
-        'assessed_date' => 'date-time',
+        'assessedDate' => 'date-time',
         'description' => null,
-        'invoice_number' => 'int64',
-        'charge_type' => null,
-        'item_charge' => 'double',
-        'processing_fee' => 'double',
-        'billing_fee' => 'double',
-        'paid_amount' => 'double',
+        'invoiceNumber' => 'int64',
+        'chargeType' => null,
+        'itemCharge' => 'double',
+        'processingFee' => 'double',
+        'billingFee' => 'double',
+        'paidAmount' => 'double',
         'location' => null,
         'initials' => null,
-        'creation_method' => null,
-        'date_paid' => 'date-time',
-        'original_patron' => null,
-        'print_bill' => null,
-        'terminal_number' => 'int32',
-        'transfer_date' => 'date-time',
-        'return_date' => 'date-time'
+        'creationMethod' => null,
+        'datePaid' => 'date-time',
+        'originalPatron' => null,
+        'printBill' => null,
+        'terminalNumber' => 'int32',
+        'transferDate' => 'date-time',
+        'returnDate' => 'date-time'
     ];
 
     /**
@@ -135,23 +135,23 @@ class Fine implements ModelInterface, ArrayAccess
         'id' => 'id',
         'patron' => 'patron',
         'item' => 'item',
-        'assessed_date' => 'assessedDate',
+        'assessedDate' => 'assessedDate',
         'description' => 'description',
-        'invoice_number' => 'invoiceNumber',
-        'charge_type' => 'chargeType',
-        'item_charge' => 'itemCharge',
-        'processing_fee' => 'processingFee',
-        'billing_fee' => 'billingFee',
-        'paid_amount' => 'paidAmount',
+        'invoiceNumber' => 'invoiceNumber',
+        'chargeType' => 'chargeType',
+        'itemCharge' => 'itemCharge',
+        'processingFee' => 'processingFee',
+        'billingFee' => 'billingFee',
+        'paidAmount' => 'paidAmount',
         'location' => 'location',
         'initials' => 'initials',
-        'creation_method' => 'creationMethod',
-        'date_paid' => 'datePaid',
-        'original_patron' => 'originalPatron',
-        'print_bill' => 'printBill',
-        'terminal_number' => 'terminalNumber',
-        'transfer_date' => 'transferDate',
-        'return_date' => 'returnDate'
+        'creationMethod' => 'creationMethod',
+        'datePaid' => 'datePaid',
+        'originalPatron' => 'originalPatron',
+        'printBill' => 'printBill',
+        'terminalNumber' => 'terminalNumber',
+        'transferDate' => 'transferDate',
+        'returnDate' => 'returnDate'
     ];
 
     /**
@@ -163,23 +163,23 @@ class Fine implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'patron' => 'setPatron',
         'item' => 'setItem',
-        'assessed_date' => 'setAssessedDate',
+        'assessedDate' => 'setAssessedDate',
         'description' => 'setDescription',
-        'invoice_number' => 'setInvoiceNumber',
-        'charge_type' => 'setChargeType',
-        'item_charge' => 'setItemCharge',
-        'processing_fee' => 'setProcessingFee',
-        'billing_fee' => 'setBillingFee',
-        'paid_amount' => 'setPaidAmount',
+        'invoiceNumber' => 'setInvoiceNumber',
+        'chargeType' => 'setChargeType',
+        'itemCharge' => 'setItemCharge',
+        'processingFee' => 'setProcessingFee',
+        'billingFee' => 'setBillingFee',
+        'paidAmount' => 'setPaidAmount',
         'location' => 'setLocation',
         'initials' => 'setInitials',
-        'creation_method' => 'setCreationMethod',
-        'date_paid' => 'setDatePaid',
-        'original_patron' => 'setOriginalPatron',
-        'print_bill' => 'setPrintBill',
-        'terminal_number' => 'setTerminalNumber',
-        'transfer_date' => 'setTransferDate',
-        'return_date' => 'setReturnDate'
+        'creationMethod' => 'setCreationMethod',
+        'datePaid' => 'setDatePaid',
+        'originalPatron' => 'setOriginalPatron',
+        'printBill' => 'setPrintBill',
+        'terminalNumber' => 'setTerminalNumber',
+        'transferDate' => 'setTransferDate',
+        'returnDate' => 'setReturnDate'
     ];
 
     /**
@@ -191,23 +191,23 @@ class Fine implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'patron' => 'getPatron',
         'item' => 'getItem',
-        'assessed_date' => 'getAssessedDate',
+        'assessedDate' => 'getAssessedDate',
         'description' => 'getDescription',
-        'invoice_number' => 'getInvoiceNumber',
-        'charge_type' => 'getChargeType',
-        'item_charge' => 'getItemCharge',
-        'processing_fee' => 'getProcessingFee',
-        'billing_fee' => 'getBillingFee',
-        'paid_amount' => 'getPaidAmount',
+        'invoiceNumber' => 'getInvoiceNumber',
+        'chargeType' => 'getChargeType',
+        'itemCharge' => 'getItemCharge',
+        'processingFee' => 'getProcessingFee',
+        'billingFee' => 'getBillingFee',
+        'paidAmount' => 'getPaidAmount',
         'location' => 'getLocation',
         'initials' => 'getInitials',
-        'creation_method' => 'getCreationMethod',
-        'date_paid' => 'getDatePaid',
-        'original_patron' => 'getOriginalPatron',
-        'print_bill' => 'getPrintBill',
-        'terminal_number' => 'getTerminalNumber',
-        'transfer_date' => 'getTransferDate',
-        'return_date' => 'getReturnDate'
+        'creationMethod' => 'getCreationMethod',
+        'datePaid' => 'getDatePaid',
+        'originalPatron' => 'getOriginalPatron',
+        'printBill' => 'getPrintBill',
+        'terminalNumber' => 'getTerminalNumber',
+        'transferDate' => 'getTransferDate',
+        'returnDate' => 'getReturnDate'
     ];
 
     /**
@@ -273,23 +273,23 @@ class Fine implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['patron'] = isset($data['patron']) ? $data['patron'] : null;
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
-        $this->container['assessed_date'] = isset($data['assessed_date']) ? $data['assessed_date'] : null;
+        $this->container['assessedDate'] = isset($data['assessedDate']) ? $data['assessedDate'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['invoice_number'] = isset($data['invoice_number']) ? $data['invoice_number'] : null;
-        $this->container['charge_type'] = isset($data['charge_type']) ? $data['charge_type'] : null;
-        $this->container['item_charge'] = isset($data['item_charge']) ? $data['item_charge'] : null;
-        $this->container['processing_fee'] = isset($data['processing_fee']) ? $data['processing_fee'] : null;
-        $this->container['billing_fee'] = isset($data['billing_fee']) ? $data['billing_fee'] : null;
-        $this->container['paid_amount'] = isset($data['paid_amount']) ? $data['paid_amount'] : null;
+        $this->container['invoiceNumber'] = isset($data['invoiceNumber']) ? $data['invoiceNumber'] : null;
+        $this->container['chargeType'] = isset($data['chargeType']) ? $data['chargeType'] : null;
+        $this->container['itemCharge'] = isset($data['itemCharge']) ? $data['itemCharge'] : null;
+        $this->container['processingFee'] = isset($data['processingFee']) ? $data['processingFee'] : null;
+        $this->container['billingFee'] = isset($data['billingFee']) ? $data['billingFee'] : null;
+        $this->container['paidAmount'] = isset($data['paidAmount']) ? $data['paidAmount'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
-        $this->container['creation_method'] = isset($data['creation_method']) ? $data['creation_method'] : null;
-        $this->container['date_paid'] = isset($data['date_paid']) ? $data['date_paid'] : null;
-        $this->container['original_patron'] = isset($data['original_patron']) ? $data['original_patron'] : null;
-        $this->container['print_bill'] = isset($data['print_bill']) ? $data['print_bill'] : null;
-        $this->container['terminal_number'] = isset($data['terminal_number']) ? $data['terminal_number'] : null;
-        $this->container['transfer_date'] = isset($data['transfer_date']) ? $data['transfer_date'] : null;
-        $this->container['return_date'] = isset($data['return_date']) ? $data['return_date'] : null;
+        $this->container['creationMethod'] = isset($data['creationMethod']) ? $data['creationMethod'] : null;
+        $this->container['datePaid'] = isset($data['datePaid']) ? $data['datePaid'] : null;
+        $this->container['originalPatron'] = isset($data['originalPatron']) ? $data['originalPatron'] : null;
+        $this->container['printBill'] = isset($data['printBill']) ? $data['printBill'] : null;
+        $this->container['terminalNumber'] = isset($data['terminalNumber']) ? $data['terminalNumber'] : null;
+        $this->container['transferDate'] = isset($data['transferDate']) ? $data['transferDate'] : null;
+        $this->container['returnDate'] = isset($data['returnDate']) ? $data['returnDate'] : null;
     }
 
     /**
@@ -304,17 +304,17 @@ class Fine implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['item_charge'] === null) {
-            $invalidProperties[] = "'item_charge' can't be null";
+        if ($this->container['itemCharge'] === null) {
+            $invalidProperties[] = "'itemCharge' can't be null";
         }
-        if ($this->container['processing_fee'] === null) {
-            $invalidProperties[] = "'processing_fee' can't be null";
+        if ($this->container['processingFee'] === null) {
+            $invalidProperties[] = "'processingFee' can't be null";
         }
-        if ($this->container['billing_fee'] === null) {
-            $invalidProperties[] = "'billing_fee' can't be null";
+        if ($this->container['billingFee'] === null) {
+            $invalidProperties[] = "'billingFee' can't be null";
         }
-        if ($this->container['paid_amount'] === null) {
-            $invalidProperties[] = "'paid_amount' can't be null";
+        if ($this->container['paidAmount'] === null) {
+            $invalidProperties[] = "'paidAmount' can't be null";
         }
         return $invalidProperties;
     }
@@ -331,16 +331,16 @@ class Fine implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             return false;
         }
-        if ($this->container['item_charge'] === null) {
+        if ($this->container['itemCharge'] === null) {
             return false;
         }
-        if ($this->container['processing_fee'] === null) {
+        if ($this->container['processingFee'] === null) {
             return false;
         }
-        if ($this->container['billing_fee'] === null) {
+        if ($this->container['billingFee'] === null) {
             return false;
         }
-        if ($this->container['paid_amount'] === null) {
+        if ($this->container['paidAmount'] === null) {
             return false;
         }
         return true;
@@ -420,25 +420,25 @@ class Fine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets assessed_date
+     * Gets assessedDate
      *
      * @return \DateTime
      */
     public function getAssessedDate()
     {
-        return $this->container['assessed_date'];
+        return $this->container['assessedDate'];
     }
 
     /**
-     * Sets assessed_date
+     * Sets assessedDate
      *
-     * @param \DateTime $assessed_date the date the fine was assessed, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $assessedDate the date the fine was assessed, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setAssessedDate($assessed_date)
+    public function setAssessedDate($assessedDate)
     {
-        $this->container['assessed_date'] = $assessed_date;
+        $this->container['assessedDate'] = $assessedDate;
 
         return $this;
     }
@@ -468,145 +468,145 @@ class Fine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets invoice_number
+     * Gets invoiceNumber
      *
      * @return int
      */
     public function getInvoiceNumber()
     {
-        return $this->container['invoice_number'];
+        return $this->container['invoiceNumber'];
     }
 
     /**
-     * Sets invoice_number
+     * Sets invoiceNumber
      *
-     * @param int $invoice_number the fine's invoice number
+     * @param int $invoiceNumber the fine's invoice number
      *
      * @return $this
      */
-    public function setInvoiceNumber($invoice_number)
+    public function setInvoiceNumber($invoiceNumber)
     {
-        $this->container['invoice_number'] = $invoice_number;
+        $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
     }
 
     /**
-     * Gets charge_type
+     * Gets chargeType
      *
-     * @return \Sierra\Models\ChargeType
+     * @return \III\Sierra\Models\ChargeType
      */
     public function getChargeType()
     {
-        return $this->container['charge_type'];
+        return $this->container['chargeType'];
     }
 
     /**
-     * Sets charge_type
+     * Sets chargeType
      *
-     * @param \Sierra\Models\ChargeType $charge_type the code representing the type of charge assessed
+     * @param \III\Sierra\Models\ChargeType $chargeType the code representing the type of charge assessed
      *
      * @return $this
      */
-    public function setChargeType($charge_type)
+    public function setChargeType($chargeType)
     {
-        $this->container['charge_type'] = $charge_type;
+        $this->container['chargeType'] = $chargeType;
 
         return $this;
     }
 
     /**
-     * Gets item_charge
+     * Gets itemCharge
      *
      * @return double
      */
     public function getItemCharge()
     {
-        return $this->container['item_charge'];
+        return $this->container['itemCharge'];
     }
 
     /**
-     * Sets item_charge
+     * Sets itemCharge
      *
-     * @param double $item_charge a fine amount related to the item (the exact meaning depends on the charge code)
+     * @param double $itemCharge a fine amount related to the item (the exact meaning depends on the charge code)
      *
      * @return $this
      */
-    public function setItemCharge($item_charge)
+    public function setItemCharge($itemCharge)
     {
-        $this->container['item_charge'] = $item_charge;
+        $this->container['itemCharge'] = $itemCharge;
 
         return $this;
     }
 
     /**
-     * Gets processing_fee
+     * Gets processingFee
      *
      * @return double
      */
     public function getProcessingFee()
     {
-        return $this->container['processing_fee'];
+        return $this->container['processingFee'];
     }
 
     /**
-     * Sets processing_fee
+     * Sets processingFee
      *
-     * @param double $processing_fee a processing fee amount (the exact meaning depends on the charge code)
+     * @param double $processingFee a processing fee amount (the exact meaning depends on the charge code)
      *
      * @return $this
      */
-    public function setProcessingFee($processing_fee)
+    public function setProcessingFee($processingFee)
     {
-        $this->container['processing_fee'] = $processing_fee;
+        $this->container['processingFee'] = $processingFee;
 
         return $this;
     }
 
     /**
-     * Gets billing_fee
+     * Gets billingFee
      *
      * @return double
      */
     public function getBillingFee()
     {
-        return $this->container['billing_fee'];
+        return $this->container['billingFee'];
     }
 
     /**
-     * Sets billing_fee
+     * Sets billingFee
      *
-     * @param double $billing_fee a billing fee amount (the exact meaning depends on the charge code)
+     * @param double $billingFee a billing fee amount (the exact meaning depends on the charge code)
      *
      * @return $this
      */
-    public function setBillingFee($billing_fee)
+    public function setBillingFee($billingFee)
     {
-        $this->container['billing_fee'] = $billing_fee;
+        $this->container['billingFee'] = $billingFee;
 
         return $this;
     }
 
     /**
-     * Gets paid_amount
+     * Gets paidAmount
      *
      * @return double
      */
     public function getPaidAmount()
     {
-        return $this->container['paid_amount'];
+        return $this->container['paidAmount'];
     }
 
     /**
-     * Sets paid_amount
+     * Sets paidAmount
      *
-     * @param double $paid_amount the amount already paid for this fine
+     * @param double $paidAmount the amount already paid for this fine
      *
      * @return $this
      */
-    public function setPaidAmount($paid_amount)
+    public function setPaidAmount($paidAmount)
     {
-        $this->container['paid_amount'] = $paid_amount;
+        $this->container['paidAmount'] = $paidAmount;
 
         return $this;
     }
@@ -614,7 +614,7 @@ class Fine implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \Sierra\Models\Location
+     * @return \III\Sierra\Models\Location
      */
     public function getLocation()
     {
@@ -624,7 +624,7 @@ class Fine implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \Sierra\Models\Location $location the charge location
+     * @param \III\Sierra\Models\Location $location the charge location
      *
      * @return $this
      */
@@ -660,169 +660,169 @@ class Fine implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets creation_method
+     * Gets creationMethod
      *
      * @return string
      */
     public function getCreationMethod()
     {
-        return $this->container['creation_method'];
+        return $this->container['creationMethod'];
     }
 
     /**
-     * Sets creation_method
+     * Sets creationMethod
      *
-     * @param string $creation_method the method that was used to create the fine
+     * @param string $creationMethod the method that was used to create the fine
      *
      * @return $this
      */
-    public function setCreationMethod($creation_method)
+    public function setCreationMethod($creationMethod)
     {
-        $this->container['creation_method'] = $creation_method;
+        $this->container['creationMethod'] = $creationMethod;
 
         return $this;
     }
 
     /**
-     * Gets date_paid
+     * Gets datePaid
      *
      * @return \DateTime
      */
     public function getDatePaid()
     {
-        return $this->container['date_paid'];
+        return $this->container['datePaid'];
     }
 
     /**
-     * Sets date_paid
+     * Sets datePaid
      *
-     * @param \DateTime $date_paid the date the fine was paid
+     * @param \DateTime $datePaid the date the fine was paid
      *
      * @return $this
      */
-    public function setDatePaid($date_paid)
+    public function setDatePaid($datePaid)
     {
-        $this->container['date_paid'] = $date_paid;
+        $this->container['datePaid'] = $datePaid;
 
         return $this;
     }
 
     /**
-     * Gets original_patron
+     * Gets originalPatron
      *
      * @return string
      */
     public function getOriginalPatron()
     {
-        return $this->container['original_patron'];
+        return $this->container['originalPatron'];
     }
 
     /**
-     * Sets original_patron
+     * Sets originalPatron
      *
-     * @param string $original_patron the original patron record number associated with the fine
+     * @param string $originalPatron the original patron record number associated with the fine
      *
      * @return $this
      */
-    public function setOriginalPatron($original_patron)
+    public function setOriginalPatron($originalPatron)
     {
-        $this->container['original_patron'] = $original_patron;
+        $this->container['originalPatron'] = $originalPatron;
 
         return $this;
     }
 
     /**
-     * Gets print_bill
+     * Gets printBill
      *
      * @return bool
      */
     public function getPrintBill()
     {
-        return $this->container['print_bill'];
+        return $this->container['printBill'];
     }
 
     /**
-     * Sets print_bill
+     * Sets printBill
      *
-     * @param bool $print_bill has the bill been printed
+     * @param bool $printBill has the bill been printed
      *
      * @return $this
      */
-    public function setPrintBill($print_bill)
+    public function setPrintBill($printBill)
     {
-        $this->container['print_bill'] = $print_bill;
+        $this->container['printBill'] = $printBill;
 
         return $this;
     }
 
     /**
-     * Gets terminal_number
+     * Gets terminalNumber
      *
      * @return int
      */
     public function getTerminalNumber()
     {
-        return $this->container['terminal_number'];
+        return $this->container['terminalNumber'];
     }
 
     /**
-     * Sets terminal_number
+     * Sets terminalNumber
      *
-     * @param int $terminal_number the terminal number
+     * @param int $terminalNumber the terminal number
      *
      * @return $this
      */
-    public function setTerminalNumber($terminal_number)
+    public function setTerminalNumber($terminalNumber)
     {
-        $this->container['terminal_number'] = $terminal_number;
+        $this->container['terminalNumber'] = $terminalNumber;
 
         return $this;
     }
 
     /**
-     * Gets transfer_date
+     * Gets transferDate
      *
      * @return \DateTime
      */
     public function getTransferDate()
     {
-        return $this->container['transfer_date'];
+        return $this->container['transferDate'];
     }
 
     /**
-     * Sets transfer_date
+     * Sets transferDate
      *
-     * @param \DateTime $transfer_date the original transfer date
+     * @param \DateTime $transferDate the original transfer date
      *
      * @return $this
      */
-    public function setTransferDate($transfer_date)
+    public function setTransferDate($transferDate)
     {
-        $this->container['transfer_date'] = $transfer_date;
+        $this->container['transferDate'] = $transferDate;
 
         return $this;
     }
 
     /**
-     * Gets return_date
+     * Gets returnDate
      *
      * @return \DateTime
      */
     public function getReturnDate()
     {
-        return $this->container['return_date'];
+        return $this->container['returnDate'];
     }
 
     /**
-     * Sets return_date
+     * Sets returnDate
      *
-     * @param \DateTime $return_date the date that the item was returned
+     * @param \DateTime $returnDate the date that the item was returned
      *
      * @return $this
      */
-    public function setReturnDate($return_date)
+    public function setReturnDate($returnDate)
     {
-        $this->container['return_date'] = $return_date;
+        $this->container['returnDate'] = $returnDate;
 
         return $this;
     }

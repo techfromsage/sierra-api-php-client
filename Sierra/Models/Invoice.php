@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * Invoice Class Doc Comment
  *
  * @category Class
  * @description an invoice record
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,16 +56,16 @@ class Invoice implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'accounting_unit' => 'int',
-        'inv_date' => '\DateTime',
-        'inv_num' => 'string',
-        'tax_type' => 'string',
-        'vendors' => '\Sierra\Models\Vendor[]',
-        'paid_date' => '\DateTime',
-        'for_currency' => '\Sierra\Models\ForeignCurrency',
-        'inv_total' => '\Sierra\Models\InvoiceTotal',
-        'use_tax' => '\Sierra\Models\UseTax',
-        'line_items' => 'string[]'
+        'accountingUnit' => 'int',
+        'invDate' => '\DateTime',
+        'invNum' => 'string',
+        'taxType' => 'string',
+        'vendors' => '\III\Sierra\Models\Vendor[]',
+        'paidDate' => '\DateTime',
+        'forCurrency' => '\III\Sierra\Models\ForeignCurrency',
+        'invTotal' => '\III\Sierra\Models\InvoiceTotal',
+        'useTax' => '\III\Sierra\Models\UseTax',
+        'lineItems' => 'string[]'
     ];
 
     /**
@@ -75,16 +75,16 @@ class Invoice implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'accounting_unit' => 'int32',
-        'inv_date' => 'date-time',
-        'inv_num' => null,
-        'tax_type' => null,
+        'accountingUnit' => 'int32',
+        'invDate' => 'date-time',
+        'invNum' => null,
+        'taxType' => null,
         'vendors' => null,
-        'paid_date' => 'date-time',
-        'for_currency' => null,
-        'inv_total' => null,
-        'use_tax' => null,
-        'line_items' => null
+        'paidDate' => 'date-time',
+        'forCurrency' => null,
+        'invTotal' => null,
+        'useTax' => null,
+        'lineItems' => null
     ];
 
     /**
@@ -115,16 +115,16 @@ class Invoice implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'accounting_unit' => 'accountingUnit',
-        'inv_date' => 'invDate',
-        'inv_num' => 'invNum',
-        'tax_type' => 'taxType',
+        'accountingUnit' => 'accountingUnit',
+        'invDate' => 'invDate',
+        'invNum' => 'invNum',
+        'taxType' => 'taxType',
         'vendors' => 'vendors',
-        'paid_date' => 'paidDate',
-        'for_currency' => 'forCurrency',
-        'inv_total' => 'invTotal',
-        'use_tax' => 'useTax',
-        'line_items' => 'lineItems'
+        'paidDate' => 'paidDate',
+        'forCurrency' => 'forCurrency',
+        'invTotal' => 'invTotal',
+        'useTax' => 'useTax',
+        'lineItems' => 'lineItems'
     ];
 
     /**
@@ -134,16 +134,16 @@ class Invoice implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'accounting_unit' => 'setAccountingUnit',
-        'inv_date' => 'setInvDate',
-        'inv_num' => 'setInvNum',
-        'tax_type' => 'setTaxType',
+        'accountingUnit' => 'setAccountingUnit',
+        'invDate' => 'setInvDate',
+        'invNum' => 'setInvNum',
+        'taxType' => 'setTaxType',
         'vendors' => 'setVendors',
-        'paid_date' => 'setPaidDate',
-        'for_currency' => 'setForCurrency',
-        'inv_total' => 'setInvTotal',
-        'use_tax' => 'setUseTax',
-        'line_items' => 'setLineItems'
+        'paidDate' => 'setPaidDate',
+        'forCurrency' => 'setForCurrency',
+        'invTotal' => 'setInvTotal',
+        'useTax' => 'setUseTax',
+        'lineItems' => 'setLineItems'
     ];
 
     /**
@@ -153,16 +153,16 @@ class Invoice implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'accounting_unit' => 'getAccountingUnit',
-        'inv_date' => 'getInvDate',
-        'inv_num' => 'getInvNum',
-        'tax_type' => 'getTaxType',
+        'accountingUnit' => 'getAccountingUnit',
+        'invDate' => 'getInvDate',
+        'invNum' => 'getInvNum',
+        'taxType' => 'getTaxType',
         'vendors' => 'getVendors',
-        'paid_date' => 'getPaidDate',
-        'for_currency' => 'getForCurrency',
-        'inv_total' => 'getInvTotal',
-        'use_tax' => 'getUseTax',
-        'line_items' => 'getLineItems'
+        'paidDate' => 'getPaidDate',
+        'forCurrency' => 'getForCurrency',
+        'invTotal' => 'getInvTotal',
+        'useTax' => 'getUseTax',
+        'lineItems' => 'getLineItems'
     ];
 
     /**
@@ -226,16 +226,16 @@ class Invoice implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['accounting_unit'] = isset($data['accounting_unit']) ? $data['accounting_unit'] : null;
-        $this->container['inv_date'] = isset($data['inv_date']) ? $data['inv_date'] : null;
-        $this->container['inv_num'] = isset($data['inv_num']) ? $data['inv_num'] : null;
-        $this->container['tax_type'] = isset($data['tax_type']) ? $data['tax_type'] : null;
+        $this->container['accountingUnit'] = isset($data['accountingUnit']) ? $data['accountingUnit'] : null;
+        $this->container['invDate'] = isset($data['invDate']) ? $data['invDate'] : null;
+        $this->container['invNum'] = isset($data['invNum']) ? $data['invNum'] : null;
+        $this->container['taxType'] = isset($data['taxType']) ? $data['taxType'] : null;
         $this->container['vendors'] = isset($data['vendors']) ? $data['vendors'] : null;
-        $this->container['paid_date'] = isset($data['paid_date']) ? $data['paid_date'] : null;
-        $this->container['for_currency'] = isset($data['for_currency']) ? $data['for_currency'] : null;
-        $this->container['inv_total'] = isset($data['inv_total']) ? $data['inv_total'] : null;
-        $this->container['use_tax'] = isset($data['use_tax']) ? $data['use_tax'] : null;
-        $this->container['line_items'] = isset($data['line_items']) ? $data['line_items'] : null;
+        $this->container['paidDate'] = isset($data['paidDate']) ? $data['paidDate'] : null;
+        $this->container['forCurrency'] = isset($data['forCurrency']) ? $data['forCurrency'] : null;
+        $this->container['invTotal'] = isset($data['invTotal']) ? $data['invTotal'] : null;
+        $this->container['useTax'] = isset($data['useTax']) ? $data['useTax'] : null;
+        $this->container['lineItems'] = isset($data['lineItems']) ? $data['lineItems'] : null;
     }
 
     /**
@@ -300,97 +300,97 @@ class Invoice implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets accounting_unit
+     * Gets accountingUnit
      *
      * @return int
      */
     public function getAccountingUnit()
     {
-        return $this->container['accounting_unit'];
+        return $this->container['accountingUnit'];
     }
 
     /**
-     * Sets accounting_unit
+     * Sets accountingUnit
      *
-     * @param int $accounting_unit the accounting unit
+     * @param int $accountingUnit the accounting unit
      *
      * @return $this
      */
-    public function setAccountingUnit($accounting_unit)
+    public function setAccountingUnit($accountingUnit)
     {
-        $this->container['accounting_unit'] = $accounting_unit;
+        $this->container['accountingUnit'] = $accountingUnit;
 
         return $this;
     }
 
     /**
-     * Gets inv_date
+     * Gets invDate
      *
      * @return \DateTime
      */
     public function getInvDate()
     {
-        return $this->container['inv_date'];
+        return $this->container['invDate'];
     }
 
     /**
-     * Sets inv_date
+     * Sets invDate
      *
-     * @param \DateTime $inv_date the invoice date and time as entered by the customer, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $invDate the invoice date and time as entered by the customer, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setInvDate($inv_date)
+    public function setInvDate($invDate)
     {
-        $this->container['inv_date'] = $inv_date;
+        $this->container['invDate'] = $invDate;
 
         return $this;
     }
 
     /**
-     * Gets inv_num
+     * Gets invNum
      *
      * @return string
      */
     public function getInvNum()
     {
-        return $this->container['inv_num'];
+        return $this->container['invNum'];
     }
 
     /**
-     * Sets inv_num
+     * Sets invNum
      *
-     * @param string $inv_num invoice number as entered by the customer
+     * @param string $invNum invoice number as entered by the customer
      *
      * @return $this
      */
-    public function setInvNum($inv_num)
+    public function setInvNum($invNum)
     {
-        $this->container['inv_num'] = $inv_num;
+        $this->container['invNum'] = $invNum;
 
         return $this;
     }
 
     /**
-     * Gets tax_type
+     * Gets taxType
      *
      * @return string
      */
     public function getTaxType()
     {
-        return $this->container['tax_type'];
+        return $this->container['taxType'];
     }
 
     /**
-     * Sets tax_type
+     * Sets taxType
      *
-     * @param string $tax_type tax information if your library has enabled the feature to pay invoices using GST or VAT
+     * @param string $taxType tax information if your library has enabled the feature to pay invoices using GST or VAT
      *
      * @return $this
      */
-    public function setTaxType($tax_type)
+    public function setTaxType($taxType)
     {
-        $this->container['tax_type'] = $tax_type;
+        $this->container['taxType'] = $taxType;
 
         return $this;
     }
@@ -398,7 +398,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets vendors
      *
-     * @return \Sierra\Models\Vendor[]
+     * @return \III\Sierra\Models\Vendor[]
      */
     public function getVendors()
     {
@@ -408,7 +408,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets vendors
      *
-     * @param \Sierra\Models\Vendor[] $vendors a list of vendor details for the invoice
+     * @param \III\Sierra\Models\Vendor[] $vendors a list of vendor details for the invoice
      *
      * @return $this
      */
@@ -420,121 +420,121 @@ class Invoice implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets paid_date
+     * Gets paidDate
      *
      * @return \DateTime
      */
     public function getPaidDate()
     {
-        return $this->container['paid_date'];
+        return $this->container['paidDate'];
     }
 
     /**
-     * Sets paid_date
+     * Sets paidDate
      *
-     * @param \DateTime $paid_date the date and time that the invoice was paid, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
+     * @param \DateTime $paidDate the date and time that the invoice was paid, in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ssZZ)
      *
      * @return $this
      */
-    public function setPaidDate($paid_date)
+    public function setPaidDate($paidDate)
     {
-        $this->container['paid_date'] = $paid_date;
+        $this->container['paidDate'] = $paidDate;
 
         return $this;
     }
 
     /**
-     * Gets for_currency
+     * Gets forCurrency
      *
-     * @return \Sierra\Models\ForeignCurrency
+     * @return \III\Sierra\Models\ForeignCurrency
      */
     public function getForCurrency()
     {
-        return $this->container['for_currency'];
+        return $this->container['forCurrency'];
     }
 
     /**
-     * Sets for_currency
+     * Sets forCurrency
      *
-     * @param \Sierra\Models\ForeignCurrency $for_currency the invoice's foreign currency code, rate and format
+     * @param \III\Sierra\Models\ForeignCurrency $forCurrency the invoice's foreign currency code, rate and format
      *
      * @return $this
      */
-    public function setForCurrency($for_currency)
+    public function setForCurrency($forCurrency)
     {
-        $this->container['for_currency'] = $for_currency;
+        $this->container['forCurrency'] = $forCurrency;
 
         return $this;
     }
 
     /**
-     * Gets inv_total
+     * Gets invTotal
      *
-     * @return \Sierra\Models\InvoiceTotal
+     * @return \III\Sierra\Models\InvoiceTotal
      */
     public function getInvTotal()
     {
-        return $this->container['inv_total'];
+        return $this->container['invTotal'];
     }
 
     /**
-     * Sets inv_total
+     * Sets invTotal
      *
-     * @param \Sierra\Models\InvoiceTotal $inv_total the invoice totals
+     * @param \III\Sierra\Models\InvoiceTotal $invTotal the invoice totals
      *
      * @return $this
      */
-    public function setInvTotal($inv_total)
+    public function setInvTotal($invTotal)
     {
-        $this->container['inv_total'] = $inv_total;
+        $this->container['invTotal'] = $invTotal;
 
         return $this;
     }
 
     /**
-     * Gets use_tax
+     * Gets useTax
      *
-     * @return \Sierra\Models\UseTax
+     * @return \III\Sierra\Models\UseTax
      */
     public function getUseTax()
     {
-        return $this->container['use_tax'];
+        return $this->container['useTax'];
     }
 
     /**
-     * Sets use_tax
+     * Sets useTax
      *
-     * @param \Sierra\Models\UseTax $use_tax the invoice's use tax percentage rate and fund
+     * @param \III\Sierra\Models\UseTax $useTax the invoice's use tax percentage rate and fund
      *
      * @return $this
      */
-    public function setUseTax($use_tax)
+    public function setUseTax($useTax)
     {
-        $this->container['use_tax'] = $use_tax;
+        $this->container['useTax'] = $useTax;
 
         return $this;
     }
 
     /**
-     * Gets line_items
+     * Gets lineItems
      *
      * @return string[]
      */
     public function getLineItems()
     {
-        return $this->container['line_items'];
+        return $this->container['lineItems'];
     }
 
     /**
-     * Sets line_items
+     * Sets lineItems
      *
-     * @param string[] $line_items a list of links to line item ids for the invoice
+     * @param string[] $lineItems a list of links to line item ids for the invoice
      *
      * @return $this
      */
-    public function setLineItems($line_items)
+    public function setLineItems($lineItems)
     {
-        $this->container['line_items'] = $line_items;
+        $this->container['lineItems'] = $lineItems;
 
         return $this;
     }

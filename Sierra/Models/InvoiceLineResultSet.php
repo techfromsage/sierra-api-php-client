@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -24,17 +24,17 @@
  * Do not edit the class manually.
  */
 
-namespace Sierra\Models;
+namespace III\Sierra\Models;
 
 use \ArrayAccess;
-use \Sierra\ObjectSerializer;
+use \III\Sierra\ObjectSerializer;
 
 /**
  * InvoiceLineResultSet Class Doc Comment
  *
  * @category Class
  * @description a paged set of invoice line item results
- * @package  Sierra
+ * @package  III\Sierra
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InvoiceLineResultSet implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total' => 'int',
-        'entries' => '\Sierra\Models\InvoiceLine[]'
+        'entries' => '\III\Sierra\Models\InvoiceLine[]'
     ];
 
     /**
@@ -242,7 +242,7 @@ class InvoiceLineResultSet implements ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Sierra\Models\InvoiceLine[]
+     * @return \III\Sierra\Models\InvoiceLine[]
      */
     public function getEntries()
     {
@@ -252,7 +252,7 @@ class InvoiceLineResultSet implements ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Sierra\Models\InvoiceLine[] $entries the invoice line item entries
+     * @param \III\Sierra\Models\InvoiceLine[] $entries the invoice line item entries
      *
      * @return $this
      */
