@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **placed** | [**\DateTime**](\DateTime.md) | the date the hold was placed, in ISO 8601 format (yyyy-MM-dd) | [optional] 
 **not_needed_after_date** | [**\DateTime**](\DateTime.md) | the date the hold expires, in ISO 8601 format (yyyy-MM-dd) | [optional] 
 **not_wanted_before_date** | [**\DateTime**](\DateTime.md) | the date before which the system should not fill the hold, in ISO 8601 format (yyyy-MM-dd) | [optional] 
+**pickup_by_date** | [**\DateTime**](\DateTime.md) | the date that the hold is picked up by (in ISO 8601 format (yyyy-MM-dd&#39;T&#39;HH:mm:ssZZ)) | [optional] 
 **location** | [**\Sierra\Models\Location**](Location.md) | the code of the location from which to fill the hold, if the hold is set for \&quot;Limit to Location\&quot; (does not apply to item-level holds) | [optional] 
 **pickup_location** | [**\Sierra\Models\Location**](Location.md) | the location code of the hold&#39;s pickup location | [optional] 
 **status** | [**\Sierra\Models\HoldStatus**](HoldStatus.md) | the hold status code and description | [optional] 

@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **print_bill** | **bool** | has the bill been printed | [optional] 
 **terminal_number** | **int** | the terminal number | [optional] 
 **transfer_date** | [**\DateTime**](\DateTime.md) | the original transfer date | [optional] 
+**return_date** | [**\DateTime**](\DateTime.md) | the date that the item was returned | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
