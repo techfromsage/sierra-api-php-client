@@ -64,3 +64,4 @@ update_api 5 'https://sandbox.iii.com/iii/sierra-api/docs'
 update_api 4 'https://library02.tcd.ie/iii/sierra-api/docs'
 
 echo -e "\n\nAll Done\n\n"
+echo -e "\nPlease check that the root composer.json contains everything it needs to for autoloading!"
