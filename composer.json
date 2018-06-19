@@ -29,11 +29,15 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "III\\Sierra\\V4\\" : "/V4/Sierra/" },
-        "psr-4": { "III\\Sierra\\V5\\" : "/V5/Sierra/" }
+        "psr-4": {
+            "III\\Sierra\\V4\\" : "/V4/Sierra/",
+            "III\\Sierra\\V5\\" : "/V5/Sierra/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "III\\Sierra\\V4\\" : "/V4/test/" },
-        "psr-4": { "III\\Sierra\\V5\\" : "/V5/test/" }
+        "psr-4": {
+            "III\\Sierra\\V4\\" : "/V4/test/",
+            "III\\Sierra\\V5\\" : "/V5/test/"
+        }
     }
 }
