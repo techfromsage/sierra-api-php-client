@@ -39,7 +39,7 @@ use \Exception;
 class HeaderSelector
 {
 
-    private $acceptHeaderMimeType
+    private $acceptHeaderMimeType;
 
     /**
      * @param string[] $accept
@@ -81,6 +81,7 @@ class HeaderSelector
     private function selectAcceptHeader($accept)
     {
 
+        // don't send the generic set of accept headers, just a chosen header.
         if (!empty($this->acceptHeaderMimeType)) {
             return $this->acceptHeaderMimeType;
         }
@@ -114,7 +115,7 @@ class HeaderSelector
 
     public function setAcceptHeaderMimeType($mimeType)
     {
-        $this->acceptHeaderMimeType = $mimeType
+        $this->acceptHeaderMimeType = $mimeType;
     }
 }
 
