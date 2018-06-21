@@ -33,13 +33,13 @@ rebuild_api () {
 
     echo "Rebuilding from ${docs_url} using config file ${config_file}"
 
-    # java -jar ./swagger-codegen-cli-3.0.0-20171123.081951-8.jar\
-    java -jar ./swagger-codegen-cli-2.1.5.jar\
+    java -jar ./swagger-codegen-cli-3.0.0-20171123.081951-8.jar\
      generate\
      -l php\
      -i ${docs_url}\
      -o ../\
-     -c ${config_file}
+     -c ${config_file}\
+     -t ./templates
 }
 
 update_api () {
