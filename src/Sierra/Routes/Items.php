@@ -12,9 +12,12 @@ class Items extends BaseRoutes
      *  'offset'
      *  'location'
      *  'status'
-     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/items/Get_a_list_of_items_get_0
      *
      * @return string
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
+     * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/items/Get_a_list_of_items_get_0
+     *
      */
     public function getItemsByBibId($bibId, array $opts = [])
     {

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tatty
- * Date: 09/11/17
- * Time: 12:34
- */
 
 namespace Sierra\Routes;
 
@@ -38,6 +32,8 @@ abstract class BaseRoutes
      * @param array $args The arguments to add to the query string
      *
      * @return \stdClass|string
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
      */
     protected function doGetRequest($uri, array $args)
     {

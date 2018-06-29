@@ -61,6 +61,10 @@ class JsonQuery
         $this->opts['lcn'][] = $lcn;
     }
 
+    /**
+     * Build a query using the Sierra 'Tags'
+     * @return array|null
+     */
     private function buildQuery()
     {
         // TODO: These tag codes are guessed. this bit of documentation is behind a login which we don't have access to.

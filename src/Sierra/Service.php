@@ -8,7 +8,6 @@ use kamermans\OAuth2\GrantType\ClientCredentials;
 use Sierra\Errors\APIClientError;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
-use Sierra\Errors\APIClientException;
 use Sierra\Errors\SierraApiConfigurationException;
 use Sierra\Errors\SierraAuthorizationException;
 
@@ -64,6 +63,8 @@ trait Service
      *
      * @return \stdClass|string
      * @throws APIClientError
+     * @throws SierraAuthorizationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     private function handleRequest(Request $request, $expected_status_code = 200)
     {
@@ -98,7 +99,6 @@ trait Service
      * Generate default headers to always request JSON and send our API Key.
      *
      * @return array
-     * @throws SierraAuthorizationException
      */
     private function getDefaultHeaders()
     {
@@ -137,6 +137,7 @@ trait Service
     /**
      * Get an HTTP Client
      * @return Client|null
+     * @throws SierraApiConfigurationException
      * @throws SierraAuthorizationException
      */
     private function getHTTPClient()

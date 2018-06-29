@@ -13,6 +13,8 @@ class Bibs extends BaseRoutes
      * @param int $limit Limit to n responses (defaults to 20)
      *
      * @return \stdClass
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function query(JsonQuery $query, $offset = 0, $limit = 20)
     {
@@ -80,6 +82,8 @@ class Bibs extends BaseRoutes
      * @param array $fields
      *
      * @return \stdClass
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function search($index, $text, $offset = 0, $limit = 20, $fields = [])
     {
@@ -107,6 +111,8 @@ class Bibs extends BaseRoutes
      * @param array $fields Optional fields to retrieve
      *
      * @return \stdClass
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function getRecordByID($id, array $fields = [])
     {
@@ -126,10 +132,12 @@ class Bibs extends BaseRoutes
      *
      * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Get_the_MARC_data_for_a_single_bib_record_get_6
      *
-     * @param int   $id          The bib id to retrieve
-     * @param null  $contentType A content type to ask for
+     * @param int $id The bib id to retrieve
+     * @param null $contentType A content type to ask for
      *
      * @return \stdClass|string
+     * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function getMarcRecordByID($id, $contentType = null)
     {
