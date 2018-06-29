@@ -80,7 +80,6 @@ class HeaderSelector
      */
     private function selectAcceptHeader($accept)
     {
-
         // don't send the generic set of accept headers, just a chosen header.
         if (!empty($this->acceptHeaderMimeType)) {
             return $this->acceptHeaderMimeType;
