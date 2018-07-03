@@ -1,0 +1,11 @@
+{
+	"packagePath": "sierra-api-php-client/V5",
+	"artifactVersion": "0.0.1",
+	"srcBasePath": "/Sierra",
+	"invokerPackage": "III\\Sierra\\V5",
+	"apiPackage": "API",
+	"modelPackage": "Models",
+	"gitUserId": "talis",
+	"gitRepoId": "sierra-api-php-client",
+	"variableNamingConvention": "camelCase"
+}
