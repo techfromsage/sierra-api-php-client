@@ -14,8 +14,7 @@
     }
   ],
   "require-dev": {
-    "phpunit/phpunit": "4.1.6",
-    "timhodson/php-split-timer": "0.1.0"
+    "phpunit/phpunit": "4.1.6"
   },
   "license": "MIT",
   "authors": [
