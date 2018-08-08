@@ -13,7 +13,7 @@ class Items extends BaseRoutes
      *  'location'
      *  'status'
      *
-     * @return string
+     * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException

@@ -12,7 +12,7 @@ class Bibs extends BaseRoutes
      * @param int $offset Start at Offset (defaults to 0)
      * @param int $limit Limit to n responses (defaults to 20)
      *
-     * @return \stdClass
+     * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
@@ -83,7 +83,7 @@ class Bibs extends BaseRoutes
      * @param int $limit
      * @param array $fields
      *
-     * @return \stdClass
+     * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
@@ -114,7 +114,7 @@ class Bibs extends BaseRoutes
      * @param int $id The bib id to retrieve
      * @param array $fields Optional fields to retrieve
      *
-     * @return \stdClass
+     * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
@@ -141,11 +141,10 @@ class Bibs extends BaseRoutes
      * @param int $id The bib id to retrieve
      * @param string|null $contentType A content type to ask for
      *
-     * @return \stdClass|string
+     * @return string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Sierra\Errors\SierraApiConfigurationException
      */
     public function getMarcRecordByID($id, $contentType = null)
     {

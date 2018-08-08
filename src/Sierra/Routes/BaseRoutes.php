@@ -32,7 +32,7 @@ abstract class BaseRoutes
      * @param string $uri The URI to GET
      * @param array $args The arguments to add to the query string
      *
-     * @return \stdClass|string
+     * @return array|string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -53,7 +53,7 @@ abstract class BaseRoutes
      * @param array $args Any arguments to add to the query string
      * @param string $body The body of the request
      *
-     * @return \StdClass|string
+     * @return array|string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
      * @throws \GuzzleHttp\Exception\GuzzleException
