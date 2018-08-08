@@ -13,7 +13,9 @@ class Bibs extends BaseRoutes
      * @param int $limit Limit to n responses (defaults to 20)
      *
      * @return \stdClass
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function query(JsonQuery $query, $offset = 0, $limit = 20)
@@ -82,7 +84,9 @@ class Bibs extends BaseRoutes
      * @param array $fields
      *
      * @return \stdClass
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function search($index, $text, $offset = 0, $limit = 20, $fields = [])
@@ -95,7 +99,7 @@ class Bibs extends BaseRoutes
         $optionalArguments = [
             'offset' => $offset,
             'limit'  => $limit,
-            'fields' => join(',', $fields)
+            'fields' => implode(',', $fields)
         ];
 
         return $this->doGetRequest(
@@ -111,13 +115,15 @@ class Bibs extends BaseRoutes
      * @param array $fields Optional fields to retrieve
      *
      * @return \stdClass
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Sierra\Errors\APIClientError
+     * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
     public function getRecordByID($id, array $fields = [])
     {
         $optionalArguments = [
-            'fields' => join(',', $fields)
+            'fields' => implode(',', $fields)
         ];
 
         return $this->doGetRequest(
@@ -133,18 +139,20 @@ class Bibs extends BaseRoutes
      * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/bibs/Get_the_MARC_data_for_a_single_bib_record_get_6
      *
      * @param int $id The bib id to retrieve
-     * @param null $contentType A content type to ask for
+     * @param string|null $contentType A content type to ask for
      *
      * @return \stdClass|string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Sierra\Errors\SierraApiConfigurationException
      */
     public function getMarcRecordByID($id, $contentType = null)
     {
-        if (is_null($contentType)) {
+        if (empty($contentType)) {
             $contentType = self::CONTENT_TYPE_MARC_XML;
         }
-        $this->setRequestContentType($contentType);
+        $this->setRouteSpecificContentType($contentType);
         return $this->doGetRequest('bibs/' . $id . '/marc', []);
     }
 }

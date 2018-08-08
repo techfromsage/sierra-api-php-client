@@ -3,6 +3,7 @@
 namespace Sierra\Routes;
 
 use GuzzleHttp\Psr7\Request;
+use Sierra\Errors\SierraAPIClientException;
 use Sierra\Service;
 use Sierra\SierraAPI;
 
@@ -34,6 +35,7 @@ abstract class BaseRoutes
      * @return \stdClass|string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function doGetRequest($uri, array $args)
     {
@@ -50,9 +52,11 @@ abstract class BaseRoutes
      * @param string $uri The URI to get
      * @param array $args Any arguments to add to the query string
      * @param string $body The body of the request
+     *
+     * @return \StdClass|string
      * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
-     * @return \StdClass|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function doPostRequest($uri, array $args, $body)
     {
@@ -70,18 +74,35 @@ abstract class BaseRoutes
      * Prepare optional and mandatory arguments, making sure that only optional arguments with values are included
      *
      * @param array $mandatory Parameters which must be sent in the URL
-     * @param array $optional  Parameters that may be sent if they have a value
+     *                         It is valid that some API routes may have no mandatory parameters required
+     * @param array $optional Parameters that may be sent if they have a value
      *
      * @return array
+     * @throws SierraAPIClientException
      */
     protected function prepareArguments(array $mandatory, array $optional = [])
     {
-        foreach ($optional as $k => $v) {
-            if (!empty($v)) {
-                $mandatory[$k] = $v;
-            }
+        // if mandatory parameters are required, then check that we have a value for them.
+        if (!empty($mandatory) && (count(array_filter($mandatory, [$this, 'argumentFilter'])) <> count($mandatory))) {
+            throw new SierraAPIClientException("Mandatory parameter is missing a value");
         }
 
-        return $mandatory;
+        $out = array_filter(array_merge($mandatory, $optional), [$this, 'argumentFilter']);
+
+        return $out;
+    }
+
+    /**
+     * We might legitimately be passing a mandatory argument
+     * (for example 'offset') where '0' should not be filtered out.
+     * So we create our own filter here.
+     *
+     * @param null|string|integer|boolean $value The value to test
+     *
+     * @return boolean
+     */
+    private function argumentFilter($value)
+    {
+        return ($value !== null && $value !== false && $value !== '');
     }
 }

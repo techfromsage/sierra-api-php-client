@@ -32,17 +32,13 @@ class JsonQuery
     public function toJSON()
     {
         $query = $this->buildQuery();
-        if (!is_null($query)) {
-            return json_encode($query);
-        }
+        return json_encode($query);
     }
 
     /**
      * Build a query to look for an ISBN
      *
      * @param string $isbn The Value to search for
-     *
-     * @return array
      */
     public function addIsbn($isbn)
     {
@@ -53,8 +49,6 @@ class JsonQuery
      * Build a query to look for an LCN
      *
      * @param string $lcn The Value to search for
-     *
-     * @return array
      */
     public function addLcn($lcn)
     {

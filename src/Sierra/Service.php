@@ -8,7 +8,6 @@ use kamermans\OAuth2\GrantType\ClientCredentials;
 use Sierra\Errors\APIClientError;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
-use Sierra\Errors\SierraApiConfigurationException;
 use Sierra\Errors\SierraAuthorizationException;
 
 /**
@@ -30,23 +29,14 @@ trait Service
     protected $sierraAPI = null;
 
     /**
-     * Default Content Type
-     * @var null|string
-     */
-    protected $defaultContentType = null;
-
-    /**
-     * Content type of a particular request
+     * Content type of a particular route
      * This is reset to null immediately after use.
      * @var null|string
      */
-    protected $requestContentType = null;
+    protected $routeSpecificContentType = null;
 
     /**
-     * Get a named option from the options
-     *
-     * @throws SierraApiConfigurationException
-     * @internal param string $key
+     * Get the Sierra API
      *
      * @return SierraAPI
      */
@@ -82,7 +72,7 @@ trait Service
                 case 'application/json':
                 case 'application/marc-json':
                 case 'application/marc-in-json':
-                    return json_decode($response->getBody());
+                    return json_decode($response->getBody(), true);
                     break;
                 case 'application/marc-xml':
                     return $response->getBody()->getContents();
@@ -96,7 +86,7 @@ trait Service
     }
 
     /**
-     * Generate default headers to always request JSON and send our API Key.
+     * Generate default headers
      *
      * @return array
      */
@@ -109,35 +99,40 @@ trait Service
     }
 
     /**
-     * Get either a specific request content type or the default content type.
+     * Get either a route specific content type or the default content type.
      * @return null|string
      */
     protected function getContentType()
     {
-        if (is_null($this->requestContentType)) {
-            return $this->defaultContentType;
+        if (empty($this->routeSpecificContentType)) {
+            // we don't have to use a specific content type for this route, so can use whatever the default is.
+            return $this->getSierraAPI()->getDefaultAcceptContentType();
         } else {
-            $retVal = $this->requestContentType;
-            $this->requestContentType = null;
+            // we need to use a specific content type for this request only.
+            // So we capture the content type to return, and reset the internal value to null.
+            $retVal = $this->routeSpecificContentType;
+            $this->routeSpecificContentType = null;
             return $retVal;
         }
     }
 
     /**
-     * Set a content Type to use for this request
-     * resets to default content type after use.
+     * Set a content Type to use for this API Route.
+     * Some API routes only support one content type which may not be
+     * the default content type set in the SierraAPI Client.
+     *
+     * Resets to default content type after use in getContentType().
      *
      * @param string $contentType Set this Content Type as the value to use in the header for the next request
      */
-    protected function setRequestContentType($contentType)
+    protected function setRouteSpecificContentType($contentType)
     {
-        $this->requestContentType = $contentType;
+        $this->routeSpecificContentType = $contentType;
     }
 
     /**
      * Get an HTTP Client
      * @return Client|null
-     * @throws SierraApiConfigurationException
      * @throws SierraAuthorizationException
      */
     private function getHTTPClient()

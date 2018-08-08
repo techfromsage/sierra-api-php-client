@@ -44,7 +44,7 @@ class SierraAPI
      * @param string $baseUrl The Base URL to build API requests on
      * @param string $clientId Identify your client to the service
      * @param string $clientSecret Authenticate your client id
-     * @param string $contentType Set a default Accept Content-Type
+     * @param string $contentType Set a default Accept Content-Type defaults to application/json
      *
      * @internal param array $opts A optional array of options to pass to the client
      */
@@ -53,8 +53,7 @@ class SierraAPI
         $clientId = null,
         $clientSecret = null,
         $contentType = 'application/json'
-    )
-    {
+    ) {
         $this->setBaseURL($baseUrl);
         $this->setClientID($clientId);
         $this->setClientSecret($clientSecret);
