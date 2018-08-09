@@ -45,8 +45,6 @@ class SierraAPI
      * @param string $clientId Identify your client to the service
      * @param string $clientSecret Authenticate your client id
      * @param string $contentType Set a default Accept Content-Type defaults to application/json
-     *
-     * @internal param array $opts A optional array of options to pass to the client
      */
     public function __construct(
         $baseUrl = null,

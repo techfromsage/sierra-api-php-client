@@ -66,20 +66,24 @@ trait Service
 
         if ($response_status_code == $expected_status_code) {
             $contentType = $response->getHeader('Content-Type');
-            if (strpos($contentType[0], ';') !== -1) {
-                $contentType = explode(';', $contentType[0]);
-            }
-            switch ($contentType[0]) {
-                case 'application/json':
-                case 'application/marc-json':
-                case 'application/marc-in-json':
-                    return json_decode($response->getBody(), true);
-                    break;
-                case 'application/marc-xml':
-                    return $response->getBody()->getContents();
-                    break;
-                default:
-                    return $response->getBody()->getContents();
+            if (!empty($contentType)) {
+                if (strpos($contentType[0], ';') !== -1) {
+                    $contentType = explode(';', $contentType[0]);
+                }
+                switch ($contentType[0]) {
+                    case 'application/json':
+                    case 'application/marc-json':
+                    case 'application/marc-in-json':
+                        return json_decode($response->getBody(), true);
+                        break;
+                    case 'application/marc-xml':
+                        return $response->getBody()->getContents();
+                        break;
+                    default:
+                        return $response->getBody()->getContents();
+                }
+            } else {
+                return $response->getBody()->getContents();
             }
         } else {
             throw new SierraAPIClientException("Response code $response_status_code was unexpected");

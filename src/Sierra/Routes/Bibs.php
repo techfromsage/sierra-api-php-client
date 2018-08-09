@@ -8,13 +8,18 @@ class Bibs extends BaseRoutes
     /**
      * Post a query to the /bibs/query endpoint
      *
+     * Filter the records by a query in JSON format
+     * This may ba a slow way of searching for records, you may prefer to use the 'AWS' search route instead.
+     *
+     * @see https://techdocs.iii.com/sierraapi/Content/zAppendix/jsonQuery.htm
+     *
+     *
      * @param JsonQuery $query A Query to execute
      * @param int $offset Start at Offset (defaults to 0)
      * @param int $limit Limit to n responses (defaults to 20)
      *
      * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
@@ -33,7 +38,7 @@ class Bibs extends BaseRoutes
     }
 
     /**
-     * Search the Sierra 'AWS' index for the text given
+     * Search the Sierra 'Advanced Word Search' index for the text given
      *
      * @see https://techdocs.iii.com/sierraapi/Content/zAppendix/keywordSearchIndexes.htm
      *
@@ -85,7 +90,6 @@ class Bibs extends BaseRoutes
      *
      * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
@@ -116,7 +120,6 @@ class Bibs extends BaseRoutes
      *
      * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      */
@@ -142,7 +145,6 @@ class Bibs extends BaseRoutes
      * @param string|null $contentType A content type to ask for
      *
      * @return string
-     * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAuthorizationException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */

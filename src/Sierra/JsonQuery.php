@@ -42,7 +42,9 @@ class JsonQuery
      */
     public function addIsbn($isbn)
     {
-        $this->opts['isbn'][] = $isbn;
+        if (!in_array($isbn, $this->opts['isbn'])) {
+            $this->opts['isbn'][] = $isbn;
+        }
     }
 
     /**
@@ -52,7 +54,9 @@ class JsonQuery
      */
     public function addLcn($lcn)
     {
-        $this->opts['lcn'][] = $lcn;
+        if (!in_array($lcn, $this->opts['lcn'])) {
+            $this->opts['lcn'][] = $lcn;
+        }
     }
 
     /**

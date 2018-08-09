@@ -15,7 +15,6 @@ class Items extends BaseRoutes
      *
      * @return array|string
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Sierra\Errors\APIClientError
      * @throws \Sierra\Errors\SierraAPIClientException
      * @throws \Sierra\Errors\SierraAuthorizationException
      * @see https://sandbox.iii.com/iii/sierra-api/swagger/index.html#!/items/Get_a_list_of_items_get_0
