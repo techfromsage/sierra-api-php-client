@@ -37,26 +37,27 @@ If you have already got a compose.lock, then run `composer update`
 ## Prerequisites
 
 ### Oauth 2 client id and secret
-In order to use Sierra APIs, you will need...  
+In order to use Sierra APIs, you will need to get a Sierra API key and secret for your Sierra system.  
 
 ### Base URL
 You need to know what Base URL your particular Sierra system should use. 
 
 ## Usage 
 
-The client is designed to follow the same structure as the... ??? 
+The client is designed to follow the same logical structure as the organisation of the Sierra APIs
 
 ```php
-INSERT USAGE GUIDE
+// This example reads Sierra API key, secret and base url from environment variables.
+$sierraAPI = new \Sierra\SierraAPI();
+$sierraAPI->setClientID(getenv('SIERRA_SANDBOX_CLIENT_ID'));
+$sierraAPI->setClientSecret(getenv('SIERRA_SANDBOX_CLIENT_SECRET'));
+$sierraAPI->setBaseURL(getenv('SIERRA_SANDBOX_BASE_URL'));
+
+// Using the bibs search api to query for an ISBN.
+$results = $sierraAPI->bibs()->search('ISBN', '0080091032');
+
+// do something with the results.
 ```
-
-
-## Checking whether everything workd _(optional)_ MAY NOT BE IMPLEMENTED???
-
-You do not need to do this to successfully use the API, however it may be useful for troubleshooting purposes.
-
-You may want to check whether the API key you have been given will do what you need it to. Especially if you do not control the creation of the API key. There may be crucial API routes that you need access to.
-
 
 ## Running Tests
 

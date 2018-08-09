@@ -2,7 +2,6 @@
 $appRoot = dirname(dirname(__FILE__));
 include($appRoot . '/vendor/autoload.php');
 
-// TODO: put some examples in here.
 // Examples should be run-able using `php examples.php` and echo useful illustrative info to the user
 
 $sierraAPI = new \Sierra\SierraAPI();
