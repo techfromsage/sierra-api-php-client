@@ -8,6 +8,7 @@ use kamermans\OAuth2\GrantType\ClientCredentials;
 use Sierra\Errors\APIClientError;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
+use Sierra\Errors\SierraAPIClientException;
 use Sierra\Errors\SierraAuthorizationException;
 
 /**
@@ -52,9 +53,9 @@ trait Service
      * @param int $expected_status_code An expected status code
      *
      * @return \stdClass|string
-     * @throws APIClientError
      * @throws SierraAuthorizationException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws SierraAPIClientException
      */
     private function handleRequest(Request $request, $expected_status_code = 200)
     {
@@ -81,7 +82,7 @@ trait Service
                     return $response->getBody()->getContents();
             }
         } else {
-            throw new APIClientError("Response code $response_status_code was unexpected");
+            throw new SierraAPIClientException("Response code $response_status_code was unexpected");
         }
     }
 
