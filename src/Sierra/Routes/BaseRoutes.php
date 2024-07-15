@@ -25,7 +25,6 @@ abstract class BaseRoutes
     public function __construct(SierraAPI $sierraAPI)
     {
         $this->sierraAPI = $sierraAPI;
-        $this->defaultContentType = $sierraAPI->getDefaultAcceptContentType();
     }
 
     /**
